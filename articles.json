@@ -1,0 +1,398 @@
+{
+  "generated": "2026-05-08T00:20:00+00:00",
+  "sections": [
+    {
+      "id": "world",
+      "emoji": "🌍",
+      "title": "World",
+      "editorial": "Lead with Hormuz ceasefire as top story; Rubio-Pope meeting is significant diplomatic signal.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "Iran's fragile ceasefire tested as IRGC attacks UAE, ~1,600 ships stuck in Strait of Hormuz",
+          "url": "https://www.pbs.org/newshour/world/iran-wars-fragile-ceasefire-tested-in-u-s-attempt-to-open-the-strait-of-hormuz",
+          "source": "PBS News",
+          "snippet": "Iran's IRGC launched missiles and drones at UAE despite the April 8 truce; Trump paused 'Project Freedom' naval operations claiming 'great progress'.",
+          "date": "2026-05-08T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Trump touts 'very good talks' with Iran on Day 68 of Middle East conflict",
+          "url": "https://www.cnn.com/2026/05/06/world/live-news/iran-war-trump-strait-of-hormuz",
+          "source": "CNN",
+          "snippet": "Talks mediated by Pakistan; issues include freedom of navigation, Iran's nuclear programme, reconstruction and sanctions.",
+          "date": "2026-05-06T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Has the US accepted Iran's demand to settle Hormuz first, nuclear later?",
+          "url": "https://www.aljazeera.com/news/2026/5/6/has-the-us-accepted-irans-demand-to-settle-hormuz-first-nuclear-later",
+          "source": "Al Jazeera",
+          "snippet": "Sequencing dispute may be central to whether talks succeed or collapse.",
+          "date": "2026-05-06T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Rubio meets Pope Leo XIV at the Vatican, discusses peace in Middle East and beyond",
+          "url": "https://www.washingtonpost.com/world/2026/05/07/trump-pope-leo-rubio-rift/",
+          "source": "Washington Post",
+          "snippet": "45-minute private meeting; pope gave Rubio olive-wood pen as symbol of peace; tensions persist over White House criticism of Leo XIV.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Marco Rubio meets Pope Leo after Trump's criticism over Iran war",
+          "url": "https://www.nbcnews.com/world/pope-leo-xiv/marco-rubio-meets-pope-leo-trump-criticism-iran-war-vatican-rcna343991",
+          "source": "NBC News",
+          "snippet": "Vatican statement said discussions covered wars, political tensions, and difficult humanitarian situations including Cuba.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "PSG vs Arsenal Champions League final set for Budapest, May 30",
+          "url": "https://worldnews.whatfinger.com/2026/05/07/mornings-friday-8-may-2026",
+          "source": "World News",
+          "snippet": "Arsenal defeated Atletico Madrid 2-1 on aggregate to reach the final.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Jonathan Pollard announces run in Israeli elections",
+          "url": "https://sundayguardianlive.com/trending/school-assembly-news-headlines-today-may-08-top-national-business-news-sports-news-education-news-world-news-with-weather-updates-thought-of-the-day-189952/",
+          "source": "Multiple reports",
+          "snippet": "The former U.S. intelligence analyst who served 30 years for spying for Israel announced his candidacy.",
+          "date": "2026-05-08T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "us_politics",
+      "emoji": "🇺🇸",
+      "title": "US & Politics",
+      "editorial": "Indiana primary results dominate; redistricting battle is the larger structural story for November.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "Trump exacts revenge in Indiana: 5 GOP senators who blocked redistricting defeated",
+          "url": "https://www.nbcnews.com/politics/2026-election/indiana-legislators-primary-election-trump-redistricting-state-senate-rcna343321",
+          "source": "NBC News",
+          "snippet": "More than $12M spent by Trump-allied outside groups; 5 of 7 Trump-backed challengers won.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Trump gets revenge, and other takeaways from Tuesday's Indiana and Ohio primaries",
+          "url": "https://www.cnn.com/2026/05/05/politics/takeaways-indiana-ohio-primary-elections",
+          "source": "CNN",
+          "snippet": "Results demonstrate Trump's continued grip on Republican primaries even in typically obscure state legislative races.",
+          "date": "2026-05-05T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Democrats win Michigan special election in bellwether district; midterm momentum building",
+          "url": "https://www.pbs.org/newshour/politics/takeaways-from-indiana-ohio-and-michigan-trumps-flex-pays-off-and-democrats-win-special-election",
+          "source": "PBS News",
+          "snippet": "Democrats have won special elections in unexpected places, significantly narrowing the House gap even without outright flips.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Redistricting fight intensifies: Republicans drawn new maps in 5 states targeting 13 Dem House seats",
+          "url": "https://www.cnn.com/2026/05/07/politics/midterm-elections-redistricting-voting-rights-act-trump-analysis",
+          "source": "CNN",
+          "snippet": "Unprecedented mid-decade map changes create flux six months before November midterm elections.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "tech_ai",
+      "emoji": "⚡",
+      "title": "Tech & AI",
+      "editorial": "AI investment scale is the dominant structural story; Apple chip diversification is a significant supply chain development.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "OpenAI surpasses $25B annualized revenue, taking early steps toward late-2026 IPO",
+          "url": "https://llm-stats.com/ai-news",
+          "source": "Multiple AI outlets",
+          "snippet": "Rival Anthropic approaches $19B annualized revenue as the two leading AI labs continue rapid commercial growth.",
+          "date": "2026-05-08T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Google invests up to $40B in Anthropic; Anthropic commits $200B to Google Cloud",
+          "url": "https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html",
+          "source": "CNBC",
+          "snippet": "$10B upfront with remaining $30B tied to performance milestones; Anthropic's $200B cloud commitment cements mutual dependency.",
+          "date": "2026-04-24T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Anthropic releases Claude Opus 4.7; previews 'Mythos' model to limited partners",
+          "url": "https://www.anthropic.com/news/claude-opus-4-7",
+          "source": "Anthropic",
+          "snippet": "Opus 4.7 improves advanced software engineering; Mythos described as most powerful model with cybersecurity focus previewed to select partners.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Apple explores Intel and Samsung for US chip production, diversifying beyond TSMC",
+          "url": "https://www.bloomberg.com/news/articles/2026-05-05/apple-explores-using-intel-and-samsung-to-build-main-device-chips-in-the-us",
+          "source": "Bloomberg",
+          "snippet": "Exploratory talks reflect both tariff pressure and domestic manufacturing push; iOS 26.5 RC also released this week.",
+          "date": "2026-05-05T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "OpenAI reasoning model outperforms ER physicians at diagnosis in Harvard/Beth Israel study",
+          "url": "https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report",
+          "source": "Science journal / Harvard Medical School",
+          "snippet": "Model used only electronic health records from a Boston emergency department; published in Science.",
+          "date": "2026-05-06T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Apple settles Siri privacy lawsuit for $250 million",
+          "url": "https://9to5mac.com/2026/05/06/daily-may-6-2026/",
+          "source": "9to5Mac",
+          "snippet": "Settlement resolves long-running class action over alleged inadvertent Siri activations and data handling.",
+          "date": "2026-05-06T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Trump administration secures AI pre-release evaluation agreements with Google DeepMind, Microsoft, xAI",
+          "url": "https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html",
+          "source": "CNBC",
+          "snippet": "Center for AI Standards and Innovation will evaluate models before public release; represents expansion of federal AI oversight.",
+          "date": "2026-05-05T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "faith_theology",
+      "emoji": "✦",
+      "title": "Faith & Theology",
+      "editorial": "Pope Leo XIV anniversary is the biggest faith story; Gen Z spiritual openness is the most theologically rich trend piece.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "Pope Leo XIV marks one year; Rubio visit signals effort to repair Vatican-White House rift",
+          "url": "https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-marco-rubio-united-states-secretary-of-state-vatican.html",
+          "source": "Vatican News",
+          "snippet": "The first American-born pope received Rubio for 45-minute private talks; the pope gave an olive-wood pen as a symbol of peace amid tensions over Iran war criticism.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Gen Z is spiritually open but skeptical of church institutions — 'belief is back,' say missiologists",
+          "url": "https://premierchristian.news/us/news/article/unexplained-and-spiritually-open-the-mission-trends-of-2026",
+          "source": "Premier Christian News",
+          "snippet": "The 2026 mission landscape shows a generation seeking transcendence while remaining suspicious of organized religion.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "san_diego",
+      "emoji": "🌊",
+      "title": "San Diego",
+      "editorial": "Infrastructure safety and wildfire risk are the hard news; weekend events for balance.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "Lake Hodges dam is California's only 'unsatisfactory' dam — rebuild stalled, residents demanding action",
+          "url": "https://inewsource.org/2026/05/03/lake-hodges-dam-flood-fire/",
+          "source": "inewsource",
+          "snippet": "State allocated $1.5M for brush clearing, but full 173-acre recommendation remains unfunded; flood and wildfire risk unaddressed.",
+          "date": "2026-05-03T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "San Diego County wildfire risk elevated after dry March; spot fires hit North County on May 3",
+          "url": "https://www.kpbs.org/news/environment/2026/04/06/march-was-unusually-hot-and-dry-that-may-worsen-wildfire-risk-in-san-diego-county",
+          "source": "KPBS",
+          "snippet": "Unusually hot and dry March conditions have elevated seasonal fire danger; new defensible space rules take effect for most homeowners in 2027.",
+          "date": "2026-05-03T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Gator By The Bay returns to Spanish Landing this weekend with 100+ live performances and 10,000 lbs of crawfish",
+          "url": "https://timesofsandiego.com/san-diego-events/2026/05/07/san-diego-weekend-guide-may-8-10-its-a-mothersdaylode/",
+          "source": "Times of San Diego",
+          "snippet": "Annual zydeco and blues festival runs through the weekend; free Mother's Day vendor market at Waterfront Park runs concurrently.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "GI Film Festival San Diego closes today at Balboa Park's Museum of Photographic Arts",
+          "url": "https://gifilmfestivalsd.org/2026/",
+          "source": "GI Film Festival",
+          "snippet": "The festival highlighting military and veteran stories wraps its May 6–8 run at the San Diego Museum of Art.",
+          "date": "2026-05-08T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "maker",
+      "emoji": "🛠",
+      "title": "Maker & Creative Economy",
+      "editorial": "Hackaday Europe is the community-first story; creator economy data anchors the broader trends.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "Hackaday Europe 2026 opens May 16-17 in Lecco, Italy; first speaker slate announced",
+          "url": "https://hackaday.com/2026/04/07/2026-hackaday-europe-first-round-of-speakers-announced/",
+          "source": "Hackaday",
+          "snippet": "Annual open-hardware gathering features workshops, talks, and community showcases in the Italian lake district.",
+          "date": "2026-05-03T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "U.S. creator economy ad spend projected to reach $43.9B in 2026; handmade premium holds strong",
+          "url": "https://digiday.com/marketing/in-graphic-detail-heres-what-the-creator-economy-is-expected-to-look-like-in-2026/",
+          "source": "Digiday",
+          "snippet": "70.8% of consumers say they'll pay more for high-quality handmade goods; micro/nano-influencers claim 45.5% of influencer spend.",
+          "date": "2026-05-01T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Hackaday weekly highlights: portable synthesizer, C-3PO LLM droid, CNC camera slider from 3D printer parts",
+          "url": "https://hackaday.com/2026/05/03/hackaday-links-may-3-2026/",
+          "source": "Hackaday",
+          "snippet": "Community highlights include a Raspberry Pi 5-powered interactive droid and a camera slider rig with quick-release mounting.",
+          "date": "2026-05-03T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "filmmaking",
+      "emoji": "🎥",
+      "title": "Filmmaking Gear",
+      "editorial": "Sony Cinema Line upgrades dominate; DJI NAB news is a solid secondary story.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "Sony BURANO V3.0 firmware launches May 2026 with FF 5.8K 6:5 anamorphic and 120fps S35 modes",
+          "url": "https://www.cined.com/sony-firmware-updates-for-burano-fx6-venice-2-fr7-and-a7s-iii-announced/",
+          "source": "CineD",
+          "snippet": "Also adds 3D LUT scaling support, HLG Mild custom mode, peaking improvements, and S700P command compatibility.",
+          "date": "2026-05-01T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Sony FX6 v6.0 firmware: BIG6 quick-menu and Blackmagic RAW via HDMI now available",
+          "url": "https://ymcinema.com/2026/03/19/sony-fx6-firmware-600-big6-venice-style-ui/",
+          "source": "Y.M.Cinema",
+          "snippet": "The Venice-style BIG6 interface overhaul and Blackmagic RAW HDMI output are the two headline additions for working cinematographers.",
+          "date": "2026-03-19T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "DJI debuts RS 5 gimbal at NAB 2026; Ronin 4D gets price cut and $1 RAW license",
+          "url": "https://nofilmschool.com/dji-ronin-4d-price-drop",
+          "source": "No Film School",
+          "snippet": "NAB 2026 showcase featured a fully built film set on the DJI booth floor; RS 5 features next-gen intelligent tracking.",
+          "date": "2026-04-18T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Sony FX6 and FX3 led Sundance 2026 documentary cameras; Netflix Approved Camera List confirms dominance",
+          "url": "https://www.kamehamedia.com/blog/sundance-2026-cameras",
+          "source": "Kameha Media Group",
+          "snippet": "Sony's Cinema Line appeared in more Sundance 2026 documentaries than any competing camera system.",
+          "date": "2026-05-01T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "mito_research",
+      "emoji": "🧬",
+      "title": "Mito Research",
+      "editorial": "Strong PubMed results this cycle — include section. Label sources per mito guidelines.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "MELAS patients with m.3243A>G show 30% WPW prevalence vs 10% in non-MELAS carriers — UT Houston",
+          "url": "https://doi.org/10.1007/s00246-025-03985-4",
+          "source": "PubMed — Pediatric Cardiology (peer-reviewed)",
+          "snippet": "Conduction abnormalities correlated with heteroplasmy levels; researchers recommend routine cardiology screening for early detection.",
+          "date": "2025-08-12T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Twin MELAS case highlights phenotypic heterogeneity and frequent misdiagnosis; early genetic testing critical",
+          "url": "https://doi.org/10.1097/MD.0000000000047264",
+          "source": "PubMed — Medicine (Baltimore) (peer-reviewed)",
+          "snippet": "Brothers carried m.3243A>G; elder initially treated for viral encephalitis; mother asymptomatic carrier at 30.79% heteroplasmy.",
+          "date": "2026-05-01T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Thiogenesis TTI-0102 Phase 2 (EU) shows 10% fatigue reduction in MELAS vs placebo at Mitocon 2026",
+          "url": "https://www.newsfilecorp.com/release/281290/Thiogenesis-Presents-Phase-2-EU-MELAS-Data-at-Mitocon-2026",
+          "source": "Newsfilecorp — industry press release (Thiogenesis Therapeutics) ⚠️",
+          "snippet": "Mean MFIS score reduction at ~60mg/kg/day vs placebo (p<0.001) presented at Mitocon 2026 in Pisa, Italy.",
+          "date": "2026-05-01T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "First US basket Phase I trial for MELAS + LHON-Plus launched at GWU using NIH-funded Glycerol Tributyrate",
+          "url": "https://smhs.gwu.edu/news/gw-researchers-launch-first-basket-phase-i-clinical-trial-two-ultra-rare-mitochondrial",
+          "source": "GWU School of Medicine (academic institution)",
+          "snippet": "FDA-approved trial by Dr. Anne Chiaramello; funded by NIH's National Center for Advancing Translational Sciences.",
+          "date": "2026-04-01T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    },
+    {
+      "id": "ev",
+      "emoji": "🔋",
+      "title": "Electric Vehicles",
+      "editorial": "Tariff disruption is the dominant structural story; WattEV fleet order is the most concrete deployment news.",
+      "anchor_articles": [],
+      "expanded_articles": [
+        {
+          "title": "Dozen-plus EV models discontinued in US as 25% tariffs and loss of $7,500 credit reshape market",
+          "url": "https://thenextweb.com/news/ev-models-discontinued-us-tariffs-2026",
+          "source": "The Next Web",
+          "snippet": "Tesla Model S/X, Hyundai Kona Electric, Volvo EX30, BMW i4 among models paused or cancelled; automakers pivoting to domestic production or exiting.",
+          "date": "2026-05-06T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "WattEV orders 370 Tesla Semi trucks for California — largest single electric truck deployment in the state",
+          "url": "https://electrek.co/",
+          "source": "Electrek",
+          "snippet": "300+ trucks earmarked for joint Port of Oakland program; signals growing commercial-fleet confidence in Class 8 electric trucks.",
+          "date": "2026-05-07T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Ford UEV platform targets $30K midsize EV pickup next year, aiming for Model e breakeven by 2029",
+          "url": "https://www.cnbc.com/2026/05/05/ford-ev-universal-electric-vehicle-california.html",
+          "source": "CNBC",
+          "snippet": "Universal Electric Vehicle platform built in Long Beach is Ford's bet to end billions in annual EV losses.",
+          "date": "2026-05-05T00:00:00+00:00",
+          "is_anchor": false
+        },
+        {
+          "title": "Used EV sales surge 27.7% year-over-year; BYD, Chery, and Geely scout Canada after tariff cut",
+          "url": "https://www.cnbc.com/2026/05/03/ev-ownership-costs.html",
+          "source": "CNBC",
+          "snippet": "Canada slashed Chinese EV tariffs from 100% to 6.1%; three major Chinese automakers now hiring staff and scouting dealer locations in Canada.",
+          "date": "2026-05-03T00:00:00+00:00",
+          "is_anchor": false
+        }
+      ]
+    }
+  ]
+}
