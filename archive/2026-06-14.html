@@ -25,8 +25,8 @@
     color: var(--text);
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 1.05rem;
+    line-height: 1.8;
   }
 
   a {
@@ -82,18 +82,18 @@
 
   .section-header {
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-weight: 500;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.9rem;
   }
 
   ul { list-style: none; padding: 0; }
 
   li {
-    padding: 0.4rem 0 0.4rem 1.5rem;
+    padding: 0.55rem 0 0.55rem 1.5rem;
     position: relative;
   }
   li::before {
@@ -102,6 +102,21 @@
     left: 0;
     color: var(--muted);
   }
+
+  /* SOURCE ATTRIBUTION */
+  .sources {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+    line-height: 1.5;
+  }
+  .sources a {
+    color: var(--muted);
+    text-decoration: underline;
+    text-underline-offset: 1px;
+  }
+  .sources a:hover { color: var(--link-hover); }
 
   .section-rule {
     border: none;
@@ -146,17 +161,39 @@
     border-top: 1px solid var(--rule);
   }
 
-  /* MOBILE */
+  /* MOBILE — optimized for iPhone */
   @media (max-width: 600px) {
+    body {
+      font-size: 1.08rem;
+      line-height: 1.82;
+    }
     .masthead {
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.75rem;
-      padding: 1.25rem 1.25rem;
+      gap: 0.4rem;
+      padding: 1.1rem 1rem 1.2rem;
     }
     .masthead-right { text-align: left; }
-    .masthead-date { font-size: 1.8rem; }
-    .content { padding: 1.5rem 1.25rem; }
+    .masthead-date { font-size: 1.75rem; }
+    .masthead-label { margin-bottom: 0.2rem; }
+    .content { padding: 1.4rem 1rem; }
+    .section { margin-bottom: 1.6rem; }
+    .section-header {
+      font-size: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+    li { padding: 0.6rem 0 0.6rem 1.4rem; }
+    .sources {
+      font-size: 0.82rem;
+      margin-top: 0.3rem;
+    }
+    .section-rule { margin: 1.6rem 0; }
+    .closing-quote {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      padding-bottom: 1.5rem;
+    }
+    .closing-quote blockquote { font-size: 1rem; }
   }
 </style>
 </head>
@@ -176,15 +213,25 @@
   <section class="section">
     <div class="section-header">🌍 &nbsp;World</div>
     <ul>
-      <li>The 2026 FIFA World Cup opened June 11 at Mexico City's Estadio Azteca — the first stadium to host three men's World Cups — with co-host Mexico defeating South Africa 2–0 in a feisty opener that produced three red cards. Shakira, Andrea Bocelli, and J Balvin headlined the opening ceremony. The expanded 48-team tournament runs across the US, Mexico, and Canada through mid-July. (<a href="https://www.espn.com/soccer/story/_/id/49003509/2026-fifa-world-cup-live-updates-mexico-vs-south-africa">ESPN</a>, <a href="https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-2026-opening-ceremonies-june-11-live-updates-rcna349400">NBC News</a>, <a href="https://www.cnn.com/2026/06/11/sport/live-news/world-cup-mexico-south-africa">CNN</a>)</li>
+      <li>The 2026 FIFA World Cup opened June 11 at Mexico City's Estadio Azteca — the first stadium to host three men's World Cups — with co-host Mexico defeating South Africa 2–0 in a feisty opener that produced three red cards. Shakira, Andrea Bocelli, and J Balvin headlined the opening ceremony. The expanded 48-team tournament runs across the US, Mexico, and Canada through mid-July.
+        <span class="sources">(<a href="https://www.espn.com/soccer/story/_/id/49003509/2026-fifa-world-cup-live-updates-mexico-vs-south-africa">ESPN</a>, <a href="https://www.nbcnews.com/sports/soccer/live-blog/fifa-world-cup-2026-opening-ceremonies-june-11-live-updates-rcna349400">NBC News</a>, <a href="https://www.cnn.com/2026/06/11/sport/live-news/world-cup-mexico-south-africa">CNN</a>)</span>
+      </li>
 
-      <li>South Korea's former President Yoon Suk Yeol was sentenced to 30 years in prison on June 12 for ordering military drone flights over Pyongyang — moves prosecutors say were designed to fabricate a pretext for his December 2024 martial law declaration. It is the most severe sentence in a cascade of criminal proceedings against Yoon since his impeachment. (<a href="https://www.aljazeera.com/news/2026/6/12/south-koreas-ex-president-yoon-gets-30-years-over-drone-operation">Al Jazeera</a>, <a href="https://www.koreatimes.co.kr/southkorea/law-crime/20260612/ex-president-yoon-sentenced-to-30-yrs-in-prison-in-drone-infiltration-case">Korea Times</a>)</li>
+      <li>South Korea's former President Yoon Suk Yeol was sentenced to 30 years in prison on June 12 for ordering military drone flights over Pyongyang — moves prosecutors say were designed to fabricate a pretext for his December 2024 martial law declaration. It is the most severe sentence in a cascade of criminal proceedings against Yoon since his impeachment.
+        <span class="sources">(<a href="https://www.aljazeera.com/news/2026/6/12/south-koreas-ex-president-yoon-gets-30-years-over-drone-operation">Al Jazeera</a>, <a href="https://www.koreatimes.co.kr/southkorea/law-crime/20260612/ex-president-yoon-sentenced-to-30-yrs-in-prison-in-drone-infiltration-case">Korea Times</a>)</span>
+      </li>
 
-      <li>Anti-immigrant riots erupted in Belfast after a Sudanese man allegedly stabbed and blinded a local resident on June 9. Police deployed water cannons on a second night of violence as masked protesters burned families out of their homes, displaced more than two dozen people, and hurled bricks at riot officers. Far-right activists online helped incite the crowds; politicians across parties called for calm. (<a href="https://www.npr.org/2026/06/11/g-s1-127401/uk-anti-immigration-protests-belfast">NPR</a>, <a href="https://abcnews.com/International/wireStory/stabbing-suspect-due-court-after-night-anti-immigrant-133738608">ABC News</a>, <a href="https://www.pbs.org/newshour/world/what-to-know-about-the-stabbing-that-set-off-fiery-riots-in-northern-ireland">PBS News</a>)</li>
+      <li>Anti-immigrant riots erupted in Belfast after a Sudanese man allegedly stabbed and blinded a local resident on June 9. Police deployed water cannons on a second night of violence as masked protesters burned families out of their homes, displaced more than two dozen people, and hurled bricks at riot officers. Far-right activists online helped incite the crowds; politicians across parties called for calm.
+        <span class="sources">(<a href="https://www.npr.org/2026/06/11/g-s1-127401/uk-anti-immigration-protests-belfast">NPR</a>, <a href="https://abcnews.com/International/wireStory/stabbing-suspect-due-court-after-night-anti-immigrant-133738608">ABC News</a>, <a href="https://www.pbs.org/newshour/world/what-to-know-about-the-stabbing-that-set-off-fiery-riots-in-northern-ireland">PBS News</a>)</span>
+      </li>
 
-      <li>President Trump announced Friday that a joint US-Venezuelan military strike killed Hector Rusthenford Guerrero Flores ("Niño Guerrero"), a founder of the Tren de Aragua transnational gang, at a compound in Venezuela's Bolívar state. The operation was conducted alongside Venezuela's new government — installed after the US captured former president Nicolás Maduro — marking an unusual episode of bilateral security cooperation. (<a href="https://www.washingtonpost.com/world/2026/06/13/tren-de-aragua-venezuela-trump-nino-guerrero/fb82d2f4-676e-11f1-bdd4-805ebb99a693_story.html">Washington Post</a>, <a href="https://www.nbcnews.com/politics/trump-administration/trump-says-alleged-leader-tren-de-aragua-gang-killed-us-strike-rcna349903">NBC News</a>, <a href="https://www.aljazeera.com/news/2026/6/13/trump-says-us-strike-killed-tren-de-aragua-gang-boss-with-venezuela-help">Al Jazeera</a>)</li>
+      <li>President Trump announced Friday that a joint US-Venezuelan military strike killed Hector Rusthenford Guerrero Flores ("Niño Guerrero"), a founder of the Tren de Aragua transnational gang, at a compound in Venezuela's Bolívar state. The operation was conducted alongside Venezuela's new government — installed after the US captured former president Nicolás Maduro — marking an unusual episode of bilateral security cooperation.
+        <span class="sources">(<a href="https://www.washingtonpost.com/world/2026/06/13/tren-de-aragua-venezuela-trump-nino-guerrero/fb82d2f4-676e-11f1-bdd4-805ebb99a693_story.html">Washington Post</a>, <a href="https://www.nbcnews.com/politics/trump-administration/trump-says-alleged-leader-tren-de-aragua-gang-killed-us-strike-rcna349903">NBC News</a>, <a href="https://www.aljazeera.com/news/2026/6/13/trump-says-us-strike-killed-tren-de-aragua-gang-boss-with-venezuela-help">Al Jazeera</a>)</span>
+      </li>
 
-      <li>Pope Leo XIV concluded a weeklong apostolic visit to Spain by celebrating Mass inside Barcelona's Sagrada Família on June 10 — the centennial of architect Antoni Gaudí's death — and inaugurating the Tower of Jesus Christ, the basilica's final major spire. With the tower's completion, the Sagrada Família becomes the world's tallest church at 566 feet. His return flight was briefly grounded; Spain's king offered his private jet. (<a href="https://www.vatican.va/content/leo-xiv/en/homilies/2026/documents/20260610-spagna-messa-sagrada-familia.html">Vatican.va</a>, <a href="https://www.nbcnews.com/world/spain/pope-leo-barcelona-spain-sagrada-familia-cathedral-basilica-rcna349049">NBC News</a>, <a href="https://www.deseret.com/u-s-world/2026/06/10/pope-leo-dedicates-la-sagrada-familia-on-anniversary-of-antoni-gaudi-death/">Deseret News</a>)</li>
+      <li>Pope Leo XIV concluded a weeklong apostolic visit to Spain by celebrating Mass inside Barcelona's Sagrada Família on June 10 — the centennial of architect Antoni Gaudí's death — and inaugurating the Tower of Jesus Christ, the basilica's final major spire. With the tower's completion, the Sagrada Família becomes the world's tallest church at 566 feet. His return flight was briefly grounded; Spain's king offered his private jet.
+        <span class="sources">(<a href="https://www.vatican.va/content/leo-xiv/en/homilies/2026/documents/20260610-spagna-messa-sagrada-familia.html">Vatican.va</a>, <a href="https://www.nbcnews.com/world/spain/pope-leo-barcelona-spain-sagrada-familia-cathedral-basilica-rcna349049">NBC News</a>, <a href="https://www.deseret.com/u-s-world/2026/06/10/pope-leo-dedicates-la-sagrada-familia-on-anniversary-of-antoni-gaudi-death/">Deseret News</a>)</span>
+      </li>
     </ul>
   </section>
 
@@ -194,11 +241,17 @@
   <section class="section">
     <div class="section-header">🇺🇸 &nbsp;US &amp; Politics</div>
     <ul>
-      <li>The 2026 midterm primary season enters a critical stretch this week: Georgia runoffs are set for June 16, and California's June 2 primary results are settling. Republican Steve Hilton and Democrat Xavier Becerra advanced to November's governor's race in California. Internal GOP divisions over messaging and legislative priorities are sharpening as November approaches. (<a href="https://www.nbcnews.com/politics/2026-election">NBC News</a>, <a href="https://www.kpbs.org/news/politics/2026/06/02/primary-election-what-we-know-about-voter-turnout-in-san-diego-county-so-far">KPBS</a>)</li>
+      <li>The 2026 midterm primary season enters a critical stretch this week: Georgia runoffs are set for June 16, and California's June 2 primary results are settling. Republican Steve Hilton and Democrat Xavier Becerra advanced to November's governor's race in California. Internal GOP divisions over messaging and legislative priorities are sharpening as November approaches.
+        <span class="sources">(<a href="https://www.nbcnews.com/politics/2026-election">NBC News</a>, <a href="https://www.kpbs.org/news/politics/2026/06/02/primary-election-what-we-know-about-voter-turnout-in-san-diego-county-so-far">KPBS</a>)</span>
+      </li>
 
-      <li>Top Republican appropriators declared a third budget reconciliation bill "not an option" for 2026, as internal party disagreements have paralyzed the GOP's legislative agenda. Republicans passed a $72 billion immigration enforcement package earlier this spring via reconciliation, but the path to any additional major legislation before November looks increasingly blocked. (<a href="https://federalnewsnetwork.com/congress/2026/06/top-republican-appropriators-say-third-reconciliation-bill-is-not-an-option/">Federal News Network</a>, <a href="https://www.pbs.org/newshour/politics/watch-live-house-considers-reconciliation-bill-funding-trumps-immigration-enforcement-agenda">PBS News</a>)</li>
+      <li>Top Republican appropriators declared a third budget reconciliation bill "not an option" for 2026, as internal party disagreements have paralyzed the GOP's legislative agenda. Republicans passed a $72 billion immigration enforcement package via reconciliation this spring, but the path to any additional major legislation before November looks increasingly blocked.
+        <span class="sources">(<a href="https://federalnewsnetwork.com/congress/2026/06/top-republican-appropriators-say-third-reconciliation-bill-is-not-an-option/">Federal News Network</a>, <a href="https://www.pbs.org/newshour/politics/watch-live-house-considers-reconciliation-bill-funding-trumps-immigration-enforcement-agenda">PBS News</a>)</span>
+      </li>
 
-      <li>A joint US-Venezuela military strike Friday killed the reported leader of Tren de Aragua — a Venezuelan transnational gang the Trump administration has blamed for violent crime and drug trafficking across the US. President Trump announced the operation, which was conducted with Venezuela's new government following Nicolás Maduro's removal. (<a href="https://www.cnbc.com/2026/06/13/trump-venezuela-tren-de-aragua.html">CNBC</a>, <a href="https://www.washingtonpost.com/world/2026/06/13/tren-de-aragua-venezuela-trump-nino-guerrero/fb82d2f4-676e-11f1-bdd4-805ebb99a693_story.html">Washington Post</a>)</li>
+      <li>A joint US-Venezuela military strike Friday killed the reported leader of Tren de Aragua — a Venezuelan transnational gang the Trump administration has blamed for violent crime and drug trafficking across the US. President Trump announced the operation, conducted with Venezuela's new government following Nicolás Maduro's removal.
+        <span class="sources">(<a href="https://www.cnbc.com/2026/06/13/trump-venezuela-tren-de-aragua.html">CNBC</a>, <a href="https://www.washingtonpost.com/world/2026/06/13/tren-de-aragua-venezuela-trump-nino-guerrero/fb82d2f4-676e-11f1-bdd4-805ebb99a693_story.html">Washington Post</a>)</span>
+      </li>
     </ul>
   </section>
 
@@ -208,13 +261,21 @@
   <section class="section">
     <div class="section-header">⚡ &nbsp;Tech &amp; AI</div>
     <ul>
-      <li>Apple's WWDC 2026 (June 8) unveiled a rebuilt Siri — now called "Siri AI" and powered by Google Gemini — with a standalone app, real-time on-screen awareness, and a chat-style interface that syncs across devices via iCloud. iOS 27 brings up to 30% faster app launches and supports every device back to iPhone 11. macOS 27 is named "Golden Gate." Devices with 12GB+ unified memory get exclusive AI voice and system-wide dictation upgrades. (<a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/">TechCrunch</a>, <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/">Apple Newsroom</a>, <a href="https://www.cnbc.com/2026/06/08/apple-wwdc-2026-live-updates.html">CNBC</a>)</li>
+      <li>Apple's WWDC 2026 (June 8) unveiled a rebuilt Siri — now called "Siri AI" and powered by Google Gemini — with a standalone app, real-time on-screen awareness, and a chat-style interface that syncs across devices via iCloud. iOS 27 brings up to 30% faster app launches and supports every device back to iPhone 11. macOS 27 is named "Golden Gate." Devices with 12GB+ unified memory get exclusive AI voice and dictation upgrades.
+        <span class="sources">(<a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/">TechCrunch</a>, <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/">Apple Newsroom</a>, <a href="https://www.cnbc.com/2026/06/08/apple-wwdc-2026-live-updates.html">CNBC</a>)</span>
+      </li>
 
-      <li>One week after WWDC, the AI assistant market continues to realign: Google Gemini has climbed to an estimated 27.4% share of major AI chatbot web traffic (up roughly 104% in six months), while ChatGPT leads at 54.7% — down from 76.5% in early 2025. The new Siri AI's Gemini integration substantially extends Google's AI reach across the Apple ecosystem. (<a href="https://www.bloomberg.com/news/articles/2026-06-05/wwdc-2026-preview-ios-27-siri-ai-features-macos-27-more-apple-will-announce">Bloomberg</a>, <a href="https://appleinsider.com/articles/26/06/05/ios-27-macos-27-siri-what-to-expect-to-launch-at-wwdc-2026">AppleInsider</a>)</li>
+      <li>One week after WWDC, the AI assistant market continues to realign: Google Gemini has climbed to an estimated 27.4% share of major AI chatbot web traffic (up ~104% in six months), while ChatGPT leads at 54.7% — down from 76.5% in early 2025. The new Siri AI's Gemini integration substantially extends Google's reach across the Apple ecosystem.
+        <span class="sources">(<a href="https://www.bloomberg.com/news/articles/2026-06-05/wwdc-2026-preview-ios-27-siri-ai-features-macos-27-more-apple-will-announce">Bloomberg</a>, <a href="https://appleinsider.com/articles/26/06/05/ios-27-macos-27-siri-what-to-expect-to-launch-at-wwdc-2026">AppleInsider</a>)</span>
+      </li>
 
-      <li>Credible rumors point to a Sony FX3 Mark II announcement before summer's end, with alleged specs including a dual processor, global shutter, 4K120, and possible 6K output at around $5,000. Most specs remain unverified, but the direction signals Sony prioritizing sensor speed and motion quality over raw resolution in the compact Cinema Line tier. (<a href="https://ymcinema.com/2026/06/01/sony-fx3-mark-ii-rumors-sensor-speed/">Y.M.Cinema</a>)</li>
+      <li>Credible rumors point to a Sony FX3 Mark II announcement before summer's end, with alleged specs including a dual processor, global shutter, 4K120, and possible 6K at ~$5,000. Most specs remain unverified, but the direction signals Sony prioritizing sensor speed and motion quality over raw resolution in the compact Cinema Line tier.
+        <span class="sources">(<a href="https://ymcinema.com/2026/06/01/sony-fx3-mark-ii-rumors-sensor-speed/">Y.M.Cinema</a>)</span>
+      </li>
 
-      <li>Sony previewed the Rialto 65, a modular system that transforms the Venice 2 into a 65mm large-format cinema camera with one of the industry's largest sensors. Set for public exhibition at Cine Gear Expo 2026 in LA, with commercial release targeted for the first half of 2027. (<a href="https://petapixel.com/2026/06/04/sony-is-making-a-massive-cinema-camera-image-sensor/">PetaPixel</a>)</li>
+      <li>Sony previewed the Rialto 65, a modular system that transforms the Venice 2 into a 65mm large-format cinema camera with one of the industry's largest sensors. Set for public exhibition at Cine Gear Expo 2026 in LA, with commercial release targeted for the first half of 2027.
+        <span class="sources">(<a href="https://petapixel.com/2026/06/04/sony-is-making-a-massive-cinema-camera-image-sensor/">PetaPixel</a>)</span>
+      </li>
     </ul>
   </section>
 
@@ -224,9 +285,13 @@
   <section class="section">
     <div class="section-header">✦ &nbsp;Faith &amp; Theology</div>
     <ul>
-      <li>The Pentagon cut its list of recognized military faith codes from more than 200 to 31, initially labeling all Christian denominations with a "Christian" prefix while omitting that designation for the Church of Jesus Christ of Latter-day Saints. After bipartisan backlash and a direct appeal to President Trump from LDS-aligned senators, the Pentagon revised the list by removing the "Christian" prefix from all denominations — a compromise that drew criticism from multiple directions. (<a href="https://www.washingtonpost.com/religion/2026/06/08/after-outcry-mormon-lawmakers-pentagon-updates-religious-codes/">Washington Post</a>, <a href="https://religionnews.com/2026/06/04/department-of-defense-drops-more-than-100-recognized-faith-groups/">Religion News Service</a>, <a href="https://www.cbsnews.com/news/pentagon-updates-religious-codes-after-criticism-from-mormons/">CBS News</a>)</li>
+      <li>The Pentagon cut its list of recognized military faith codes from more than 200 to 31, initially labeling all Christian denominations with a "Christian" prefix while omitting that designation for the Church of Jesus Christ of Latter-day Saints. After bipartisan backlash and a direct appeal to President Trump from LDS-aligned senators, the Pentagon revised the list by removing the "Christian" prefix from all denominations — a compromise that drew criticism from multiple directions.
+        <span class="sources">(<a href="https://www.washingtonpost.com/religion/2026/06/08/after-outcry-mormon-lawmakers-pentagon-updates-religious-codes/">Washington Post</a>, <a href="https://religionnews.com/2026/06/04/department-of-defense-drops-more-than-100-recognized-faith-groups/">Religion News Service</a>, <a href="https://www.cbsnews.com/news/pentagon-updates-religious-codes-after-criticism-from-mormons/">CBS News</a>)</span>
+      </li>
 
-      <li>Pope Leo XIV celebrated Mass inside the Sagrada Família on June 10 and dedicated the Tower of Jesus Christ — the basilica's final central spire — on the centenary of Antoni Gaudí's death. The ceremony formally closed Gaudí's 144-year architectural project and marked the Catholic Church's completion of what Gaudí called his life's great spiritual work. 8,000 worshippers attended. (<a href="https://www.americamagazine.org/vatican-dispatch/2026/06/04/pope-leos-trip-to-spain-background-on-sagrada-familia-migrant-advocacy-and-a-changing-catholic-landscape/">America Magazine</a>, <a href="https://www.deseret.com/u-s-world/2026/06/10/pope-leo-dedicates-la-sagrada-familia-on-anniversary-of-antoni-gaudi-death/">Deseret News</a>)</li>
+      <li>Pope Leo XIV celebrated Mass inside the Sagrada Família on June 10 and dedicated the Tower of Jesus Christ — the basilica's final central spire — on the centenary of Antoni Gaudí's death. The ceremony formally closed Gaudí's 144-year architectural project and marked the Catholic Church's completion of what Gaudí called his life's great spiritual work. 8,000 worshippers attended.
+        <span class="sources">(<a href="https://www.americamagazine.org/vatican-dispatch/2026/06/04/pope-leos-trip-to-spain-background-on-sagrada-familia-migrant-advocacy-and-a-changing-catholic-landscape/">America Magazine</a>, <a href="https://www.deseret.com/u-s-world/2026/06/10/pope-leo-dedicates-la-sagrada-familia-on-anniversary-of-antoni-gaudi-death/">Deseret News</a>)</span>
+      </li>
     </ul>
   </section>
 
@@ -236,23 +301,17 @@
   <section class="section">
     <div class="section-header">🌊 &nbsp;San Diego</div>
     <ul>
-      <li>San Diego's MTS and NCTD are advancing the region's first transit fare increase since 2019 — bus and trolley fares would rise from $2.50 to $3.00 this fall and to $3.25 in 2027, a cumulative ~30% increase. The agencies cite lost federal funding and post-pandemic ridership gaps; a regional committee vote is expected this summer before any increase takes effect. (<a href="https://www.kpbs.org/news/economy/2026/06/10/taking-public-transit-in-san-diego-could-cost-a-bit-more-starting-this-fall">KPBS</a>, <a href="https://inewsource.org/2026/04/15/nctd-mts-public-transit-fare-increases/">inewsource</a>, <a href="https://timesofsandiego.com/transportation/2026/04/16/fare-hike-bus-trolley-transit-san-diego/">Times of San Diego</a>)</li>
+      <li>San Diego's MTS and NCTD are advancing the region's first transit fare increase since 2019 — bus and trolley fares would rise from $2.50 to $3.00 this fall and to $3.25 in 2027, a cumulative ~30% increase. The agencies cite lost federal funding and post-pandemic ridership gaps; a regional committee vote is expected this summer before any increase takes effect.
+        <span class="sources">(<a href="https://www.kpbs.org/news/economy/2026/06/10/taking-public-transit-in-san-diego-could-cost-a-bit-more-starting-this-fall">KPBS</a>, <a href="https://inewsource.org/2026/04/15/nctd-mts-public-transit-fare-increases/">inewsource</a>, <a href="https://timesofsandiego.com/transportation/2026/04/16/fare-hike-bus-trolley-transit-san-diego/">Times of San Diego</a>)</span>
+      </li>
 
-      <li>Results from San Diego County's June 2 primary are settling: the District 5 Board of Supervisors race is heading to a runoff, and Measure A — the non-primary homes tax — is failing by more than 16 percentage points. Congressional and state legislative races continue to be finalized ahead of November. (<a href="https://www.kpbs.org/news/politics/2026/06/02/live-election-results-san-diego-county-board-of-supervisors-district-5">KPBS</a>, <a href="https://www.kpbs.org/news/politics/2026/06/02/live-election-results-measure-a-the-non-primary-homes-tax">KPBS</a>)</li>
+      <li>San Diego County's June 2 primary results are settling: the District 5 Board of Supervisors race is heading to a runoff, and Measure A — the non-primary homes tax — is failing by more than 16 percentage points. Congressional and state legislative races continue to be finalized ahead of November.
+        <span class="sources">(<a href="https://www.kpbs.org/news/politics/2026/06/02/live-election-results-san-diego-county-board-of-supervisors-district-5">KPBS</a>, <a href="https://www.kpbs.org/news/politics/2026/06/02/live-election-results-measure-a-the-non-primary-homes-tax">KPBS</a>)</span>
+      </li>
 
-      <li>With the World Cup underway, San Diego fans gathered at watch parties across the county — including Little Italy's Piazza della Famiglia — to follow the US team's early matches. The tournament's proximity to San Diego (US matches in LA and the Bay Area) has made it an unusually local experience for regional soccer fans. (<a href="https://www.kpbs.org/news/local/2026/06/12/u-s-soccer-fans-gather-at-watch-parties-across-san-diego-county-for-world-cup-kickoff">KPBS</a>)</li>
-    </ul>
-  </section>
-
-  <hr class="section-rule">
-
-  <!-- MAKER & CREATIVE ECONOMY -->
-  <section class="section">
-    <div class="section-header">🛠 &nbsp;Maker &amp; Creative Economy</div>
-    <ul>
-      <li>The 9th Annual Maker Faire Long Island ran June 6 at the Long Island Explorium, gathering engineers, crafters, robotics hobbyists, and DIY tinkerers for a day of hands-on exhibits. Maker Faire's regional circuit continues to rebuild after pandemic-era cancellations, and events like this remain anchor moments for local maker communities. (<a href="https://makerfaire.com/">Maker Faire</a>)</li>
-
-      <li>Craft industry observers are forecasting continued strength for personalized and handmade goods in 2026, particularly in jewelry-making and textile arts, as consumers invest in unique maker-sourced pieces over mass-produced alternatives. The Craft Industry Alliance sees growing demand for DIY kits that support skill-building alongside finished goods — reflecting a sustained self-expression trend. (<a href="https://craftindustryalliance.org/craft-industry-reflections-on-2025-and-predictions-for-2026/">Craft Industry Alliance</a>)</li>
+      <li>With the World Cup underway, San Diego fans gathered at watch parties across the county — including Little Italy's Piazza della Famiglia — to follow the US team's early matches. The tournament's proximity to San Diego (US matches in LA and the Bay Area) has made it an unusually local experience for regional soccer fans.
+        <span class="sources">(<a href="https://www.kpbs.org/news/local/2026/06/12/u-s-soccer-fans-gather-at-watch-parties-across-san-diego-county-for-world-cup-kickoff">KPBS</a>)</span>
+      </li>
     </ul>
   </section>
 
@@ -262,11 +321,17 @@
   <section class="section">
     <div class="section-header">🎥 &nbsp;Filmmaking Gear</div>
     <ul>
-      <li>Credible rumors suggest Sony may announce the FX3 Mark II before end of summer 2026. Alleged specs — unconfirmed by Sony — include a dual processor architecture, global shutter, 4K120, and possible 6K at around $5,000. If the global shutter claim holds, it would address one of the FX3's most-cited limitations for fast-motion and strobe-heavy shooting environments. (<a href="https://ymcinema.com/2026/06/01/sony-fx3-mark-ii-rumors-sensor-speed/">Y.M.Cinema</a>)</li>
+      <li>Credible rumors suggest Sony may announce the FX3 Mark II before end of summer 2026. Alleged specs — unconfirmed by Sony — include a dual processor architecture, global shutter, 4K120, and possible 6K at around $5,000. If the global shutter claim holds, it would address one of the FX3's most-cited limitations for fast-motion and strobe-heavy shooting environments.
+        <span class="sources">(<a href="https://ymcinema.com/2026/06/01/sony-fx3-mark-ii-rumors-sensor-speed/">Y.M.Cinema</a>)</span>
+      </li>
 
-      <li>Sony previewed the Rialto 65, a modular system that transforms the Venice 2 into a large-format 65mm cinema camera with one of the industry's biggest sensors. The system is planned for exhibition at Cine Gear Expo 2026 in LA, with commercial release targeted for the first half of 2027 — a significant step upmarket within the Cinema Line family. (<a href="https://petapixel.com/2026/06/04/sony-is-making-a-massive-cinema-camera-image-sensor/">PetaPixel</a>)</li>
+      <li>Sony previewed the Rialto 65, a modular system that transforms the Venice 2 into a large-format 65mm cinema camera with one of the industry's biggest sensors. The system is planned for exhibition at Cine Gear Expo 2026 in LA, with commercial release targeted for the first half of 2027 — a significant step upmarket within the Cinema Line family.
+        <span class="sources">(<a href="https://petapixel.com/2026/06/04/sony-is-making-a-massive-cinema-camera-image-sensor/">PetaPixel</a>)</span>
+      </li>
 
-      <li>Sony's Alpha mirrorless platform turns 20 this month, with the brand now leading global mirrorless camera market share. The Alpha 7R VI — Sony's highest-resolution full-frame body to date, released earlier in 2026 — continues to expand the upper end of the E-mount ecosystem shared by FX6 and FX3 Cinema Line shooters. (<a href="https://photorumors.com/2026/06/05/20-years-of-sony-alpha-cameras-from-the-alpha-100-to-mirrorless-leadership-in-2026/">Photo Rumors</a>)</li>
+      <li>Sony's Alpha mirrorless platform turns 20 this month, with the brand now leading global mirrorless camera market share. The Alpha 7R VI — Sony's highest-resolution full-frame body to date, released earlier in 2026 — continues to expand the upper end of the E-mount ecosystem shared by FX6 and FX3 Cinema Line shooters.
+        <span class="sources">(<a href="https://photorumors.com/2026/06/05/20-years-of-sony-alpha-cameras-from-the-alpha-100-to-mirrorless-leadership-in-2026/">Photo Rumors</a>)</span>
+      </li>
     </ul>
   </section>
 
@@ -276,9 +341,13 @@
   <section class="section">
     <div class="section-header">🔋 &nbsp;Electric Vehicles</div>
     <ul>
-      <li>Amazon's electric delivery van fleet passed 50,000 units — the halfway mark toward its 2030 goal of 100,000 — with more than 30,000 Rivian-built vans and thousands of Mercedes-Benz commercial EVs operating across the US, Europe, and India. The fleet has delivered over 2.4 billion packages with zero tailpipe emissions. Rivian is now developing AWD and longer-range van variants for the next phase of Amazon's order. (<a href="https://insideevs.com/news/797914/amazon-ev-delivery-fleet-2026-update/">InsideEVs</a>, <a href="https://electrek.co/2026/02/18/amazon-grew-its-rivian-electric-delivery-van-fleet-by-50-in-2025/">Electrek</a>)</li>
+      <li>Amazon's electric delivery van fleet passed 50,000 units — the halfway mark toward its 2030 goal of 100,000 — with more than 30,000 Rivian-built vans and thousands of Mercedes-Benz commercial EVs operating across the US, Europe, and India. The fleet has delivered over 2.4 billion packages with zero tailpipe emissions. Rivian is now developing AWD and longer-range van variants for the next phase of Amazon's order.
+        <span class="sources">(<a href="https://insideevs.com/news/797914/amazon-ev-delivery-fleet-2026-update/">InsideEVs</a>, <a href="https://electrek.co/2026/02/18/amazon-grew-its-rivian-electric-delivery-van-fleet-by-50-in-2025/">Electrek</a>)</span>
+      </li>
 
-      <li>The IEA's Global EV Outlook 2026 finds that electric car sales exceeded 20 million globally in 2025 — a 20% increase from 2024 — reaching 25% of total vehicle sales. Sales are forecast to reach 23 million in 2026 (approaching 30% of the global market). China leads with EVs at ~55% of all car sales; the US market has slowed relative to global peers. <em>(general EV news)</em> (<a href="https://www.iea.org/reports/global-ev-outlook-2026">IEA</a>, <a href="https://restofworld.org/2026/iea-global-ev-outlook-us-sales-drop/">Rest of World</a>)</li>
+      <li>The IEA's Global EV Outlook 2026 finds that electric car sales exceeded 20 million globally in 2025 — up 20% from 2024 — reaching 25% of total vehicle sales. Sales are forecast to reach 23 million in 2026, approaching 30% of the global market. China leads with EVs at ~55% of all car sales; the US market has slowed relative to global peers. <em>(general EV news)</em>
+        <span class="sources">(<a href="https://www.iea.org/reports/global-ev-outlook-2026">IEA</a>, <a href="https://restofworld.org/2026/iea-global-ev-outlook-us-sales-drop/">Rest of World</a>)</span>
+      </li>
     </ul>
   </section>
 
@@ -288,9 +357,13 @@
   <section class="section">
     <div class="section-header">🧬 &nbsp;Mito Research</div>
     <ul>
-      <li>A systematic review and meta-analysis covering 988 MELAS patients — published June 10 in <em>Orphanet Journal of Rare Diseases</em> — found the m.3243A&gt;G mutation in 78% of cases. The most prevalent symptoms were stroke-like episodes (99%), seizures (89%), and elevated lactate (81%), with the temporal lobe most commonly affected on imaging. Pathway analysis identified <strong>L-arginine, MNRR1, the PI3K-AKT-mTOR pathway, and the electron transport chain</strong> as the most promising targets for multi-targeted therapeutic development — providing a cleaner framework for future treatment research. (PubMed; <a href="https://doi.org/10.1186/s13023-026-04448-6">Orphanet J Rare Dis — doi:10.1186/s13023-026-04448-6</a>)</li>
+      <li>A systematic review and meta-analysis covering 988 MELAS patients — published June 10 in <em>Orphanet Journal of Rare Diseases</em> — found the m.3243A&gt;G mutation in 78% of cases. The most prevalent symptoms were stroke-like episodes (99%), seizures (89%), and elevated lactate (81%), with the temporal lobe most commonly affected on imaging. Pathway analysis identified <strong>L-arginine, MNRR1, the PI3K-AKT-mTOR pathway, and the electron transport chain</strong> as the most promising targets for multi-targeted therapeutic development.
+        <span class="sources">(PubMed; <a href="https://doi.org/10.1186/s13023-026-04448-6">Orphanet J Rare Dis — doi:10.1186/s13023-026-04448-6</a>)</span>
+      </li>
 
-      <li>A comprehensive review published June 10 in <em>Cellular and Molecular Life Sciences</em> examines mitochondrial Complex I deficiency — the primary enzymatic failure underlying MELAS, Leigh syndrome, and LHON — and concludes that existing animal and cellular disease models cannot adequately capture the heteroplasmy variation and tissue-specific effects that define real patient experience. The authors call urgently for better human-relevant models (iPSC lines, organoids) to accelerate therapeutic development. <em>Honest context: no cure currently exists, and the field's own review acknowledges the distance between current models and patients.</em> (PubMed; <a href="https://doi.org/10.1007/s00018-026-06169-2">Cell Mol Life Sci — doi:10.1007/s00018-026-06169-2</a>)</li>
+      <li>A comprehensive review published June 10 in <em>Cellular and Molecular Life Sciences</em> examines mitochondrial Complex I deficiency — the primary enzymatic failure underlying MELAS — and concludes that existing animal and cellular disease models cannot adequately capture the heteroplasmy variation and tissue-specific effects that define real patient experience. The authors call urgently for better human-relevant models (iPSC lines, organoids) to accelerate therapeutic development. <em>Honest context: no cure currently exists.</em>
+        <span class="sources">(PubMed; <a href="https://doi.org/10.1007/s00018-026-06169-2">Cell Mol Life Sci — doi:10.1007/s00018-026-06169-2</a>)</span>
+      </li>
     </ul>
   </section>
 
