@@ -3,22 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Brief — Saturday, June 20</title>
+<title>Morning Brief — Friday, June 26</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f5f4f0;
-    --surface: #ffffff;
-    --text: #1a1a18;
-    --muted: #6b6b66;
-    --rule: #d8d7d2;
-    --link: #1a3a8f;
+    --bg:         #f5f4f0;
+    --surface:    #ffffff;
+    --text:       #1a1a18;
+    --muted:      #6b6b66;
+    --rule:       #d8d7d2;
+    --link:       #1a3a8f;
     --link-hover: #c41230;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
   body {
     background: var(--bg);
@@ -29,56 +33,76 @@
     line-height: 1.75;
   }
 
+  a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+
+  a:hover {
+    color: var(--link-hover);
+  }
+
+  /* MASTHEAD */
   .masthead {
+    background: var(--surface);
     border-bottom: 2px solid var(--text);
     padding: 1.5rem 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
-    background: var(--surface);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
-  .masthead-left .label {
+  .masthead-label {
+    display: block;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--muted);
-    display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
   }
 
-  .masthead-left .date {
+  .masthead-date {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 300;
     font-size: 2.4rem;
     line-height: 1.1;
+    color: var(--text);
   }
 
   .masthead-right {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
+    letter-spacing: 0.05em;
     color: var(--muted);
     text-align: right;
+    align-self: flex-end;
   }
 
+  /* CONTENT */
   .content {
     max-width: 780px;
     margin: 0 auto;
     padding: 2.5rem 2rem;
   }
 
+  /* SECTIONS */
   .section {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
-  .section-label {
+  .section-header {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
+    font-weight: 500;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--muted);
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.75rem;
   }
 
   ul {
@@ -87,16 +111,20 @@
   }
 
   li {
-    padding: 0.4rem 0 0.4rem 1.4rem;
     position: relative;
+    padding: 0.45rem 0 0.45rem 1.4rem;
   }
 
   li::before {
-    content: '—';
+    content: '\2014';
     position: absolute;
     left: 0;
     color: var(--muted);
     font-weight: 400;
+  }
+
+  li em {
+    font-style: italic;
   }
 
   .section-rule {
@@ -105,22 +133,12 @@
     margin: 2rem 0;
   }
 
-  a {
-    color: var(--link);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    text-decoration-thickness: 1px;
-  }
-
-  a:hover { color: var(--link-hover); }
-
-  em { font-style: italic; font-weight: 300; }
-
+  /* CLOSING QUOTE */
   .closing-quote {
     border-top: 1px solid var(--rule);
-    margin-top: 3rem;
-    padding-top: 2.75rem;
-    padding-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
     text-align: center;
   }
 
@@ -128,36 +146,51 @@
     font-style: italic;
     font-weight: 300;
     color: var(--muted);
-    max-width: 580px;
-    margin: 0 auto;
     font-size: 1.05rem;
     line-height: 1.85;
+    margin-bottom: 0.9rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .closing-quote cite {
     display: block;
-    margin-top: 1.1rem;
     font-style: normal;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.72rem;
     color: var(--muted);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
   }
 
-  footer {
+  /* FOOTER */
+  .footer {
     text-align: center;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
     color: var(--muted);
-    padding: 1.75rem 2rem 2.5rem;
+    padding: 1.5rem 2rem 2rem;
     border-top: 1px solid var(--rule);
+    margin-top: 2rem;
   }
 
+  /* MOBILE */
   @media (max-width: 600px) {
-    .masthead { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-    .masthead-left .date { font-size: 1.75rem; }
-    .content { padding: 1.5rem 1rem; }
-    .closing-quote blockquote { font-size: 0.95rem; }
+    .masthead {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .masthead-date {
+      font-size: 1.8rem;
+    }
+    .masthead-right {
+      text-align: left;
+      align-self: auto;
+    }
+    .content {
+      padding: 1.5rem 1rem;
+    }
   }
 </style>
 </head>
@@ -165,137 +198,127 @@
 
 <header class="masthead">
   <div class="masthead-left">
-    <span class="label">Morning Brief</span>
-    <span class="date">Saturday, June 20</span>
+    <span class="masthead-label">Morning Brief</span>
+    <div class="masthead-date">Friday, June 26</div>
   </div>
-  <div class="masthead-right">Generated 5:40 AM PT</div>
+  <div class="masthead-right">Generated 05:33 AM PT</div>
 </header>
 
 <main class="content">
 
-  <!-- 🌍 WORLD -->
+  <!-- WORLD -->
   <section class="section">
-    <div class="section-label">🌍 World</div>
+    <div class="section-header">&#127757; World</div>
     <ul>
-      <li>The U.S. and Iran signed a 14-point memorandum of understanding in Geneva on June 19, ending more than 100 days of conflict. The deal reopens the Strait of Hormuz, lifts the U.S. naval blockade, and opens a 60-day negotiation window on Iran's nuclear program, sanctions relief, and reconstruction funding — mediated through Qatar and Pakistan. The U.S. is now permitting ships to freely enter and exit Iranian coastal waters. (<a href="https://www.npr.org/2026/06/15/nx-s1-5858590/us-iran-deal-updates">NPR</a>, <a href="https://www.atlanticcouncil.org/dispatches/experts-react-the-us-and-iran-just-announced-an-interim-peace-deal-heres-what-we-know-so-far/">Atlantic Council</a>)</li>
-      <li>China escalated maritime pressure on Taiwan throughout early June, with PRC Coast Guard ships entering restricted waters of Taiwan's Pratas Islands (June 5–6, coordinated with a research vessel for the first time) and then Itu Aba/Taiping Island (June 11) — the first PRC law enforcement incursion there. Taiwan's Coast Guard Administration condemned both as sovereignty violations. (<a href="https://www.cnbc.com/2026/05/24/taiwan-and-china-coast-guards-in-standoff-at-top-of-south-china-sea.html">CNBC</a>, <a href="https://www.aei.org/articles/china-taiwan-update-june-12-2026/">AEI</a>)</li>
-      <li>Russia continues grinding advances in eastern Ukraine; Ukrainian defense officials say Moscow's explicit goal is to occupy the full east bank of the Dnipro River — including parts of Dnipropetrovsk Oblast — and seize Odesa and Mykolaiv oblasts by year's end. Russia made a net gain of roughly 1,400 square miles in the past twelve months (~0.6% of Ukraine's territory). (<a href="https://www.aljazeera.com/news/2026/6/2/at-least-nine-people-killed-dozens-wounded-in-russian-attacks-on-ukraine">Al Jazeera</a>, <a href="https://mod.gov.ua/en/news/total-russian-combat-losses-in-ukraine-as-of-june-20-2026">Ukraine Ministry of Defence</a>)</li>
-      <li>The 2026 FIFA World Cup — the first with 48 teams, co-hosted across the U.S., Mexico, and Canada — is deep in group-stage play. Saturday's results include Brazil defeating Haiti 3–0 in Philadelphia (Cunha with two goals, Vinicius Junior a third); Germany vs. Côte d'Ivoire and Netherlands vs. Sweden are also on the card. The tournament runs through July 19. (<a href="https://www.olympics.com/en/news/fifa-world-cup-2026-every-match-result-on-saturday-20-june-live-scores">Olympics.com</a>, <a href="https://www.sbs.com.au/news/article/fifa-world-cup-2026-results-june-20/qhucy9edd">SBS News</a>)</li>
-      <li>UK Labour: Andy Burnham, Greater Manchester mayor and former Labour cabinet minister, won a parliamentary by-election seat, positioning himself as a credible challenger to embattled Prime Minister Keir Starmer for the party leadership. (<a href="https://www.zerofox.com/intelligence/monthly-geopolitical-report-june-2026/">ZeroFox</a>)</li>
+      <li>A 7.2-magnitude foreshock struck near Caracas on June 24, followed less than a minute later by a 7.5-magnitude quake — Venezuela’s most powerful seismic event in over a century. The confirmed death toll has reached at least 235, with the U.S. Geological Survey estimating a 44% chance the final count exceeds 10,000. Urban search-and-rescue teams from Fairfax County (VA) and Los Angeles County have deployed alongside responders from Mexico, Brazil, Colombia, Cuba, and Canada. A state of emergency remains in effect as rescue workers continue to search collapsed buildings. (<a href="https://www.npr.org/2026/06/26/nx-s1-5870651/venezuela-earthquakes-caracas">NPR</a>, <a href="https://www.aljazeera.com/news/2026/6/26/neighbours-aid-rescue-effort-as-venezuela-quake-death-toll-hits-235">Al Jazeera</a>, <a href="https://www.nbcnews.com/world/venezuela/live-blog/live-updates-venezuela-earthquakes-rescue-aid-trump-delcy-caracas-rcna351701">NBC News</a>)</li>
+      <li>The Ebola outbreak in eastern Democratic Republic of Congo has surpassed 1,118 confirmed cases and 291 deaths as of June 24, making it the second-largest Ebola outbreak on record — and one rising faster than any previous outbreak. The disease, caused by the Bundibugyo virus strain, has crossed into Uganda; France reported one imported confirmed case on June 24. WHO, MSF, and UN agencies are scaling up response across affected provinces in Ituri, North Kivu, and South Kivu. (<a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON608">WHO</a>, <a href="https://www.doctorswithoutborders.org/latest/ebola-disease-outbreak-2026-how-msf-responding">Doctors Without Borders</a>, <a href="https://news.un.org/en/story/2026/06/1167765">UN News</a>, <a href="https://www.cdc.gov/ebola/situation-summary/index.html">CDC</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- 🇺🇸 US & POLITICS -->
+  <!-- US & POLITICS -->
   <section class="section">
-    <div class="section-label">🇺🇸 US &amp; Politics</div>
+    <div class="section-header">&#127482;&#127480; US &amp; Politics</div>
     <ul>
-      <li>Senate Republicans are breaking with the Trump administration over the Iran deal — specifically its provisions lifting U.S. sanctions on Iranian oil exports and establishing a $300 billion reconstruction fund for Iran — framing the agreement as a return to the prewar status quo rather than a strategic win. President Trump has defended the deal as historic. (<a href="https://www.npr.org/2026/06/15/nx-s1-5858590/us-iran-deal-updates">NPR</a>)</li>
-      <li>Rural approval of President Trump has fallen to a new low as farm bankruptcies rise and trade uncertainty from ongoing tariff disputes weighs on agricultural communities. Some farmers are openly accusing the GOP of making "a hard business harder." (<a href="https://www.nbcnews.com/politics">NBC News</a>)</li>
-      <li>The Trump administration is advancing a legal interpretation that would let it build a 250-foot arch on the National Mall without deferring to the federal law that caps most D.C. structures at 130 feet. Separately, Trump's planned renovation of the National Mall reflecting pool — timed to the nation's 250th anniversary — has hit another delay. (<a href="https://www.washingtonpost.com/politics/">Washington Post</a>)</li>
-      <li>Maine held its gubernatorial primaries: Hannah Pingree (D), former state house speaker endorsed by outgoing Gov. Janet Mills, and Bobby Charles (R) won their respective nominations ahead of the November midterms. (<a href="https://www.nbcnews.com/politics">NBC News</a>)</li>
+      <li>In a 6–3 ruling on June 25, the Supreme Court held in <em>Mullin v. Doe</em> that the president has virtually unrestrained authority to terminate Temporary Protected Status, clearing the way for the Trump administration to begin deportations of more than one million TPS holders — including Haitians and Syrians who have lived and worked legally in the U.S. for years or decades. Justice Sonia Sotomayor read her dissent aloud from the bench. The White House called it an affirmation that “temporary protected status is, by definition, temporary.” (<a href="https://www.cnn.com/2026/06/25/politics/live-news/supreme-court-issues-opinions">CNN</a>, <a href="https://www.npr.org/sections/world/">NPR</a>)</li>
+      <li>Eight Supreme Court decisions remain outstanding this term, with rulings expected in the next few days. The most watched: Trump’s bid to end automatic birthright citizenship (<em>Trump v. Barbara</em>) — every lower court that reviewed the underlying executive order called it “blatantly unconstitutional” — along with Trump’s effort to fire Federal Reserve Governor Lisa Cook, a state ban on transgender athletes in girls’ sports, and deadlines for counting mail-in ballots. (<a href="https://www.scotusblog.com/2026/06/major-decisions-ahead/">SCOTUSblog</a>, <a href="https://www.npr.org/2026/06/09/nx-s1-5847967/supreme-court-major-cases-left-2026">NPR</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- ⚡ TECH & AI -->
+  <!-- TECH & AI -->
   <section class="section">
-    <div class="section-label">⚡ Tech &amp; AI</div>
+    <div class="section-header">&#9889; Tech &amp; AI</div>
     <ul>
-      <li>Apple's WWDC 2026 keynote (June 8) unveiled iOS 27, macOS "Golden Gate," iPadOS 27, and a rebuilt Siri powered by Google Gemini — conversational, context-aware, and capable of detailed on-device tasks. Expanded Visual Intelligence features include bill splitting and nutrition analysis; visionOS 27 adds spatial widgets and more realistic Personas. Apple described it as its most AI-forward WWDC on record. (<a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/">Apple</a>, <a href="https://www.macrumors.com/2026/06/08/wwdc-2026-recap/">MacRumors</a>)</li>
-      <li>SpaceX acquired Cursor, the leading AI-assisted coding platform, for $60 billion — one of the largest AI acquisitions on record and a sign that Musk intends to deeply integrate AI tooling into SpaceX's engineering workflows. (<a href="https://techstartups.com/2026/06/16/top-tech-news-today-june-16-2026/">Tech Startups</a>)</li>
-      <li>Colorado's Consumer Protections for Artificial Intelligence Act takes effect June 30 — making Colorado the first U.S. state with comprehensive AI oversight covering "high-risk" systems in employment, healthcare, education, housing, and financial services. It applies to any company deploying such AI for Colorado residents. (<a href="https://techstartups.com/2026/06/16/top-tech-news-today-june-16-2026/">Tech Startups</a>)</li>
-      <li>Florida became the first U.S. state to sue OpenAI and CEO Sam Altman, alleging ChatGPT contributed to harmful real-world incidents including acts of violence. The lawsuit escalates state-level legal pressure on AI developers and follows investigations by other attorneys general. (<a href="https://www.nbcnews.com/tech">NBC News</a>)</li>
+      <li>Google has lost at least four senior AI researchers to Anthropic in six days: Nobel laureate and AlphaFold co-creator John Jumper, plus Gemini contributors Jonas Adler and Alexander Pritzel, with additional departures still unfolding. Star researcher Noam Shazeer separately went to OpenAI. Fortune reports the exodus is raising investor doubts about Google DeepMind’s ability to remain at the frontier, as Anthropic tracks toward its first operating profit (~$559M in Q2 2026) and OpenAI projects $14B in losses for the year. (<a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/">TechCrunch</a>, <a href="https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic">Bloomberg</a>, <a href="https://fortune.com/2026/06/23/google-deepmind-ai-researcher-departures-raise-doubts-about-ability-to-win-the-ai-race-shazeer-jumper-eye-on-ai/">Fortune</a>, <a href="https://www.axios.com/2026/06/23/ai-lab-agi-google-deepmind-departures">Axios</a>)</li>
+      <li>Google launched Gemini 2.5 Pro with a Deep Think reasoning mode on June 22, posting benchmark scores of 82.4% on GPQA Diamond — topping Claude Fable 5 (79.1%) and GPT-5.5 (76.3%) on science and math reasoning. Deep Think uses parallel thinking to generate and evaluate multiple approaches simultaneously before committing, and pairs with a 2-million-token context window. Separately, Anthropic sent a formal letter to the U.S. Senate accusing Alibaba of conducting 28.8 million fraudulent API exchanges against Claude and urging export controls on AI model access. (<a href="https://blog.google/products/gemini/gemini-2-5-deep-think/">Google Blog</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- ✦ FAITH & THEOLOGY -->
+  <!-- FAITH & THEOLOGY -->
   <section class="section">
-    <div class="section-label">✦ Faith &amp; Theology</div>
+    <div class="section-header">&#10022; Faith &amp; Theology</div>
     <ul>
-      <li>VP JD Vance published <em>Communion: Finding My Way Back to Faith</em>, a memoir charting his journey from evangelical Christianity to atheism and ultimately to Catholicism. He describes his grandmother's death as a turning point in his faith crisis. The book arrives as debates over Christian nationalism and the GOP's religious identity intensify in the run-up to the midterms. (commentary) (<a href="https://religionmediacentre.org.uk/morning-news-bulletin/religion-news-16-june-2026">Religion Media Centre</a>)</li>
-      <li>A new Public Religion Research Institute survey finds 64% of Americans do not want to live in a primarily Christian nation, preferring a pluralistic society of many faiths. The result is consistent across several recent surveys and cuts against Christian nationalist framing prominent in current U.S. politics. (<a href="https://www.christiancitizen.us/articles/weekly-religion-news-roundup-june-12-18-2026">Christian Citizen</a>)</li>
+      <li>Anglican Archbishop of Canterbury Sarah Mullally and Jerusalem Archbishop Hosam Naoum published a joint pastoral letter on June 26 warning they “fear for the long-term future of the indigenous Christian Palestinian presence in the Holy Land,” released at the conclusion of Mullally’s visit to meet Palestinian Christians. The letter is among the most senior ecumenical statements yet on the conflict’s impact on one of Christianity’s oldest and most geographically rooted communities. (<a href="https://religionmediacentre.org.uk/morning-news-bulletin/religion-news-26-june-2026">Religion Media Centre</a>)</li>
+      <li>A Pew Research Center survey of U.S. Catholics (conducted May 26–June 1) finds roughly eight-in-ten hold favorable views of Pope Leo — a notably resilient approval rating given unusually public tensions between Leo and President Trump over Iran and other policy disputes. (Religion Media Centre, citing <a href="https://www.pewresearch.org/">Pew Research Center</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- 🌊 SAN DIEGO -->
+  <!-- SAN DIEGO -->
   <section class="section">
-    <div class="section-label">🌊 San Diego</div>
+    <div class="section-header">&#127754; San Diego</div>
     <ul>
-      <li>A novel cross-border water arrangement is taking shape: Arizona, facing acute water shortage, is willing to fund treatment of Tijuana's sewage to potable standards — with the San Diego County Water Authority positioned as a willing water seller. Voice of San Diego reports the SDCWA is eager to move quickly, given the region's current surplus. (<a href="https://voiceofsandiego.org/2026/06/08/environment-report-could-the-tijuana-river-help-get-arizona-more-water/">Voice of San Diego</a>)</li>
-      <li>Construction has begun on Navajo Family Apartments in San Carlos — 45 units of affordable housing with one-, two-, and three-bedroom units, including 8 specifically reserved for residents with intellectual or developmental disabilities. (<a href="https://www.countynewscenter.com/">San Diego County News Center</a>)</li>
-      <li>The director of the Museum of Contemporary Art San Diego is stepping down after nearly a decade leading the institution; a search for new leadership is expected to follow. (<a href="https://www.kpbs.org/">KPBS</a>)</li>
-      <li>Belmont Park drew large, flag-waving crowds cheering the U.S. men's national team during World Cup group play — San Diego joining a wave of soccer enthusiasm sweeping host cities across North America as the first 48-team tournament unfolds. (<a href="https://www.kpbs.org/">KPBS</a>)</li>
+      <li>The Navy presented updated plans on June 22 for redeveloping its 70-acre NAVWAR campus near Old Town: up to 10,000 housing units, two hotels, office space, retail, and new military facilities — with buildings potentially reaching 30 stories alongside Interstate 5. Manchester/Edgemoor is the selected developer; the project is currently in environmental review. A community briefing held June 18 surfaced neighborhood opposition centered on building height and density near the historic Old Town corridor. (<a href="https://timesofsandiego.com/community/2026/06/22/the-navys-redevelopment-of-navwar-could-see-buildings-up-to-30-stories-tall/">Times of San Diego</a>, <a href="https://fox5sandiego.com/news/local-news/navy-eyes-major-development-with-10k-housing-units-hotels-on-navwar-site/">Fox 5 San Diego</a>)</li>
+      <li>Harbor Island West is beginning a $70 million marina modernization project this summer — a major overhaul of one of San Diego Bay’s primary recreational boating hubs and one of the larger waterfront infrastructure investments in the region this year. (<a href="https://timesofsandiego.com/">Times of San Diego</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- 🛠 MAKER & CREATIVE ECONOMY -->
+  <!-- MAKER & CREATIVE ECONOMY -->
   <section class="section">
-    <div class="section-label">🛠 Maker &amp; Creative Economy</div>
+    <div class="section-header">&#128296; Maker &amp; Creative Economy</div>
     <ul>
-      <li>CAA and private equity firm TPG launched Compound Creative Holdings with $250 million in committed capital to acquire and scale businesses in the independent creator economy — one of the largest institutional bets yet that independent creative businesses are durable, investable assets. (<a href="https://deadline.com/2026/06/caa-tpg-launch-creator-economy-company-compound-creative-1236953040/">Deadline</a>)</li>
-      <li>Epidemic Sound's 2026 creator economy report finds the most successful independent creators integrate AI to accelerate output without replacing their creative voice; 41% of surveyed creators aim to build sustainable independent businesses rather than scale into large studios. (<a href="https://www.epidemicsound.com/data-trends/sound-of-creativity-reports/future-creator-economy-report-2026/">Epidemic Sound</a>)</li>
-      <li>Hackaday's June 19 post "PCBs Straight From the Magazine" documents a maker etching PCBs via toner-transfer using a circuit printed in an old issue of <em>Make</em> magazine — print media doing double duty as fabrication source. (<a href="https://hackaday.com/2026/06/19/pcbs-straight-from-the-magazine/">Hackaday</a>)</li>
+      <li>CAA and private equity firm TPG have launched Compound Creative Holdings, committing $250 million to acquire and grow businesses across the creator economy. The move signals growing institutional appetite for the infrastructure layer supporting independent creators — production tools, audience platforms, and brand deal intermediaries. (<a href="https://deadline.com/2026/06/caa-tpg-launch-creator-economy-company-compound-creative-1236953040/">Deadline</a>)</li>
+      <li>Make Magazine has opened applications for makers seeking to be featured at its fall 2026 Maker Faires — a key annual showcase for independent hardware, craft electronics, and DIY projects. (<a href="https://makezine.com/article/maker-news/heads-up-makers-apply-now-for-featured-fall-faires/">Make Magazine</a>)</li>
+      <li>A new analysis from Mastercard and the Nest artisan network finds independent craftspeople are increasingly formalizing into structured small businesses — using co-op purchasing, direct-to-consumer channels, and e-commerce platforms — as the global handicraft market tracks toward $2.9 billion by 2034, nearly tripling from its 2025 level. (<a href="https://www.mastercard.com/us/en/news-and-trends/stories/2026/craft-economy-nest-building-artisan-businesses.html">Mastercard</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- 🎥 FILMMAKING GEAR -->
+  <!-- FILMMAKING GEAR -->
   <section class="section">
-    <div class="section-label">🎥 Filmmaking Gear</div>
+    <div class="section-header">&#127909; Filmmaking Gear</div>
     <ul>
-      <li>Cine Gear Expo LA 2026 (June 5–6) brought multiple hands-on debuts. Hollyland debuted the C1 Pro Air — a smaller, lighter redesign of its C1 Pro wireless video transmitter with full feature parity, shipping by end of summer 2026. ErgoRig launched the ErgoRig II, a second-gen camera-support vest at $2,250 (currently 15% off), available now. (<a href="https://www.newsshooter.com/2026/06/06/hollyland-c1-pro-air-first-look-cine-gear-2026/">Newsshooter</a>, <a href="https://www.newsshooter.com/2026/06/06/new-ergorig-ii-includes-several-updates-cine-gear-2026-first-look/">Newsshooter</a>)</li>
-      <li>Kinefinity officially presented the Vista personal cinema camera at Cine Gear — a compact full-frame 6K body targeting documentary and solo-crew shooters who want large-format image quality without the bulk of traditional cinema rigs. (<a href="https://www.newsshooter.com/2026/04/20/kinefinity-vista-personal-cinema-camera-first-look-at-nab-2026/">Newsshooter</a>)</li>
-      <li>Sony's Cinema Line FX6 firmware V6.0 unified the shooting experience with the VENICE via the "Big6" quick-access interface (FPS, ISO, shutter, iris, ND, look, and white balance in a single view), added Blackmagic RAW recording via HDMI output, and improved autofocus at 29.97/25/24/23.98 fps — meaningfully tightening the gap between the FX6 and Sony's flagship CineAlta bodies. (<a href="https://www.xdcam-user.com/alisters-blog/">Alister Chapman / XDCAM-USER</a>, <a href="https://ymcinema.com/2026/03/19/sony-fx6-firmware-600-big6-venice-style-ui/">Y.M.Cinema</a>)</li>
+      <li>Sony announced the Alpha 7R VI with a 66.8MP back-illuminated fully-stacked sensor, 8K 30p, 4K 120p in full-frame, and a new sensor-level Dual Gain mode — shipping in June 2026 at $4,499 body only. A high-resolution E-mount hybrid that deepens the ecosystem for FX6 users who want a secondary stills/video body. (<a href="https://www.cined.com/sony-alpha-7r-vi-announced-66-8mp-stacked-sensor-8k-30p-4k-120p-and-sensor-level-dual-gain/">CineD</a>)</li>
+      <li>Blackmagic Design’s Camera 10.2 firmware update brings phase detect autofocus to the PYXIS 6K as a public feature and adds Blackmagic Cloud stream routing — a substantial free upgrade that addresses two of the most-requested gaps in the PYXIS workflow. (<a href="https://www.cined.com/blackmagic-camera-10-2-update-released-pyxis-6k-gains-phase-detect-autofocus-and-cloud-stream-routing/">CineD</a>)</li>
+      <li>Kinefinity confirmed the VISTA at $2,499 body only — a palm-sized full-frame 6K open-gate cinema camera with a built-in 220GB SSD and a 610g chassis. At that price, a compelling compact B-camera for E-mount documentary and travel shooters. (<a href="https://www.cined.com/kinefinity-vista-confirmed-at-2499-full-frame-6k-open-gate-220gb-built-in-ssd-610g-body/">CineD</a>)</li>
+      <li>Canon unveiled the EOS R6 V: 32.5MP full-frame, 7K RAW video, open-gate, IBIS, active cooling, and no EVF — shipping late June 2026 at $2,499 body only. A video-forward run-and-gun hybrid positioned against Sony’s FX30 / A7-series tier. (<a href="https://www.cined.com/canon-eos-r6-v-unveiled-7k-full-frame-video-hybrid-with-ibis-active-cooling-and-no-evf/">CineD</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- 🔋 ELECTRIC VEHICLES -->
+  <!-- ELECTRIC VEHICLES -->
   <section class="section">
-    <div class="section-label">🔋 Electric Vehicles</div>
+    <div class="section-header">&#128267; Electric Vehicles</div>
     <ul>
-      <li>Amazon's global EV delivery fleet has surpassed 50,000 vehicles — primarily Rivian-built vans in North America, with nearly 5,000 Mercedes-Benz vans now deployed across Austria, France, Germany, Italy, and the UK. The company has pledged 100,000 electric delivery vehicles by 2030; Rivian's next-gen EDV variants will add AWD and 30% more range for longer routes and colder climates. (<a href="https://insideevs.com/news/797914/amazon-ev-delivery-fleet-2026-update/">InsideEVs</a>, <a href="https://electrek.co/2026/02/18/amazon-grew-its-rivian-electric-delivery-van-fleet-by-50-in-2025/">Electrek</a>)</li>
-      <li>BloombergNEF's Electric Vehicle Outlook 2026 projects 27% of all cars sold globally this year will be electric. Commercial electric van registrations are forecast to jump 50% to roughly 45,000 units as one-tonne payload capacity and 200+ mile real-world ranges become the standard. (general EV news) (<a href="https://about.bnef.com/insights/clean-transport/bloombergnefs-electric-vehicle-outlook-2026-global-ev-sales-set-for-another-record-breaking-year-but-growth-in-some-major-markets-slows/">BloombergNEF</a>)</li>
-      <li>Mercedes-Benz is bringing a new all-electric luxury limousine van to market in 2026, built on the dedicated 800-volt VAN.EA platform — the first purpose-engineered EV architecture for the Mercedes van lineup, designed for both cargo and premium passenger configurations. (<a href="https://insideevs.com/features/783999/every-new-electric-car-ev-2026/">InsideEVs</a>)</li>
+      <li>Amazon has crossed 50,000 electric delivery vans in its global fleet — the majority Rivian, with thousands of Mercedes-Benz commercial EVs — on its way to a stated goal of 100,000 EV delivery vehicles by 2030. The milestone makes Amazon one of the largest commercial EV fleet operators in the world and continues to validate the Rivian commercial van program. (<a href="https://insideevs.com/news/797914/amazon-ev-delivery-fleet-2026-update/">InsideEVs</a>)</li>
+      <li>BloombergNEF’s Electric Vehicle Outlook 2026 projects more than 23 million passenger EVs sold globally this year — 27% of all new car sales, up from roughly 9% five years ago — and forecasts over half of all new passenger vehicles sold globally will be electric by 2035. Electric van sales are projected to hit 34% of global van segment sales by 2030. (<a href="https://about.bnef.com/insights/clean-transport/bloombergnefs-electric-vehicle-outlook-2026-global-ev-sales-set-for-another-record-breaking-year-but-growth-in-some-major-markets-slows/">BloombergNEF</a>)</li>
+      <li>The commercial electric van segment is gaining real depth in 2026: the Ram ProMaster EV and Kia PV5 are arriving to join the Ford E-Transit, which is gaining new configurations. A current buyer’s guide from Recharged now lists more than a dozen competitive electric van models available or imminently arriving for U.S. fleet operators. (<a href="https://recharged.com/articles/best-electric-commercial-van-2026">Recharged</a>)</li>
     </ul>
   </section>
 
   <hr class="section-rule">
 
-  <!-- 🧬 MITO RESEARCH -->
+  <!-- MITO RESEARCH -->
   <section class="section">
-    <div class="section-label">🧬 Mito Research</div>
+    <div class="section-header">&#129516; Mito Research</div>
     <ul>
-      <li>A systematic review and meta-analysis of MELAS published in <em>Orphanet Journal of Rare Diseases</em> (June 10, 2026) pooled 988 patients across 13 studies, confirming m.3243A&gt;G prevalence at 78%. Top presentations: stroke-like episodes (99%), seizures (89%), elevated lactate (81%), temporal lobe involvement (87%). Pathway analysis identified mitophagy/autophagy, ROS generation, and energy metabolism as the core disease mechanisms — with L-arginine, PI3K-AKT-mTOR signaling, and the electron transport chain as the most promising therapeutic targets — and proposes a framework for multi-targeted therapy. (Based on articles retrieved from PubMed / <a href="https://doi.org/10.1186/s13023-026-04448-6">DOI 10.1186/s13023-026-04448-6</a>)</li>
-      <li>A June 18, 2026 review in <em>Nature Reviews Cardiology</em> — co-authored by Douglas C. Wallace at Children's Hospital of Philadelphia — synthesizes the full molecular and clinical landscape of mitochondrial cardiomyopathy, including the complexities of heteroplasmy, maternal mtDNA inheritance, and tissue-specific variant load. Emerging treatments under active investigation: metabolic supplementation, AAV-based gene therapy, and genome editing. The mechanisms and therapeutic directions are directly relevant to MELAS and m.3243A&gt;G carriers. (PubMed / <a href="https://doi.org/10.1038/s41569-026-01301-y">DOI 10.1038/s41569-026-01301-y</a>)</li>
-      <li>A June 18, 2026 case commentary in <em>Revista Española de Enfermedades Digestivas</em> discusses chronic intestinal pseudo-obstruction (CIPO) as a severe complication in a patient with m.3243A&gt;G MELAS syndrome — one in which colostomy, prokinetics, jejunal nutrition, and mitochondrial supplementation all failed to halt progression to multiple organ failure. A clinical reminder of the systemic severity of this mutation and the urgent need for targeted therapies. (PubMed / <a href="https://doi.org/10.17235/reed.2026.12026/2026">DOI 10.17235/reed.2026.12026/2026</a>)</li>
+      <li>A commentary published June 18 in <em>Revista Española de Enfermedades Digestivas</em> by neurologist Josef Finsterer specifically addresses the m.3243A&gt;G variant in MT-TL1 — the exact mutation underlying Emi’s MELAS — in the context of a patient with MELAS who developed chronic intestinal pseudo-obstruction (CIPO). The paper identifies gaps in current mitochondrial therapy protocols and argues for better-defined intervention strategies when CIPO complicates MELAS. (PubMed · <a href="https://doi.org/10.17235/reed.2026.12026/2026">DOI 10.17235/reed.2026.12026/2026</a>)</li>
+      <li>A major review published June 18 in <em>Nature Reviews Cardiology</em> synthesizes the full molecular and clinical landscape of mitochondrial cardiomyopathy, with particular attention to mtDNA heteroplasmy, maternal inheritance patterns, and emerging treatment strategies — metabolic supplementation, gene therapy, and genome editing. Co-authored by Douglas C. Wallace at Children’s Hospital of Philadelphia (Center for Mitochondrial and Epigenomic Medicine), one of the most cited researchers in the field. (PubMed · <a href="https://doi.org/10.1038/s41569-026-01301-y">DOI 10.1038/s41569-026-01301-y</a>)</li>
     </ul>
   </section>
 
   <!-- CLOSING QUOTE -->
   <div class="closing-quote">
     <blockquote>
-      "We must learn to regard people less in the light of what they do or omit to do,
-      and more in the light of what they suffer."
+      “People with dementia are held in the memory of God even when they can no longer remember themselves.”
     </blockquote>
-    <cite>— Dietrich Bonhoeffer, <em>Letters and Papers from Prison</em></cite>
+    <cite>— John Swinton, <em>Dementia: Living in the Memories of God</em></cite>
   </div>
 
 </main>
 
-<footer>
-  Morning Brief &middot; Saturday, June 20, 2026 &middot; Sources are primary news outlets
+<footer class="footer">
+  Morning Brief &nbsp;&middot;&nbsp; Friday, June 26, 2026 &nbsp;&middot;&nbsp; Sources are primary news outlets
 </footer>
 
 </body>
