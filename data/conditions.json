@@ -1,0 +1,110 @@
+{
+  "fetched_at_utc": "2026-07-14T02:20:20Z",
+  "location": {
+    "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
+    "surf": "Mission Beach / Pacific Beach, San Diego"
+  },
+  "weather": {
+    "updated": "2026-07-13T18:26:43+00:00",
+    "periods": [
+      {
+        "name": "Tonight",
+        "temperature": 67,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "W",
+        "shortForecast": "Partly Cloudy",
+        "detailedForecast": "Partly cloudy, with a low around 67. West wind 0 to 5 mph.",
+        "precipChancePct": 2
+      },
+      {
+        "name": "Tuesday",
+        "temperature": 86,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "NW",
+        "shortForecast": "Mostly Sunny",
+        "detailedForecast": "Mostly sunny, with a high near 86. Northwest wind 0 to 10 mph, with gusts as high as 20 mph.",
+        "precipChancePct": 1
+      },
+      {
+        "name": "Tuesday Night",
+        "temperature": 68,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "W",
+        "shortForecast": "Partly Cloudy",
+        "detailedForecast": "Partly cloudy, with a low around 68. West wind 0 to 5 mph.",
+        "precipChancePct": 0
+      },
+      {
+        "name": "Wednesday",
+        "temperature": 92,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "SW",
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 92. Southwest wind 0 to 10 mph.",
+        "precipChancePct": 0
+      }
+    ]
+  },
+  "buoy_46258_mission_bay": {
+    "observed_utc": "2026-07-14T01:26Z",
+    "waveHeightFt": 3.0,
+    "dominantPeriodS": 13,
+    "avgPeriodS": 7.6,
+    "meanWaveDirDeg": 190,
+    "waterTempF": 70.3
+  },
+  "buoy_46225_torrey_pines": {
+    "observed_utc": "2026-07-14T01:56Z",
+    "waveHeightFt": 2.6,
+    "dominantPeriodS": 13,
+    "avgPeriodS": 7.8,
+    "meanWaveDirDeg": 202,
+    "waterTempF": 72.1
+  },
+  "tides_san_diego_9410170": [
+    {
+      "time_pt": "2026-07-13 03:34",
+      "type": "Low",
+      "heightFt": -1.554
+    },
+    {
+      "time_pt": "2026-07-13 09:59",
+      "type": "High",
+      "heightFt": 4.196
+    },
+    {
+      "time_pt": "2026-07-13 14:40",
+      "type": "Low",
+      "heightFt": 2.128
+    },
+    {
+      "time_pt": "2026-07-13 20:59",
+      "type": "High",
+      "heightFt": 7.553
+    },
+    {
+      "time_pt": "2026-07-14 04:17",
+      "type": "Low",
+      "heightFt": -1.692
+    },
+    {
+      "time_pt": "2026-07-14 10:40",
+      "type": "High",
+      "heightFt": 4.42
+    },
+    {
+      "time_pt": "2026-07-14 15:32",
+      "type": "Low",
+      "heightFt": 1.92
+    },
+    {
+      "time_pt": "2026-07-14 21:47",
+      "type": "High",
+      "heightFt": 7.511
+    }
+  ]
+}
