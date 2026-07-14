@@ -1,0 +1,89 @@
+name: Fetch weather & surf conditions
+
+on:
+  schedule:
+    # 12:15 & 13:00 UTC = 5:15 & 6:00 AM PDT — fresh data just before the morning brief runs
+    - cron: '15 12 * * *'
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch NWS, NDBC and NOAA tide data
+        run: |
+          set -uo pipefail
+          UA="morning-brief-routine (github.com/${GITHUB_REPOSITORY}; automated daily brief)"
+          mkdir -p data tmp
+
+          fail_note() { echo "\"$1\": null" ; }
+
+          # --- NWS point forecast for La Mesa, CA (32.7678, -117.0231) ---
+          WEATHER=null
+          if curl -fsS -A "$UA" -m 30 "https://api.weather.gov/points/32.7678,-117.0231" -o tmp/points.json; then
+            FORECAST_URL=$(jq -r '.properties.forecast' tmp/points.json)
+            if curl -fsS -A "$UA" -m 30 "$FORECAST_URL" -o tmp/forecast.json; then
+              WEATHER=$(jq '{updated: .properties.updateTime, periods: [.properties.periods[:4][] | {name, temperature, temperatureUnit, windSpeed, windDirection, shortForecast, detailedForecast, precipChancePct: .probabilityOfPrecipitation.value}]}' tmp/forecast.json)
+            fi
+          fi
+
+          # --- NDBC buoys: 46258 (Mission Bay West), 46225 (Torrey Pines) ---
+          # realtime2 format, metric units; convert WVHT m->ft, WTMP C->F
+          fetch_buoy() {
+            local id="$1"
+            if curl -fsS -A "$UA" -m 30 "https://www.ndbc.noaa.gov/data/realtime2/${id}.txt" -o "tmp/${id}.txt"; then
+              awk 'NR==3 {
+                wvht=($9=="MM")?"null":sprintf("%.1f",$9*3.28084);
+                dpd=($10=="MM")?"null":$10;
+                apd=($11=="MM")?"null":$11;
+                mwd=($12=="MM")?"null":$12;
+                wtmp=($15=="MM")?"null":sprintf("%.1f",$15*1.8+32);
+                printf "{\"observed_utc\":\"%s-%s-%sT%s:%sZ\",\"waveHeightFt\":%s,\"dominantPeriodS\":%s,\"avgPeriodS\":%s,\"meanWaveDirDeg\":%s,\"waterTempF\":%s}", $1,$2,$3,$4,$5,wvht,dpd,apd,mwd,wtmp
+              }' "tmp/${id}.txt"
+            else
+              echo null
+            fi
+          }
+          BUOY_46258=$(fetch_buoy 46258)
+          BUOY_46225=$(fetch_buoy 46225)
+
+          # --- NOAA tide predictions, San Diego station 9410170, today + tomorrow (Pacific) ---
+          TIDES=null
+          BEGIN=$(TZ=America/Los_Angeles date +%Y%m%d)
+          END=$(TZ=America/Los_Angeles date -d "+1 day" +%Y%m%d)
+          if curl -fsS -A "$UA" -m 30 "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&datum=MLLW&station=9410170&time_zone=lst_ldt&units=english&interval=hilo&format=json&begin_date=${BEGIN}&end_date=${END}" -o tmp/tides.json; then
+            TIDES=$(jq '[.predictions[] | {time_pt: .t, type: (if .type=="H" then "High" else "Low" end), heightFt: (.v|tonumber)}]' tmp/tides.json)
+          fi
+
+          jq -n \
+            --argjson weather "${WEATHER:-null}" \
+            --argjson buoy46258 "${BUOY_46258:-null}" \
+            --argjson buoy46225 "${BUOY_46225:-null}" \
+            --argjson tides "${TIDES:-null}" \
+            '{fetched_at_utc: (now | todate),
+              location: {weather: "La Mesa, CA 91942 (NWS SGX point forecast)", surf: "Mission Beach / Pacific Beach, San Diego"},
+              weather: $weather,
+              buoy_46258_mission_bay: $buoy46258,
+              buoy_46225_torrey_pines: $buoy46225,
+              tides_san_diego_9410170: $tides}' > data/conditions.json
+
+          cat data/conditions.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name "conditions-bot"
+          git config user.email "actions@github.com"
+          git add data/conditions.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update weather & surf conditions data"
+            git pull --rebase origin main
+            git push origin main
+          fi
