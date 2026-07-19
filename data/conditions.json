@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-07-19T13:09:00Z",
+  "fetched_at_utc": "2026-07-19T13:55:26Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -8,17 +8,7 @@
     "updated": "2026-07-19T07:03:33+00:00",
     "periods": [
       {
-        "name": "Overnight",
-        "temperature": 66,
-        "temperatureUnit": "F",
-        "windSpeed": "0 mph",
-        "windDirection": "",
-        "shortForecast": "Patchy Fog",
-        "detailedForecast": "Patchy fog. Mostly cloudy, with a low around 66. West wind around 0 mph.",
-        "precipChancePct": 2
-      },
-      {
-        "name": "Sunday",
+        "name": "Today",
         "temperature": 84,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
@@ -28,7 +18,7 @@
         "precipChancePct": 3
       },
       {
-        "name": "Sunday Night",
+        "name": "Tonight",
         "temperature": 65,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
@@ -46,23 +36,33 @@
         "shortForecast": "Patchy Fog then Mostly Sunny",
         "detailedForecast": "Patchy fog before 11am. Mostly sunny, with a high near 85. West wind 0 to 10 mph.",
         "precipChancePct": 2
+      },
+      {
+        "name": "Monday Night",
+        "temperature": 67,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "SW",
+        "shortForecast": "Patchy Fog",
+        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 67. Southwest wind 0 to 5 mph.",
+        "precipChancePct": 1
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-07-19T12:26Z",
-    "waveHeightFt": 3.9,
+    "observed_utc": "2026-07-19T13:26Z",
+    "waveHeightFt": 3.6,
     "dominantPeriodS": 13,
-    "avgPeriodS": 9.2,
-    "meanWaveDirDeg": 183,
+    "avgPeriodS": 8.7,
+    "meanWaveDirDeg": 178,
     "waterTempF": 71.1
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-07-19T12:26Z",
-    "waveHeightFt": 3.6,
+    "observed_utc": "2026-07-19T13:26Z",
+    "waveHeightFt": 3.9,
     "dominantPeriodS": 13,
-    "avgPeriodS": 9.5,
-    "meanWaveDirDeg": 185,
+    "avgPeriodS": 9.7,
+    "meanWaveDirDeg": 190,
     "waterTempF": 71.2
   },
   "tides_san_diego_9410170": [
