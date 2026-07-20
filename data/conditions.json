@@ -1,31 +1,21 @@
 {
-  "fetched_at_utc": "2026-07-19T14:20:40Z",
+  "fetched_at_utc": "2026-07-20T13:12:51Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-07-19T07:03:33+00:00",
+    "updated": "2026-07-20T07:47:49+00:00",
     "periods": [
       {
-        "name": "Today",
-        "temperature": 84,
+        "name": "Overnight",
+        "temperature": 66,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 10 mph",
-        "windDirection": "W",
-        "shortForecast": "Patchy Fog then Mostly Sunny",
-        "detailedForecast": "Patchy fog before 11am. Mostly sunny, with a high near 84. West wind 0 to 10 mph.",
-        "precipChancePct": 3
-      },
-      {
-        "name": "Tonight",
-        "temperature": 65,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "W",
-        "shortForecast": "Partly Cloudy then Patchy Fog",
-        "detailedForecast": "Patchy fog after 5am. Partly cloudy, with a low around 65. West wind 0 to 5 mph.",
-        "precipChancePct": 3
+        "windSpeed": "0 mph",
+        "windDirection": "",
+        "shortForecast": "Patchy Fog",
+        "detailedForecast": "Patchy fog. Mostly cloudy, with a low around 66. West wind around 0 mph.",
+        "precipChancePct": 0
       },
       {
         "name": "Monday",
@@ -43,49 +33,39 @@
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
         "windDirection": "SW",
-        "shortForecast": "Patchy Fog",
-        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 67. Southwest wind 0 to 5 mph.",
-        "precipChancePct": 1
+        "shortForecast": "Partly Cloudy then Patchy Fog",
+        "detailedForecast": "Patchy fog after 5am. Partly cloudy, with a low around 67. Southwest wind 0 to 5 mph.",
+        "precipChancePct": 2
+      },
+      {
+        "name": "Tuesday",
+        "temperature": 85,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "SW",
+        "shortForecast": "Patchy Fog then Sunny",
+        "detailedForecast": "Patchy fog before 8am. Sunny, with a high near 85. Southwest wind 0 to 10 mph.",
+        "precipChancePct": 0
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-07-19T13:56Z",
-    "waveHeightFt": 3.6,
-    "dominantPeriodS": 13,
-    "avgPeriodS": 8.7,
-    "meanWaveDirDeg": 174,
-    "waterTempF": 71.1
+    "observed_utc": "2026-07-20T12:56Z",
+    "waveHeightFt": 3.9,
+    "dominantPeriodS": 17,
+    "avgPeriodS": 9.3,
+    "meanWaveDirDeg": 206,
+    "waterTempF": 71.6
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-07-19T13:56Z",
-    "waveHeightFt": 3.6,
-    "dominantPeriodS": 13,
+    "observed_utc": "2026-07-20T12:56Z",
+    "waveHeightFt": 3.3,
+    "dominantPeriodS": 11,
     "avgPeriodS": 9.3,
-    "meanWaveDirDeg": 184,
-    "waterTempF": 71.2
+    "meanWaveDirDeg": 195,
+    "waterTempF": 73.0
   },
   "tides_san_diego_9410170": [
-    {
-      "time_pt": "2026-07-19 01:01",
-      "type": "High",
-      "heightFt": 4.959
-    },
-    {
-      "time_pt": "2026-07-19 07:31",
-      "type": "Low",
-      "heightFt": 0.604
-    },
-    {
-      "time_pt": "2026-07-19 14:13",
-      "type": "High",
-      "heightFt": 5.085
-    },
-    {
-      "time_pt": "2026-07-19 20:24",
-      "type": "Low",
-      "heightFt": 1.937
-    },
     {
       "time_pt": "2026-07-20 02:01",
       "type": "High",
@@ -105,6 +85,26 @@
       "time_pt": "2026-07-20 21:54",
       "type": "Low",
       "heightFt": 1.844
+    },
+    {
+      "time_pt": "2026-07-21 03:23",
+      "type": "High",
+      "heightFt": 3.333
+    },
+    {
+      "time_pt": "2026-07-21 08:44",
+      "type": "Low",
+      "heightFt": 1.999
+    },
+    {
+      "time_pt": "2026-07-21 15:57",
+      "type": "High",
+      "heightFt": 5.155
+    },
+    {
+      "time_pt": "2026-07-21 23:34",
+      "type": "Low",
+      "heightFt": 1.488
     }
   ]
 }
