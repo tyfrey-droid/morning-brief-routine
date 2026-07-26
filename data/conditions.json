@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-07-26T13:58:40Z",
+  "fetched_at_utc": "2026-07-26T14:24:24Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -58,11 +58,11 @@
     "waterTempF": 72.3
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-07-26T13:26Z",
-    "waveHeightFt": 3.9,
+    "observed_utc": "2026-07-26T13:56Z",
+    "waveHeightFt": 3.6,
     "dominantPeriodS": 20,
-    "avgPeriodS": 9.5,
-    "meanWaveDirDeg": 211,
+    "avgPeriodS": 8.8,
+    "meanWaveDirDeg": 215,
     "waterTempF": 72.7
   },
   "tides_san_diego_9410170": [
