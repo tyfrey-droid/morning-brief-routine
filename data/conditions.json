@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-07-27T15:15:45Z",
+  "fetched_at_utc": "2026-07-27T15:37:26Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -12,9 +12,9 @@
         "temperature": 87,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
-        "windDirection": "SW",
+        "windDirection": "W",
         "shortForecast": "Mostly Sunny",
-        "detailedForecast": "Mostly sunny, with a high near 87. Southwest wind 0 to 10 mph.",
+        "detailedForecast": "Mostly sunny, with a high near 87. West wind 0 to 10 mph.",
         "precipChancePct": 1
       },
       {
