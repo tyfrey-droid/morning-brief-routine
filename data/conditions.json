@@ -1,91 +1,71 @@
 {
-  "fetched_at_utc": "2026-08-01T14:22:56Z",
+  "fetched_at_utc": "2026-08-02T13:10:39Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-08-01T08:18:29+00:00",
+    "updated": "2026-08-02T07:51:30+00:00",
     "periods": [
       {
         "name": "Today",
-        "temperature": 88,
+        "temperature": 86,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
         "windDirection": "W",
         "shortForecast": "Patchy Fog then Sunny",
-        "detailedForecast": "Patchy fog before 8am. Sunny, with a high near 88. West wind 0 to 10 mph.",
-        "precipChancePct": 0
+        "detailedForecast": "Patchy fog before 11am. Sunny, with a high near 86. West wind 0 to 10 mph.",
+        "precipChancePct": 2
       },
       {
         "name": "Tonight",
         "temperature": 68,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
-        "windDirection": "SW",
-        "shortForecast": "Partly Cloudy then Patchy Fog",
-        "detailedForecast": "Patchy fog after 2am. Partly cloudy, with a low around 68. Southwest wind 0 to 5 mph.",
-        "precipChancePct": 0
+        "windDirection": "W",
+        "shortForecast": "Patchy Fog",
+        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 68. West wind 0 to 5 mph.",
+        "precipChancePct": 2
       },
       {
-        "name": "Sunday",
-        "temperature": 89,
+        "name": "Monday",
+        "temperature": 86,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
         "windDirection": "W",
-        "shortForecast": "Patchy Fog then Sunny",
-        "detailedForecast": "Patchy fog before 8am. Sunny, with a high near 89. West wind 0 to 10 mph.",
+        "shortForecast": "Patchy Fog then Mostly Sunny",
+        "detailedForecast": "Patchy fog before 11am. Mostly sunny, with a high near 86. West wind 0 to 10 mph.",
         "precipChancePct": 1
       },
       {
-        "name": "Sunday Night",
-        "temperature": 68,
+        "name": "Monday Night",
+        "temperature": 67,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
         "windDirection": "W",
         "shortForecast": "Patchy Fog",
-        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 68. West wind 0 to 5 mph.",
+        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 67. West wind 0 to 5 mph.",
         "precipChancePct": 0
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-08-01T13:56Z",
+    "observed_utc": "2026-08-02T12:26Z",
     "waveHeightFt": 3.6,
-    "dominantPeriodS": 10,
-    "avgPeriodS": 8.0,
-    "meanWaveDirDeg": 198,
-    "waterTempF": 73.6
+    "dominantPeriodS": 13,
+    "avgPeriodS": 7.2,
+    "meanWaveDirDeg": 197,
+    "waterTempF": 73.8
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-08-01T13:56Z",
+    "observed_utc": "2026-08-02T12:26Z",
     "waveHeightFt": 3.3,
-    "dominantPeriodS": 11,
-    "avgPeriodS": 8.2,
-    "meanWaveDirDeg": 198,
-    "waterTempF": 74.3
+    "dominantPeriodS": 13,
+    "avgPeriodS": 7.5,
+    "meanWaveDirDeg": 211,
+    "waterTempF": 76.3
   },
   "tides_san_diego_9410170": [
-    {
-      "time_pt": "2026-08-01 05:40",
-      "type": "Low",
-      "heightFt": -0.037
-    },
-    {
-      "time_pt": "2026-08-01 12:01",
-      "type": "High",
-      "heightFt": 4.761
-    },
-    {
-      "time_pt": "2026-08-01 17:28",
-      "type": "Low",
-      "heightFt": 1.922
-    },
-    {
-      "time_pt": "2026-08-01 23:22",
-      "type": "High",
-      "heightFt": 5.508
-    },
     {
       "time_pt": "2026-08-02 06:05",
       "type": "Low",
@@ -100,6 +80,26 @@
       "time_pt": "2026-08-02 18:17",
       "type": "Low",
       "heightFt": 1.892
+    },
+    {
+      "time_pt": "2026-08-03 00:03",
+      "type": "High",
+      "heightFt": 4.882
+    },
+    {
+      "time_pt": "2026-08-03 06:30",
+      "type": "Low",
+      "heightFt": 0.838
+    },
+    {
+      "time_pt": "2026-08-03 13:05",
+      "type": "High",
+      "heightFt": 5.114
+    },
+    {
+      "time_pt": "2026-08-03 19:17",
+      "type": "Low",
+      "heightFt": 1.858
     }
   ]
 }
