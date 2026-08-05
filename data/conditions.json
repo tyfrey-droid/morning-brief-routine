@@ -1,31 +1,21 @@
 {
-  "fetched_at_utc": "2026-08-04T15:16:42Z",
+  "fetched_at_utc": "2026-08-05T13:26:56Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-08-04T10:01:44+00:00",
+    "updated": "2026-08-05T07:46:50+00:00",
     "periods": [
       {
-        "name": "Today",
-        "temperature": 83,
+        "name": "Overnight",
+        "temperature": 67,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 10 mph",
-        "windDirection": "SW",
-        "shortForecast": "Patchy Fog then Mostly Sunny",
-        "detailedForecast": "Patchy fog before 11am. Mostly sunny, with a high near 83. Southwest wind 0 to 10 mph.",
-        "precipChancePct": 1
-      },
-      {
-        "name": "Tonight",
-        "temperature": 66,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "W",
+        "windSpeed": "0 mph",
+        "windDirection": "",
         "shortForecast": "Patchy Fog",
-        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 66. West wind 0 to 5 mph.",
-        "precipChancePct": 1
+        "detailedForecast": "Patchy fog. Mostly cloudy, with a low around 67. Northwest wind around 0 mph.",
+        "precipChancePct": 0
       },
       {
         "name": "Wednesday",
@@ -39,53 +29,43 @@
       },
       {
         "name": "Wednesday Night",
-        "temperature": 67,
+        "temperature": 66,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
-        "windDirection": "SW",
+        "windDirection": "NW",
         "shortForecast": "Patchy Fog",
-        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 67. Southwest wind 0 to 5 mph.",
-        "precipChancePct": 0
+        "detailedForecast": "Patchy fog after 11pm. Partly cloudy, with a low around 66. Northwest wind 0 to 5 mph.",
+        "precipChancePct": 1
+      },
+      {
+        "name": "Thursday",
+        "temperature": 84,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "W",
+        "shortForecast": "Patchy Fog then Mostly Sunny",
+        "detailedForecast": "Patchy fog before 11am. Mostly sunny, with a high near 84. West wind 0 to 10 mph.",
+        "precipChancePct": 2
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-08-04T14:56Z",
+    "observed_utc": "2026-08-05T10:26Z",
     "waveHeightFt": 2.6,
-    "dominantPeriodS": 14,
-    "avgPeriodS": 6.5,
-    "meanWaveDirDeg": 197,
-    "waterTempF": 74.5
+    "dominantPeriodS": 15,
+    "avgPeriodS": 6.8,
+    "meanWaveDirDeg": 212,
+    "waterTempF": 74.3
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-08-04T14:56Z",
+    "observed_utc": "2026-08-05T10:26Z",
     "waveHeightFt": 2.6,
     "dominantPeriodS": 13,
-    "avgPeriodS": 7.2,
-    "meanWaveDirDeg": 201,
-    "waterTempF": 74.8
+    "avgPeriodS": 7.7,
+    "meanWaveDirDeg": 225,
+    "waterTempF": 74.7
   },
   "tides_san_diego_9410170": [
-    {
-      "time_pt": "2026-08-04 00:55",
-      "type": "High",
-      "heightFt": 4.144
-    },
-    {
-      "time_pt": "2026-08-04 06:56",
-      "type": "Low",
-      "heightFt": 1.387
-    },
-    {
-      "time_pt": "2026-08-04 13:46",
-      "type": "High",
-      "heightFt": 5.277
-    },
-    {
-      "time_pt": "2026-08-04 20:36",
-      "type": "Low",
-      "heightFt": 1.754
-    },
     {
       "time_pt": "2026-08-05 02:10",
       "type": "High",
@@ -105,6 +85,26 @@
       "time_pt": "2026-08-05 22:19",
       "type": "Low",
       "heightFt": 1.414
+    },
+    {
+      "time_pt": "2026-08-06 04:18",
+      "type": "High",
+      "heightFt": 2.945
+    },
+    {
+      "time_pt": "2026-08-06 08:06",
+      "type": "Low",
+      "heightFt": 2.496
+    },
+    {
+      "time_pt": "2026-08-06 15:48",
+      "type": "High",
+      "heightFt": 5.634
+    },
+    {
+      "time_pt": "2026-08-06 23:53",
+      "type": "Low",
+      "heightFt": 0.773
     }
   ]
 }
