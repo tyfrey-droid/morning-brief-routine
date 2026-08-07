@@ -55,19 +55,42 @@ Changed 2026-08-06 by reader request. The brief is a Mon/Wed/Fri publication,
 not a daily one — a Pour-Over-style longer cadence so each issue carries
 stories with staying power rather than 24-hour-cycle churn.
 
-1. GATE FIRST. At the very start of every run, check the current Pacific-time
-   day of week. Publish ONLY on Monday, Wednesday, or Friday. On any other day,
+1. GATE FIRST — unless a human asked for this run (see "Manual override"
+   below). At the very start of every run, check the current Pacific-time day
+   of week. On Monday, Wednesday or Friday, publish normally. On any other day,
    do NOT gather, write, commit, or push anything — log "Off-cadence day
-   (<weekday>) — no brief today" and stop immediately. (The external scheduler
-   may still fire daily; this gate is the safety net. Keep the off-day path
-   cheap — no searches, no connectors.)
+   (<weekday>) — no brief today" and stop immediately. Keep the off-day path
+   cheap — no searches, no connectors.
 2. LOOKBACK = since the previous brief. Determine the date of the most recent
    archive/ file and gather news published since then (typically ~48–72h:
    Fri→Mon spans the weekend). Prefer developments that still matter now over
    things that merely happened; when a story ran in the last brief, lead only
    with what is genuinely new since.
 3. Weather/Surf are still point-in-time for publish day — use the freshest
-   data/conditions.json as before.
+   data/conditions.json as before. On an off-day manual run the scheduled
+   fetch will not have fired, so expect stale data: trigger
+   `fetch-conditions.yml` via `actions_run_trigger` (it keeps
+   `workflow_dispatch` for exactly this), wait ~60–90 s, then `git pull`.
+
+### Manual override — an off-day run a human asked for DOES publish
+
+The gate exists to stop an *unattended* scheduler, never to refuse the reader.
+Publish on an off-day — running the full normal pipeline — in either case:
+
+- **Explicit in-session request.** A human asks for the brief in conversation
+  ("run it now", "publish today"). Always honor this; do not ask twice.
+- **"Run now" from the routines pane.** This arrives as the stored prompt and
+  can look identical to an automated firing, so use the clock to tell them
+  apart. The scheduled slot is ~6 AM PT. An off-day firing OUTSIDE roughly
+  5:00–7:30 AM PT is a human pressing the button → publish. An off-day firing
+  INSIDE that window is likely a stray automated run → apply the gate and stop.
+  (The external trigger is itself set to Mon/Wed/Fri, so off-day firings should
+  be rare and are almost always manual; the window check is only
+  defense-in-depth in case a daily schedule ever returns.)
+
+When publishing off-cadence: note it in the final report, use the normal
+"since the previous brief" lookback, and write index.html + the dated archive
+as usual. That issue then counts as "the previous brief" for the next run.
 
 ## Story counts: small by default, with headroom
 
