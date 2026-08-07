@@ -16,8 +16,9 @@ live data to `data/conditions.json`:
 - NOAA tide predictions for San Diego station 9410170 (today + tomorrow,
   Pacific time, hi/lo)
 
-It runs on a schedule at 12:15 & 13:00 UTC (5:15 & 6:00 AM PT) before the
-morning brief. Each run:
+It runs on a schedule at 12:15 & 13:00 UTC (5:15 & 6:00 AM PT) on the brief's
+publish days (Mon/Wed/Fri) before the morning brief. On any run day, if the
+data is stale, trigger a fresh fetch on demand (step 2 below). Each run:
 
 1. `git pull origin main`, read `data/conditions.json`, check `fetched_at_utc`.
 2. If it is older than ~2 hours, trigger a fresh run via the GitHub MCP tool
@@ -42,6 +43,65 @@ no wind. For wind, use the NWS forecast periods' windSpeed/windDirection.
   summary, links whose display name matches the linked domain.
 - Section order: World · US & Politics · Tech & AI · 🏀 Sports (NBA: Blazers
   first, Warriors second, league-wide; max 1–2 big non-NBA items) ·
-  San Diego · 🌺 Kauai (max 2) · Filmmaking Gear · Weather · Surf ·
-  One Good Thing · On This Day (exactly 1 item) · closing quote.
-- No Electric Vehicles section (removed 2026-07-13 by reader request).
+  San Diego · 🌺 Kauai (max 2) · Filmmaking Gear · Electric Vehicles (max 3) ·
+  🧬 Mito Research (omit entirely — no header — when nothing meets the strict
+  bar) · Weather · Surf · closing quote.
+- REMOVED sections — do NOT include (dropped 2026-08-06 by reader request):
+  ✨ One Good Thing and 📅 On This Day. The closing theologian quote stays.
+
+## Release cadence: Monday / Wednesday / Friday only
+
+Changed 2026-08-06 by reader request. The brief is a Mon/Wed/Fri publication,
+not a daily one — a Pour-Over-style longer cadence so each issue carries
+stories with staying power rather than 24-hour-cycle churn.
+
+1. GATE FIRST. At the very start of every run, check the current Pacific-time
+   day of week. Publish ONLY on Monday, Wednesday, or Friday. On any other day,
+   do NOT gather, write, commit, or push anything — log "Off-cadence day
+   (<weekday>) — no brief today" and stop immediately. (The external scheduler
+   may still fire daily; this gate is the safety net. Keep the off-day path
+   cheap — no searches, no connectors.)
+2. LOOKBACK = since the previous brief. Determine the date of the most recent
+   archive/ file and gather news published since then (typically ~48–72h:
+   Fri→Mon spans the weekend). Prefer developments that still matter now over
+   things that merely happened; when a story ran in the last brief, lead only
+   with what is genuinely new since.
+3. Weather/Surf are still point-in-time for publish day — use the freshest
+   data/conditions.json as before.
+
+## Story counts: small by default, with headroom
+
+- The goal is still a tight, high-signal brief — a handful of items, not a
+  firehose. Do not pad to fill space; an empty or 1-item section is fine.
+- But the longer cadence means real news accumulates. When genuinely
+  qualifying stories exist, allow headroom: World / US up to 5 (was 4),
+  Tech, Sports, San Diego, Gear up to ~8 each, EV up to 3, Kauai up to 2.
+  These are ceilings for busy stretches, not targets. Quality bar is
+  unchanged — every added item must independently clear it.
+
+## Reader feedback loop (self-improvement)
+
+The published brief carries a per-story feedback control (see the flag button
+in index.html). Clicking it opens a pre-filled GitHub issue labeled
+`brief-feedback` against tyfrey-droid/morning-brief-routine.
+
+At the START of each run (after the cadence gate, before selecting stories):
+- Read open issues via the GitHub MCP tools (search issues with label
+  `brief-feedback`, state open). Honor them:
+  - "already read" / "redundant" → exclude that story AND its underlying
+    development from this brief; treat like the anti-redundancy filter.
+  - "not relevant" → down-weight that topic/source going forward.
+  - "more like this" → up-weight that topic/source when it recurs.
+- After acting on a feedback issue, close it via the GitHub MCP tools with a
+  one-line comment noting how it was applied (so it isn't re-processed). Keep
+  comments minimal.
+
+## Self-evaluation (bounded — must not burn usage)
+
+Keep this cheap: no extra web searches, no subagents, no separate model calls.
+At the END of each successful publish, append a 3–5 line entry to
+`SELF-REVIEW.md` on main (create if missing) covering only: (a) which sections
+were thin/empty and why, (b) any story you were unsure cleared the bar,
+(c) one concrete tweak to try next run. Read the last ~3 entries at the start
+of a run to avoid repeating mistakes. This file is internal notes, never
+published to Pages. If time/tokens are short, skip it — it is best-effort.

@@ -233,6 +233,70 @@
 
   em { color: var(--muted); font-style: italic; }
 
+  /* Per-story feedback control */
+  .fb-wrap { display: inline; position: relative; white-space: nowrap; }
+  .fb-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1;
+    padding: 0.35rem;
+    margin-left: 0.15rem;
+    border-radius: 6px;
+    opacity: 0.5;
+    transition: opacity 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+    vertical-align: baseline;
+  }
+  .fb-btn:hover, .fb-btn:focus-visible, .fb-btn[aria-expanded="true"] {
+    opacity: 1;
+    color: var(--link);
+    outline: none;
+  }
+  .fb-menu {
+    position: absolute;
+    right: 0;
+    top: 1.8rem;
+    z-index: 20;
+    min-width: 12.5rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+    padding: 0.35rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .fb-menu.open { display: flex; }
+  .fb-menu a {
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.55rem 0.6rem;
+    border-radius: 7px;
+    white-space: normal;
+  }
+  .fb-menu a:hover, .fb-menu a:focus-visible {
+    background: var(--bg);
+    color: var(--link-hover);
+    outline: none;
+  }
+  .fb-menu .fb-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0.3rem 0.6rem 0.15rem;
+  }
+
   @media (min-width: 700px) {
     .content { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
     .masthead {
@@ -383,26 +447,6 @@
     <div class="data-note">NDBC buoys 46258 (Mission Bay) &amp; 46225 (Torrey Pines) observed ~5:56 AM PT today; tides NOAA station 9410170. Scripps buoys report waves/water temp only — wind from NWS. Live data — no readings invented.</div>
   </section>
 
-  <hr class="rule">
-
-  <!-- ONE GOOD THING -->
-  <section class="section">
-    <div class="section-header">✨ One Good Thing</div>
-    <ul>
-      <li><strong>A first liver transplant, a second chance</strong> — Surgeons at the University of Mississippi Medical Center performed the state's first liver transplant for hilar cholangiocarcinoma, a rare and aggressive bile-duct cancer, giving patient Ashley Castle a new liver — and a future — after a treatment path few hospitals offer. (<a href="https://umc.edu/news/News_Articles/2026/08/Liver-Transplant.html">UMMC</a>)</li>
-    </ul>
-  </section>
-
-  <hr class="rule">
-
-  <!-- ON THIS DAY -->
-  <section class="section">
-    <div class="section-header">📅 On This Day</div>
-    <ul>
-      <li><strong>1991 — The World Wide Web goes public</strong> — Tim Berners-Lee posted a short public summary of his "WorldWideWeb" project to an internet newsgroup, inviting anyone to try it — the moment the web quietly opened to the world beyond CERN.</li>
-    </ul>
-  </section>
-
 </main>
 
 <div class="content">
@@ -433,6 +477,103 @@
     apply(next);
     try { localStorage.setItem('brief-theme', next); } catch (e) {}
   });
+})();
+</script>
+
+<script>
+/* Per-story feedback → pre-filled GitHub issues (label: brief-feedback).
+   Lets the reader flag a story so the next brief can learn from it. */
+(function(){
+  var REPO = 'tyfrey-droid/morning-brief-routine';
+  var ISSUE = 'https://github.com/' + REPO + '/issues/new';
+  var OPTIONS = [
+    { key: 'already-read',  label: 'I already read this' },
+    { key: 'redundant',     label: 'Redundant — covered in a prior brief' },
+    { key: 'not-relevant',  label: 'Not relevant to me' },
+    { key: 'more-like-this',label: 'More stories like this' }
+  ];
+
+  var dateEl = document.querySelector('.masthead-left .date');
+  var briefDate = dateEl ? dateEl.textContent.trim() : '';
+  var openMenu = null;
+
+  function closeOpen(){
+    if (openMenu) {
+      openMenu.menu.classList.remove('open');
+      openMenu.btn.setAttribute('aria-expanded', 'false');
+      openMenu = null;
+    }
+  }
+
+  function issueUrl(opt, headline){
+    var title = '[brief-feedback] ' + opt.key + ': ' + headline;
+    var body =
+      'Story: ' + headline + '\n' +
+      'Brief: ' + briefDate + '\n' +
+      'Feedback: ' + opt.label + '\n\n' +
+      '_Optional notes:_\n';
+    return ISSUE + '?labels=' + encodeURIComponent('brief-feedback') +
+      '&title=' + encodeURIComponent(title) +
+      '&body=' + encodeURIComponent(body);
+  }
+
+  var bullets = document.querySelectorAll('main .section ul li');
+  bullets.forEach(function(li){
+    var strong = li.querySelector('strong');
+    if (!strong) return;
+    var headline = strong.textContent.trim();
+
+    var wrap = document.createElement('span');
+    wrap.className = 'fb-wrap';
+
+    var b = document.createElement('button');
+    b.className = 'fb-btn';
+    b.type = 'button';
+    b.textContent = '⚐';
+    b.setAttribute('aria-haspopup', 'true');
+    b.setAttribute('aria-expanded', 'false');
+    b.setAttribute('aria-label', 'Give feedback on: ' + headline);
+    b.title = 'Feedback on this story';
+
+    var menu = document.createElement('span');
+    menu.className = 'fb-menu';
+    menu.setAttribute('role', 'menu');
+
+    var lbl = document.createElement('span');
+    lbl.className = 'fb-label';
+    lbl.textContent = 'Feedback';
+    menu.appendChild(lbl);
+
+    OPTIONS.forEach(function(opt){
+      var a = document.createElement('a');
+      a.href = issueUrl(opt, headline);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.setAttribute('role', 'menuitem');
+      a.textContent = opt.label;
+      a.addEventListener('click', function(){ closeOpen(); });
+      menu.appendChild(a);
+    });
+
+    b.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('open');
+      closeOpen();
+      if (!isOpen) {
+        menu.classList.add('open');
+        b.setAttribute('aria-expanded', 'true');
+        openMenu = { menu: menu, btn: b };
+      }
+    });
+
+    wrap.appendChild(b);
+    wrap.appendChild(menu);
+    li.appendChild(document.createTextNode(' '));
+    li.appendChild(wrap);
+  });
+
+  document.addEventListener('click', closeOpen);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeOpen(); });
 })();
 </script>
 
