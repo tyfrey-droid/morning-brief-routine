@@ -25,3 +25,22 @@ Format per entry:
   consensus; caught it here. Tweak next run: in the World/US consensus sweep,
   explicitly check the Ukraine/Russia thread each cycle — it was crowded out by
   FIFA and Israel–Lebanon this morning.
+
+- **2026-08-11 (off-cadence Tue, manual "fix it" run)** — OUTAGE FIXED. Nothing
+  had published since Aug 6: the external trigger fires on UTC weekdays (~04:10
+  UTC Mon/Wed/Fri), landing ~9 PM PT the *evening before* each intended publish
+  day — always an off-cadence Pacific day — so the cadence gate stopped every
+  firing and no brief shipped for ~5 days while fetch-conditions.yml kept
+  refreshing data for briefs that never came. Added a UTC-skew guard to CLAUDE.md
+  so a gated firing on the eve of a publish day now publishes instead of dying
+  silently (with a same-day dedupe check). Real fix still pending: the owner must
+  reset the trigger to ~6 AM America/Los_Angeles. This issue: World ran a full 3
+  (Ukraine deep strikes, Netanyahu–Trump split, Hormuz terms), Sports a healthy 3
+  (Moda Center county vote, Warriors schedule, Don Nelson obit). Thin by honest
+  design: San Diego 1 (no 2nd item cleared the ≤14-day bar — pro/local sites
+  egress-blocked), Gear 1 (DJI Osmo Pocket 4P; pro-video anchors all blocked),
+  EV 1 (ID. Buzz). Mito omitted — PubMed 28-hit window, nothing cleared the
+  strict bar (closest: MTERF1 bioRxiv preprint on mtDNA *deletions*, not
+  m.3243A>G; and a Newcastle digital-cognition methodology paper). Tweak next
+  run: confirm firings have moved into the 5–7:30 AM PT window; if still skewed,
+  keep flagging in the report.

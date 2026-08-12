@@ -92,6 +92,30 @@ When publishing off-cadence: note it in the final report, use the normal
 "since the previous brief" lookback, and write index.html + the dated archive
 as usual. That issue then counts as "the previous brief" for the next run.
 
+### UTC-skew guard — a "gated" firing may BE the publish-day run (outage fix)
+
+Observed Aug 7–11, 2026: the external trigger was configured on UTC weekdays
+(Mon/Wed/Fri at ~04:10 UTC ≈ 6 AM UTC+2), so every firing arrived ~9 PM PT on
+Sunday/Tuesday/Thursday — an off-cadence Pacific day. The gate stopped each
+one and NO brief published for nearly a week, while `fetch-conditions.yml`
+(correctly on UTC cron) kept refreshing data for briefs that never came. The
+gate must never cause a silent total outage again:
+
+1. If an unattended firing lands on an off-cadence Pacific day but its **UTC
+   weekday is a publish day** (equivalently: it is the evening before a
+   publish day, roughly 4 PM PT–midnight), it is the publish-day trigger
+   arriving early, not a stray. Do NOT gate — run the full normal pipeline
+   and publish. Date the issue with the actual Pacific date and note the
+   early/off-slot publish in the report.
+2. Dedupe guard: if the newest archive/ file is from today or a brief was
+   published within ~12 hours, log "issue already published — skipping
+   duplicate firing" and stop.
+3. The real fix is the trigger's schedule: it must be ~6:00 AM
+   **America/Los_Angeles** Mon/Wed/Fri (= 13:00 UTC during PDT). Only the
+   account owner can change it in the routines pane. Until firings start
+   arriving in the 5:00–7:30 AM PT window, keep flagging the
+   misconfiguration in every final report.
+
 ## Story counts: small by default, with headroom
 
 - The goal is still a tight, high-signal brief — a handful of items, not a
