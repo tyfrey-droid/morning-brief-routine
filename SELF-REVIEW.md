@@ -44,3 +44,23 @@ Format per entry:
   m.3243A>G; and a Newcastle digital-cognition methodology paper). Tweak next
   run: confirm firings have moved into the 5–7:30 AM PT window; if still skewed,
   keep flagging in the report.
+
+- **2026-08-13 (Thu evening, UTC-skew guard fired — first automatic use)** — The
+  guard added on Aug 11 worked exactly as designed: firing landed 9:20 PM PT
+  Thursday (off-cadence Pacific day) but Friday UTC, i.e. the eve of a publish
+  day, so the gate was bypassed and the brief published instead of dying. Dated
+  with the actual Pacific date per CLAUDE.md; weather rows were framed
+  TONIGHT / FRIDAY / SATURDAY so a Thursday-dated, Friday-read issue stays
+  internally coherent — worth keeping as the pattern for early firings.
+  **The trigger is STILL misconfigured** (~04:10 UTC Mon/Wed/Fri); the owner
+  must move it to ~6:00 AM America/Los_Angeles. Counts: World 3, US 3, Tech 2,
+  Sports 2, San Diego 2, Kauaʻi 1, Gear 1, EV 1. Mito omitted again — PubMed
+  returned 316 hits in the window but nothing cleared the strict bar; the two
+  near-misses were a MELAS pulmonary-hypertension case report (excluded: case
+  report, no new mechanism) and a strong urinary-heteroplasmy screening paper in
+  Mol Genet Metab that would have qualified except it published Jun 26, outside
+  the 14-day window. Dropped a Padres wild-card bullet because the only MLB.com
+  article surfaced had no confirmable publish date. Tweak next run: pro-video
+  and local-news anchors are still egress-blocked, so gear/San Diego depend
+  entirely on search phrasing — lead those searches with a dated outlet query
+  ("newsshooter.com August 2026") which is what finally surfaced the one gear item.
