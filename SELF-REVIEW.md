@@ -64,3 +64,24 @@ Format per entry:
   and local-news anchors are still egress-blocked, so gear/San Diego depend
   entirely on search phrasing — lead those searches with a dated outlet query
   ("newsshooter.com August 2026") which is what finally surfaced the one gear item.
+
+- **2026-08-16 (Sun evening, UTC-skew guard fired — second automatic use)** — Guard
+  worked again: firing at 9:15 PM PT Sunday (off-cadence Pacific) but Monday UTC,
+  i.e. the eve of a publish day, so the gate was bypassed. Dated with the actual
+  Pacific date; weather rows framed TONIGHT / MONDAY / TUESDAY per the Aug 13
+  pattern. **Trigger is STILL misconfigured** (~04:10 UTC Mon/Wed/Fri) — owner must
+  move it to ~6:00 AM America/Los_Angeles. Counts: World 3, US 2, Tech 2, Sports 1
+  (+ an honest "NBA dead stretch" line), San Diego 2, Kauaʻi 2, Gear 1, EV 1, Mito 1.
+  Unsure calls: (a) included the lamotrigine/Stevens-Johnson case report in Mito —
+  the filter says exclude case reports, but it proposes a mechanism AND is a drug
+  safety signal in seizure management for mito patients, which the INCLUDE list
+  names explicitly; framed it hard as hypothesis-generating, N=1. (b) EV ran the
+  Lucid Gravity GT-S, a $127k three-row — family *format*, not family *price*; said
+  so in the bullet rather than pretending otherwise. Excluded despite consensus:
+  Hormuz Iran–Oman shipping-map deal (third consecutive brief; Araghchi conceded it
+  does not reopen the strait, so the new development was thin). Date-excluded: Ja
+  Morant→Blazers trade (Jun 29), Sony FX5 (Jul 22). Egress blocked newsshooter.com,
+  insideevs.com, macrumors.com, provideocoalition.com, espn.com this run — search
+  snippets carried the load. Tweak next run: NBA is dead until camps open in late
+  Sept, so plan on Padres/MLB carrying Sports for the next several issues rather
+  than re-running the "nothing new" line each time.
