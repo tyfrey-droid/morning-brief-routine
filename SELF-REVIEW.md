@@ -85,3 +85,33 @@ Format per entry:
   snippets carried the load. Tweak next run: NBA is dead until camps open in late
   Sept, so plan on Padres/MLB carrying Sports for the next several issues rather
   than re-running the "nothing new" line each time.
+
+- **2026-08-18 (Tue evening, UTC-skew guard fired — third automatic use)** — Guard
+  worked again: firing at 9:08 PM PT Tuesday (off-cadence Pacific) but Wednesday
+  UTC, i.e. the eve of a publish day, so the gate was bypassed. Dated with the
+  actual Pacific date; weather rows framed TONIGHT / WEDNESDAY / THURSDAY per the
+  Aug 13 pattern. **Trigger is STILL misconfigured** (~04:10 UTC Mon/Wed/Fri) —
+  owner must move it to ~6:00 AM America/Los_Angeles. Counts: World 3, US 2,
+  Tech 2, Sports 2 (+ NBA dead-stretch line), San Diego 3, Kauaʻi 1, Gear 1,
+  EV 1, Mito 1. Unsure calls: (a) Mito ran the Turku drug-safety cohort (Neurol
+  Sci, Aug 6) one brief after the Aug 16 lamotrigine case report — thematically
+  adjacent, but a distinct study with real cohort data and a named drug list, so
+  it clears "new safety data"; watch for a third drug-safety item in a row and
+  drop it if so. (b) Padres appeared in both Sports (sale, wild card) and San
+  Diego (ICE detains a coach) — three Padres bullets is a lot, but the $3.9B sale
+  and an ICE arrest are genuinely different stories. Excluded despite consensus:
+  Ukraine deep-strike drone attacks (third brief running, nothing new beyond the
+  pattern); Kushner–Hamas Cairo talks (ran Aug 16); Virginia State University
+  shooting (Aug 15, predates the lookback and had faded by Tuesday). Date-excluded:
+  Trump "master list of espionage targets" (underlying reporting traces to early
+  July); MELAS pulmonary-hypertension case report (already excluded Aug 13).
+  Egress blocked this run: reuters.com, apnews.com, bbc.com, pbs.org, npr.org,
+  democracynow.org, kpbs.org, thegardenisland.com, cined.com, newsshooter.com,
+  xdcam-user.com, thepourover.org — so no TPO cross-check was possible and Gear
+  again rested entirely on a search-surfaced PetaPixel item. WebSearch also now
+  rejects allowed_domains lists containing reuters/ap/bbc/verge/arstechnica —
+  don't waste calls on domain-filtered searches; use plain queries and filter the
+  returned URLs by hand. Tweak next run: the single most productive query shape
+  was "<outlet> news <exact date>" (e.g. "Padres news August 18 2026"), which is
+  what surfaced the KPBS ICE story and the whole San Diego section — lead with
+  that for local and niche sections instead of topic-only queries.
