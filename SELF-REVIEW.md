@@ -115,3 +115,29 @@ Format per entry:
   was "<outlet> news <exact date>" (e.g. "Padres news August 18 2026"), which is
   what surfaced the KPBS ICE story and the whole San Diego section — lead with
   that for local and niche sections instead of topic-only queries.
+
+- **2026-08-20 (Thu evening, UTC-skew guard fired — fourth automatic use)** — Firing at
+  9:09 PM PT Thursday (off-cadence Pacific) but Friday UTC, i.e. the eve of a publish
+  day, so the gate was bypassed and the issue dated with the actual Pacific date.
+  **Trigger is STILL misconfigured** (~04:10 UTC Mon/Wed/Fri) — owner must move it to
+  ~6:00 AM America/Los_Angeles; four consecutive off-slot publishes now. Counts:
+  World 3, US 2, Tech 3, Sports 2, San Diego 3, Kauaʻi 2, Gear 1, EV 1, Mito 0
+  (omitted). (a) Thin/empty: Gear ran a single item and it is a consumer pocket gimbal,
+  not FX6-adjacent — the only pro-video item in window was the FX5 delay, already run
+  Aug 18 with no new development, so I took the Insta360 launch and said plainly in the
+  bullet that it does not touch an FX6 rig. EV ran one item for the same reason: the
+  Rivian AWD/big-battery story traces to a February shareholder letter and the
+  Amazon-fleet update to ~Aug 5, both outside 14 days. Mito omitted — both PubMed hits
+  (Biomed Pharmacother 10.1016/j.biopha.2026.119699, Mol Neurobiol
+  10.1007/s12035-026-06008-2) are 2026-06-26 reviews, date-excluded, and the second
+  fails the review exception anyway. (b) Unsure call: the Darth Vader/Flock item is a
+  stunt, but it is the visible edge of a real surveillance-policy fight and both The
+  Hill and 404 Media covered it — kept it third in the section, not first. (c) Excluded
+  despite consensus: Lavrov's warning that UK-made drones make Britain a party to the
+  Ukraine war — the sourcing available to me was the paywalled Times original plus RT
+  (Russian state media) and aggregators, and Ukraine ran in the last two briefs.
+  Egress blocked this run: justsecurity.org, timesofsandiego.com, 9to5mac.com,
+  newsshooter.com, cined.com, 10news.com. Tweak next run: for Gear, search the product
+  category rather than the outlet ("cinema camera announced <date>", "Sony E-mount
+  <date>") — outlet-name queries kept returning site landing pages, while the one item
+  that surfaced came from a product-name query.
