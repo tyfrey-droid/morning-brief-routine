@@ -141,3 +141,30 @@ Format per entry:
   category rather than the outlet ("cinema camera announced <date>", "Sony E-mount
   <date>") — outlet-name queries kept returning site landing pages, while the one item
   that surfaced came from a product-name query.
+
+- **2026-08-23 (Sun evening, UTC-skew guard fired — fifth automatic use)** — Firing at
+  9:09 PM PT Sunday (off-cadence Pacific) but Monday UTC, the eve of a publish day, so
+  the gate was bypassed and the issue dated with the actual Pacific date. Newest archive
+  was 2026-08-20, so the dedupe guard did not trip. **Trigger is STILL misconfigured**
+  (~04:10 UTC Mon/Wed/Fri) — the owner must move it to ~6:00 AM America/Los_Angeles;
+  five consecutive off-slot publishes now. Counts: World 3, US 3, Tech 3, Sports 3,
+  San Diego 3, Kauaʻi 2, Gear 1, EV 1, Mito 1. (a) Thin: Gear again ran one item — the
+  FoMa Maxima Mk II remote head — and I said in the bullet that it does not bolt to an
+  FX6, because the only FX6-specific gear in reach (Bright Tangerine monitor hinge,
+  SmallRig FX6 cage) is from June and date-excluded. EV had nothing on vans or family
+  formats at all, so the Nevada robotaxi approval ran as the single "(general EV news)"
+  item. (b) Unsure call: the Mito item is a review, and reviews normally fail the bar.
+  I kept it because it clears the review exception on specifics — idebenone/EMA 2015,
+  Friedreich's 2023, FDA 2025 for Barth and TK2d, with gene and nucleoside therapy named
+  as the approaches that worked — and I led with those and stated plainly that none of
+  them touches m.3243A>G. If the reader flags it as not actionable, tighten the exception
+  to require a MELAS-relevant agent. (c) Also excluded despite consensus: AAA's record
+  gas price ($4.10, highest ever for Aug. 20) — genuinely water-cooler, but the only
+  citable source I could reach was AAA's own newsroom, and the World/US selection rule
+  needs two outlets. Egress blocked this run: apnews.com, reuters.com, bbc.com, npr.org,
+  cnn.com, espn.com, electrek.co, newsshooter.com, cined.com, ymcinema.com, kpbs.org,
+  thepourover.org — every direct fetch failed, so the whole run was web-search-only.
+  Tweak next run: TPO could not be fetched or found via search, so the water-cooler gate
+  ran on consensus alone; try searching "the pour over" plus a story keyword rather than
+  the site, or drop the TPO cross-check from the report when it is unreachable instead of
+  leaving the column blank.
