@@ -1,110 +1,69 @@
 {
-  "fetched_at_utc": "2026-08-26T04:11:53Z",
+  "fetched_at_utc": "2026-08-26T13:13:43Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-08-26T00:10:27+00:00",
+    "updated": "2026-08-26T10:21:34+00:00",
     "periods": [
       {
-        "name": "Tonight",
-        "temperature": 71,
+        "name": "Today",
+        "temperature": 96,
         "temperatureUnit": "F",
-        "windSpeed": "0 mph",
-        "windDirection": "",
-        "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 71. West wind around 0 mph.",
-        "precipChancePct": 1
-      },
-      {
-        "name": "Wednesday",
-        "temperature": 95,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
+        "windSpeed": "0 to 10 mph",
         "windDirection": "SW",
-        "shortForecast": "Mostly Sunny",
-        "detailedForecast": "Mostly sunny, with a high near 95. Southwest wind 0 to 5 mph.",
-        "precipChancePct": 0
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 96. Southwest wind 0 to 10 mph.",
+        "precipChancePct": 4
       },
       {
-        "name": "Wednesday Night",
+        "name": "Tonight",
         "temperature": 73,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
-        "windDirection": "NW",
+        "windDirection": "SW",
         "shortForecast": "Patchy Fog",
-        "detailedForecast": "Patchy fog after 11pm. Mostly cloudy, with a low around 73. Northwest wind 0 to 5 mph.",
+        "detailedForecast": "Patchy fog between 11pm and 5am. Partly cloudy, with a low around 73. Southwest wind 0 to 5 mph.",
         "precipChancePct": 0
       },
       {
         "name": "Thursday",
-        "temperature": 99,
+        "temperature": 97,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
-        "windDirection": "SW",
-        "shortForecast": "Patchy Fog then Mostly Sunny",
-        "detailedForecast": "Patchy fog before 11am. Mostly sunny, with a high near 99. Southwest wind 0 to 10 mph.",
+        "windDirection": "W",
+        "shortForecast": "Mostly Sunny",
+        "detailedForecast": "Mostly sunny, with a high near 97. West wind 0 to 10 mph.",
+        "precipChancePct": 0
+      },
+      {
+        "name": "Thursday Night",
+        "temperature": 73,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "NW",
+        "shortForecast": "Partly Cloudy",
+        "detailedForecast": "Partly cloudy, with a low around 73. Northwest wind 0 to 5 mph.",
         "precipChancePct": 0
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-08-26T03:26Z",
-    "waveHeightFt": 4.9,
+    "observed_utc": "2026-08-26T12:56Z",
+    "waveHeightFt": 6.2,
     "dominantPeriodS": 13,
-    "avgPeriodS": 10.0,
-    "meanWaveDirDeg": 173,
-    "waterTempF": 77.0
+    "avgPeriodS": 10.3,
+    "meanWaveDirDeg": 181,
+    "waterTempF": 75.2
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-08-26T03:26Z",
-    "waveHeightFt": 3.9,
-    "dominantPeriodS": 12,
-    "avgPeriodS": 10.2,
-    "meanWaveDirDeg": 180,
-    "waterTempF": 77.7
+    "observed_utc": "2026-08-26T12:56Z",
+    "waveHeightFt": 5.2,
+    "dominantPeriodS": 13,
+    "avgPeriodS": 10.6,
+    "meanWaveDirDeg": 185,
+    "waterTempF": 75.9
   },
-  "tides_san_diego_9410170": [
-    {
-      "time_pt": "2026-08-25 02:53",
-      "type": "Low",
-      "heightFt": -0.076
-    },
-    {
-      "time_pt": "2026-08-25 09:12",
-      "type": "High",
-      "heightFt": 4.397
-    },
-    {
-      "time_pt": "2026-08-25 14:13",
-      "type": "Low",
-      "heightFt": 2.268
-    },
-    {
-      "time_pt": "2026-08-25 20:21",
-      "type": "High",
-      "heightFt": 6.224
-    },
-    {
-      "time_pt": "2026-08-26 03:18",
-      "type": "Low",
-      "heightFt": -0.199
-    },
-    {
-      "time_pt": "2026-08-26 09:31",
-      "type": "High",
-      "heightFt": 4.643
-    },
-    {
-      "time_pt": "2026-08-26 14:47",
-      "type": "Low",
-      "heightFt": 1.92
-    },
-    {
-      "time_pt": "2026-08-26 20:53",
-      "type": "High",
-      "heightFt": 6.348
-    }
-  ]
+  "tides_san_diego_9410170": null
 }
