@@ -168,3 +168,33 @@ Format per entry:
   ran on consensus alone; try searching "the pour over" plus a story keyword rather than
   the site, or drop the TPO cross-check from the report when it is unreachable instead of
   leaving the column blank.
+
+- **2026-08-25 (Tue evening, UTC-skew guard fired — sixth automatic use)** — Firing at
+  9:11 PM PT Tuesday (off-cadence Pacific) but Wednesday UTC, the eve of a publish day,
+  so the gate was bypassed and the issue dated with the actual Pacific date. Newest
+  archive was 2026-08-23, so the dedupe guard did not trip. **Trigger is STILL
+  misconfigured** (~04:10 UTC Mon/Wed/Fri) — the owner must move it to ~6:00 AM
+  America/Los_Angeles; six consecutive off-slot publishes now. Counts: World 3, US 3,
+  Tech 3, Sports 3 (one a no-development note), San Diego 2, Kauaʻi 1, Gear 1, EV 1,
+  Mito 0 (section omitted). (a) Thin: Gear ran one item and it is a research paper, not
+  a product — every reachable pro-video release (Laowa Aksen Aug 3, Saramonic K9 XTX
+  Aug 6) fell outside the 14-day bar, and cined.com, newsshooter.com and ymcinema.com
+  were all egress-blocked so I could only work from search summaries. EV also ran one:
+  no van or family-format release cleared the window, so the PG&E V2X expansion carried
+  the section on the strength of the EV9/EX90/Bolt eligibility list, flagged as PG&E
+  territory rather than SDG&E. Mito omitted correctly — the only PubMed hit inside 14
+  days was the Karaa scoping review already run on Aug 23; everything else (riboflavin
+  Jul 13, SPP-004 Leigh Phase III Jul 17, POLG nucleoside Jun 15) is date-excluded.
+  (b) Unsure call: the Apple event bullet is Gurman reporting, not an announcement, and
+  normally that is a weak item — I kept it because the reader is Apple-priority and
+  labeled it plainly as reporting in the bullet itself. Also unsure: the Padres line is
+  a stated non-development rather than a story; if that reads as filler, drop the line
+  entirely next time instead of announcing the absence. (c) Excluded despite consensus:
+  the Senate/House stopgap funding deal through Dec. 11 leads widely but dates to Aug. 8,
+  outside the 14-day bar as a new development. Egress blocked this run: npr.org,
+  axios.com, espn.com, insideevs.com, cined.com, ymcinema.com, justsecurity.org,
+  thepourover.org — search-only again, and TPO was unreachable for the fourth straight
+  run. Tweak next run: stop attempting the TPO cross-check and drop its column from the
+  consensus table until the block lifts; the WORLD Radio daily rundown surfaced the same
+  water-cooler set (Canada tariffs, Iran sanctions) and is reachable, so use it as the
+  visibility signal instead.
