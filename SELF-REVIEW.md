@@ -198,3 +198,37 @@ Format per entry:
   consensus table until the block lifts; the WORLD Radio daily rundown surfaced the same
   water-cooler set (Canada tariffs, Iran sanctions) and is reachable, so use it as the
   visibility signal instead.
+
+- **2026-08-27 (Thu evening, UTC-skew guard fired — seventh automatic use)** — Firing at
+  9:09 PM PT Thursday (off-cadence Pacific) but Friday UTC, the eve of a publish day, so
+  the gate was bypassed and the issue dated with the actual Pacific date. Newest archive
+  was 2026-08-25, so the dedupe guard did not trip. **Trigger is STILL misconfigured**
+  (~04:10 UTC Mon/Wed/Fri) — the owner must move it to ~6:00 AM America/Los_Angeles;
+  seven consecutive off-slot publishes now. Counts: World 3, US 3, Tech 4, Sports 2,
+  San Diego 3, Kauaʻi 1, Gear 1, EV 1, Mito 2. (a) Thin: Gear ran one item again — the
+  GoPro MISSION 1 PRO ILS was the only pro-video release inside 14 days that I could
+  reach; the Blackmagic URSA Cine Immersive 100G and Cartoni/Ikegami IBC items all date
+  to NAB (April) or Aug. 4 and were date-excluded, and cined.com, newsshooter.com,
+  ibc.org and gopro.com were egress-blocked so the bullet is built from PetaPixel plus
+  the PR Newswire release. EV also ran one: no van or family-format story cleared the
+  window (the VW ID. Buzz and Kia PV5 hits were all months old), and the MyFirstEV/Tesla
+  rebate item that search surfaced was already run Aug. 13, so the Electrek FSD
+  railroad-crossing report carried the section as flagged general EV news.
+  (b) Unsure call: the second Mito item is a narrative review, and the Aug. 23 brief
+  already ran a horizon-scan review — I kept it only because sonlicromanol/KHENERFIN and
+  KL1333/FALCON appear in no prior brief (grep-checked), and I led with those rather than
+  with taurine, which ran June 29. If the reader flags it as redundant, the rule to adopt
+  is one review per month regardless of new named trials. Also unsure: the Kuminga bullet
+  is league-wide rather than Blazers/Warriors — he is a *former* Warrior traded to Atlanta
+  in February, so the team hook is thin; I folded the "nothing new from Portland or Golden
+  State" note into that bullet instead of running it as its own line, per the Aug. 25
+  tweak. (c) Excluded despite consensus: the WHO Ebola announcement (Uganda outbreak over,
+  DRC ongoing) led on several outlets but I could not reach a wire page to verify the
+  framing, so it was dropped rather than summarized from aggregated search text.
+  Egress blocked this run: npr.org, aljazeera.com, kpbs.org, electrek.co, insideevs.com,
+  cined.com, newsshooter.com, ibc.org, gopro.com — search-only again. Per the Aug. 25
+  tweak I did not attempt thepourover.org and dropped its column from the consensus table.
+  Tweak next run: the anti-redundancy grep against archive/ caught two would-be repeats
+  (MyFirstEV, taurine) before drafting — run that grep on every candidate headline's key
+  proper nouns *before* writing the section, not after, and budget the time saved toward
+  a second reachable Gear source.
