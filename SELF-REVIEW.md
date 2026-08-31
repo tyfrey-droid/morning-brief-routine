@@ -232,3 +232,29 @@ Format per entry:
   (MyFirstEV, taurine) before drafting — run that grep on every candidate headline's key
   proper nouns *before* writing the section, not after, and budget the time saved toward
   a second reachable Gear source.
+
+## 2026-08-30 (published early for the Mon Aug 31 slot)
+(a) Thin/empty: 🧬 Mito omitted entirely — the only qualifying-looking hit was another MELAS
+  narrative review (PMID 42644018, Aug 31) naming taurine, sonlicromanol/KHENERFIN, zagociguat,
+  TTI-0102 and KL1333/FALCON, i.e. the same therapeutic movement the Aug 27 brief already ran;
+  I applied the "one review per month" rule the Aug 27 entry proposed and dropped it. The rest of
+  the window was case reports (Turner-masked MELAS, m.3303C>T family) and off-target mtDNA papers.
+  🎥 Gear ran empty for real: the trade press sits between NAB and IBC (opens Sept 11), and the
+  Sony FE 100-400mm (Aug 4) and FX5 delay (ran Aug 18) are both outside the window. 🌺 Kauai empty —
+  the mayoral race is between the Aug 8 primary and the Nov 3 general.
+(b) Unsure calls: Dolly Parton. She died Aug 25 and no prior brief covered it — a genuine miss,
+  not a redundancy question — so I ran it in US & Politics led on the weekend burial rather than
+  on the death, which is 5 days old. Placement is imperfect (there is no culture section) but it
+  was the week's clear water-cooler story. Also unsure: two Anthropic items in one Tech section.
+  They are unrelated (the Pentagon supply-chain ruling; the 35-publisher copyright suit) and both
+  were top-of-section news, so I kept both and wrote them straight.
+(c) Tweak next run: the Aug 27 tweak — grep archive/ for each candidate's proper nouns BEFORE
+  drafting — worked and caught four would-be repeats (Niang, EV9/PG&E, FX5 delay, the ID.
+  California Cruise *preview*, which I reframed around Friday's actual reveal specs rather than
+  dropping). Keep it. New tweak: also grep for names that are absent, not just present — Parton
+  returned zero hits across every archive, which is what surfaced the miss. Run a
+  "biggest-story-of-the-week absent from archive/" check each Monday.
+Egress blocked this run: npr.org, pbs.org, axios.com, cbsnews.com, cnn.com, kyivindependent.com,
+usnews.com, timesofsandiego.com, cbs8.com, kauainownews.com, xdcam-user.com — search-only again;
+links are cited to the outlets that reported the story, dates verified from search result metadata
+and URL date paths.
