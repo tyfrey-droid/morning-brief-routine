@@ -83,10 +83,15 @@ Publish on an off-day — running the full normal pipeline — in either case:
   ("run it now", "publish today"). Always honor this; do not ask twice.
 - **"Run now" from the routines pane.** This arrives as the stored prompt and
   can look identical to an automated firing, so use the clock to tell them
-  apart. The scheduled slot is the 4–6 AM PT window (target ~5:00 AM PT). An
-  off-day firing OUTSIDE roughly 3:30–7:00 AM PT is a human pressing the button
-  → publish. An off-day firing INSIDE that window is likely a stray automated
-  run → apply the gate and stop.
+  apart. As of 2026-09-01 the trigger fires at **5:30 AM PT on weekdays**
+  (Mon–Fri), so the scheduler's Tue/Thu arrivals are tightly clustered around
+  5:30. An off-day firing INSIDE roughly **5:15–5:50 AM PT** is that scheduler
+  → apply the gate and stop. An off-day firing at any other hour is a human
+  pressing the button → publish.
+  Keep this window tight. It used to be 3:30–7:00 AM, which was safe when
+  off-day firings were rare, but Tue/Thu firings are now routine and a wide
+  window would swallow a genuine 6 AM "Run now" on one of those days —
+  refusing the reader, which the gate must never do.
   (The external trigger is itself set to Mon/Wed/Fri, so off-day firings should
   be rare and are almost always manual; the window check is only
   defense-in-depth in case a daily schedule ever returns.)
@@ -113,17 +118,23 @@ gate must never cause a silent total outage again:
 2. Dedupe guard: if the newest archive/ file is from today or a brief was
    published within ~12 hours, log "issue already published — skipping
    duplicate firing" and stop.
-3. The real fix is the trigger's schedule. The reader confirmed on 2026-09-01
-   that they want the brief written in the early-morning hours, **4–6 AM PT**,
-   not the night before. Target ~5:00 AM **America/Los_Angeles** Mon/Wed/Fri
-   (= 12:00 UTC during PDT, 13:00 UTC during PST). Only the account owner can
-   change it in the routines pane. Until firings start arriving in the
-   4:00–6:00 AM PT window, keep flagging the misconfiguration in every final
-   report.
-4. Once firings do arrive in that window, the UTC-skew path in 1. should stop
-   triggering. Do not delete it — it is the outage backstop if the schedule is
-   ever reset to UTC weekdays — but a run that publishes via 1. after the fix
-   is a signal the trigger reverted, and the report should say so plainly.
+3. **RESOLVED 2026-09-01.** The reader reset the trigger to **5:30 AM PT,
+   weekdays (Mon–Fri)** — inside the 4–6 AM PT window they asked for. Firings
+   now land on the correct Pacific day, so **stop flagging the schedule as
+   misconfigured in the final report.** Nothing further is owed on this.
+4. The UTC-skew path in 1. should no longer trigger: a 5:30 AM PT firing has
+   the same UTC calendar day (12:30 UTC in PDT, 13:30 in PST), so the
+   "evening before" condition cannot match. Do NOT delete it — it is the
+   outage backstop if the schedule is ever reset to UTC weekdays — but if a
+   run ever publishes via 1. again, that means the trigger reverted, and the
+   report should say so plainly.
+5. The trigger fires **five** days a week against a **three**-day cadence.
+   That is expected and correct, not a bug: Tue/Thu firings hit the gate in
+   "Release cadence" step 1 and stop cheaply without searches or connectors.
+   Do not report a gated Tue/Thu firing as an error or a schedule problem —
+   log the one-line off-cadence message and stop. `fetch-conditions.yml`
+   stays on Mon/Wed/Fri only; there is no reason to fetch conditions for a
+   brief that will not be written.
 
 ## Story counts: small by default, with headroom
 
