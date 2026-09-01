@@ -16,9 +16,11 @@ live data to `data/conditions.json`:
 - NOAA tide predictions for San Diego station 9410170 (today + tomorrow,
   Pacific time, hi/lo)
 
-It runs on a schedule at 12:15 & 13:00 UTC (5:15 & 6:00 AM PT) on the brief's
-publish days (Mon/Wed/Fri) before the morning brief. On any run day, if the
-data is stale, trigger a fresh fetch on demand (step 2 below). Each run:
+It runs at 11:20, 11:45, 12:20 & 12:45 UTC on the brief's publish days
+(Mon/Wed/Fri). Two of those four land at 4:20 & 4:45 AM PT — just before the
+brief's 4–6 AM PT slot — in whichever DST regime is current; the other pair
+fires harmlessly and just refreshes. On any run day, if the data is stale,
+trigger a fresh fetch on demand (step 2 below). Each run:
 
 1. `git pull origin main`, read `data/conditions.json`, check `fetched_at_utc`.
 2. If it is older than ~2 hours, trigger a fresh run via the GitHub MCP tool
@@ -81,9 +83,10 @@ Publish on an off-day — running the full normal pipeline — in either case:
   ("run it now", "publish today"). Always honor this; do not ask twice.
 - **"Run now" from the routines pane.** This arrives as the stored prompt and
   can look identical to an automated firing, so use the clock to tell them
-  apart. The scheduled slot is ~6 AM PT. An off-day firing OUTSIDE roughly
-  5:00–7:30 AM PT is a human pressing the button → publish. An off-day firing
-  INSIDE that window is likely a stray automated run → apply the gate and stop.
+  apart. The scheduled slot is the 4–6 AM PT window (target ~5:00 AM PT). An
+  off-day firing OUTSIDE roughly 3:30–7:00 AM PT is a human pressing the button
+  → publish. An off-day firing INSIDE that window is likely a stray automated
+  run → apply the gate and stop.
   (The external trigger is itself set to Mon/Wed/Fri, so off-day firings should
   be rare and are almost always manual; the window check is only
   defense-in-depth in case a daily schedule ever returns.)
@@ -110,11 +113,17 @@ gate must never cause a silent total outage again:
 2. Dedupe guard: if the newest archive/ file is from today or a brief was
    published within ~12 hours, log "issue already published — skipping
    duplicate firing" and stop.
-3. The real fix is the trigger's schedule: it must be ~6:00 AM
-   **America/Los_Angeles** Mon/Wed/Fri (= 13:00 UTC during PDT). Only the
-   account owner can change it in the routines pane. Until firings start
-   arriving in the 5:00–7:30 AM PT window, keep flagging the
-   misconfiguration in every final report.
+3. The real fix is the trigger's schedule. The reader confirmed on 2026-09-01
+   that they want the brief written in the early-morning hours, **4–6 AM PT**,
+   not the night before. Target ~5:00 AM **America/Los_Angeles** Mon/Wed/Fri
+   (= 12:00 UTC during PDT, 13:00 UTC during PST). Only the account owner can
+   change it in the routines pane. Until firings start arriving in the
+   4:00–6:00 AM PT window, keep flagging the misconfiguration in every final
+   report.
+4. Once firings do arrive in that window, the UTC-skew path in 1. should stop
+   triggering. Do not delete it — it is the outage backstop if the schedule is
+   ever reset to UTC weekdays — but a run that publishes via 1. after the fix
+   is a signal the trigger reverted, and the report should say so plainly.
 
 ## Story counts: small by default, with headroom
 

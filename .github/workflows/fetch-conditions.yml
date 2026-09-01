@@ -2,10 +2,17 @@ name: Fetch weather & surf conditions
 
 on:
   schedule:
-    # 12:15 & 13:00 UTC = 5:15 & 6:00 AM PDT — fresh data just before the morning brief.
+    # The brief publishes in the 4-6 AM PT window (target ~5:00 AM PT), so conditions
+    # must land BEFORE that. GitHub cron is always UTC and does not follow DST, so we
+    # run two pairs to cover both regimes:
+    #   11:20 / 11:45 UTC = 4:20 / 4:45 AM PDT  (Mar-Nov)
+    #   12:20 / 12:45 UTC = 4:20 / 4:45 AM PST  (Nov-Mar)
+    # The off-regime pair still fires harmlessly and just refreshes the data.
     # Mon/Wed/Fri only (DoW 1,3,5) to match the brief's Mon/Wed/Fri publish cadence.
-    - cron: '15 12 * * 1,3,5'
-    - cron: '0 13 * * 1,3,5'
+    - cron: '20 11 * * 1,3,5'
+    - cron: '45 11 * * 1,3,5'
+    - cron: '20 12 * * 1,3,5'
+    - cron: '45 12 * * 1,3,5'
   workflow_dispatch:
 
 permissions:
