@@ -1,30 +1,30 @@
 {
-  "fetched_at_utc": "2026-09-02T16:35:39Z",
+  "fetched_at_utc": "2026-09-02T16:52:13Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-09-02T08:15:42+00:00",
+    "updated": "2026-09-02T16:35:49+00:00",
     "periods": [
       {
         "name": "Today",
-        "temperature": 81,
+        "temperature": 82,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
         "windDirection": "W",
         "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 81. West wind 0 to 10 mph.",
+        "detailedForecast": "Sunny, with a high near 82. West wind 0 to 10 mph.",
         "precipChancePct": 0
       },
       {
         "name": "Tonight",
-        "temperature": 64,
+        "temperature": 63,
         "temperatureUnit": "F",
         "windSpeed": "5 to 10 mph",
         "windDirection": "N",
         "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 64. North wind 5 to 10 mph.",
+        "detailedForecast": "Mostly clear, with a low around 63. North wind 5 to 10 mph.",
         "precipChancePct": 0
       },
       {
@@ -39,12 +39,12 @@
       },
       {
         "name": "Thursday Night",
-        "temperature": 63,
+        "temperature": 62,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
         "windDirection": "N",
         "shortForecast": "Patchy Fog",
-        "detailedForecast": "Patchy fog between 11pm and 5am. Mostly clear, with a low around 63. North wind 0 to 10 mph.",
+        "detailedForecast": "Patchy fog between 11pm and 5am. Partly cloudy, with a low around 62. North wind 0 to 10 mph.",
         "precipChancePct": 0
       }
     ]
