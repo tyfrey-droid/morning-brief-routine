@@ -258,3 +258,34 @@ Egress blocked this run: npr.org, pbs.org, axios.com, cbsnews.com, cnn.com, kyiv
 usnews.com, timesofsandiego.com, cbs8.com, kauainownews.com, xdcam-user.com — search-only again;
 links are cited to the outlets that reported the story, dates verified from search result metadata
 and URL date paths.
+
+## 2026-09-02 (Wednesday — first firing on the correct Pacific day since the schedule reset)
+(a) Thin/empty: 🎥 Gear ran one item and it is a patent, not a product — the trade press is still in
+  the NAB/IBC gap (IBC opens Sept. 11) and nothing shipped in the window. 🌺 Kauai ran one (Section 8
+  waiting list) with a Garden Island briefs page as the best available link; the mayoral race is still
+  between the primary and the Nov. 3 general. 🌊 San Diego ran two, not three: I drafted a third on the
+  city's $15M affordable-housing round and cut it at the last check because the search results mixed a
+  July NOFA, an April 6 application deadline and a Sept. 1 post, and I could not pin the publication
+  date inside 14 days. Dropping it was right, but I should have date-checked before drafting.
+(b) Unsure calls: the OpenAI "Jalapeño" chip is from Aug. 25 — inside the 14-day window but outside the
+  since-Aug-30 lookback, and no prior brief covered it, so I ran it as a miss-catch rather than a fresh
+  item. Same logic for Norway (Harald V died Aug. 28, uncovered) and Venezuela (announced Aug. 28), both
+  led on what happened since: the Storting oath Tuesday, and the deal's actual ownership structure.
+  Also unsure: the second Mito item is a diabetes registry study and the daughter is 7 with onset
+  clustering near 48. I kept it because it answers the metformin caution the Aug. 18 brief raised, with
+  m.3243A>G-specific data rather than a general warning — that is new information on a named drug, not
+  a prevalence count. The Warriors bullet is thin (an Exhibit 10 deal) and sits close to Aug. 30's
+  "offseason has gone quiet"; I ran it only because Portland has nothing and the section would otherwise
+  have no NBA at all.
+(c) Tweak next run: the Aug. 30 tweak — grep archive/ for candidate proper nouns before drafting — again
+  earned its keep (caught the Apple Sept. 9 event, the Kia EV9 recall flavor, taurine/sonlicromanol) and
+  the absent-name check surfaced Norway and Venezuela the same way it surfaced Parton. Keep both. New
+  tweak: date-verify BEFORE writing the bullet, not after. I wrote the San Diego housing item in full
+  and then threw it away; that is the same wasted pass the anti-redundancy grep was moved earlier to
+  avoid. Also: when assembling from a prior archive as a template, diff the assembled file against the
+  template tail — the Aug. 30 closing quote survived outside </main> and shipped in the first commit
+  before I caught it on a full read. Add a "exactly one <blockquote>" assertion to the build step.
+Egress blocked this run: reuters.com, apnews.com, bbc.com, macrumors.com, timesofsandiego.com,
+newsshooter.com, insideevs.com, thegardenisland.com — search-only again; every link's publication date
+was verified from search result metadata and URL date paths. Per the Aug. 25 tweak I did not attempt
+thepourover.org and dropped its column from the consensus table.
