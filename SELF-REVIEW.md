@@ -289,3 +289,41 @@ Egress blocked this run: reuters.com, apnews.com, bbc.com, macrumors.com, timeso
 newsshooter.com, insideevs.com, thegardenisland.com — search-only again; every link's publication date
 was verified from search result metadata and URL date paths. Per the Aug. 25 tweak I did not attempt
 thepourover.org and dropped its column from the consensus table.
+
+## 2026-09-04 (Friday — on-cadence, scheduler fired 5:38 AM PT)
+(a) Thin/empty: 🌺 Kauai ran the "nothing significant" line — The Garden Island's only in-window items
+  were a Labor Day breakfast, a Kalalau Trail ankle rescue and a Sept. 19 health fair; nothing cleared the
+  bar and the mayoral race is still idle between primary and Nov. 3. 🎥 Gear ran one item (DJI Osmo 360 II)
+  and it is a consumer 360 camera, not pro video — the trade press is still in the IBC gap (opens Sept. 11),
+  exactly as predicted Sept. 2. I framed it honestly rather than pretending it was an FX6-adjacent release.
+  🧬 Mito ran one. US & Politics ran two, not three: I looked at the House court-packing amendment vote
+  (212–206, failed) but could not pin it to a reputable outlet with a verifiable date, so I dropped it before
+  drafting — the Sept. 2 tweak working as intended.
+(b) Unsure calls: the Mito item (VISTA / FnCas12a lateral-flow readout for m.3243A>G, Anal Chem Aug. 25) is a
+  methods paper, not a therapy, and I nearly cut it. Kept it because it is a diagnostic advance at her exact
+  variant with clinical-sample validation, and wrote the four real limits into the bullet rather than
+  overselling it. I deliberately EXCLUDED the Aug. 31 MELAS review (Intractable Rare Dis Res) even though it
+  is the most on-topic paper in the window — its specifics (taurine approval, sonlicromanol KHENERFIN,
+  zagociguat, KL1333/FALCON) were all covered Aug. 27 and earlier, so under the review-article exception it
+  surfaces nothing new. Also excluded the PNAS scMPCDS single-cell paper: that IS the Sept. 2 item.
+  Second unsure call: the Sharpe injury is Aug. 26–27, inside 14 days but well outside the since-Sept-2
+  lookback. Ran it as a miss-catch — Aug. 30 said "the offseason has gone quiet" without ever naming it,
+  and it is the biggest Blazers story of the month.
+(c) Structural note worth keeping: the Iran story was the obvious World lead, but the Sept. 2 archive already
+  carried the Jordan interception with the identical 10-of-13 detail. Rather than re-summarise it, I moved
+  the thread to US & Politics framed on what is actually new — Vance's "I wouldn't call it a war," the
+  war-powers votes, and the Klinner widow's withheld combat pay — and left World to four genuinely fresh
+  stories. Generalize this: when a running story has no new *event*, check whether it has a new *frame* in
+  another section before dropping or repeating it.
+(d) Tweak next run: I could not verify a verbatim John Swinton quote (goodreads, abdn.ac.uk both egress-blocked)
+  even though he was the correct rotation slot at 15 days. Rather than fabricate one I fell back to Augustine
+  (Confessions IV.9, distinct from the Aug. 11 and Aug. 25 quotes). Fix: keep a small verified quote bank in
+  this repo so rotation never depends on live egress. Start it next run with 3–4 Swinton lines sourced when
+  a fetch succeeds.
+Date-excluded this run: De Anza Natural / ReWild Coastal Commission approval — Times of San Diego published
+Aug. 31 but the vote itself was Aug. 14, and the older-date rule puts it outside 14 days. Kia PV7 electric van
+(IAA debut Sept. 14) excluded as redundant: Sept. 2 already ran "Kia previews a bigger electric van."
+Egress blocked this run: openai.com, 9to5mac.com, thehackernews.com, goodreads.com, abdn.ac.uk; and reuters.com,
+apnews.com, theverge.com, arstechnica.com, wired.com, ft.com, zdnet.com, theguardian.com, sandiegouniontribune.com
+are refused to the search user-agent. Search-only again; every link's date verified from result metadata and URL
+date paths. Per the Aug. 25 tweak I did not attempt thepourover.org and dropped its column from the consensus table.
