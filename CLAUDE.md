@@ -47,9 +47,97 @@ no wind. For wind, use the NWS forecast periods' windSpeed/windDirection.
   first, Warriors second, league-wide; max 1–2 big non-NBA items) ·
   San Diego · 🌺 Kauai (max 2) · Filmmaking Gear · Electric Vehicles (max 3) ·
   🧬 Mito Research (omit entirely — no header — when nothing meets the strict
-  bar) · Weather · Surf · closing quote.
+  bar) · 🎒 School (same omit-entirely rule) · Weather · Surf · closing quote.
 - REMOVED sections — do NOT include (dropped 2026-08-06 by reader request):
   ✨ One Good Thing and 📅 On This Day. The closing theologian quote stays.
+
+## 🎒 School — added 2026-09-05 by reader request
+
+A short section pulled from the school's email, so the week's classroom
+topics, dates and parent action items land in one place instead of across a
+dozen newsletters.
+
+### Gmail is now READ-ONLY allowed, for this section only
+
+This supersedes the "never touch Gmail" / "Gmail is never used" lines in the
+stored routine prompt, changed 2026-09-05 by explicit reader request. The
+carve-out is narrow and absolute at its edges:
+
+- ALLOWED: `search_threads` and `get_thread` against school senders, to build
+  this section.
+- NEVER: send, reply, forward, draft, label, archive, trash, or mark spam.
+  Never read mail outside the school scope below. Never quote a private
+  one-to-one message from a teacher — this section is for mail sent to all
+  families, not correspondence about a specific child.
+- If a Gmail call fails or the connector is unavailable, log it and omit the
+  section. Never guess at school content from memory.
+
+### Scope: whose mail, and how far back
+
+Micah (4th grade) at High Tech Elementary Mesa. Search since the previous
+brief's date — the same lookback every other section uses:
+
+    from:hightechhigh.org OR from:schoolsoft.com OR from:schoolmintemails.com
+    after:YYYY/MM/DD
+
+Recurring senders worth knowing: the 4th-grade classroom newsletter, the
+performing-arts teacher, the school director, and the School Family
+Association (SFA) blasts. `noreply@` addresses carry the school-wide
+announcements; the classroom newsletter carries the actual curriculum.
+
+### What qualifies
+
+INCLUDE: what the class is actually studying this week; dates and deadlines;
+anything needing a parent to DO something (forms, signatures, volunteer
+slots, supplies, permission slips); school-wide policy that changes something
+(meal programs, drop-off rules, calendar changes).
+
+EXCLUDE: fundraising and donation appeals with no action attached; spirit-wear
+marketing; menu emails unless the policy changed; the third restatement of an
+event already covered; anything already carried in a prior brief unless the
+details moved. Standard anti-redundancy applies — a date announced three
+briefs ago is not news again until it is imminent or changed.
+
+Surface genuinely time-sensitive items FIRST — a form due before the next
+brief, a volunteer day this weekend, a mandatory performance.
+
+### Emi's IEP / SDUSD advocacy thread — EXCLUDED by default
+
+Do NOT put the special-education dispute, IEP correspondence, CDE complaint,
+attorney or advocate mail into this section or any other. It is sensitive,
+it is legally live, the reader is already a participant, and (see below) this
+brief is public. Only include it if the reader asks in-session, and even then
+only in the chat reply, never in the published HTML.
+
+### PRIVACY — this repo and its Pages site are PUBLIC
+
+Verified 2026-09-05: `tyfrey-droid/morning-brief-routine` is a public repo
+with public GitHub Pages, and every archive/ issue is permanently readable by
+anyone. So the published section is written DE-IDENTIFIED by default:
+
+- Say "4th grade," never the child's name, and never a room number.
+- Refer to "the classroom teachers," "the performing-arts teacher," "the
+  school director" — no staff names, no staff email addresses.
+- Do NOT name the school or district in the published HTML.
+- No links into Google Docs/Photos/wishlists from the school mail — those
+  URLs are effectively unlisted credentials for a private community.
+- No drop-off/pick-up procedures, room assignments, or anything describing
+  where a specific child physically is at a specific time.
+
+Curriculum topics, dates, and "a form is due Tuesday" all survive this
+intact, which is the actual value. The reader knows who his kid's teacher is.
+If he ever asks for full detail with names, that is his call to make — but it
+should be a deliberate choice, and the right fix first is making the site
+private, not quietly loosening this rule.
+
+### Length
+
+Same discipline as everywhere else: a handful of bullets, ~4 max. Group into
+"this week in class," "coming up," and "needs you" only if there is enough to
+warrant it — otherwise a flat list. **Omit the section entirely, header and
+all, when nothing qualifies** (the 🧬 Mito rule). An empty week is normal:
+holidays, breaks, and Wednesday issues will often have nothing new since
+Monday. Never pad it to justify its existence.
 
 ## Release cadence: Monday / Wednesday / Friday only
 
@@ -142,9 +230,9 @@ gate must never cause a silent total outage again:
   firehose. Do not pad to fill space; an empty or 1-item section is fine.
 - But the longer cadence means real news accumulates. When genuinely
   qualifying stories exist, allow headroom: World / US up to 5 (was 4),
-  Tech, Sports, San Diego, Gear up to ~8 each, EV up to 3, Kauai up to 2.
-  These are ceilings for busy stretches, not targets. Quality bar is
-  unchanged — every added item must independently clear it.
+  Tech, Sports, San Diego, Gear up to ~8 each, EV up to 3, Kauai up to 2,
+  School up to 4. These are ceilings for busy stretches, not targets. Quality
+  bar is unchanged — every added item must independently clear it.
 
 ## Reader feedback loop (self-improvement)
 
