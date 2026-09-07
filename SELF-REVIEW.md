@@ -327,3 +327,39 @@ Egress blocked this run: openai.com, 9to5mac.com, thehackernews.com, goodreads.c
 apnews.com, theverge.com, arstechnica.com, wired.com, ft.com, zdnet.com, theguardian.com, sandiegouniontribune.com
 are refused to the search user-agent. Search-only again; every link's date verified from result metadata and URL
 date paths. Per the Aug. 25 tweak I did not attempt thepourover.org and dropped its column from the consensus table.
+
+## 2026-09-07 (Monday, Labor Day)
+(a) Thin/empty sections: 🧬 Mito omitted entirely — the Aug 24–Sep 7 PubMed window returned 50 hits and none
+  cleared the bar. The two closest were already covered: PNAS scMPCDS (PMID 42673453) ran Sept. 2, and the
+  GENOMIT mitochondrial-diabetes/metformin registry paper (PMID 42679752) is the Sept. 2 metformin item. The
+  rest were reviews (Alzheimer's mito, CLPP), case reports (MELAS masked by Turner syndrome; MT-ND4 anaesthesia
+  encephalopathy), the UMDF TK2d masterclass write-up (explicit "multidisciplinary care" exclusion), or
+  off-target. 🏀 Sports ran a single bullet: NBA offseason is genuinely quiet and Sharpe/Moda Center were both
+  spent on Sept. 4. 🔋 EV ran one — no van or family-format story existed in the window, so one general filler
+  per the CHANGE 3 cap.
+(b) Unsure calls: I dropped the Blazers' Sept. 7 Exhibit 10 signing (Lee Hyun-jung). It is Blazers-first and
+  dated today, but an unguaranteed camp contract is exactly the padding the filter exists to stop, and Sept. 2
+  already ran "Golden State adds a camp body" — running the same non-story for the other team two briefs later
+  would be redundancy in spirit if not in letter. Also dropped Brandon Williams to Golden State (Aug. 25):
+  inside 14 days but outside the since-Sept-4 lookback, and I could not rule out that it WAS the Sept. 2
+  "camp body" bullet. Second unsure call: the Poway school-bus lawsuit is Aug. 30, outside the lookback, run
+  as a deliberate miss-catch — neither Sept. 2 nor Sept. 4 carried it and it is a substantial local story.
+(c) Process note: I nearly shipped with a stale <title> ("Friday, September 4"). The head/CSS is spliced
+  verbatim from the previous index.html, and the masthead .date and the <footer> both get rewritten in the
+  body block while the <title> lives up in the head — so it is the one date the body rewrite never touches.
+  Caught it on the post-assembly read, but only by luck. Generalize: after assembly, grep for the PREVIOUS
+  brief's date string across the whole file, not just eyeball the masthead.
+(d) Tweak next run: the quote bank idea from Sept. 4 is still unbuilt and it bit again. Swinton was the right
+  rotation slot (18 days, and the correct author for this reader), but the only Swinton line I could verify
+  live — "God's time is slow, patient, and kind" — is the Aug. 20 quote, inside the 30-day no-repeat window,
+  and I would not ship the "embodied theodicy of practice" line because I could not confirm it was verbatim
+  Swinton rather than a reviewer's paraphrase. Fell back to MLK ("unearned suffering is redemptive," Suffering
+  and Faith, 1960; Aug. 23's MLK quote was a different one). Actually build the bank next run: 3–4 verified
+  Swinton lines with book and page, committed to this repo, so rotation stops depending on live search.
+Date-excluded this run: the "Pacing the Frontier" AI-employee petition — surfaced via a Sept. 6 CNBC piece but
+the letter itself is July 28, well outside 14 days, so the underlying event fails the older-date rule. The
+Aug. 31 MELAS review (Intractable Rare Dis Res) remains excluded for the second run running — same specifics
+(taurine, sonlicromanol/KHENERFIN, zagociguat, KL1333/FALCON) as Aug. 27 and earlier.
+Source note: avoided the abcnews.com URLs that search kept returning for ABC News stories — ABC's real domain
+is abcnews.go.com, and under the "displayed name must match the linked domain" rule I would not cite a domain
+I could not confirm. Used NBC News/SCOTUSblog and NPR/WaPo/CBS for those two stories instead.
