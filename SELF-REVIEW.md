@@ -363,3 +363,49 @@ Aug. 31 MELAS review (Intractable Rare Dis Res) remains excluded for the second 
 Source note: avoided the abcnews.com URLs that search kept returning for ABC News stories — ABC's real domain
 is abcnews.go.com, and under the "displayed name must match the linked domain" rule I would not cite a domain
 I could not confirm. Used NBC News/SCOTUSblog and NPR/WaPo/CBS for those two stories instead.
+
+## 2026-09-09 (Wednesday)
+(a) Thin/empty sections: 🌍 World ran 2, not 3 — the West Bank trade measures and Canada's
+  counter-tariffs both cleared the multi-outlet bar cleanly, but the third candidates (Kenya's
+  crackdown on foreign small-business owners, the UNGA world-map vote) each surfaced in exactly one
+  search summary and no second outlet, so they failed the 2-outlet rule rather than the interest
+  test. 🏀 Sports ran one real bullet plus an explicit "nothing moved" line: Portland and Golden
+  State have genuinely done nothing since the Sharpe diagnosis on Sept. 4, and the US Open final is
+  not until Sept. 13. 🔋 EV had exactly one van story (ID. Buzz Cargo LWB) and one general item —
+  correct under the CHANGE 3 cap, not padding. 🌺 Kauai ran one, which is the ceiling that matters
+  here anyway.
+(b) Unsure calls: two. First, the L-arginine paper is a systematic review, which the Mito filter
+  excludes by default. I ran it under the review exception because it is a quantitative synthesis
+  producing pooled effect sizes on a named drug the reader's daughter plausibly takes, not a
+  narrative "more research needed" — but it is the closest call the section has had. Second, the
+  Apple bullet: the Sept. 7 brief already covered the event, and "the event is today" is not a new
+  development. I framed it strictly around the release calendar (pre-orders Sept. 12, on sale
+  Sept. 18, shifted off the Sept. 11 anniversary), which genuinely firmed up Sept. 6. Defensible,
+  but if the next run finds itself doing this again it should just drop Apple for the cycle.
+(c) Process: the Sept. 7 note about grepping for the PREVIOUS brief's date after assembly worked —
+  ran it, the only hit was "September 2036" inside the Qualcomm warrant text, a false positive.
+  Keep the check; expect that class of false positive. Second catch: I wrote the EV tag as
+  <span class="tag">, a class that does not exist in the stylesheet. Caught it by grepping every
+  class I used against the CSS before committing. Make that grep standard too — the head/CSS is
+  spliced verbatim from the prior file, so any NEW class name in the body is silently unstyled.
+(d) Tweak next run: the Drive upload is the single most expensive step in the run — ~35KB of HTML
+  retyped into a tool call. This run cut it in half by uploading once to Archive and then using
+  Drive's copy_file to place "Current Brief.html" in the folder root. Do that every time; do not
+  upload the same document twice.
+Date-excluded this run: nothing new was cut on date grounds. Mito exclusions were relevance, not
+date — the TK2d/UMDF masterclass write-up (explicit multidisciplinary-care exclusion, and already
+excluded once), the Turner-syndrome MELAS case report (no new mechanism), the Alzheimer and
+preterm-brain-injury mitochondrial reviews (off-target), the CML mtDNA paper (oncology), and the
+Intractable Rare Dis Res MELAS review, now excluded for a third consecutive run.
+Source note: The Pour Over's latest issue at run time was "Fully Reignited," roughly Sept. 4 —
+entirely inside the previous brief's window, so it offered no cross-check signal on this run's
+World/US picks. That is the failure mode the routine already warns about (they publish 3x/week);
+on a Wednesday run their latest issue will usually be stale. Treat a Wednesday TPO check as
+optional rather than spending a fetch on it.
+Quote: built QUOTES.md this run, per the standing note from Sept. 4 and Sept. 7. Swinton was the
+correct rotation slot again (20 days) and failed verification again for the third run — the only
+lines I can surface live are publisher framing questions and a reviewer's "embodied theodicy of
+practice," neither confirmable as verbatim. Went to Bonhoeffer (13 days, different quote and
+different letter) with the Christmas Eve 1943 letter to Renate and Eberhard Bethge, which is
+verifiable. Swinton stays unverifiable until someone checks a physical copy; QUOTES.md now records
+that explicitly so the next run stops re-litigating it.
