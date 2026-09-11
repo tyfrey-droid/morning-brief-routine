@@ -89,6 +89,7 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 
 | Date | Author | Source |
 |------|--------|--------|
+| 2026-09-11 | Keller | The Meaning of Marriage |
 | 2026-09-09 | Bonhoeffer | Letters and Papers from Prison (Christmas Eve 1943) |
 | 2026-09-07 | MLK | "Suffering and Faith," 1960 |
 | 2026-09-04 | Augustine | Confessions IV |

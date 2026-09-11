@@ -409,3 +409,46 @@ practice," neither confirmable as verbatim. Went to Bonhoeffer (13 days, differe
 different letter) with the Christmas Eve 1943 letter to Renate and Eberhard Bethge, which is
 verifiable. Swinton stays unverifiable until someone checks a physical copy; QUOTES.md now records
 that explicitly so the next run stops re-litigating it.
+
+## 2026-09-11 (Friday)
+(a) Thin/empty: 🎒 School omitted entirely — the only qualifying-window mail was Back-to-School
+  Night (already carried Sept. 9, and it happened Sept. 10), spirit-wear marketing, a same-day
+  volunteer ask that had expired by publish, and a private one-to-one teacher exchange that the
+  privacy rule excludes outright. MAP testing Sept. 14–16 was tempting as "now imminent," but it
+  ran one brief ago unchanged, so restating it would have been padding. US & Politics ran 2 of a
+  possible 4: the convention and the Missouri ruling were the only stories clearing the 2-outlet
+  consensus bar with a genuine development. EV ran 2 by design. Kauai 1.
+(b) Unsure it cleared the bar: the Mito item. The GENOMIT finding is adult-onset diabetes, not
+  childhood MELAS, which is a real distance from this reader's situation. It got in because it is
+  genotype-specific to m.3243A>G (HR 10.3), names a drug (metformin), and replaces mechanism-based
+  caution with registry data — the review-exception test. Flagged that distance in the bullet
+  rather than overselling it. Also borderline: Patch Tuesday, which is Sept. 8 and so predates the
+  last brief by a day, but was never covered and has a Sept. 22 CISA deadline attached.
+(c) Process: the class-name grep and the previous-brief-date grep both ran clean (the only 09/09
+  hits were legitimate article URLs). Domain-vs-display-name audit caught one real error — I had
+  labelled a doi.org link "EBioMedicine". Make that audit standard; it is the one check that has
+  now caught something twice. Egress blocking was much worse this run: apnews.com, bbc.com,
+  macrumors.com, appleinsider.com, thepourover.org and api-docs.deepseek.com all refused. Search
+  with allowed_domains was the workaround, but note reuters.com, theguardian.com, nytimes.com,
+  wsj.com, politico.com and theverge.com are all rejected by the search API's user agent — do not
+  waste calls putting them in allowed_domains.
+(d) Tweak next run: I dropped a DeepSeek V4.1-Flash item because every source search surfaced was
+  a content farm and the primary changelog was egress-blocked. That was the right call, but it
+  cost two searches to reach. Next time a story only surfaces on aggregator/SEO domains, drop it
+  on the first pass instead of hunting for a reputable second source.
+Date-excluded this run: Canon CINE-SERVO 40-1200mm (announced Apr. 15 at NAB, ships this month —
+the ship date is not a publication date); Warriors' Niang/Williams signings (August, and the
+Sept. 9 brief's "offseason stays quiet" was correct); Warriors Hawaii camp announcement itself is
+Aug. 31, cited only as a forward-looking date. Mito exclusions were relevance, not date: the ND6
+allotopic-expression paper (covered Sept. 9), the VISTA FnCas12a assay (covered Sept. 4), the TK2d
+masterclass (fourth consecutive exclusion), the Turner/MELAS case report (second exclusion), the
+endothelial-coupling and CLPP reviews, the vitamin/cofactor prescribing-patterns paper, and the
+CHOP contrast-enhanced-ultrasound study — the last of which is genuinely interesting but is 5 vs 5
+with no significant between-group result.
+Source note: The Pour Over is now egress-blocked outright (thepourover.org, EGRESS_BLOCKED), not
+merely stale. The water-cooler gate ran on wire/public-broadcaster consensus alone. If the block
+persists, the routine's TPO cross-check step should be rewritten or dropped rather than retried
+every run.
+Quote: Swinton was oldest in rotation (22 days) and remains unverifiable per QUOTES.md, so fell
+through to Keller (12 days), different book from his last appearance — The Meaning of Marriage,
+the "fully known and truly loved" passage. Verified as widely and consistently attributed.
