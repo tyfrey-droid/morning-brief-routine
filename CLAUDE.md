@@ -50,6 +50,73 @@ no wind. For wind, use the NWS forecast periods' windSpeed/windDirection.
   bar) · 🎒 School (same omit-entirely rule) · Weather · Surf · closing quote.
 - REMOVED sections — do NOT include (dropped 2026-08-06 by reader request):
   ✨ One Good Thing and 📅 On This Day. The closing theologian quote stays.
+- STANDING WATCH: USS George Washington (CVN-73) — see the ⚓ section below.
+  Flag any news involving that ship inside World or US & Politics. Exempt from
+  the consensus rule and from the section bullet cap; strict sourcing and a
+  privacy rule apply.
+
+## ⚓ USS George Washington watch — added 2026-09-13 by reader request
+
+The reader knows someone serving aboard **USS George Washington (CVN-73)**,
+currently deployed to the CENTCOM AOR in the Arabian Sea near the Strait of
+Hormuz, in the middle of the US–Iran conflict. Standing instruction: **flag any
+news involving that ship.**
+
+### How to run it
+
+- This is a WATCH, not a new section. The item goes in 🌍 World or 🇺🇸 US &
+  Politics — whichever fits — as a normal bullet, with the ship named in the
+  bolded lead-in so it is unmissable on a skim (e.g. "**George Washington rides
+  out a missile claim**"). Do not create a standing header; an empty week gets
+  no bullet at all.
+- It is EXEMPT from the World/US consensus rule (leading on 2+ outlets). A
+  single credible defense outlet is enough here — USNI News, The War Zone
+  (twz.com), Task & Purpose, Stars and Stripes, Defense News, Military.com, or
+  a CENTCOM/Navy release. The consensus test exists to pick water-cooler
+  stories; this one is personal and does not need to clear it.
+- It does NOT count against the section's bullet cap. If World already has its
+  four, the GW item is a fifth.
+- Anti-redundancy still applies in the normal way: run it when there is a
+  genuine development (position or homeport change, strike or damage claim,
+  named casualties, relief by another strike group, deployment extension,
+  incident aboard), not for a restatement of where she already was.
+
+### Accuracy discipline — the point is to be trustworthy, not fast
+
+This is the one item in the brief where the reader has someone's safety at
+stake, so the bar on sourcing is HIGHER than elsewhere, not lower:
+
+- ALWAYS separate claim from confirmation. Iranian state media and IRGC
+  statements routinely claim strikes on US vessels that CENTCOM then denies;
+  as of 2026-09-13 no hit on CVN-73 has been independently confirmed. Write
+  "Iran's IRGC claimed X; CENTCOM denied it" — never launder a claim into a
+  fact, and never lead with the claim's framing.
+- Content farms and SEO aggregators pick up these claims hard and strip the
+  denial. If a strike claim appears ONLY on such sites, it does not run. Check
+  a real defense desk before writing anything alarming.
+- Never speculate about the safety of any individual crew member, and never
+  estimate casualties ahead of official confirmation.
+- Tone: the brief's standing "informed, not alarmed" rule applies with extra
+  force. Report position, orders and confirmed events plainly. No dramatics.
+- If nothing verifiable happened, say nothing. Silence is the correct output
+  for a quiet week, and a reader with someone aboard will read an invented
+  item as much worse than no item.
+
+### PRIVACY — do not publish the personal connection
+
+The repo and its Pages site are public (see the School section's privacy note,
+which applies here for the same reasons, with an added force-protection edge).
+
+- NEVER state or imply in the published HTML that the reader knows someone
+  aboard, has family or a friend on the ship, or has any personal stake in it.
+  The bullet reads as ordinary news coverage and nothing more.
+- Never name the service member, their rate/rank, division, job, or any detail
+  that could identify them, in the HTML or in a commit message.
+- Do not publish anything about the ship's future movements, port calls,
+  schedule, or return date beyond what the Navy or a major outlet has already
+  announced publicly. Do not aggregate ship-tracker or AIS data.
+- The reader can of course ask for more detail in-session; answer freely in the
+  chat reply. The restriction is on what gets committed and published.
 
 ## 🎒 School — added 2026-09-05 by reader request
 
