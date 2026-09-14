@@ -452,3 +452,47 @@ every run.
 Quote: Swinton was oldest in rotation (22 days) and remains unverifiable per QUOTES.md, so fell
 through to Keller (12 days), different book from his last appearance — The Meaning of Marriage,
 the "fully known and truly loved" passage. Verified as widely and consistently attributed.
+
+## 2026-09-14 (Monday)
+(a) Thin/empty: 🇺🇸 US ran 2 (the Missouri map and mail-ballot stories were both covered Sept. 7/11
+  with no new development since). 🌊 San Diego ran 2 — the county Medicaid vote was Sept. 3 and
+  already carried Sept. 4, the Haitian-community ICE protest overlapped Sept. 11's City College
+  protest bullet, and the Padres-ownership item KPBS surfaced turned out to be Aug. 24. 🌺 Kauai
+  ran 1, correctly — restoration is now an incremental percentage story. ⚓ GW watch produced
+  NOTHING and that is the right output: the newest USNI Fleet Tracker is Sept. 8, predating the
+  last brief, and no position change, incident or claim has surfaced since. Silence per the rule.
+(b) Unsure it cleared the bar: the $5,000 dividend. The announcement itself was Wed. Sept. 9, so it
+  predates Friday's brief — which covered the convention's closing but missed the dividend
+  entirely. I ran it framed on the Sept. 10–13 development (bipartisan pushback, Vance narrowing it
+  to exclude the wealthy, the legal question about conditioning payments on an election result)
+  rather than on the announcement. Defensible, but it is a gap-fill for a miss, not fresh news.
+  Also borderline: the IAA Transportation bullet is a preview of a press day happening today, so it
+  is forward-looking rather than reported — I cited electrive's Sept. 13 preview and Automotive
+  World's Renault piece rather than claiming the Kia PV7 reveal I could not yet confirm had run.
+(c) Process: the three standing audits (stale-date grep, class-name grep, domain-vs-display-name)
+  all ran clean — 34/34 links matched their displayed source names, no leftover "September 11"
+  strings. The domain audit has now caught something on two of four runs, so keeping it is right.
+  Egress this run: news.usni.org and www.nfl.com both EGRESS_BLOCKED, and the search API rejects
+  arstechnica.com and wired.com in allowed_domains (add these to the known-rejected list alongside
+  reuters/guardian/nytimes/wsj/politico/theverge). thepourover.org stayed blocked, so the
+  water-cooler gate again ran on wire/public-broadcaster consensus alone — that is now three
+  consecutive runs and the routine's TPO step should be rewritten or dropped rather than retried.
+(d) Tweak next run: I spent two searches chasing NBA content (Blazers/Warriors) that does not exist
+  — camp opens Sept. 29 and the Sept. 9 brief already said the offseason is quiet. Until media day,
+  skip the NBA pass entirely and go straight to Padres + one non-NBA item; CLAUDE.md's "NBA first"
+  ordering is a preference, not a requirement to search for nothing. Second: last run's note about
+  dropping stories that only surface on aggregators paid off — the OpenAI/Google/Meta search
+  returned nothing but LLM-tracker farms and I dropped it on the first pass as intended.
+Date-excluded this run: Padres ownership introduction (Aug. 24, 21 days — KPBS's homepage summary
+made it look current); Warriors Hawaii camp (Aug. 31, and forward-looking to Sept. 29); Kia PV5
+ten-body-style expansion (Sept. 9, carried Sept. 11); Sony DP7/DP5 control monitor and Atomos
+Shinobi 7 II (both carried Sept. 11). Mito exclusions were relevance, not date: the ND6 allotopic
+paper (covered Sept. 9), the CEUS perfusion study and TK2 masterclass (excluded again — fifth
+consecutive for TK2), the endothelial-coupling review, riboflavin/complex-I case reports, the MASLD
+MitoQ-vs-SS-31 mouse study, the ASCENT oocyte review and two general mitochondria reviews.
+Mito item that ran: PNAS scMPCDS (Aug. 31, 14 days exactly — at the edge of the window). It
+qualified on the DdCBE off-target finding, which is a real safety signal for the heteroplasmy-
+reduction route, not on the platform paper's novelty alone. Cited pnas.org, PubMed and doi.org
+separately so each displayed name matches its own domain — the fix for last run's doi.org error.
+Quote: Swinton is still oldest in rotation but remains unverifiable per QUOTES.md, so fell through
+to Chambers (12 days), different passage from the Sept. 2 "built for the valley" line.
