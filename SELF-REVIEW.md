@@ -496,3 +496,36 @@ reduction route, not on the platform paper's novelty alone. Cited pnas.org, PubM
 separately so each displayed name matches its own domain — the fix for last run's doi.org error.
 Quote: Swinton is still oldest in rotation but remains unverifiable per QUOTES.md, so fell through
 to Chambers (12 days), different passage from the Sept. 2 "built for the valley" line.
+
+## 2026-09-16 (Wed)
+(a) Thin/empty: 🧬 Mito omitted entirely — correct call, see below. School ran 1 bullet (only one new
+  qualifying email since Monday; the 9/13 director letter was already mined by the Sept. 14 issue).
+  Kauai 1, Tech 2, World 2, US 2 — a genuinely quiet 48 hours, not under-searching.
+(b) Unsure of the bar: the Kauai bullet. 76%→82% is incremental and on its own would not run; it
+  cleared because schools reopening and the Princeville–Wainiha isolation are new facts, not a
+  restatement of the percentage. If next Friday is only another percentage, drop it.
+  Also the Tilta FX5 bullet — the reader shoots an FX6, not an FX5, so it ran on the rigging
+  hardware (ARCA plate, DJI centring point) being body-agnostic rather than on the camera.
+(c) Mito: omitted. Everything in the 14-day window failed the filter, not the date — two case
+  reports (MELAS peritoneal dialysis, MT-ND4 anaesthesia encephalopathy), an RIRCD case series, a
+  vitamin/cofactor prescribing survey, and four reviews (oxygen delivery, CLPP, endothelial
+  coupling, TK2 masterclass — the last two now excluded for the sixth consecutive run). The ND6
+  allotopic JCI Insight paper resurfaced in the search and was correctly caught as already covered
+  Sept. 9. The taurine/zagociguat/PRIZM material that the IRDR review surfaces ran Aug. 27, so the
+  review-article exception does not reopen it.
+(d) GW watch: no bullet. USNI's Sept. 14 fleet tracker still has CVN-73 in the Arabian Sea with
+  CVW-5 and USS Shoup — position unchanged, no incident, so silence was the correct output.
+(e) Tweak next run: the two Tech bullets (labs coordinating on safety, OpenAI IPO delay) are really
+  one story about the same safety-pressure moment; next time collapse a pair like that into one
+  synthesised bullet and spend the slot on consumer/practical tech, which has now been absent two
+  runs running. Apple correctly yielded nothing — iOS 27 shipped into the Sept. 14 issue and there
+  was no Sept. 15–16 follow-on.
+Egress this run: espn.com, cined.com and newsshooter.com all EGRESS_BLOCKED on direct fetch (add to
+  the known-blocked list with usni.org and nfl.com); search-only worked fine for all three. The
+  Padres score needed two passes because one search result conflated a Sept. 15 Rockies loss with an
+  8–7 Padres win from a different date — verified against the ESPN recap gameId before writing.
+Drive: the rotation path worked end to end this run (reparent + rename), so the fallback was not
+  needed. Note for a future cleanup: eight stale "Latest.html" files from May still sit in the
+  folder root from the pre-"Current Brief" scheme. Left alone — out of scope for a per-run rotation.
+Quote: Swinton still unverifiable and skipped per QUOTES.md, so next-oldest was Augustine (09-04);
+  used Sermon 169 rather than another Confessions passage to avoid a third Confessions in five weeks.
