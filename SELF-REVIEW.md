@@ -529,3 +529,50 @@ Drive: the rotation path worked end to end this run (reparent + rename), so the 
   folder root from the pre-"Current Brief" scheme. Left alone — out of scope for a per-run rotation.
 Quote: Swinton still unverifiable and skipped per QUOTES.md, so next-oldest was Augustine (09-04);
   used Sermon 169 rather than another Confessions passage to avoid a third Confessions in five weeks.
+
+## 2026-09-18 (Friday)
+(a) Thin/empty: Gear 1 (IBC ran Sept 11-14 and the last two issues already mined it — Sirui Saturn V2
+  was the one genuinely uncovered item left, so one bullet is honest rather than thin). EV 1 — no new
+  van/family story at all since the Sept 16 Kia PV7 and Renault Trafic bullets, so the one allowed
+  general item (NHTSA/Cybercab) carried the section. School 1: only three emails since Monday and all
+  three were the same lockdown thread. Sports 2, both non-NBA — camps do not open until Sept 29 and
+  there was no Blazers/Warriors news in the window; the Sharpe meniscus surgery surfaced in search but
+  dates to Aug 26-27 and was out of the lookback.
+(b) Unsure of the bar: the Houthi/Bab el-Mandeb bullet. The underlying captures are Sept 11-14, i.e.
+  before the last brief, and the Sept 16 issue simply did not run them. I ran it on the "what is new
+  since we last covered this" test against the Sept 11 Mokha bullet — Perim, the Hanish islands and the
+  completed coastline takeover are all new facts — rather than on same-day freshness. If a similar gap
+  shows up again, that is the right test, but flag it. Also the Kauai bullet: the self-review from last
+  run said drop it if it is only another percentage, so I led on the Wainiha/Hā'ena helicopter repair and
+  the end-of-next-week ETA and used 91% only as context. That held the line.
+(c) Mito: omitted, sixth consecutive run. Everything in the window failed relevance, not date — forensic
+  mtDNA papers (EDNAP heteroplasmy concordance, telogen hair panels, thermal degradation in teeth), a
+  string of TCM/nanozyme mitochondria-adjacent bench papers, an iPSC neuronal deletion model, and the
+  MELAS peritoneal-dialysis case report already caught and excluded last run. The CHOP zebrafish
+  "drug in MELAS trials works in other mito models" story surfaced and looked promising until the date
+  check: the release is August 2025. Correctly excluded.
+(d) GW watch: no bullet, second consecutive quiet run. The Sept 14 USNI fleet tracker is still the most
+  recent position report — CVN-73 with CVW-5 and USS Shoup in the Arabian Sea, unchanged, no incident,
+  no claim. CENTCOM's Sept 16 "Hormuz remains open" line is theatre-wide, not ship-specific, so it went
+  into the World Houthi bullet as context and not into a GW item. Silence remains correct.
+(e) Tweak next run: last run's note said to collapse paired same-moment AI stories and spend the slot on
+  consumer/practical tech. Did that — the OpenAI misalignment disclosure is one bullet, not two, and the
+  iOS 27.2-before-27.1 item is the first practical Apple bullet in three runs. Keep that. Next tweak:
+  the EV section has now been van-less for one run and will likely stay so until the next commercial-
+  vehicle show, so consider letting a family-format EV *policy* story (charging, tax credit, pricing)
+  count as priority rather than filler when no new van model exists.
+Egress this run: timesofsandiego.com, chop.edu and mlb.com all EGRESS_BLOCKED on direct fetch — add to
+  the known-blocked list alongside espn.com, cined.com, newsshooter.com, usni.org, nfl.com. Search-only
+  worked for all three. The Padres record needed care: the Sept 14 and Sept 16 issues disagree with each
+  other (80-68 vs 82-68), so I cited the AP recap's own framing — four games clear of Arizona with nine
+  to play — instead of carrying forward a W-L number I could not reconcile.
+Conditions: the scheduled 11:20/11:45 UTC fetches did not land — data/conditions.json was still the
+  Sept 16 17:17Z file at run time. Manual actions_run_trigger worked and returned fresh data in ~10 min.
+  Worth watching: if the scheduled runs miss again on Monday, the workflow cron needs a look.
+Tide gap: the fetched prediction set contained only three entries starting at the 2:35 PM high, so
+  today's morning low is genuinely absent rather than omitted. Flagged in the data-note per the
+  data-integrity rule instead of interpolating.
+Quote: Swinton still skipped per QUOTES.md. Next-oldest was MLK (09-07), and both prior MLK entries
+  (Birmingham Jail 08-23, "Suffering and Faith" 09-07) were inside 30 days, so I went to a third source
+  — "Shattered Dreams" from Strength to Love — and verified the wording against the King Institute at
+  Stanford rather than a quote-aggregator.

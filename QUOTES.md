@@ -89,6 +89,7 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 
 | Date | Author | Source |
 |------|--------|--------|
+| 2026-09-18 | MLK | "Shattered Dreams," Strength to Love |
 | 2026-09-16 | Augustine | Sermon 169 |
 | 2026-09-14 | Chambers | My Utmost for His Highest |
 | 2026-09-11 | Keller | The Meaning of Marriage |
