@@ -576,3 +576,36 @@ Quote: Swinton still skipped per QUOTES.md. Next-oldest was MLK (09-07), and bot
   (Birmingham Jail 08-23, "Suffering and Faith" 09-07) were inside 30 days, so I went to a third source
   — "Shattered Dreams" from Strength to Love — and verified the wording against the King Institute at
   Stanford rather than a quote-aggregator.
+
+## 2026-09-21 (Mon)
+(a) Thin/empty: Mito omitted entirely — see below. Kauai ran 1 (correct, the story is now a
+  two-town tail). No NBA item: camps do not open until Sept 29 and the only Blazers news in
+  range (coaching staff, Sept 10) predates the Friday lookback, so Sports led with MLB. EV ran 2,
+  the second marked "(general EV news)" per the cap rule.
+(b) Unsure it cleared the bar: the San Diego gas-price bullet. It ran Sept 18 at "29th in 30 days,
+  $6.157" and this is "31st in 32 days, $6.19." I framed it on the new four-month high rather than
+  the counter, but it is the weakest item in the issue and a third real SD story would have pushed
+  it out. Search for SD local on a Sunday/Monday is consistently the thinnest part of the run.
+(c) Mito: the one genuinely strong candidate was the Stanford myeloid-cell-replacement /
+  intercellular mitochondrial-transfer paper in Nature Communications (PMID 42736305) — it entered
+  PubMed this window but was PUBLISHED Aug 15, so the "use the older date" rule excludes it at 37
+  days. Everything else in the window was case reports (MELAS peritoneal dialysis, RIRCD), a
+  Finsterer letter, an oxygen-delivery review restating the known hypoxia work, and a PDE5
+  editorial (Mol Genet Metab, Sept 16) with no abstract and no findable companion study — I could
+  not verify what was new, so it did not run. Section omitted, header and all.
+(d) Tweak next run: the Nature Communications miss is worth a rule check with the reader. A
+  landmark mito paper indexed 5 weeks after online publication will ALWAYS fail the 14-day gate,
+  which means the strict filter and the date filter can combine to make the section structurally
+  unable to report the biggest results. Consider proposing a narrow carve-out: for Mito only,
+  allow up to ~45 days from publication date, since the anti-repetition rule already prevents
+  re-running anything covered. Do not change it unilaterally — raise it in the chat reply.
+Conditions: scheduled 11:20/11:45/12:20 UTC fetches did NOT land again (file was still the Sept 18
+  16:44Z copy at run time) — second consecutive run where this happened. Manual trigger returned
+  fresh data in ~8 min. Per last run's note, the workflow cron now needs an actual look; flag it
+  to the reader rather than just re-triggering a third time.
+Surf: reported OUTLOOK as unavailable rather than guessing. conditions.json carries live buoy
+  readings only, no forecast model, and a single time-slice cannot tell building from fading —
+  Friday's reading was a different swell (3.0 ft @ 14s from 183) so it is not a usable baseline.
+GW watch: nothing verifiable since the last brief. Latest USNI material (Sept 13-14 fleet tracker,
+  a routine Super Hornet recovery) predates the Friday issue and restates a known position.
+  No bullet — silence is the correct output.
