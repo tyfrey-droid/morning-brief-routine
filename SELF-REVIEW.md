@@ -599,10 +599,16 @@ Quote: Swinton still skipped per QUOTES.md. Next-oldest was MLK (09-07), and bot
   unable to report the biggest results. Consider proposing a narrow carve-out: for Mito only,
   allow up to ~45 days from publication date, since the anti-repetition rule already prevents
   re-running anything covered. Do not change it unilaterally — raise it in the chat reply.
-Conditions: scheduled 11:20/11:45/12:20 UTC fetches did NOT land again (file was still the Sept 18
-  16:44Z copy at run time) — second consecutive run where this happened. Manual trigger returned
-  fresh data in ~8 min. Per last run's note, the workflow cron now needs an actual look; flag it
-  to the reader rather than just re-triggering a third time.
+Conditions: DIAGNOSED. The cron in fetch-conditions.yml is correct (20/45 past 11 and 12 UTC,
+  Mon/Wed/Fri). The problem is GitHub's scheduler delivering the runs hours late: on Sept 18 the
+  four scheduled runs actually fired at 15:11, 16:24 and 16:44 UTC — 3.5 to 5 hours behind their
+  cron times, i.e. long AFTER the brief published. Same today, which is why the file was still the
+  Sept 18 16:44Z copy. GitHub documents cron as best-effort and delays are worst at heavily used
+  minutes; :20 and :45 on the hour boundary are exactly that. This is NOT the DST or day-of-week
+  logic and it is not a repo bug — do not "fix" the cron days. The fix worth proposing to the
+  reader is moving the schedule an hour or two earlier and onto odd minutes (e.g. 07/37 past
+  09 and 10 UTC) to buy slack, and keeping the manual actions_run_trigger as the reliable path.
+  Manual trigger again returned fresh data in ~8 minutes.
 Surf: reported OUTLOOK as unavailable rather than guessing. conditions.json carries live buoy
   readings only, no forecast model, and a single time-slice cannot tell building from fading —
   Friday's reading was a different swell (3.0 ft @ 14s from 183) so it is not a usable baseline.
