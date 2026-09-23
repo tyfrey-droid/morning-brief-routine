@@ -615,3 +615,30 @@ Surf: reported OUTLOOK as unavailable rather than guessing. conditions.json carr
 GW watch: nothing verifiable since the last brief. Latest USNI material (Sept 13-14 fleet tracker,
   a routine Super Hornet recovery) predates the Friday issue and restates a known position.
   No bullet — silence is the correct output.
+
+## 2026-09-23 (Wed)
+(a) Thin/empty: US & Politics ran ONE bullet — the White House press ban was the only story clearing
+  the 2+ outlet consensus test with a development since Monday. The NPR piece on National Guard
+  deployment fears was the obvious second, but the corroborating coverage (Caine's letter to
+  Slotkin, The Hill/NBC/PBS) all dates to Aug 31–Sep 1, outside the 14-day citation window, so it
+  would have been a single-outlet bullet. San Diego and Gear also ran one each. Mito and School
+  omitted entirely.
+(b) Unsure it cleared the bar: the Atomos Shinobi 7 II (Sept 11). It was an IBC product and the
+  Sept 16 brief carried a generic "IBC best-of-show lists land" bullet, so there is partial overlap;
+  I ran it on the specific shipping/price/camera-control detail, which was not previously stated.
+(c) Tweak next run: build the World/US candidate list from date-filtered searches FIRST (e.g. append
+  the target date to every query) rather than topic searches, then check consensus. Three separate
+  promising US stories this run — shutdown CR, Tijuana River bonds, Curry extension — died on date
+  checks AFTER I had spent calls researching them. Filtering on date earlier would have left budget
+  for a second US story that did qualify.
+Mito: five PubMed hits, none qualified. Two (PDE5 editorial, oxygen-delivery review) were already
+  assessed and rejected last run. The Finsterer letter is a single-case report. The one genuinely
+  new paper (MyD88/Ndufs4 Leigh mouse, J Neuropathol Exp Neurol, Sept 16) is a negative result —
+  MyD88 immune signalling is NOT a primary driver — with an incidental finding that prophylactic
+  enrofloxacin accelerated disease. Mouse Leigh model, veterinary fluoroquinolone, nothing
+  actionable for a MELAS child; the 45-day-window question from last run is still worth raising.
+GW watch: nothing verifiable since Monday. The Sept 21 USNI fleet tracker restates a known position
+  and everything else search surfaced is the Aug 20 arrival coverage. No bullet — correct output.
+Conditions: manual actions_run_trigger again returned fresh data in ~11 min (file was 2 days stale
+  at 12:48Z fetch). The scheduled-cron delay diagnosed on Sept 21 is unchanged; the schedule-timing
+  proposal there still stands.
