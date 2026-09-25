@@ -642,3 +642,30 @@ GW watch: nothing verifiable since Monday. The Sept 21 USNI fleet tracker restat
 Conditions: manual actions_run_trigger again returned fresh data in ~11 min (file was 2 days stale
   at 12:48Z fetch). The scheduled-cron delay diagnosed on Sept 21 is unchanged; the schedule-timing
   proposal there still stands.
+
+## 2026-09-25 (Fri)
+(a) Thin/empty: San Diego, Kauai, Gear and EV each ran one bullet. Gear was the weakest — search
+  surfaced nothing dated Sept 24-25 from the anchors except a gear-inventory tool, so that ran.
+  Mito omitted entirely; School ran three.
+(b) Unsure it cleared the bar: the ACA story broke Sept 22, one day before the previous brief, so it
+  sits just outside a strict "since the last brief" lookback. It was never covered, it is a major
+  domestic story, and it cleared consensus easily (NPR/CNBC/WaPo/NBC), so I ran it. Also the Asset
+  Giant bullet — a software tool, not gear; borderline for the section's intent.
+(c) Tweak next run: the date-filtered-search-first approach from Sept 23 worked and should stay, but
+  it under-serves Gear and San Diego, where the anchors are egress-blocked AND poorly indexed by
+  date. For those two, query the outlet's date-stamped URL pattern directly
+  (e.g. "kpbs.org/news 2026/09/25") — that is what finally surfaced both the Chicano Park vote and
+  the inewsource El Nino piece after four generic searches had failed.
+Excluded on lookback, not quality: Otay Mesa Detention Center TB-reporting warning (KPBS Sept 17 —
+  never covered, but eight days old, so not news); inewsource "Super El Nino" explainer (Sept 24, but
+  the Sept 23 brief ran the statewide emergency and an explainer is not a new development); Accsoon
+  CineView M7 firmware (CineD article carries no confirmable date and near-identical pieces exist
+  from January and October, so the date test failed); Shaedon Sharpe meniscus tear (August).
+GW watch: nothing verifiable since Wednesday. Latest is an F-35C launch Sept 19 and the Sept 21 USNI
+  fleet tracker, both predating the last brief and restating a known Arabian Sea position. No bullet.
+Mito: PubMed returned three Finsterer letters, a peritoneal-dialysis case report, and reviews on
+  aging/gastric-cancer heteroplasmy. None clears the bar. Note the broad query
+  ("MELAS OR mitochondrial disease therapy OR ...") is now mostly noise — 45k hits, top 20 almost all
+  unrelated mitochondrial-dysfunction papers. The title-scoped query is the one worth keeping.
+Conditions: actions_run_trigger worked well this run — fetch landed at 12:36Z, about 7 minutes after
+  the trigger, well inside the window. No staleness issue.
