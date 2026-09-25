@@ -466,6 +466,23 @@
 
 
 <script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  function apply(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    btn.textContent = theme === 'dark' ? '☀' : '☾';
+  }
+  var current = document.documentElement.getAttribute('data-theme') || 'dark';
+  apply(current);
+  btn.addEventListener('click', function(){
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    apply(next);
+    try { localStorage.setItem('brief-theme', next); } catch (e) {}
+  });
+})();
+</script>
+
+<script>
 /* Per-story feedback → pre-filled GitHub issues (label: brief-feedback).
    Lets the reader flag a story so the next brief can learn from it. */
 (function(){
