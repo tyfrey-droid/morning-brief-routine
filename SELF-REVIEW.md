@@ -669,3 +669,30 @@ Mito: PubMed returned three Finsterer letters, a peritoneal-dialysis case report
   unrelated mitochondrial-dysfunction papers. The title-scoped query is the one worth keeping.
 Conditions: actions_run_trigger worked well this run — fetch landed at 12:36Z, about 7 minutes after
   the trigger, well inside the window. No staleness issue.
+
+## 2026-09-28 (Monday)
+(a) Thin/empty: Kauai one bullet (correct — the restoration finally closed out), San Diego two and both
+  from Sept 20/22 rather than the weekend, Gear two, EV two. Mito omitted entirely. Weekend lookbacks
+  starve the local and trade sections; the wires carry the weekend, local desks do not publish it.
+(b) Unsure it cleared the bar: the Lexus TZ item — the "development" is a spy sighting of a car
+  unveiled in May, so the bullet leans on specs rather than news. Ran it because family-format EVs are
+  the section's stated priority and the alternative was a charging-port milestone. Also the Warriors
+  roster bullet, which is transaction bookkeeping; kept it because Warriors are a standing second team.
+(c) Tweak next run: the Pour Over cross-check earned its place this run — their Sept 28 issue was what
+  surfaced the nor'easter, which none of my wire queries had returned. Check TPO EARLIER, before
+  building the US shortlist, not as a final gate.
+Excluded on redundancy: Trump-vs-media (ran Sept 23 and Sept 25, nothing new); GPT-6 Sol / Opus 5.5
+  model drop (ran Sept 23); Padres clinch itself (ran Sept 25 — this run leads on the seeding only);
+  fall project launch and FASS form (both ran, School).
+Date-excluded: Nikon NIKKOR Z CINEMA T1.9 VV lenses (Sept 7); Sony RM-DP5/DP7 monitors (Sept 8 — would
+  have been the best FX6-adjacent item of the month, missed at the time); Mercedes/Rivian van JV
+  (September 2022, surfaced undated by search); MELAS NADH/NAD metabolomics paper (published June 13).
+GW watch: nothing verifiable. Latest remains the Sept 21 USNI fleet tracker and a Sept 19 F-35C launch,
+  both predating the last brief and restating a known Arabian Sea position. No bullet — correct output.
+Mito: title-scoped PubMed query returned 4 hits for the 14-day window: two Finsterer-style letters
+  arguing over a single rehab case report, a krill COI heteroplasmy paper (wrong field entirely), and
+  the June metabolomics paper. The title-scoped query is still the right one — 4 hits is a readable
+  result set where the broad query gave 45k of noise — but "heteroplasmy[Title]" pulls in non-human
+  genetics. Consider adding NOT to exclude zoology journals.
+Conditions: data was 3 days stale on arrival (Friday's fetch); actions_run_trigger fired at 5:36 AM PT
+  and landed inside 60 seconds. Trigger-then-work-other-sections is the right order and cost nothing.
