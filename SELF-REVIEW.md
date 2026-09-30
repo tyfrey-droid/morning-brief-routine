@@ -696,3 +696,37 @@ Mito: title-scoped PubMed query returned 4 hits for the 14-day window: two Finst
   genetics. Consider adding NOT to exclude zoology journals.
 Conditions: data was 3 days stale on arrival (Friday's fetch); actions_run_trigger fired at 5:36 AM PT
   and landed inside 60 seconds. Trigger-then-work-other-sections is the right order and cost nothing.
+
+## 2026-09-30 (Wednesday)
+(a) Thin/empty: Gear one bullet — the only in-window item was a PVC light review; the three best gear
+  candidates all fell outside 14 days (Sony 8-14mm fisheye Sept 8, Atomos Shogun AV-19M Sept 11, Canon
+  CINE-SERVO announced back in April). Tech two, EV two, San Diego two. School omitted — the only mail
+  since Monday was the October lunch menu, which the rules exclude absent a policy change. Mito ran TWO
+  items, unusually.
+(b) Unsure it cleared the bar: the MELAS migraine cohort. It is observational with n=48 and no treatment
+  angle, which the filter nominally excludes as a prevalence paper. Ran it because the AHF subgroup
+  finding (12/12 migraine, half with aura) is MELAS-specific, quantitative and clinically actionable for
+  a nonverbal child who cannot report head pain. Also the ICE surge bullet — two outlets, neither a wire,
+  and the announcement date reads as Sept 26 in The Hill but Sept 29 in AP's roundup; ran it on the
+  California/San Diego relevance.
+(c) Tweak next run: gear needs a different retrieval path. cined.com, newsshooter.com and ymcinema.com are
+  ALL egress-blocked, so the section depends entirely on search snippets that skew to older SEO pages.
+  Next run, search provideocoalition.com and bhphotovideo.com/explora by date directly — PVC was the only
+  anchor that surfaced same-week content.
+Excluded on redundancy: Iran/Hormuz talks (ran Sept 23, 25 and 28, nothing new since Trump's rejection);
+  Blazers camp opening as such (flagged Sept 28 — led on Media Day content instead); Padres wild-card
+  seeding (ran Sept 28 — led on the Game 1 result); Atomos Shinobi 7 II (ran Sept 23); nor'easter,
+  pocket rescission, college sports bill, Vision Pro concepts, Mercedes/Wayve (all Sept 28).
+Date-excluded: Sony SEL814G 8-14mm fisheye (Sept 8); Atomos Shogun AV-19M (Sept 11); Renault Trafic Van of
+  the Year and Kia PV7 (both Sept 14, IAA); Canon EOS R8 II + EG-E2 grip (Sept 15); Canon CINE-SERVO
+  40-1200mm (April, NAB); the Dec 11 continuing resolution (passed Sept 1, signed Sept 4).
+TPO cross-check: attempted early per last run's note, but thepourover.org is egress-blocked to WebFetch and
+  search only surfaced their Sept 26 issue. Could not use it as a gate this run. Worth accepting that TPO
+  is unavailable from this sandbox rather than retrying each run.
+GW watch: ran a bullet — the Theodore Roosevelt sailing from San Diego on Sept 27 to relieve GW in CENTCOM
+  is a relief-by-another-strike-group development, which qualifies. Sourced to Stars and Stripes, USNI and
+  NBC San Diego; all publicly announced, nothing about GW's return date, no personal connection implied.
+  Deliberately did NOT touch the Fox reporter's early-September missile-attack claim — no CENTCOM
+  confirmation surfaced, so it stays out.
+Conditions: data arrived 41 hours stale (Monday's fetch). Triggered fetch-conditions.yml at 5:35 AM PT and
+  it landed within ~60 seconds. Trigger-first-then-gather continues to cost nothing.
