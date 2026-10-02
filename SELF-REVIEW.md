@@ -730,3 +730,36 @@ GW watch: ran a bullet — the Theodore Roosevelt sailing from San Diego on Sept
   confirmation surfaced, so it stays out.
 Conditions: data arrived 41 hours stale (Monday's fetch). Triggered fetch-conditions.yml at 5:35 AM PT and
   it landed within ~60 seconds. Trigger-first-then-gather continues to cost nothing.
+
+## 2026-10-02 (Friday)
+Thin/empty: Mito omitted entirely — PubMed (two queries, 09/18–10/02 entry-date window, ~90 hits scanned)
+  returned nothing clearing the bar: two MELAS case reports (CapeOX enteritis, HF/AF management), mtDNA
+  mechanism reviews (cGAS/STING, base editing), and a lot of non-MELAS mitochondrial oncology/neurodegen.
+  Correct outcome two days after 09/30 ran two mito items. Kauai ran 1 of 2; Gear ran 2 — the FX6 firmware
+  that search surfaced was v6.00 (March) and v6.01 (Sept 1), both date-excluded, so the section is thin
+  again for the same reason as last run. Warriors bullet dropped: only Kerr's preseason starting lineup,
+  and the only sources were Yahoo/Yardbarker syndication — not worth a weak citation to fill the slot.
+Unsure it cleared the bar: the Rubio/Iran-delegation half of the World Iran bullet is Axios-originated and
+  Iran disputes it, so I wrote the denial in and led the bullet on the troop numbers instead. Also the
+  Samyang 28–135mm is a tease with no price/weight and a Feb 2027 date — kept it only because constant
+  f/2.8 on E-mount is squarely the reader's kit.
+Excluded on redundancy: Nov 6 exhibition date as such (ran 09/28 — led on the casting detail instead);
+  giant cardboard request (09/28 — now superseded, they have enough); Theodore Roosevelt relieving GW
+  (09/30 — reframed around the 10,000-troop buildup, which is the new development); ICE sanctuary surge
+  (09/30 — ran the local community-college sign response instead).
+Date-excluded: Google's $40B/$350B Anthropic investment (April 2026 — llm-stats.com and aiweekly.co both
+  served it as current; those aggregators are unusable as a freshness signal, don't query them again);
+  FX6 firmware 6.00 (Mar 18) and 6.01 (Sept 1); Kia PV7 IAA debut (Sept 14, already excluded last run);
+  Canon CINE-SERVO 40-1200mm (April); SmallHD OLED 16 (no date confirmable — dropped rather than guess).
+GW watch: NO bullet. Checked twice (carrier-location search + a direct strike/incident-claim search) and
+  found only restatements of the mid-August CENTCOM arrival and the 09/30 TWZ carrier tracker. No position
+  change, no claim, no incident since 09/30, so silence per the standing instruction. The buildup bullet
+  deliberately stays at force-posture level and says nothing about GW's schedule or return.
+Conditions: data was 41h stale again (Monday's 18:08Z fetch — Wednesday's run also saw this). Triggered
+  fetch-conditions.yml at 5:35 AM PT, fresh data landed in ~45s. Trigger-first-then-gather still free.
+  Note 103°F/NE wind — first extreme-heat event of this brief's run; weather NOTE row and a San Diego
+  bullet both carry it, which is the right split rather than duplicating the forecast.
+Tweak to try next run: three of four Gear/EV attempts died on date-excluded hits surfaced by undated search
+  snippets. Next run, filter gear/EV candidates by the date embedded in the article URL path (newsshooter,
+  electrek and cined all put /YYYY/MM/DD/ in the path) BEFORE spending a verification fetch on them — that
+  would have killed the FX6 firmware and CINE-SERVO leads instantly.
