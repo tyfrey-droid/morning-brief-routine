@@ -1,40 +1,30 @@
 {
-  "fetched_at_utc": "2026-10-05T12:36:18Z",
+  "fetched_at_utc": "2026-10-05T19:44:39Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-10-05T09:20:36+00:00",
+    "updated": "2026-10-05T18:25:33+00:00",
     "periods": [
       {
-        "name": "Overnight",
-        "temperature": 74,
+        "name": "Today",
+        "temperature": 100,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "N",
-        "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 74. North wind 0 to 5 mph.",
+        "windSpeed": "5 to 10 mph",
+        "windDirection": "W",
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 100. West wind 5 to 10 mph, with gusts as high as 25 mph.",
         "precipChancePct": 0
       },
       {
-        "name": "Monday",
-        "temperature": 101,
+        "name": "Tonight",
+        "temperature": 74,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
-        "windDirection": "NW",
-        "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 101. Northwest wind 0 to 10 mph.",
-        "precipChancePct": 0
-      },
-      {
-        "name": "Monday Night",
-        "temperature": 74,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "SW",
+        "windDirection": "N",
         "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 74. Southwest wind 0 to 5 mph.",
+        "detailedForecast": "Mostly clear, with a low around 74. North wind 0 to 10 mph.",
         "precipChancePct": 0
       },
       {
@@ -42,28 +32,38 @@
         "temperature": 100,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
-        "windDirection": "NW",
+        "windDirection": "N",
         "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 100. Northwest wind 0 to 10 mph, with gusts as high as 20 mph.",
+        "detailedForecast": "Sunny, with a high near 100. North wind 0 to 10 mph, with gusts as high as 20 mph.",
+        "precipChancePct": 0
+      },
+      {
+        "name": "Tuesday Night",
+        "temperature": 73,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "E",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": "Mostly clear, with a low around 73. East wind 0 to 5 mph.",
         "precipChancePct": 0
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-10-05T11:56Z",
-    "waveHeightFt": 2.3,
-    "dominantPeriodS": 13,
-    "avgPeriodS": 9.0,
-    "meanWaveDirDeg": 212,
-    "waterTempF": 72.7
+    "observed_utc": "2026-10-05T18:56Z",
+    "waveHeightFt": 2.6,
+    "dominantPeriodS": 14,
+    "avgPeriodS": 9.8,
+    "meanWaveDirDeg": 201,
+    "waterTempF": 74.7
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-10-05T11:56Z",
+    "observed_utc": "2026-10-05T18:56Z",
     "waveHeightFt": 2.3,
-    "dominantPeriodS": 13,
-    "avgPeriodS": 9.8,
-    "meanWaveDirDeg": 215,
-    "waterTempF": 74.5
+    "dominantPeriodS": 14,
+    "avgPeriodS": 9.2,
+    "meanWaveDirDeg": 206,
+    "waterTempF": 75.6
   },
   "tides_san_diego_9410170": [
     {
