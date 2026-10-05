@@ -1,110 +1,110 @@
 {
-  "fetched_at_utc": "2026-10-02T18:02:34Z",
+  "fetched_at_utc": "2026-10-05T12:36:18Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-10-02T07:34:49+00:00",
+    "updated": "2026-10-05T09:20:36+00:00",
     "periods": [
       {
-        "name": "Today",
-        "temperature": 103,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "NE",
-        "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 103. Northeast wind 0 to 5 mph.",
-        "precipChancePct": 0
-      },
-      {
-        "name": "Tonight",
-        "temperature": 77,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "NE",
-        "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 77. Northeast wind 0 to 5 mph.",
-        "precipChancePct": 0
-      },
-      {
-        "name": "Saturday",
-        "temperature": 101,
-        "temperatureUnit": "F",
-        "windSpeed": "5 mph",
-        "windDirection": "NW",
-        "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 101. Northwest wind around 5 mph.",
-        "precipChancePct": 0
-      },
-      {
-        "name": "Saturday Night",
-        "temperature": 77,
+        "name": "Overnight",
+        "temperature": 74,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
         "windDirection": "N",
         "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 77. North wind 0 to 5 mph.",
+        "detailedForecast": "Mostly clear, with a low around 74. North wind 0 to 5 mph.",
+        "precipChancePct": 0
+      },
+      {
+        "name": "Monday",
+        "temperature": 101,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "NW",
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 101. Northwest wind 0 to 10 mph.",
+        "precipChancePct": 0
+      },
+      {
+        "name": "Monday Night",
+        "temperature": 74,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "SW",
+        "shortForecast": "Mostly Clear",
+        "detailedForecast": "Mostly clear, with a low around 74. Southwest wind 0 to 5 mph.",
+        "precipChancePct": 0
+      },
+      {
+        "name": "Tuesday",
+        "temperature": 100,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "NW",
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 100. Northwest wind 0 to 10 mph, with gusts as high as 20 mph.",
         "precipChancePct": 0
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-10-02T17:26Z",
-    "waveHeightFt": 3.3,
+    "observed_utc": "2026-10-05T11:56Z",
+    "waveHeightFt": 2.3,
     "dominantPeriodS": 13,
-    "avgPeriodS": 7.3,
-    "meanWaveDirDeg": 226,
-    "waterTempF": 72.5
+    "avgPeriodS": 9.0,
+    "meanWaveDirDeg": 212,
+    "waterTempF": 72.7
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-10-02T17:26Z",
-    "waveHeightFt": 3.3,
+    "observed_utc": "2026-10-05T11:56Z",
+    "waveHeightFt": 2.3,
     "dominantPeriodS": 13,
-    "avgPeriodS": 6.4,
-    "meanWaveDirDeg": 216,
-    "waterTempF": 73.2
+    "avgPeriodS": 9.8,
+    "meanWaveDirDeg": 215,
+    "waterTempF": 74.5
   },
   "tides_san_diego_9410170": [
     {
-      "time_pt": "2026-10-02 03:19",
-      "type": "High",
-      "heightFt": 3.276
-    },
-    {
-      "time_pt": "2026-10-02 05:55",
+      "time_pt": "2026-10-05 00:18",
       "type": "Low",
-      "heightFt": 3.135
+      "heightFt": 0.003
     },
     {
-      "time_pt": "2026-10-02 13:30",
+      "time_pt": "2026-10-05 07:05",
       "type": "High",
-      "heightFt": 5.706
+      "heightFt": 4.596
     },
     {
-      "time_pt": "2026-10-02 21:54",
+      "time_pt": "2026-10-05 12:11",
       "type": "Low",
-      "heightFt": 0.501
+      "heightFt": 2.629
     },
     {
-      "time_pt": "2026-10-03 06:05",
+      "time_pt": "2026-10-05 18:02",
       "type": "High",
-      "heightFt": 3.62
+      "heightFt": 5.757
     },
     {
-      "time_pt": "2026-10-03 08:17",
+      "time_pt": "2026-10-06 01:03",
       "type": "Low",
-      "heightFt": 3.555
+      "heightFt": -0.135
     },
     {
-      "time_pt": "2026-10-03 15:10",
+      "time_pt": "2026-10-06 07:33",
       "type": "High",
-      "heightFt": 5.447
+      "heightFt": 5.087
     },
     {
-      "time_pt": "2026-10-03 23:19",
+      "time_pt": "2026-10-06 13:06",
       "type": "Low",
-      "heightFt": 0.261
+      "heightFt": 1.894
+    },
+    {
+      "time_pt": "2026-10-06 18:59",
+      "type": "High",
+      "heightFt": 5.936
     }
   ]
 }
