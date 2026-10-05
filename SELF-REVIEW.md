@@ -763,3 +763,34 @@ Tweak to try next run: three of four Gear/EV attempts died on date-excluded hits
   snippets. Next run, filter gear/EV candidates by the date embedded in the article URL path (newsshooter,
   electrek and cined all put /YYYY/MM/DD/ in the path) BEFORE spending a verification fetch on them — that
   would have killed the FX6 firmware and CINE-SERVO leads instantly.
+
+## 2026-10-05 (Monday)
+Thin/empty: Gear ran 1 bullet (Litepanels Astra IP kits, Newsshooter 10/04) — the only dated, relevant hit in
+  four searches. The URL-date prefilter from last run's tweak worked exactly as intended and killed three leads
+  before they cost a verification fetch: Tamron 25–200mm G2 (petapixel /2025/10/21/ — a year old), Kia PV5
+  International Van of the Year (motortrader slug ending 24-11-2025), Thypoch AF trio (sonyaddict, rumor blog,
+  teaser only). Keep doing this. Tech ran 2 rather than padding: GPT-6.1 Sol, Gemini 4 Argon and Sonnet 5.5 were
+  all inside 10/02's price-convergence bullet, and the Apple Oct 13 Home date was in 10/02's lineup bullet, so
+  the only new Apple angle was the foldable's ~60% assembly yield. Mito ran 1 of ~25 PubMed hits; the rest were
+  four Finsterer letters, two false positives (a "Melas" co-author, an Ameiurus melas seahorse poxvirus), the
+  migraine study 09/30 already ran, and case reports already triaged out last week.
+Unsure it cleared the bar: the Iraq withdrawal bullet is pegged to a 09/30 completion, which predates the
+  Fri→Mon lookback. Ran it anyway because no prior brief ever covered a 12-year mission ending, and led on the
+  10/01 Kurdish air-defence gap and the FM's ISIS warning so the bullet is about consequences, not the date.
+  Flagged in the report rather than quietly backdated. Also softened the San Diego heat bullet: ABC said San
+  Diego hit 105 Saturday, another outlet said 100 breaking a 97 from 1987 — irreconcilable from search snippets,
+  so I wrote "broke daily records" with no number and let La Mesa's own 101° carry the Weather row.
+Excluded on redundancy: Theodore Roosevelt's San Diego departure and the three-carrier posture (10/02 Iran
+  bullet already had both, with the 09/27 sail date); shutdown-averted (September); iOS 27.2 (mid-September).
+GW watch: NO bullet, second run in a row. The one apparent development — TR deploying to relieve her — was
+  already carried by 09/30 ("in line to be relieved") and 10/02 (TR left San Diego, three carriers). Everything
+  else was a CENTCOM flight-ops post on X from 10/01 restating presence. No position change, no claim, no
+  incident, so silence per the standing instruction. The Abraham Lincoln homecoming went in San Diego on its own
+  merits (300+ days, crew-conditions inquiry) and says nothing about GW's schedule.
+Conditions: 3 days stale on arrival (Friday's 18:02Z fetch — the Mon/Wed/Fri cron had not fired yet this
+  morning). Triggered fetch-conditions.yml at 5:36 AM PT before gathering news; fresh data landed in ~45s and
+  cost nothing in wall-clock. Trigger-first-then-gather is now the reliable pattern — keep it.
+Tweak to try next run: Drive's create_file only takes inline content, so backing up a 34KB page meant reading
+  and retransmitting the whole file (~20k tokens). It worked — byte sizes matched at 34,643 — but next run,
+  upload the dated Archive copy once and use copy_file to produce "Current Brief.html" from it server-side
+  (done this run, worked cleanly) instead of two inline uploads.
