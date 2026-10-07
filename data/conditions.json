@@ -1,20 +1,20 @@
 {
-  "fetched_at_utc": "2026-10-07T18:57:18Z",
+  "fetched_at_utc": "2026-10-07T19:04:57Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-10-07T18:22:05+00:00",
+    "updated": "2026-10-07T07:06:18+00:00",
     "periods": [
       {
         "name": "Today",
         "temperature": 96,
         "temperatureUnit": "F",
-        "windSpeed": "5 to 10 mph",
-        "windDirection": "W",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "NW",
         "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 96. West wind 5 to 10 mph, with gusts as high as 20 mph.",
+        "detailedForecast": "Sunny, with a high near 96. Northwest wind 0 to 10 mph.",
         "precipChancePct": 0
       },
       {
@@ -22,29 +22,29 @@
         "temperature": 70,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
-        "windDirection": "NW",
+        "windDirection": "W",
         "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 70. Northwest wind 0 to 5 mph.",
+        "detailedForecast": "Mostly clear, with a low around 70. West wind 0 to 5 mph.",
         "precipChancePct": 0
       },
       {
         "name": "Thursday",
-        "temperature": 91,
+        "temperature": 93,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
-        "windDirection": "W",
+        "windDirection": "NW",
         "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 91. West wind 0 to 10 mph, with gusts as high as 20 mph.",
-        "precipChancePct": 1
+        "detailedForecast": "Sunny, with a high near 93. Northwest wind 0 to 10 mph.",
+        "precipChancePct": 0
       },
       {
         "name": "Thursday Night",
         "temperature": 68,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
-        "windDirection": "W",
-        "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 68. West wind 0 to 5 mph.",
+        "windDirection": "SW",
+        "shortForecast": "Mostly Clear then Patchy Fog",
+        "detailedForecast": "Patchy fog after 5am. Mostly clear, with a low around 68. Southwest wind 0 to 5 mph.",
         "precipChancePct": 0
       }
     ]
