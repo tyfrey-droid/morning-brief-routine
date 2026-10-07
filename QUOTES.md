@@ -58,7 +58,7 @@ line you have actually verified.
 
 ### Tim Keller
 - "Suffering is unbearable if you aren't certain that God is for you and with you."
-  — *Walking with God through Pain and Suffering*. Used 2026-08-30.
+  — *Walking with God through Pain and Suffering*. Used 2026-08-30, 2026-10-07.
 - On wanting "the emotional consolations of faith without any of the costly demands. But the gospel
   is not a means to an end — it is not a way to get what we really want. It is the thing itself."
   — *The Reason for God*. Used 2026-08-16.
@@ -89,6 +89,13 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 
 | Date | Author | Source |
 |------|--------|--------|
+| 2026-10-07 | Keller | Walking with God through Pain and Suffering |
+| 2026-10-05 | Bonhoeffer | Life Together |
+| 2026-10-02 | Augustine | Confessions, Book I |
+| 2026-09-30 | MLK | Strength to Love |
+| 2026-09-28 | Chambers | My Utmost for His Highest |
+| 2026-09-25 | Keller | Walking with God through Pain and Suffering |
+| 2026-09-23 | Swinton | Dementia: Living in the Memories of God |
 | 2026-09-21 | Bonhoeffer | Letters and Papers from Prison ("After Ten Years") |
 | 2026-09-18 | MLK | "Shattered Dreams," Strength to Love |
 | 2026-09-16 | Augustine | Sermon 169 |

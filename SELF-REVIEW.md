@@ -794,3 +794,43 @@ Tweak to try next run: Drive's create_file only takes inline content, so backing
   and retransmitting the whole file (~20k tokens). It worked — byte sizes matched at 34,643 — but next run,
   upload the dated Archive copy once and use copy_file to produce "Current Brief.html" from it server-side
   (done this run, worked cleanly) instead of two inline uploads.
+
+## 2026-10-07 (Wednesday)
+Thin/empty: Mito OMITTED (header and all) for the first time in three runs. Tech ran 2, Gear 2, EV 2 —
+  all honest, none padded. Gear was genuinely quiet: Newsshooter's week was a WiFi router, a Fujifilm
+  price rise and a Resolve point release; only the FX5 delay and the EXOCAGE cage cleared the bar, and
+  Chapman has posted nothing since July. Skipped Y.M.Cinema's Prime-Day FX3A price drop as affiliate
+  deal content, which the reputability bar excludes.
+Mito triage (why nothing ran): ~25 PubMed hits, zero qualifying. Two false positives (a co-author named
+  Melas on a neurosarcoidosis case; Ameiurus melas in a seahorse poxvirus paper), four Finsterer
+  letters/replies, four pure case reports (MELAS heart failure/AF, CapeOX enteritis, ischemic optic
+  neuropathy, peritoneal dialysis). The two substantive hits were both already covered: the Mol Genet
+  Metab three-centre hyperinflammation series is the SAME underlying anakinra finding 10/05 ran, and
+  the Headache migraine cohort is the study 09/30 ran. The one real candidate was a BMB Reports review
+  (10/07) on mitochondrial genome editing — it names mitoTALENs, mitoARCUS, DddA-derived base editors —
+  but it has no named trial with a phase and no regulatory status, and says plainly that clinical
+  translation is still blocked on delivery and cargo size. Under the review-article exception that is a
+  landscape paper, not therapeutic movement, so it stayed out. Also checked zagociguat: PRIZM (NCT06402123)
+  is fully enrolled at 43 patients with top-line data expected Q4 2026 — nothing new in 14 days.
+Unsure it cleared the bar: the RAF Fairford bomber evacuation is dated 10/04, which predates the Monday
+  brief that should have caught it and did not. Ran it anyway because the arrests continued through 10/06
+  and no prior brief ever mentioned it; flagged in the report rather than passing it off as fresh. Also
+  dropped the DOJ noncitizen-voting charges from US: 20 charges is real and the pace shift vs. the prior
+  administration is real, but consensus was thin (PBS plus a Sinclair wire copy and Washington Times) and
+  the framing risk was high for a 3-bullet section that already had two stronger items.
+GW watch: RAN, first bullet in three runs. The development is real and not a restatement — George H.W.
+  Bush left the Arabian Sea unannounced and pulled into Phuket 10/04, which leaves GW as the sole carrier
+  in the Iran combat zone with TR still mid-Pacific. Two qualifying defense desks (Task & Purpose, Stars
+  and Stripes). Deliberately omitted the publicly reported "late November" TR arrival estimate — it is a
+  future movement and the posture facts carry the bullet without it. No personal connection published.
+Kauai naming discrepancy: The Garden Island and Kauai Now both call the storm "Hurricane Lowell"; our own
+  09/30 and 10/02 briefs called it "Nolo," and one aggregator still says Nolo. Could not reconcile from
+  search snippets, so both Kauai bullets say "the storm"/"the hurricane" with no name rather than pick a
+  side. Worth settling next run — if Lowell is correct, two prior briefs have the wrong storm name.
+Conditions: 40 hours stale on arrival (Monday 20:52Z). Triggered fetch-conditions.yml at 5:35 AM PT as
+  the very first action, before any news gathering; fresh data landed by 5:36 and cost zero wall-clock.
+  Trigger-first-then-gather held up again — this is now settled practice, stop re-litigating it.
+Tweak to try next run: curl-validating the 44 cited URLs returned 000 for all of them — the egress policy
+  blocks every news domain, exactly as CLAUDE.md says. That check is pure waste; drop it and spend the
+  time on a second consensus pass instead. Keep the link/domain-name audit, which is a local string check
+  and did catch that edition.cnn.com and cnn.com both need to read "CNN".
