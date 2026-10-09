@@ -1,34 +1,24 @@
 {
-  "fetched_at_utc": "2026-10-09T12:36:57Z",
+  "fetched_at_utc": "2026-10-09T17:28:21Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-10-09T07:22:03+00:00",
+    "updated": "2026-10-09T14:57:56+00:00",
     "periods": [
       {
-        "name": "Overnight",
-        "temperature": 68,
-        "temperatureUnit": "F",
-        "windSpeed": "0 mph",
-        "windDirection": "",
-        "shortForecast": "Partly Cloudy",
-        "detailedForecast": "Partly cloudy, with a low around 68. Northwest wind around 0 mph.",
-        "precipChancePct": 1
-      },
-      {
-        "name": "Friday",
+        "name": "Today",
         "temperature": 88,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 10 mph",
-        "windDirection": "NW",
+        "windSpeed": "5 to 10 mph",
+        "windDirection": "W",
         "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 88. Northwest wind 0 to 10 mph.",
+        "detailedForecast": "Sunny, with a high near 88. West wind 5 to 10 mph.",
         "precipChancePct": 1
       },
       {
-        "name": "Friday Night",
+        "name": "Tonight",
         "temperature": 67,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
@@ -46,24 +36,34 @@
         "shortForecast": "Mostly Cloudy then Slight Chance Rain Showers",
         "detailedForecast": "A slight chance of rain showers after 5pm. Mostly cloudy, with a high near 80. West wind 0 to 5 mph. Chance of precipitation is 20%.",
         "precipChancePct": 19
+      },
+      {
+        "name": "Saturday Night",
+        "temperature": 67,
+        "temperatureUnit": "F",
+        "windSpeed": "5 to 15 mph",
+        "windDirection": "NW",
+        "shortForecast": "Rain Showers Likely",
+        "detailedForecast": "Rain showers likely. Cloudy, with a low around 67. Northwest wind 5 to 15 mph, with gusts as high as 25 mph. Chance of precipitation is 70%. New rainfall amounts between a half and three quarters of an inch possible.",
+        "precipChancePct": 71
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-10-09T09:26Z",
-    "waveHeightFt": 5.6,
+    "observed_utc": "2026-10-09T16:56Z",
+    "waveHeightFt": 4.9,
     "dominantPeriodS": 15,
     "avgPeriodS": 10.5,
-    "meanWaveDirDeg": 232,
-    "waterTempF": 74.1
+    "meanWaveDirDeg": 218,
+    "waterTempF": 74.5
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-10-09T11:56Z",
-    "waveHeightFt": 5.9,
+    "observed_utc": "2026-10-09T16:56Z",
+    "waveHeightFt": 5.6,
     "dominantPeriodS": 11,
-    "avgPeriodS": 9.8,
-    "meanWaveDirDeg": 206,
-    "waterTempF": 73.0
+    "avgPeriodS": 10.1,
+    "meanWaveDirDeg": 209,
+    "waterTempF": 73.2
   },
   "tides_san_diego_9410170": [
     {
