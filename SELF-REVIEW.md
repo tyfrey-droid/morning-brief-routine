@@ -868,3 +868,9 @@ Tweak to try next run: dropped the curl URL validation per the last entry's note
   consensus pass for World/US in one batch of searches up front rather than story-by-story; I spent
   several extra searches backfilling Ethiopia-Eritrea after initially scoring it 1-outlet from a single
   roundup, when it was actually carried by AP, Reuters, NBC and Al Jazeera.
+Drive pipeline flaw found: step 1 (rotate root "Current Brief.html" into Archive, renamed with its own
+  date) is redundant with step 2 (always upload today's dated copy to Archive). The previous run's step 2
+  already wrote "2026-10-07 Morning Brief.html", so step 1's rotation produced a second file with the
+  identical name and byte count (34,244, verified against local archive/2026-10-07.html). Trashed the
+  duplicate. Every run has presumably been doing this. Recommend dropping step 1 entirely and just
+  overwriting/replacing the root copy — worth asking the reader before changing the stored prompt.
