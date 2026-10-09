@@ -834,3 +834,37 @@ Tweak to try next run: curl-validating the 44 cited URLs returned 000 for all of
   blocks every news domain, exactly as CLAUDE.md says. That check is pure waste; drop it and spend the
   time on a second consensus pass instead. Keep the link/domain-name audit, which is a local string check
   and did catch that edition.cnn.com and cnn.com both need to read "CNN".
+
+## 2026-10-09 (Friday)
+Thin/empty sections: Mito Research OMITTED — nothing cleared both the 14-day date bar and the relevance
+  bar. The one genuinely qualifying-looking item, the IRDR review with named specifics (taurine approved
+  9-12 g/day, sonlicromanol Phase 3 KHENERFIN, zagociguat, KL1333/napazimone FALCON, DdCBE heteroplasmy
+  shifting), is dated 2026-08-31 — 39 days out. It would have been the best mito bullet in months and the
+  date rule killed it. Worth asking the reader whether the review exception should carry a longer window,
+  since reviews surface therapeutic movement that no single 14-day paper does. Filmmaking Gear ran one
+  bullet: the week's only dated, non-rumor item was Y.M.Cinema's festival camera survey. Kauai ran one.
+Unsure it cleared the bar: the Y.M.Cinema gear bullet is a survey piece, not a product announcement, and
+  it is 4 days old. Ran it over padding with sonyalpharumors/photorumors items, which are rumor
+  aggregators and fail the reputability bar even though they had fresher Sigma E-mount news. Also dropped
+  the Mercedes VLE gas-engine story from EV: it is a van (priority format) but rests entirely on spy
+  shots, so EV ran 2 instead of 3.
+Deliberately omitted: the Lincoln strike group's eight reported suicide attempts during the extended
+  deployment. It is real and significant, but I could not pin the figure to a named outlet from search
+  snippets, and a wrong number on that subject is worse than silence. Flagging it for next run.
+GW watch: RAN as the 4th World bullet. New development is the Pentagon directing CENTCOM to complete
+  strike preparations (Axios, via NBC News and Times of Israel), not a restatement of position. Separated
+  claim from confirmation — no decision made, conflicting timing windows reported — and published no
+  future movements or arrival dates. No personal connection published.
+Kauai naming RESOLVED: Lowell and Nolo are two different storms. Hurricane Lowell hit mid-September
+  (power outages, 18 homes destroyed); Tropical Storm Nolo formed ~Sept 23 and drove the late-September
+  rain bands that closed Hanalei Bridge. Our 09/30 and 10/02 briefs were right to say Nolo for the rain
+  event. No correction needed. Stop re-litigating this.
+Conditions: 41 hours stale on arrival (Wednesday 19:04Z). Triggered fetch-conditions.yml as the first
+  action before any news gathering; fresh data landed at 12:36Z within the same step. Trigger-first
+  continues to cost zero wall-clock.
+Tweak to try next run: dropped the curl URL validation per the last entry's note — correct call, saved
+  real time. The local link/domain-name audit again earned its keep (31 domains, all matched; it
+  confirmed kbb.com reads "Kelley Blue Book" and news.usni.org reads "USNI News"). Next time, run the
+  consensus pass for World/US in one batch of searches up front rather than story-by-story; I spent
+  several extra searches backfilling Ethiopia-Eritrea after initially scoring it 1-outlet from a single
+  roundup, when it was actually carried by AP, Reuters, NBC and Al Jazeera.
