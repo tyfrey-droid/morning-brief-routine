@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Brief &mdash; Monday, October 12</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    if (t !== 'dark' && t !== 'light') t = 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: dark light; }
+
+  [data-theme="dark"] {
+    --bg: #14140f;
+    --surface: #1c1c18;
+    --text: #ebe9e2;
+    --body: #cbc9c1;
+    --muted: #9a9890;
+    --rule: #33332c;
+    --link: #8ab4f8;
+    --link-hover: #f0a5b0;
+  }
+
+  [data-theme="light"] {
+    --bg: #f5f4f0;
+    --surface: #ffffff;
+    --text: #1a1a18;
+    --body: #1a1a18;
+    --muted: #6b6b66;
+    --rule: #d8d7d2;
+    --link: #1a3a8f;
+    --link-hover: #c41230;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { background: var(--bg); }
+
+  body {
+    color: var(--body);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .masthead {
+    border-bottom: 2px solid var(--text);
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .masthead-left .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .masthead-left .date {
+    font-size: 1.9rem;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    color: var(--text);
+  }
+
+  .masthead-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .masthead-meta .generated {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+  }
+
+  #theme-toggle {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    background: none;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    color: var(--muted);
+    min-width: 44px;
+    min-height: 44px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  }
+
+  #theme-toggle:hover { color: var(--text); border-color: var(--muted); }
+
+  .content {
+    padding: 0 1.25rem;
+  }
+
+  .section {
+    padding: 2rem 0 0;
+  }
+
+  .section-header {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+
+  ul { list-style: none; padding: 0; }
+
+  li {
+    margin-bottom: 1rem;
+    padding-left: 1.1em;
+    position: relative;
+  }
+
+  li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+  }
+
+  li strong {
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  a:hover, a:active { color: var(--link-hover); }
+
+  .rule {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2rem 0 0;
+  }
+
+  .data-block { list-style: none; padding: 0; }
+
+  .data-row {
+    display: flex;
+    gap: 0.75em;
+    margin-bottom: 0.4rem;
+    align-items: baseline;
+  }
+
+  .data-row dt {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    flex-shrink: 0;
+    min-width: 4.8em;
+  }
+
+  .data-row dd { margin: 0; color: var(--body); }
+
+  .data-note {
+    margin-top: 0.75rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .closing-quote {
+    padding: 2.5rem 0 2rem;
+    text-align: center;
+  }
+
+  .closing-quote blockquote {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0 auto 0.6rem;
+  }
+
+  .closing-quote cite {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    font-style: normal;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 1.25rem;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+  }
+
+  em { color: var(--muted); font-style: italic; }
+
+  /* Per-story feedback control */
+  .fb-wrap { display: inline; position: relative; white-space: nowrap; }
+  .fb-btn {
+    appearance: none;
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1;
+    padding: 0.35rem;
+    margin-left: 0.15rem;
+    border-radius: 6px;
+    opacity: 0.5;
+    transition: opacity 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+    vertical-align: baseline;
+  }
+  .fb-btn:hover, .fb-btn:focus-visible, .fb-btn[aria-expanded="true"] {
+    opacity: 1;
+    color: var(--link);
+    outline: none;
+  }
+  .fb-menu {
+    position: absolute;
+    right: 0;
+    top: 1.8rem;
+    z-index: 20;
+    min-width: 12.5rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.28);
+    padding: 0.35rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .fb-menu.open { display: flex; }
+  .fb-menu a {
+    display: block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.55rem 0.6rem;
+    border-radius: 7px;
+    white-space: normal;
+  }
+  .fb-menu a:hover, .fb-menu a:focus-visible {
+    background: var(--bg);
+    color: var(--link-hover);
+    outline: none;
+  }
+  .fb-menu .fb-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0.3rem 0.6rem 0.15rem;
+  }
+
+  @media (min-width: 700px) {
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+    .masthead {
+      max-width: 720px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 1.5rem 2rem;
+    }
+    .masthead-top { flex-direction: column; }
+    .masthead-meta { flex-direction: row-reverse; gap: 0.75rem; }
+    .masthead-left .date { font-size: 2.4rem; }
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-top">
+    <div class="masthead-left">
+      <span class="label">Morning Brief</span>
+      <span class="date">Monday, October 12</span>
+    </div>
+  </div>
+  <div class="masthead-meta">
+    <button id="theme-toggle" aria-label="Toggle light/dark theme">&#9728;</button>
+    <span class="generated">Generated 5:52 AM PT &middot; conditions updated 5:36 AM</span>
+  </div>
+</header>
+
+<main class="content">
+  <section class="section">
+      <div class="section-header">&#127757; World</div>
+      <ul>
+        <li><strong>Riyadh&rsquo;s airport is hit four times in five days</strong> &mdash; What our Friday brief recorded as a single deadly strike has become a sustained campaign against King Khalid International Airport. Saturday&rsquo;s attack was the worst: Saudi authorities put the toll at 12 to 13 dead and more than 300 wounded, and the Saudi-led coalition called it a &ldquo;full-fledged war crime.&rdquo; A further projectile struck Terminal 4 on Sunday, starting a fire and killing a Pakistani resident while injuring 11 more. Yemen&rsquo;s Houthis claimed each attack as a response to &ldquo;Saudi aggression&rdquo;; Riyadh has promised to retaliate &ldquo;firmly,&rdquo; the coalition says it shot down another missile aimed at southern Saudi Arabia on Monday, and Trump said the US is considering joining Saudi operations against the group. (<a href="https://www.aljazeera.com/news/2026/10/12/saudi-arabia-says-1-dead-11-injured-in-latest-attack-on-riyadh-airport">Al Jazeera</a>, <a href="https://www.nbcnews.com/world/middle-east/saudi-airport-attack-trump-us-join-fight-houthis-rcna602744">NBC News</a>, <a href="https://www.france24.com/en/middle-east/20261011-live-saudi-arabia-vows-decisive-response-after-deadly-houthi-strike-on-riyadh-airport">France 24</a>)</li>
+        <li><strong>A diesel deal with Putin splits the alliance</strong> &mdash; Trump said Putin agreed on a call to put more than 300,000 tons of diesel into global markets now and 500,000 more in November, in exchange for a six-month suspension of US sanctions on Russian fuel exports. A US official told Axios the president moved after Zelensky ignored roughly half a dozen requests to stop striking Russian refineries. Zelensky called the deal &ldquo;not fair and not honest&rdquo; and a birthday gift to Putin, then told ABC he would organise elections if Putin agreed to a full 60-day ceasefire &mdash; Ukraine&rsquo;s constitution bars voting under martial law &mdash; and offered to halt refinery strikes if Russia stops hitting Ukrainian energy sites. Trump announced on Sunday that both sides had agreed to an energy ceasefire; Moscow has confirmed nothing, and Zelensky told Axios the announcement was news to him. (<a href="https://www.cnn.com/2026/10/11/europe/trump-diesel-deal-putin-latam-intl">CNN</a>, <a href="https://www.axios.com/2026/10/10/trump-ukraine-zelensky-replace-putin-diesel">Axios</a>, <a href="https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/">The Hill</a>)</li>
+        <li><strong>Ebola reaches a fourth country</strong> &mdash; The outbreak declared in the Democratic Republic of Congo on May 15 is now the worst in that country&rsquo;s history: European and US health agencies counted roughly 8,700&ndash;8,750 confirmed cases and about 4,205 deaths as of October 6, spread across 64 health zones in seven provinces, with Ituri worst hit. Kenya confirmed its first imported case the same week &mdash; a Kenyan citizen who had been living in the DRC, travelled by road through Kampala, flew into Nairobi on October 3 and died on October 5 &mdash; and is tracing 28 contacts plus passengers and crew from that flight. This is the Bundibugyo strain, for which there is no licensed vaccine or specific treatment; the WHO says the outbreak is &ldquo;far from over&rdquo; and has advised against travel or trade restrictions. (<a href="https://www.aljazeera.com/news/2026/10/6/kenya-confirms-first-ebola-case-after-patient-from-dr-congo-dies-in-nairobi">Al Jazeera</a>, <a href="https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda">ECDC</a>, <a href="https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026">WHO</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#127482;&#127480; US &amp; Politics</div>
+      <ul>
+        <li><strong>Isaias kills four and takes out the lights</strong> &mdash; The hurricane came ashore near Destin, Florida, on Friday evening as a Category 2, and the damage reports are now in: at least four dead &mdash; two in Escambia County, Florida, one from a tree falling on a house and one from a generator running in a garage, and two in Alabama&rsquo;s Jefferson and Barbour counties. Outages peaked near 950,000 customers and were down to roughly 390,000 by Sunday morning, with Alabama Power drafting 5,700 crew from 25 states and aiming for 95% restored by Sunday midnight; Florida Power &amp; Light targeted the end of Monday. The remnants have pushed north into the Appalachians and mid-Atlantic, and FEMA has made federal assistance available. (<a href="https://www.npr.org/2026/10/10/g-s1-147632/at-least-2-deaths-attributed-to-isaias-after-hurricane-bashes-florida-and-alabama">NPR</a>, <a href="https://www.cnn.com/2026/10/09/weather/live-news/hurricane-isaias-gulf-storm">CNN</a>, <a href="https://www.nbcnews.com/weather/hurricanes/florida-alabama-residents-powerless-isaias-moves-north-rcna602773">NBC News</a>)</li>
+        <li><strong>Prosecutors move against a Jan. 6 witness</strong> &mdash; The Justice Department is seeking to indict Cassidy Hutchinson, the former White House aide whose 2022 testimony to the January 6 committee described Trump&rsquo;s awareness of the potential for violence, on a charge of lying to Congress. Prosecutors have been presenting evidence to a federal grand jury in Washington and are expected to call more witnesses this month; the case has not yet been put to the panel for an indictment, and Hutchinson has not been subpoenaed. Two details stand out: the Civil Rights Division is handling it rather than the DC US attorney&rsquo;s office, which is unusual, and the investigation follows a criminal referral from Representative Barry Loudermilk. Hutchinson has consistently said her testimony was truthful. (<a href="https://www.nbcnews.com/politics/justice-department/justice-department-seeks-criminal-charge-former-trump-aide-cassidy-hut-rcna602175">NBC News</a>, <a href="https://www.cbsnews.com/news/doj-seeking-indictment-cassidy-hutchinson-jan-6/">CBS News</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#9889; Tech &amp; AI</div>
+      <ul>
+        <li><strong>The cheap iPad slips to 2027</strong> &mdash; Apple&rsquo;s &ldquo;Welcome home&rdquo; launch is tomorrow in Tribeca &mdash; press hands-on rather than a filmed keynote, with the new smart home hub, a HomePod mini and an Apple TV 4K expected. The new wrinkle is what is <em>not</em> coming: Gurman now reports the next entry-level iPads, codenamed J581 and J582, will not arrive until early 2027, leaving the cheapest iPad on last year&rsquo;s hardware through the holidays. The second October wave is still pencilled in for on or around the 27th &mdash; touchscreen OLED MacBook Pros with M5 Pro and M5 Max, an OLED iPad mini, and iMac and 14-inch MacBook Pro models on the M6. Only the October 13 event and a late-October M5 Ultra Mac Studio are officially confirmed. (<a href="https://www.macrumors.com/2026/10/08/apple-october-13-launch/">MacRumors</a>, <a href="https://9to5mac.com/2026/10/08/apple-to-launch-touchscreen-macbook-pro-and-more-on-october-27-report/">9to5Mac</a>)</li>
+        <li><strong>Fake reporters, real newspapers</strong> &mdash; OpenAI&rsquo;s October 8 threat report describes an Iran-origin operation it calls &ldquo;Bogus Bylines&rdquo;: operators wrote prompts in Persian, had ChatGPT produce English articles and editorial pitches, and placed them under seven invented journalist identities. Nearly 100 pieces were published or syndicated across roughly a dozen outlets worldwide, mostly about the US&ndash;Iran conflict, routed through VPNs because Iran cannot reach the models directly. OpenAI rated it Category 4 of six and said the activity looked commercial &mdash; a campaign for hire rather than a confirmed state operation. CNN reports none of the outlets that ran the articles was a major one. The same report details a separate Russian operation, &ldquo;Dark Clark,&rdquo; which OpenAI rated Category 5, its highest to date. (<a href="https://openai.com/index/disrupting-ai-enabled-false-front-operations/">OpenAI</a>, <a href="https://www.cnn.com/2026/10/08/politics/iranian-operatives-used-ai-to-plant-fake-stories-in-us-media">CNN</a>)</li>
+        <li><strong>Waymo borrows five billion dollars</strong> &mdash; The robotaxi company closed its first-ever debt financing, a $5 billion term loan led by PIMCO, Blackstone and Sixth Street, with Capital Group, Loomis Sayles and T. Rowe Price as significant lenders and Goldman Sachs as sole lead bookrunner. It started as a target of roughly $3 billion in early September and grew; Bloomberg reported pricing at 5.25 points over the benchmark rate. The money funds expansion of the driverless ride-hailing service in the US and abroad, and follows a $16 billion equity round that valued Waymo at $126 billion &mdash; a company that has never needed anything but equity now paying interest to keep scaling. (<a href="https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing/">Waymo</a>, <a href="https://techcrunch.com/2026/10/11/techcrunch-mobility-a-roadblock-clears-for-self-driving-trucks">TechCrunch</a>, <a href="https://qz.com/waymo-5-billion-term-loan-debt-financing-robotaxi-100826">Quartz</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#127936; Sports</div>
+      <ul>
+        <li><strong>A British club plays an NBA team</strong> &mdash; The London Lions visit Moda Center this afternoon at 1 p.m. PT, the first time a club side from the United Kingdom has shared a floor with an NBA franchise. The Lions arrive as reigning Super League Basketball champions after an unbeaten domestic sweep and are headed back to the EuroCup; head coach Tautvydas Sabonis called the game &ldquo;a great test for our guys.&rdquo; For Portland it is the third look at the Damian Lillard&ndash;Ja Morant&ndash;Jrue Holiday backcourt that coach Micah Nori still has to sort before the October 21 home opener. (<a href="https://www.thelondonlions.com/news/london-lions-to-make-history-against-portland-trail-blazers-in-nba-preseason">London Lions</a>, <a href="https://www.hoopsfix.com/2026/08/london-lions-portland-trail-blazers-history/">Hoopsfix</a>)</li>
+        <li><strong>Golden State wins without leaning on Curry</strong> &mdash; The Warriors beat Sacramento 111&ndash;106 at Chase Center on Saturday with Stephen Curry in a deliberately minor role: Steve Kerr pulled him after 14 first-half minutes and he finished with eight points, while Gui Santos led the team with 15 points and six rebounds. Kerr said the staff is working through rotations that do not include Curry at all &mdash; the preseason&rsquo;s actual purpose for a team whose 38-year-old star will sit games this year. (<a href="https://www.sfchronicle.com/sports/warriors/article/golden-state-warriors-stephen-curry-minor-role-22471853.php">San Francisco Chronicle</a>, <a href="https://www.cbssports.com/nba/teams/GS/golden-state-warriors/">CBS Sports</a>)</li>
+        <li><strong>Mike Ditka dies at 86</strong> &mdash; Ditka&rsquo;s family announced his death on Friday morning, with the news first made public by Jarrett Payton, son of Walter Payton. He was a Hall of Fame tight end who changed what the position could be, then coached 14 seasons &mdash; Chicago from 1982 to 1992 and New Orleans from 1997 to 1999 &mdash; winning Super Bowl XX with the 1985 Bears and their famous defence. The Bears flew the flag at half-staff at Halas Hall and fans honoured him during the Bears&ndash;Packers game. No cause of death was given. (<a href="https://www.nfl.com/news/mike-ditka-dies-at-86-nfl-community-mourns-iconic-hall-of-famer-and-bears-legend">NFL.com</a>, <a href="https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/legendary-player-coach-mike-ditka-dies-at-86">NBC Sports</a>, <a href="https://abc7chicago.com/live-updates/mike-ditka-death-live-updates-tributes-pouring-legendary-chicago-bears-player-super-bowl-winning-coach-dies-86/19925602/">ABC7 Chicago</a>)</li>
+        <li><strong>The team that ended the Padres takes Game 1</strong> &mdash; Milwaukee beat Los Angeles 2&ndash;1 in the NLCS opener on Sunday at American Family Field, on a Brice Turang solo home run off Tarik Skubal in the fourth and a Luis Lara RBI single in the fifth set up by a walk and a sacrifice bunt. Jacob Misiorowski went 4&frac13; innings and four relievers finished it, Trevor Megill ending the game with Mookie Betts flying out to the warning track with two aboard. The win snaps a seven-game postseason losing streak against the Dodgers, who swept the Brewers in last year&rsquo;s NLCS. Game 2 is tonight; the Rays&ndash;Guardians ALCS also opens today. (<a href="https://www.mlb.com/news/brewers-win-nlcs-game-1-2026">MLB.com</a>, <a href="https://www.espn.com/mlb/story/_/id/50163790/brice-turang-bullpen-lift-brewers-dodgers-game-1">ESPN</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#127754; San Diego</div>
+      <ul>
+        <li><strong>Rachel soaks the county and floods the coast</strong> &mdash; The tropical storm watch issued Friday for all of San Diego County delivered a genuinely wet weekend before the system was downgraded to remnants and the National Hurricane Center closed out its advisories on Sunday. Forty-eight-hour totals to Sunday morning: 3.89 inches at Palomar and 3.83 at Birch Hill in the mountains, 1.65 at Carlsbad, 1.55 at Oceanside and 0.84 at Lindbergh Field. The bigger problem was water from the other direction &mdash; a coastal flood warning ran until 3 p.m. Sunday and an advisory continues into Tuesday, with Imperial Beach flooded around the end of Seacoast Drive and the Tijuana River Estuary, a flood advisory on the San Diego River, and recreation centres opened as sandbag pickup sites. No significant structural damage has been reported here, unlike Long Beach, where high tides damaged beachfront homes. (<a href="https://timesofsandiego.com/weather/2026/10/11/as-post-tropical-storm-rachel-passes-officials-say-san-diegans-should-avoid-the-beaches/">Times of San Diego</a>, <a href="https://fox5sandiego.com/weather/tropical-storm-rachel-rainfall-san-diego/">Fox 5 San Diego</a>, <a href="https://www.10news.com/news/local-news/imperial-beach-braces-for-more-flooding-from-post-tropical-cyclone-rachel">ABC 10News</a>)</li>
+        <li><strong>A lawmaker wants hearings on Donovan&rsquo;s heat</strong> &mdash; Assemblymember Nick Schultz, who chairs the Assembly Public Safety Committee, says he will press for oversight hearings when the Legislature returns in January over conditions at Richard J. Donovan Correctional Facility during September&rsquo;s heat wave. KPBS reported that parts of the prison were locked down and access to fans and ice water limited; three incarcerated men said staff skipped steps in the heat plan, and one said the lockdown followed an alleged attack on an officer. The corrections department confirmed the lockdowns, said they were ordered for security reasons and denied that heat protocols were skipped. The plan itself dates to the 1990s, and the Prison Law Office has asked the department to install air conditioning. (<a href="https://www.kpbs.org/news/racial-justice-social-equity/2026/10/07/as-temperatures-soared-donovan-state-prison-confined-people-to-their-cells">KPBS</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#127803; Kauai</div>
+      <ul>
+        <li><strong>Two federal disaster declarations come through</strong> &mdash; Governor Josh Green announced that the president approved Major Disaster Declarations covering Hurricanes Lala and Lowell, opening FEMA&rsquo;s Public Assistance program to Kaua&lsquo;i and Maui counties for eligible recovery costs. It is the step the state&rsquo;s congressional delegation has been pressing for since mid-September, and it moves the burden of debris removal, road repair and damaged public facilities off the county&rsquo;s own budget. (<a href="https://www.thegardenisland.com/2026/10/09/hawaii-news/two-disaster-declarations-approved-to-help-recovery/">The Garden Island</a>, <a href="https://www.hawaiinewsnow.com/2026/10/09/hawaii-gets-federal-disaster-funding-after-hurricanes-lala-lowell/">Hawaii News Now</a>)</li>
+        <li><strong>Approved is not the same as paid</strong> &mdash; The declarations fund projects one assessment at a time, and that money can take months or years to arrive, so the state is stitching together several sources to cover repairs from this year&rsquo;s storms and fires. For scale on the individual side, FEMA has approved nearly $21 million in household assistance for the March storms. On Kaua&lsquo;i the gap is being filled locally in the meantime &mdash; neighbours patching each other&rsquo;s roofs, running meals and clearing roads with their own equipment. (<a href="https://www.staradvertiser.com/2026/10/11/hawaii-news/multiple-funding-sources-are-needed-to-tackle-repairs-from-hawaiis-recent-disasters/">Honolulu Star-Advertiser</a>, <a href="https://www.civilbeat.org/2026/10/see-how-kauai-residents-are-taking-recovery-into-their-own-hands/">Honolulu Civil Beat</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#127909; Filmmaking Gear</div>
+      <ul>
+        <li><strong>Sigma&rsquo;s 50-120mm f/2.8 lands in E-mount</strong> &mdash; Sigma announced the 50-120mm F2.8 DC OS Contemporary on October 8 for Sony E, Fujifilm X and Canon RF, at $799 and shipping October 22. The DC designation matters: it is an APS-C design, so on a full-frame body it is a Super35 proposition rather than a replacement for a full-frame zoom &mdash; which on an FX6 means the crop mode, with the resolution penalty that implies. At that price, a stabilised constant-f/2.8 telephoto zoom for a crop-sensor B-camera is the clearer argument. (<a href="https://newsshooter.com/2026/10/08/sigma-50-120mm-f-2-8-dc-os-contemporary">Newsshooter</a>)</li>
+        <li><strong>Nikon ships a cinema-leaning Z5 without a viewfinder</strong> &mdash; The Z5IIC appeared on Amazon at $1,399.95 with an October 15 release: 24.5MP full-frame BSI sensor, EXPEED 7 processing and internal 12-bit N-RAW, and no electronic viewfinder at all &mdash; the C variant drops the Z5II&rsquo;s EVF on the assumption you are working off a monitor. It is pitched at hybrid shooters and vloggers rather than as a cinema body, but internal RAW at that price is the part worth noticing. (<a href="https://ymcinema.com/2026/10/12/nikon-z5iic-amazon-preorder/">Y.M.Cinema</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#128267; Electric Vehicles</div>
+      <ul>
+        <li><strong>The electric Espace actually shows up</strong> &mdash; Friday&rsquo;s brief had the E-Space Concept as a promise; Renault has now put it on the floor as the Paris Motor Show opens, and the details favour families. It is 4.70 m long, 2.02 wide and 1.67 tall &mdash; CR-V footprint &mdash; with six individual seats, a second row that swivels 180 degrees and a four-seat lounge configuration with a fold-down table. It rides on Renault&rsquo;s new 800-volt RGEV platform with up to 271 hp, a claimed 750 km of range and a range-extender option the company says could stretch that much further. Renault is careful to call it a &ldquo;possible future&rdquo; rather than a production commitment, and coverage disagrees on the interior details, so treat the seat count as show-car spec. (<a href="https://www.autoevolution.com/news/renaults-2026-e-space-concept-wants-to-make-the-minivan-great-again-276869.html">autoevolution</a>, <a href="https://www.carscoops.com/2026/10/renaults-e-space-concept-reboots-another-french-icon/">Carscoops</a>)</li>
+        <li><strong>VW&rsquo;s best-seller finally goes electric</strong> &mdash; Volkswagen unveiled the ID. Tiguan on October 9, going on sale in early 2027 and replacing both the ID.4 and the ID.5 with a claimed 372 miles on the European WLTP cycle &mdash; a figure VW calls a new benchmark for its electric SUVs. Putting the Tiguan name on the EV is the point: brand CEO Thomas Sch&auml;fer noted it is the company&rsquo;s best-selling model worldwide, and the two cars it replaces were among its most successful EVs. No US details yet, and the ID.4 it supersedes is the same model under a battery-fire recall here. (<a href="https://electrek.co/2026/10/09/volkswagens-best-seller-goes-ev-replace-id-4-images/">Electrek</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#129516; Mito Research</div>
+      <ul>
+        <li><strong>Two approved drugs clear a protein jam in mitochondrial disease</strong> &mdash; Not MELAS, and worth saying so plainly: this work is on POLGA, the catalytic subunit of the enzyme that copies mitochondrial DNA, whose mutations cause progressive external ophthalmoplegia. The mechanism is new. A team reports in <em>EMBO Molecular Medicine</em> that a mitochondrial enzyme called MITOL over-tags mutant POLGA at a single lysine, which bends the protein into insoluble clumps that never make it into the mitochondrion &mdash; so mtDNA replication fails. Screening a library of drugs already approved by the FDA, EMA and Japan&rsquo;s regulator, they found two &mdash; diltiazem, a common blood-pressure calcium-channel blocker, and the antibiotic sulbactam &mdash; that broke up the aggregates, restored import and mtDNA replication, and measurably improved motor performance in mice carrying the disease-equivalent mutation. Why it matters here: it is preclinical and gene-specific, so nothing changes for a child with m.3243A&gt;G today, but it establishes protein aggregation as a treatable failure mode in a primary mitochondrial disease and does it with drugs that already have human safety records &mdash; the fastest available path from a mouse to a clinic. (<a href="https://pubmed.ncbi.nlm.nih.gov/42839124/">PubMed</a>, <a href="https://doi.org/10.1038/s44321-026-00532-3">EMBO Molecular Medicine</a>)</li>
+      </ul>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#127780; Weather &mdash; La Mesa</div>
+      <dl class="data-block">
+        <div class="data-row"><dt>Today</dt><dd>68&deg; / 57&deg; &middot; Partly sunny, a chance of showers &middot; 50% rain</dd></div>
+        <div class="data-row"><dt>Wind</dt><dd>Southwest 5&ndash;10 mph</dd></div>
+        <div class="data-row"><dt>Note</dt><dd>The tail of post-tropical Rachel. New rainfall under a tenth of an inch expected, and 20 degrees cooler than Friday&rsquo;s 88&deg;</dd></div>
+        <div class="data-row"><dt>Tomorrow</dt><dd>71&deg; &middot; Sunny, north wind</dd></div>
+      </dl>
+      <p class="data-note">NWS SGX point forecast for La Mesa 91942, issued 12:44 AM PT, fetched 5:36 AM PT.</p>
+    </section>
+  <hr class="rule">
+
+  <section class="section">
+      <div class="section-header">&#127754; Surf &mdash; Mission Beach / Pacific Beach</div>
+      <dl class="data-block">
+        <div class="data-row"><dt>Swell</dt><dd>5.6 ft @ 15s from the south (191&deg;)</dd></div>
+        <div class="data-row"><dt>Read</dt><dd>Chest- to head-high at MB/PB beach breaks, bigger on sets and on the south-facing banks. Rachel&rsquo;s long-period leftovers &mdash; 15 seconds means it breaks well outside, and the 8-second average period says there is short-range wind chop mixed in on top of it</dd></div>
+        <div class="data-row"><dt>Wind</dt><dd>Southwest 5&ndash;10 mph &mdash; onshore, so textured rather than clean, with no offshore window in today&rsquo;s forecast</dd></div>
+        <div class="data-row"><dt>Tide</dt><dd>Low 3:57 AM (1.7 ft) &middot; High 10:12 AM (6.4 ft) &middot; Low 5:07 PM (0.1 ft) &middot; High 11:17 PM (4.3 ft)</dd></div>
+        <div class="data-row"><dt>Water</dt><dd>74&deg;F</dd></div>
+        <div class="data-row"><dt>Outlook</dt><dd>No forecast model in the feed &mdash; buoy readings are live only. What is known: the NWS coastal flood advisory from the weekend runs into Tuesday, and that 6.4 ft high tide mid-morning is the one to watch at the beach</dd></div>
+      </dl>
+      <p class="data-note">Buoy 46258 (Mission Bay West) at 4:56 AM PT: 5.6 ft, 15s dominant, 191&deg;, 73.6&deg;F. Buoy 46225 (Torrey Pines) at 4:56 AM PT: 5.2 ft, 15s, 211&deg;, 72.9&deg;F &mdash; the two agree closely today, which they did not on Friday. Tides: NOAA station 9410170, San Diego. Wind from the NWS forecast &mdash; the Scripps waverider buoys do not report it.</p>
+    </section>
+
+  <section class="closing-quote">
+    <hr class="rule" style="margin-bottom:2.5rem">
+    <blockquote>I believe that unarmed truth and unconditional love will have the final word in reality. This is why right, temporarily defeated, is stronger than evil triumphant.</blockquote>
+    <cite>&mdash; Martin Luther King Jr., <em>Nobel Peace Prize acceptance address, Oslo, 1964</em></cite>
+  </section>
+</main>
+
+<footer>
+  Morning Brief &middot; Monday, October 12, 2026 &middot; Sources are primary news outlets
+</footer>
+
+
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  function apply(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    btn.textContent = theme === 'dark' ? '☀' : '☾';
+  }
+  var current = document.documentElement.getAttribute('data-theme') || 'dark';
+  apply(current);
+  btn.addEventListener('click', function(){
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    apply(next);
+    try { localStorage.setItem('brief-theme', next); } catch (e) {}
+  });
+})();
+</script>
+
+<script>
+/* Per-story feedback → pre-filled GitHub issues (label: brief-feedback).
+   Lets the reader flag a story so the next brief can learn from it. */
+(function(){
+  var REPO = 'tyfrey-droid/morning-brief-routine';
+  var ISSUE = 'https://github.com/' + REPO + '/issues/new';
+  var OPTIONS = [
+    { key: 'already-read',  label: 'I already read this' },
+    { key: 'redundant',     label: 'Redundant — covered in a prior brief' },
+    { key: 'not-relevant',  label: 'Not relevant to me' },
+    { key: 'more-like-this',label: 'More stories like this' }
+  ];
+
+  var dateEl = document.querySelector('.masthead-left .date');
+  var briefDate = dateEl ? dateEl.textContent.trim() : '';
+  var openMenu = null;
+
+  function closeOpen(){
+    if (openMenu) {
+      openMenu.menu.classList.remove('open');
+      openMenu.btn.setAttribute('aria-expanded', 'false');
+      openMenu = null;
+    }
+  }
+
+  function issueUrl(opt, headline){
+    var title = '[brief-feedback] ' + opt.key + ': ' + headline;
+    var body =
+      'Story: ' + headline + '\n' +
+      'Brief: ' + briefDate + '\n' +
+      'Feedback: ' + opt.label + '\n\n' +
+      '_Optional notes:_\n';
+    return ISSUE + '?labels=' + encodeURIComponent('brief-feedback') +
+      '&title=' + encodeURIComponent(title) +
+      '&body=' + encodeURIComponent(body);
+  }
+
+  var bullets = document.querySelectorAll('main .section ul li');
+  bullets.forEach(function(li){
+    var strong = li.querySelector('strong');
+    if (!strong) return;
+    var headline = strong.textContent.trim();
+
+    var wrap = document.createElement('span');
+    wrap.className = 'fb-wrap';
+
+    var b = document.createElement('button');
+    b.className = 'fb-btn';
+    b.type = 'button';
+    b.textContent = '⚐';
+    b.setAttribute('aria-haspopup', 'true');
+    b.setAttribute('aria-expanded', 'false');
+    b.setAttribute('aria-label', 'Give feedback on: ' + headline);
+    b.title = 'Feedback on this story';
+
+    var menu = document.createElement('span');
+    menu.className = 'fb-menu';
+    menu.setAttribute('role', 'menu');
+
+    var lbl = document.createElement('span');
+    lbl.className = 'fb-label';
+    lbl.textContent = 'Feedback';
+    menu.appendChild(lbl);
+
+    OPTIONS.forEach(function(opt){
+      var a = document.createElement('a');
+      a.href = issueUrl(opt, headline);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.setAttribute('role', 'menuitem');
+      a.textContent = opt.label;
+      a.addEventListener('click', function(){ closeOpen(); });
+      menu.appendChild(a);
+    });
+
+    b.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = menu.classList.contains('open');
+      closeOpen();
+      if (!isOpen) {
+        menu.classList.add('open');
+        b.setAttribute('aria-expanded', 'true');
+        openMenu = { menu: menu, btn: b };
+      }
+    });
+
+    wrap.appendChild(b);
+    wrap.appendChild(menu);
+    li.appendChild(document.createTextNode(' '));
+    li.appendChild(wrap);
+  });
+
+  document.addEventListener('click', closeOpen);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeOpen(); });
+})();
+</script>
+
+</body>
+</html>
