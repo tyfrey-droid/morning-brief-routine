@@ -874,3 +874,37 @@ Drive pipeline flaw found: step 1 (rotate root "Current Brief.html" into Archive
   identical name and byte count (34,244, verified against local archive/2026-10-07.html). Trashed the
   duplicate. Every run has presumably been doing this. Recommend dropping step 1 entirely and just
   overwriting/replacing the root copy — worth asking the reader before changing the stored prompt.
+
+## 2026-10-12 (Monday)
+Thin/empty: School OMITTED — Gmail returned zero threads from school senders since 10/09, which is correct
+  and expected: campus was closed Friday 10/09 (staff day) and today 10/12 (Indigenous Peoples' Day).
+  San Diego ran 2, Gear 2, EV 2, US 2. US ran 2 because the ICE "1,000 more arrests a day" directive —
+  easily the biggest immigration story of the window — is single-origin (CNN exclusive; Daily Beast and
+  AOL are downstream of it), so it fails the 2-outlet consensus gate. Noted rather than smuggled in.
+Unsure it cleared the bar: the Mito item. It is a POLGA/PEO paper, not MELAS, and preclinical — but it is
+  a genuinely new mechanism (MITOL hyperubiquitylation → aggregation) plus in vivo rescue with two already-
+  approved drugs, which is squarely on the INCLUDE list. Led with "Not MELAS, and worth saying so plainly"
+  so the reader is not misled into thinking it touches m.3243A>G. If he says that framing still oversells
+  an adjacent-gene result, tighten the bar to m.3243A>G / mtDNA-tRNA work only.
+GW watch: NO bullet, deliberately. Nothing new since Friday's Pentagon strike-prep item — the only CVN-73
+  material in the window is the 10/05 USNI fleet tracker and the Theodore Roosevelt relief rotation, both
+  of which predate our 10/07 and 10/09 briefs. Silence is the correct output; did not pad it.
+Consensus pass batching: took the self-review's own advice and ran World/US candidates as one up-front
+  batch of four searches instead of story-by-story. Clearly cheaper — but two of the four queries ("Reuters
+  top world news", "AP top stories") returned nothing usable because the wire front pages are not indexed
+  by date. The thing that actually worked was searching the STORY, not the outlet. Next run: skip the
+  "<wire> top stories today" queries entirely and go straight to story-level queries plus the TPO issue
+  headline, which alone surfaced the energy ceasefire, the storms and Ditka.
+Drive step 1 flaw CONFIRMED and routed around. Last run recommended dropping the rotate step; this run
+  verified it properly before acting — root "Current Brief.html" was 35,373 bytes, byte-identical to
+  Archive/"2026-10-09 Morning Brief.html" and to local archive/2026-10-09.html. So rotation would have
+  produced a second identical file again. Instead: uploaded today's dated Archive copy, trashed the
+  redundant root file, then used copy_file to place today's copy in root — which also cut the 37KB payload
+  from two uploads to one. Note update_file is metadata-only (title/parent), so true in-place overwrite is
+  not available through this connector; trash-then-copy is the only non-duplicating path. STILL PENDING for
+  the reader: there are two identical "2026-10-02 Morning Brief.html" files (31,918 bytes, ids 1hej… and
+  1bMv…) left by an earlier run. Left them alone — not mine to delete unasked.
+Tweak to try next run: the link/domain audit again paid for itself (45 links, 40 domains, zero mismatches)
+  and now runs in one pass; keep it. Next time, check buoy dominant-vs-average period before writing the
+  surf READ row — today's 15s dominant against an 8s average was the whole story (long-period south swell
+  with windchop on top) and I nearly wrote it as a clean 15-second swell.
