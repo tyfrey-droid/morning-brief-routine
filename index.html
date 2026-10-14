@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Brief &mdash; Monday, October 12</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Wednesday, October 14, 2026</title>
 <script>
 (function(){
   try {
     var t = localStorage.getItem('brief-theme');
-    if (t !== 'dark' && t !== 'light') t = 'dark';
-    document.documentElement.setAttribute('data-theme', t);
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
   } catch (e) {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
@@ -19,549 +18,225 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
 <style>
-  :root { color-scheme: dark light; }
-
-  [data-theme="dark"] {
-    --bg: #14140f;
-    --surface: #1c1c18;
-    --text: #ebe9e2;
-    --body: #cbc9c1;
-    --muted: #9a9890;
-    --rule: #33332c;
-    --link: #8ab4f8;
-    --link-hover: #f0a5b0;
-  }
-
-  [data-theme="light"] {
-    --bg: #f5f4f0;
-    --surface: #ffffff;
-    --text: #1a1a18;
-    --body: #1a1a18;
-    --muted: #6b6b66;
-    --rule: #d8d7d2;
-    --link: #1a3a8f;
-    --link-hover: #c41230;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html, body { background: var(--bg); }
-
-  body {
-    color: var(--body);
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 1.7;
-    transition: background-color 0.25s ease, color 0.25s ease;
-  }
-
-  .masthead {
-    border-bottom: 2px solid var(--text);
-    padding: 1.25rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .masthead-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .masthead-left .label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    display: block;
-    margin-bottom: 0.3rem;
-  }
-
-  .masthead-left .date {
-    font-size: 1.9rem;
-    font-weight: 300;
-    letter-spacing: -0.01em;
-    line-height: 1.15;
-    color: var(--text);
-  }
-
-  .masthead-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .masthead-meta .generated {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--muted);
-  }
-
-  #theme-toggle {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.85rem;
-    background: none;
-    border: 1px solid var(--rule);
-    border-radius: 6px;
-    color: var(--muted);
-    min-width: 44px;
-    min-height: 44px;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-  }
-
-  #theme-toggle:hover { color: var(--text); border-color: var(--muted); }
-
-  .content {
-    padding: 0 1.25rem;
-  }
-
-  .section {
-    padding: 2rem 0 0;
-  }
-
-  .section-header {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 0.75rem;
-  }
-
-  ul { list-style: none; padding: 0; }
-
-  li {
-    margin-bottom: 1rem;
-    padding-left: 1.1em;
-    position: relative;
-  }
-
-  li::before {
-    content: '·';
-    position: absolute;
-    left: 0;
-    color: var(--muted);
-  }
-
-  li strong {
-    font-weight: 600;
-    color: var(--text);
-  }
-
-  a {
-    color: var(--link);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
-
-  a:hover, a:active { color: var(--link-hover); }
-
-  .rule {
-    border: none;
-    border-top: 1px solid var(--rule);
-    margin: 2rem 0 0;
-  }
-
-  .data-block { list-style: none; padding: 0; }
-
-  .data-row {
-    display: flex;
-    gap: 0.75em;
-    margin-bottom: 0.4rem;
-    align-items: baseline;
-  }
-
-  .data-row dt {
-    font-family: 'IBM Plex Mono', monospace;
-    text-transform: uppercase;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    color: var(--muted);
-    flex-shrink: 0;
-    min-width: 4.8em;
-  }
-
-  .data-row dd { margin: 0; color: var(--body); }
-
-  .data-note {
-    margin-top: 0.75rem;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.62rem;
-    line-height: 1.5;
-    color: var(--muted);
-  }
-
-  .closing-quote {
-    padding: 2.5rem 0 2rem;
-    text-align: center;
-  }
-
-  .closing-quote blockquote {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--muted);
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin: 0 auto 0.6rem;
-  }
-
-  .closing-quote cite {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--muted);
-    font-style: normal;
-  }
-
-  footer {
-    border-top: 1px solid var(--rule);
-    padding: 1.25rem;
-    text-align: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.68rem;
-    color: var(--muted);
-  }
-
-  em { color: var(--muted); font-style: italic; }
-
-  /* Per-story feedback control */
-  .fb-wrap { display: inline; position: relative; white-space: nowrap; }
-  .fb-btn {
-    appearance: none;
-    background: none;
-    border: none;
-    color: var(--muted);
-    cursor: pointer;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.85rem;
-    line-height: 1;
-    padding: 0.35rem;
-    margin-left: 0.15rem;
-    border-radius: 6px;
-    opacity: 0.5;
-    transition: opacity 0.15s ease, color 0.15s ease, background-color 0.15s ease;
-    vertical-align: baseline;
-  }
-  .fb-btn:hover, .fb-btn:focus-visible, .fb-btn[aria-expanded="true"] {
-    opacity: 1;
-    color: var(--link);
-    outline: none;
-  }
-  .fb-menu {
-    position: absolute;
-    right: 0;
-    top: 1.8rem;
-    z-index: 20;
-    min-width: 12.5rem;
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-radius: 10px;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.28);
-    padding: 0.35rem;
-    display: none;
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-  .fb-menu.open { display: flex; }
-  .fb-menu a {
-    display: block;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.35;
-    color: var(--text);
-    text-decoration: none;
-    padding: 0.55rem 0.6rem;
-    border-radius: 7px;
-    white-space: normal;
-  }
-  .fb-menu a:hover, .fb-menu a:focus-visible {
-    background: var(--bg);
-    color: var(--link-hover);
-    outline: none;
-  }
-  .fb-menu .fb-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 0.3rem 0.6rem 0.15rem;
-  }
-
-  @media (min-width: 700px) {
-    .content { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
-    .masthead {
-      max-width: 720px;
-      margin: 0 auto;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding: 1.5rem 2rem;
-    }
-    .masthead-top { flex-direction: column; }
-    .masthead-meta { flex-direction: row-reverse; gap: 0.75rem; }
-    .masthead-left .date { font-size: 2.4rem; }
-  }
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
 </style>
 </head>
 <body>
+<div class="wrap">
+
 <header class="masthead">
-  <div class="masthead-top">
-    <div class="masthead-left">
-      <span class="label">Morning Brief</span>
-      <span class="date">Monday, October 12</span>
-    </div>
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Wednesday, October 14, 2026</h1>
   </div>
-  <div class="masthead-meta">
-    <button id="theme-toggle" aria-label="Toggle light/dark theme">&#9728;</button>
-    <span class="generated">Generated 5:52 AM PT &middot; conditions updated 5:36 AM</span>
+  <div class="metarow">
+    <span class="generated">Generated 5:48 AM PT</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
   </div>
 </header>
 
-<main class="content">
-  <section class="section">
-      <div class="section-header">&#127757; World</div>
-      <ul>
-        <li><strong>Riyadh&rsquo;s airport is hit four times in five days</strong> &mdash; What our Friday brief recorded as a single deadly strike has become a sustained campaign against King Khalid International Airport. Saturday&rsquo;s attack was the worst: Saudi authorities put the toll at 12 to 13 dead and more than 300 wounded, and the Saudi-led coalition called it a &ldquo;full-fledged war crime.&rdquo; A further projectile struck Terminal 4 on Sunday, starting a fire and killing a Pakistani resident while injuring 11 more. Yemen&rsquo;s Houthis claimed each attack as a response to &ldquo;Saudi aggression&rdquo;; Riyadh has promised to retaliate &ldquo;firmly,&rdquo; the coalition says it shot down another missile aimed at southern Saudi Arabia on Monday, and Trump said the US is considering joining Saudi operations against the group. (<a href="https://www.aljazeera.com/news/2026/10/12/saudi-arabia-says-1-dead-11-injured-in-latest-attack-on-riyadh-airport">Al Jazeera</a>, <a href="https://www.nbcnews.com/world/middle-east/saudi-airport-attack-trump-us-join-fight-houthis-rcna602744">NBC News</a>, <a href="https://www.france24.com/en/middle-east/20261011-live-saudi-arabia-vows-decisive-response-after-deadly-houthi-strike-on-riyadh-airport">France 24</a>)</li>
-        <li><strong>A diesel deal with Putin splits the alliance</strong> &mdash; Trump said Putin agreed on a call to put more than 300,000 tons of diesel into global markets now and 500,000 more in November, in exchange for a six-month suspension of US sanctions on Russian fuel exports. A US official told Axios the president moved after Zelensky ignored roughly half a dozen requests to stop striking Russian refineries. Zelensky called the deal &ldquo;not fair and not honest&rdquo; and a birthday gift to Putin, then told ABC he would organise elections if Putin agreed to a full 60-day ceasefire &mdash; Ukraine&rsquo;s constitution bars voting under martial law &mdash; and offered to halt refinery strikes if Russia stops hitting Ukrainian energy sites. Trump announced on Sunday that both sides had agreed to an energy ceasefire; Moscow has confirmed nothing, and Zelensky told Axios the announcement was news to him. (<a href="https://www.cnn.com/2026/10/11/europe/trump-diesel-deal-putin-latam-intl">CNN</a>, <a href="https://www.axios.com/2026/10/10/trump-ukraine-zelensky-replace-putin-diesel">Axios</a>, <a href="https://thehill.com/policy/international/6141238-zelensky-critics-russia-ukraine-war-stop-putin/">The Hill</a>)</li>
-        <li><strong>Ebola reaches a fourth country</strong> &mdash; The outbreak declared in the Democratic Republic of Congo on May 15 is now the worst in that country&rsquo;s history: European and US health agencies counted roughly 8,700&ndash;8,750 confirmed cases and about 4,205 deaths as of October 6, spread across 64 health zones in seven provinces, with Ituri worst hit. Kenya confirmed its first imported case the same week &mdash; a Kenyan citizen who had been living in the DRC, travelled by road through Kampala, flew into Nairobi on October 3 and died on October 5 &mdash; and is tracing 28 contacts plus passengers and crew from that flight. This is the Bundibugyo strain, for which there is no licensed vaccine or specific treatment; the WHO says the outbreak is &ldquo;far from over&rdquo; and has advised against travel or trade restrictions. (<a href="https://www.aljazeera.com/news/2026/10/6/kenya-confirms-first-ebola-case-after-patient-from-dr-congo-dies-in-nairobi">Al Jazeera</a>, <a href="https://www.ecdc.europa.eu/en/ebola-outbreak-democratic-republic-congo-and-uganda">ECDC</a>, <a href="https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026">WHO</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>Pope Leo has lung cancer</strong> &mdash; Surgeons at Rome's Gemelli Hospital removed the lower lobe of the pope's right lung on Tuesday using a video-assisted technique, and an examination of the tissue during the operation confirmed lung adenocarcinoma &mdash; the diagnosis his pre-operative tests had suspected. The Vatican said the roughly 90-minute procedure went without complications and that the American pope, who had no previously known health problems and is an active tennis player and swimmer, passed a calm first night; he is expected to stay about a week for further tests on the removed tissue. His audiences are cancelled until October 20, and a Latin America tour is on the calendar for November 6&ndash;17. (<a href="https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-surgery-gemelli-hospital-successful.html">Vatican News</a>, <a href="https://www.pbs.org/newshour/health/pope-leo-undergoes-surgery-to-remove-lung-nodule-at-romes-gemelli-hospital">PBS NewsHour</a>)</li>
+    <li><strong>Kyiv loses power under a ballistic barrage</strong> &mdash; Russia fired 39 ballistic missiles and more than 120 drones at Ukraine overnight Monday into Tuesday, hitting Kyiv's CHP-4 power plant and a nine-story apartment building and leaving roughly 600,000 people without electricity. At least three people were killed and more than 20 injured, with counts still being revised. Volodymyr Zelensky said the ballistic launches came with no advance warning from Ukraine's Western partners, and Ukrainian officials said intelligence-sharing had been interrupted. (<a href="https://www.rferl.org/a/russia-ballistic-missile-attack-ukraine/33876280.html">RFE/RL</a>, <a href="https://kyivindependent.com/kyiv-residential-building-struck-by-russia-as-ukraine-says-intelligence-sharing-from-partners-interrupted/">Kyiv Independent</a>)</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#127482;&#127480; US &amp; Politics</div>
-      <ul>
-        <li><strong>Isaias kills four and takes out the lights</strong> &mdash; The hurricane came ashore near Destin, Florida, on Friday evening as a Category 2, and the damage reports are now in: at least four dead &mdash; two in Escambia County, Florida, one from a tree falling on a house and one from a generator running in a garage, and two in Alabama&rsquo;s Jefferson and Barbour counties. Outages peaked near 950,000 customers and were down to roughly 390,000 by Sunday morning, with Alabama Power drafting 5,700 crew from 25 states and aiming for 95% restored by Sunday midnight; Florida Power &amp; Light targeted the end of Monday. The remnants have pushed north into the Appalachians and mid-Atlantic, and FEMA has made federal assistance available. (<a href="https://www.npr.org/2026/10/10/g-s1-147632/at-least-2-deaths-attributed-to-isaias-after-hurricane-bashes-florida-and-alabama">NPR</a>, <a href="https://www.cnn.com/2026/10/09/weather/live-news/hurricane-isaias-gulf-storm">CNN</a>, <a href="https://www.nbcnews.com/weather/hurricanes/florida-alabama-residents-powerless-isaias-moves-north-rcna602773">NBC News</a>)</li>
-        <li><strong>Prosecutors move against a Jan. 6 witness</strong> &mdash; The Justice Department is seeking to indict Cassidy Hutchinson, the former White House aide whose 2022 testimony to the January 6 committee described Trump&rsquo;s awareness of the potential for violence, on a charge of lying to Congress. Prosecutors have been presenting evidence to a federal grand jury in Washington and are expected to call more witnesses this month; the case has not yet been put to the panel for an indictment, and Hutchinson has not been subpoenaed. Two details stand out: the Civil Rights Division is handling it rather than the DC US attorney&rsquo;s office, which is unusual, and the investigation follows a criminal referral from Representative Barry Loudermilk. Hutchinson has consistently said her testimony was truthful. (<a href="https://www.nbcnews.com/politics/justice-department/justice-department-seeks-criminal-charge-former-trump-aide-cassidy-hut-rcna602175">NBC News</a>, <a href="https://www.cbsnews.com/news/doj-seeking-indictment-cassidy-hutchinson-jan-6/">CBS News</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>The ambassador to Greece is out</strong> &mdash; The White House asked Kimberly Guilfoyle to resign on Tuesday, and she confirmed she is leaving. New press secretary Katie Zacharia broke the news in her first briefing &mdash; "She has been a wonderful asset to the team, and we wish her well" &mdash; and the president said only that "she was doing a good job, but we didn't like what we were reading." The reporting that preceded it included text messages indicating she asked an associate for $100,000 toward an American Express bill before her Senate confirmation, and she had been under review by the State Department's inspector general. Guilfoyle calls the allegations false and says she will defend her reputation; none has been adjudicated. (<a href="https://www.npr.org/2026/10/14/nx-s1-6000592/u-s-ambassador-to-greece-kimberly-guilfoyle-resigns-following-misconduct-allegations">NPR</a>, <a href="https://www.nbcnews.com/politics/trump-administration/trump-kimberly-guilfoyle-resign-ambassador-greece-rcna603034">NBC News</a>, <a href="https://www.cbsnews.com/news/kimberly-guilfoyle-resign-ambassador-greece/">CBS News</a>)</li>
+    <li><strong>Agents search Ilhan Omar's home</strong> &mdash; Homeland Security Investigations executed what the Justice Department called a judicially authorized search warrant at the Minnesota congresswoman's Washington-area home on Monday, part of what NBC describes as a yearslong inquiry run with the U.S. attorney in Minneapolis. The New York Times reported the warrant listed potential immigration-related offenses including false statements and fraudulent paperwork; investigators have also subpoenaed relatives. Omar has not been charged and calls the search an attempt to "weaponize federal law enforcement." She is on the ballot in three weeks, which is why Democratic leaders have pointed to the department's longstanding practice of avoiding overt steps against candidates close to an election. (<a href="https://www.pbs.org/newshour/politics/ap-report-federal-agents-search-rep-ilhan-omars-home-as-part-of-a-criminal-investigation">PBS NewsHour</a>, <a href="https://www.nbcnews.com/politics/trump-administration/rep-ilhan-omar-home-searched-federal-agents-criminal-probe-dhs-rcna602950">NBC News</a>, <a href="https://www.axios.com/2026/10/12/ilhan-omar-search">Axios</a>)</li>
+    <li><strong>Twelve senators move against the diesel deal</strong> &mdash; Monday's brief carried the Putin diesel arrangement as an announcement; it now has a bipartisan revolt attached. Six Democrats and six Republicans &mdash; Blumenthal, Coons, Durbin, Reed, Shaheen and Whitehouse alongside Armstrong, Collins, Cornyn, McConnell, Murkowski and Tillis &mdash; signed a letter urging the president to rescind it and instead use the Russia sanctions Congress authorized last month. They argue letting Russian-origin diesel into global markets offers Americans "limited to no relief" while funding the war, and that the administration skipped a statutory consultation with Congress. Tillis went further on Sunday, saying there is "a legitimate case" that the deal is illegal. (<a href="https://www.npr.org/2026/10/13/g-s1-147871/trump-russia-diesel-deal-congressional-response">NPR</a>, <a href="https://www.axios.com/2026/10/13/trump-russian-diesel-deal-betrayal-bipartisan-letter">Axios</a>)</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#9889; Tech &amp; AI</div>
-      <ul>
-        <li><strong>The cheap iPad slips to 2027</strong> &mdash; Apple&rsquo;s &ldquo;Welcome home&rdquo; launch is tomorrow in Tribeca &mdash; press hands-on rather than a filmed keynote, with the new smart home hub, a HomePod mini and an Apple TV 4K expected. The new wrinkle is what is <em>not</em> coming: Gurman now reports the next entry-level iPads, codenamed J581 and J582, will not arrive until early 2027, leaving the cheapest iPad on last year&rsquo;s hardware through the holidays. The second October wave is still pencilled in for on or around the 27th &mdash; touchscreen OLED MacBook Pros with M5 Pro and M5 Max, an OLED iPad mini, and iMac and 14-inch MacBook Pro models on the M6. Only the October 13 event and a late-October M5 Ultra Mac Studio are officially confirmed. (<a href="https://www.macrumors.com/2026/10/08/apple-october-13-launch/">MacRumors</a>, <a href="https://9to5mac.com/2026/10/08/apple-to-launch-touchscreen-macbook-pro-and-more-on-october-27-report/">9to5Mac</a>)</li>
-        <li><strong>Fake reporters, real newspapers</strong> &mdash; OpenAI&rsquo;s October 8 threat report describes an Iran-origin operation it calls &ldquo;Bogus Bylines&rdquo;: operators wrote prompts in Persian, had ChatGPT produce English articles and editorial pitches, and placed them under seven invented journalist identities. Nearly 100 pieces were published or syndicated across roughly a dozen outlets worldwide, mostly about the US&ndash;Iran conflict, routed through VPNs because Iran cannot reach the models directly. OpenAI rated it Category 4 of six and said the activity looked commercial &mdash; a campaign for hire rather than a confirmed state operation. CNN reports none of the outlets that ran the articles was a major one. The same report details a separate Russian operation, &ldquo;Dark Clark,&rdquo; which OpenAI rated Category 5, its highest to date. (<a href="https://openai.com/index/disrupting-ai-enabled-false-front-operations/">OpenAI</a>, <a href="https://www.cnn.com/2026/10/08/politics/iranian-operatives-used-ai-to-plant-fake-stories-in-us-media">CNN</a>)</li>
-        <li><strong>Waymo borrows five billion dollars</strong> &mdash; The robotaxi company closed its first-ever debt financing, a $5 billion term loan led by PIMCO, Blackstone and Sixth Street, with Capital Group, Loomis Sayles and T. Rowe Price as significant lenders and Goldman Sachs as sole lead bookrunner. It started as a target of roughly $3 billion in early September and grew; Bloomberg reported pricing at 5.25 points over the benchmark rate. The money funds expansion of the driverless ride-hailing service in the US and abroad, and follows a $16 billion equity round that valued Waymo at $126 billion &mdash; a company that has never needed anything but equity now paying interest to keep scaling. (<a href="https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing/">Waymo</a>, <a href="https://techcrunch.com/2026/10/11/techcrunch-mobility-a-roadblock-clears-for-self-driving-trucks">TechCrunch</a>, <a href="https://qz.com/waymo-5-billion-term-loan-debt-financing-robotaxi-100826">Quartz</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong>Apple's home push finally has prices</strong> &mdash; The "Welcome home" event in Tribeca on Tuesday turned two weeks of Gurman reporting into a shipping lineup. HomeView, Apple's first smart display, is $299 with a 7-inch Liquid Retina screen on a speaker base or a wall mount; it uses Apple Intelligence to recognise up to six household members and ships November 13, with pre-orders open now and no EU launch yet while Apple works through regulators. The new Apple TV 4K is also $299 &mdash; a steep move from the $129 the last model launched at in 2022 &mdash; and arrives November 13. The HomePod mini 2 is $149, up $50 from the original, and reaches stores October 30, though its Siri features come later in a software update. (<a href="https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html">CNBC</a>, <a href="https://www.tomsguide.com/news/live/apple-homeview-event-october-13-live-updates">Tom's Guide</a>)</li>
+    <li><strong>Gemini 4 Argon opens to everyone</strong> &mdash; When Google unveiled Argon on September 30 the catch was access: it went only to a small set of cyber defenders, which is where our October 2 brief left it. As of Tuesday it is global &mdash; in the API through AI Studio, on Google Cloud, and in the Gemini app and AI Mode in Search for Pro and Ultra subscribers. Introductory pricing is $2 per million input tokens and $10 per million output, with cached input discounted 95%; both rates double after November 30. It supports a one-million-token unified context window, so a single response can run to a million tokens. (<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">Google</a>, <a href="https://www.digitaltrends.com/computing/gemini-4-argon-is-finally-available-for-developers-businesses-and-paid-users/">Digital Trends</a>)</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#127936; Sports</div>
-      <ul>
-        <li><strong>A British club plays an NBA team</strong> &mdash; The London Lions visit Moda Center this afternoon at 1 p.m. PT, the first time a club side from the United Kingdom has shared a floor with an NBA franchise. The Lions arrive as reigning Super League Basketball champions after an unbeaten domestic sweep and are headed back to the EuroCup; head coach Tautvydas Sabonis called the game &ldquo;a great test for our guys.&rdquo; For Portland it is the third look at the Damian Lillard&ndash;Ja Morant&ndash;Jrue Holiday backcourt that coach Micah Nori still has to sort before the October 21 home opener. (<a href="https://www.thelondonlions.com/news/london-lions-to-make-history-against-portland-trail-blazers-in-nba-preseason">London Lions</a>, <a href="https://www.hoopsfix.com/2026/08/london-lions-portland-trail-blazers-history/">Hoopsfix</a>)</li>
-        <li><strong>Golden State wins without leaning on Curry</strong> &mdash; The Warriors beat Sacramento 111&ndash;106 at Chase Center on Saturday with Stephen Curry in a deliberately minor role: Steve Kerr pulled him after 14 first-half minutes and he finished with eight points, while Gui Santos led the team with 15 points and six rebounds. Kerr said the staff is working through rotations that do not include Curry at all &mdash; the preseason&rsquo;s actual purpose for a team whose 38-year-old star will sit games this year. (<a href="https://www.sfchronicle.com/sports/warriors/article/golden-state-warriors-stephen-curry-minor-role-22471853.php">San Francisco Chronicle</a>, <a href="https://www.cbssports.com/nba/teams/GS/golden-state-warriors/">CBS Sports</a>)</li>
-        <li><strong>Mike Ditka dies at 86</strong> &mdash; Ditka&rsquo;s family announced his death on Friday morning, with the news first made public by Jarrett Payton, son of Walter Payton. He was a Hall of Fame tight end who changed what the position could be, then coached 14 seasons &mdash; Chicago from 1982 to 1992 and New Orleans from 1997 to 1999 &mdash; winning Super Bowl XX with the 1985 Bears and their famous defence. The Bears flew the flag at half-staff at Halas Hall and fans honoured him during the Bears&ndash;Packers game. No cause of death was given. (<a href="https://www.nfl.com/news/mike-ditka-dies-at-86-nfl-community-mourns-iconic-hall-of-famer-and-bears-legend">NFL.com</a>, <a href="https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/legendary-player-coach-mike-ditka-dies-at-86">NBC Sports</a>, <a href="https://abc7chicago.com/live-updates/mike-ditka-death-live-updates-tributes-pouring-legendary-chicago-bears-player-super-bowl-winning-coach-dies-86/19925602/">ABC7 Chicago</a>)</li>
-        <li><strong>The team that ended the Padres takes Game 1</strong> &mdash; Milwaukee beat Los Angeles 2&ndash;1 in the NLCS opener on Sunday at American Family Field, on a Brice Turang solo home run off Tarik Skubal in the fourth and a Luis Lara RBI single in the fifth set up by a walk and a sacrifice bunt. Jacob Misiorowski went 4&frac13; innings and four relievers finished it, Trevor Megill ending the game with Mookie Betts flying out to the warning track with two aboard. The win snaps a seven-game postseason losing streak against the Dodgers, who swept the Brewers in last year&rsquo;s NLCS. Game 2 is tonight; the Rays&ndash;Guardians ALCS also opens today. (<a href="https://www.mlb.com/news/brewers-win-nlcs-game-1-2026">MLB.com</a>, <a href="https://www.espn.com/mlb/story/_/id/50163790/brice-turang-bullpen-lift-brewers-dodgers-game-1">ESPN</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Portland buries Sacramento by 23</strong> &mdash; The Blazers won 100&ndash;77 at Golden 1 Center on Tuesday, and the quarter line tells the story: Portland put up 33 and 33 in the first half, led by as much as it needed through a 27-point third, then scored 7 in the fourth with the game long decided. It was the back half of a home-road turnaround after Monday's London Lions exhibition. (<a href="https://www.espn.com/nba/boxscore/_/gameId/401901826">ESPN</a>)</li>
+    <li><strong>Golden State steals one in Las Vegas</strong> &mdash; The Warriors trailed the Lakers by 13 at halftime at T-Mobile Arena on Tuesday and came back to win 101&ndash;89, with Draymond Green and Al Horford both resting. The shooting was ugly &mdash; 9 of 34 from three &mdash; and the margin came mostly from Los Angeles committing 29 turnovers; the Chronicle also flagged how little resistance Austin Reaves met in the first half. Golden State is 3&ndash;2 in the preseason with one tune-up left. (<a href="https://www.sfchronicle.com/sports/warriors/article/golden-state-warriors-win-preseason-game-show-22476067.php">San Francisco Chronicle</a>, <a href="https://sports.yahoo.com/articles/learned-warriors-storm-back-steal-215004471.html">Yahoo Sports</a>)</li>
+    <li><strong>Boston extends Payton Pritchard</strong> &mdash; The Celtics guard agreed to a two-year extension worth about $44.2 million, with a mutual option in 2029&ndash;30. It is a notable number for a reserve and lands eight days before opening night, with the Lakers among the teams still working to cut to 15 players. (<a href="https://espn.com/nba/story/_/id/50028196/2026-27-nba-buzz-latest-live-updates-news-intel-trades-deals">ESPN</a>, <a href="https://www.spotrac.com/nba/transactions">Spotrac</a>)</li>
+    <li><strong>The Brewers go up 2&ndash;0 on the Dodgers</strong> &mdash; Milwaukee won Game 2 of the NLCS 7&ndash;4 at American Family Field on Monday, with William Contreras tying it on a fifth-inning home run and singling home the go-ahead run an inning later. Rookie starter Logan Henderson was pulled early in the fifth, and four relievers then retired the last 15 Los Angeles hitters in order. The series moves to Los Angeles for Game 3 tonight. (<a href="https://www.espn.com/mlb/recap/_/gameId/401908031">ESPN</a>, <a href="https://www.nbcnews.com/sports/mlb/milwaukee-brewers-los-angeles-dodgers-nlcs-game-2-mlb-results-rcna603113">NBC News</a>)</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#127754; San Diego</div>
-      <ul>
-        <li><strong>Rachel soaks the county and floods the coast</strong> &mdash; The tropical storm watch issued Friday for all of San Diego County delivered a genuinely wet weekend before the system was downgraded to remnants and the National Hurricane Center closed out its advisories on Sunday. Forty-eight-hour totals to Sunday morning: 3.89 inches at Palomar and 3.83 at Birch Hill in the mountains, 1.65 at Carlsbad, 1.55 at Oceanside and 0.84 at Lindbergh Field. The bigger problem was water from the other direction &mdash; a coastal flood warning ran until 3 p.m. Sunday and an advisory continues into Tuesday, with Imperial Beach flooded around the end of Seacoast Drive and the Tijuana River Estuary, a flood advisory on the San Diego River, and recreation centres opened as sandbag pickup sites. No significant structural damage has been reported here, unlike Long Beach, where high tides damaged beachfront homes. (<a href="https://timesofsandiego.com/weather/2026/10/11/as-post-tropical-storm-rachel-passes-officials-say-san-diegans-should-avoid-the-beaches/">Times of San Diego</a>, <a href="https://fox5sandiego.com/weather/tropical-storm-rachel-rainfall-san-diego/">Fox 5 San Diego</a>, <a href="https://www.10news.com/news/local-news/imperial-beach-braces-for-more-flooding-from-post-tropical-cyclone-rachel">ABC 10News</a>)</li>
-        <li><strong>A lawmaker wants hearings on Donovan&rsquo;s heat</strong> &mdash; Assemblymember Nick Schultz, who chairs the Assembly Public Safety Committee, says he will press for oversight hearings when the Legislature returns in January over conditions at Richard J. Donovan Correctional Facility during September&rsquo;s heat wave. KPBS reported that parts of the prison were locked down and access to fans and ice water limited; three incarcerated men said staff skipped steps in the heat plan, and one said the lockdown followed an alleged attack on an officer. The corrections department confirmed the lockdowns, said they were ordered for security reasons and denied that heat protocols were skipped. The plan itself dates to the 1990s, and the Prison Law Office has asked the department to install air conditioning. (<a href="https://www.kpbs.org/news/racial-justice-social-equity/2026/10/07/as-temperatures-soared-donovan-state-prison-confined-people-to-their-cells">KPBS</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>Flu is early, and worse than usual</strong> &mdash; County surveillance has recorded eight influenza deaths already, four times the count at this point in each of the last three years, alongside 58 hospitalizations and 8% test positivity &mdash; and San Diego's season normally does not pick up until early November. All eight who died were over 50 and six were unvaccinated. H1N1 is the dominant strain and is covered by this year's vaccine. A new forecasting tool built with UC San Diego's Resilient Shield program projects hospitalizations climbing over the next fortnight; the county's public health officer put it plainly: it will get worse before it gets better. (<a href="https://www.kpbs.org/news/health/2026/10/12/san-diego-county-sees-early-rise-in-flu-hospitalizations-and-deaths">KPBS</a>)</li>
+    <li><strong>The city can now sue over stolen wages</strong> &mdash; The City Council voted unanimously Tuesday to amend the municipal code so San Diego can bring civil actions to recover unpaid wages and overtime, authority the previous language did not grant. Councilmembers Marni von Wilpert and Sean Elo-Rivera brought the changes forward. (<a href="https://www.kpbs.org/news/politics/2026/10/13/san-diego-city-council-to-consider-code-amendments-to-prosecute-wage-theft">KPBS</a>)</li>
+    <li><strong>An immigration surge starts here</strong> &mdash; Reporting on a federal enforcement push described as Operation Safe California has it beginning in San Diego, and local advocacy groups spent Monday organising responses and know-your-rights outreach. One man was apparently detained in Mira Mesa on Monday morning on his way to work. (<a href="https://www.kpbs.org/news/border-immigration/2026/10/12/ice-launching-operation-safe-california-crackdown-starting-in-san-diego">KPBS</a>)</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#127803; Kauai</div>
-      <ul>
-        <li><strong>Two federal disaster declarations come through</strong> &mdash; Governor Josh Green announced that the president approved Major Disaster Declarations covering Hurricanes Lala and Lowell, opening FEMA&rsquo;s Public Assistance program to Kaua&lsquo;i and Maui counties for eligible recovery costs. It is the step the state&rsquo;s congressional delegation has been pressing for since mid-September, and it moves the burden of debris removal, road repair and damaged public facilities off the county&rsquo;s own budget. (<a href="https://www.thegardenisland.com/2026/10/09/hawaii-news/two-disaster-declarations-approved-to-help-recovery/">The Garden Island</a>, <a href="https://www.hawaiinewsnow.com/2026/10/09/hawaii-gets-federal-disaster-funding-after-hurricanes-lala-lowell/">Hawaii News Now</a>)</li>
-        <li><strong>Approved is not the same as paid</strong> &mdash; The declarations fund projects one assessment at a time, and that money can take months or years to arrive, so the state is stitching together several sources to cover repairs from this year&rsquo;s storms and fires. For scale on the individual side, FEMA has approved nearly $21 million in household assistance for the March storms. On Kaua&lsquo;i the gap is being filled locally in the meantime &mdash; neighbours patching each other&rsquo;s roofs, running meals and clearing roads with their own equipment. (<a href="https://www.staradvertiser.com/2026/10/11/hawaii-news/multiple-funding-sources-are-needed-to-tackle-repairs-from-hawaiis-recent-disasters/">Honolulu Star-Advertiser</a>, <a href="https://www.civilbeat.org/2026/10/see-how-kauai-residents-are-taking-recovery-into-their-own-hands/">Honolulu Civil Beat</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127803; Kaua&#699;i</p>
+  <ul>
+    <li><em>Nothing significant since Monday &mdash; the county's Hurricane Lowell updates this week restate services already covered.</em></li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#127909; Filmmaking Gear</div>
-      <ul>
-        <li><strong>Sigma&rsquo;s 50-120mm f/2.8 lands in E-mount</strong> &mdash; Sigma announced the 50-120mm F2.8 DC OS Contemporary on October 8 for Sony E, Fujifilm X and Canon RF, at $799 and shipping October 22. The DC designation matters: it is an APS-C design, so on a full-frame body it is a Super35 proposition rather than a replacement for a full-frame zoom &mdash; which on an FX6 means the crop mode, with the resolution penalty that implies. At that price, a stabilised constant-f/2.8 telephoto zoom for a crop-sensor B-camera is the clearer argument. (<a href="https://newsshooter.com/2026/10/08/sigma-50-120mm-f-2-8-dc-os-contemporary">Newsshooter</a>)</li>
-        <li><strong>Nikon ships a cinema-leaning Z5 without a viewfinder</strong> &mdash; The Z5IIC appeared on Amazon at $1,399.95 with an October 15 release: 24.5MP full-frame BSI sensor, EXPEED 7 processing and internal 12-bit N-RAW, and no electronic viewfinder at all &mdash; the C variant drops the Z5II&rsquo;s EVF on the assumption you are working off a monitor. It is pitched at hybrid shooters and vloggers rather than as a cinema body, but internal RAW at that price is the part worth noticing. (<a href="https://ymcinema.com/2026/10/12/nikon-z5iic-amazon-preorder/">Y.M.Cinema</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>A $99 autofocus pancake for E-mount</strong> &mdash; TTArtisan announced the AF 24mm f/3.8 Mini on Tuesday, a full-frame Sony E lens that weighs 57 grams and costs $99, with a launch promotion running to October 30. It uses a VCM focus motor, six elements in six groups including two ED and two aspherical, and focuses to 30cm. The compromises are real and worth knowing up front: no weather sealing, no filter thread, and no manual focus ring at all. (<a href="https://www.newsshooter.com/2026/10/13/ttartisan-af-24mm-f3-8-a-full-frame-sony-e-mount-af-lens-for-less-than-100-usd/">Newsshooter</a>, <a href="https://photorumors.com/2026/10/13/ttartisan-af-24mm-f-3-8-mini-full-frame-pancake-lens-officially-announced-99/">Photo Rumors</a>)</li>
+    <li><strong>Tilta's FX5 viewfinder arm opens for pre-order</strong> &mdash; The EVF Extension Kit teased at IBC is now orderable, with 10% off until October 23. It moves Sony's DVF-EL1 viewfinder off the body for handheld, shoulder and tripod work using a multi-axis bracket on a NATO clamp &mdash; roughly 10.5cm of horizontal and 12.3cm of vertical travel &mdash; plus a 30cm cable. Tilta still has not said whether the XLR handle can run at the same time, which is the question if you work with on-board audio. Reported pricing has been inconsistent across Tilta's own listings, so check before ordering. (<a href="https://www.newsshooter.com/2026/10/12/tiltas-new-evf-extension-kit-for-sony-fx5/">Newsshooter</a>, <a href="https://www.cined.com/tilta-evf-extension-kit-for-sony-fx5-detailed-cage-base-plate-nucleus-autofocus-integration-xlr-adapter-in-development/">CineD</a>)</li>
+    <li><strong>The FX5 tops Amazon without existing</strong> &mdash; Last week's brief had the FX5 slipping to mid-November. The odd coda: it has climbed to number one on Amazon's new-release list for professional video cameras while being impossible to buy, and Sony's own window has drifted from an August target to late October "or later." Reports of problems with the rear LCD have surfaced alongside the delays, though Sony has not connected the two. (<a href="https://ymcinema.com/2026/10/13/sony-fx5-number-one-amazon-unavailable/">Y.M.Cinema</a>)</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#128267; Electric Vehicles</div>
-      <ul>
-        <li><strong>The electric Espace actually shows up</strong> &mdash; Friday&rsquo;s brief had the E-Space Concept as a promise; Renault has now put it on the floor as the Paris Motor Show opens, and the details favour families. It is 4.70 m long, 2.02 wide and 1.67 tall &mdash; CR-V footprint &mdash; with six individual seats, a second row that swivels 180 degrees and a four-seat lounge configuration with a fold-down table. It rides on Renault&rsquo;s new 800-volt RGEV platform with up to 271 hp, a claimed 750 km of range and a range-extender option the company says could stretch that much further. Renault is careful to call it a &ldquo;possible future&rdquo; rather than a production commitment, and coverage disagrees on the interior details, so treat the seat count as show-car spec. (<a href="https://www.autoevolution.com/news/renaults-2026-e-space-concept-wants-to-make-the-minivan-great-again-276869.html">autoevolution</a>, <a href="https://www.carscoops.com/2026/10/renaults-e-space-concept-reboots-another-french-icon/">Carscoops</a>)</li>
-        <li><strong>VW&rsquo;s best-seller finally goes electric</strong> &mdash; Volkswagen unveiled the ID. Tiguan on October 9, going on sale in early 2027 and replacing both the ID.4 and the ID.5 with a claimed 372 miles on the European WLTP cycle &mdash; a figure VW calls a new benchmark for its electric SUVs. Putting the Tiguan name on the EV is the point: brand CEO Thomas Sch&auml;fer noted it is the company&rsquo;s best-selling model worldwide, and the two cars it replaces were among its most successful EVs. No US details yet, and the ID.4 it supersedes is the same model under a battery-fire recall here. (<a href="https://electrek.co/2026/10/09/volkswagens-best-seller-goes-ev-replace-id-4-images/">Electrek</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#128267; Electric Vehicles</p>
+  <ul>
+    <li><strong>A cheaper ID. Buzz is coming</strong> &mdash; Volkswagen CEO Thomas Schäfer confirmed at the Paris Motor Show that a second-generation ID. Buzz is in development, and said the explicit goal is fixing the price &mdash; the thing that has kept the van a niche purchase rather than a family default. The current model gets one more in-generation update first; the replacement moves to VW's new SSP architecture. (<a href="https://motor1.com/news/811704/next-gen-vw-id-buzz-confirmed">Motor1</a>, <a href="https://ecomento.de/2026/10/13/vw-plant-zweite-generation-des-id-buzz">ecomento.de</a>)</li>
+    <li><strong>A modular camper on the e-Transit</strong> &mdash; Wavecamper showed a conversion of Ford's all-electric Transit Custom at the Caravan Salon, built around swappable modules so the same van can be a camper one weekend and empty cargo space the next &mdash; the practical argument for an electric van that has to do more than one job. (<a href="https://newatlas.com/campervans/wavecamper-modular-ford-electric-camper-van/">New Atlas</a>)</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#129516; Mito Research</div>
-      <ul>
-        <li><strong>Two approved drugs clear a protein jam in mitochondrial disease</strong> &mdash; Not MELAS, and worth saying so plainly: this work is on POLGA, the catalytic subunit of the enzyme that copies mitochondrial DNA, whose mutations cause progressive external ophthalmoplegia. The mechanism is new. A team reports in <em>EMBO Molecular Medicine</em> that a mitochondrial enzyme called MITOL over-tags mutant POLGA at a single lysine, which bends the protein into insoluble clumps that never make it into the mitochondrion &mdash; so mtDNA replication fails. Screening a library of drugs already approved by the FDA, EMA and Japan&rsquo;s regulator, they found two &mdash; diltiazem, a common blood-pressure calcium-channel blocker, and the antibiotic sulbactam &mdash; that broke up the aggregates, restored import and mtDNA replication, and measurably improved motor performance in mice carrying the disease-equivalent mutation. Why it matters here: it is preclinical and gene-specific, so nothing changes for a child with m.3243A&gt;G today, but it establishes protein aggregation as a treatable failure mode in a primary mitochondrial disease and does it with drugs that already have human safety records &mdash; the fastest available path from a mouse to a clinic. (<a href="https://pubmed.ncbi.nlm.nih.gov/42839124/">PubMed</a>, <a href="https://doi.org/10.1038/s44321-026-00532-3">EMBO Molecular Medicine</a>)</li>
-      </ul>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong>Lost and found clears out Friday</strong> &mdash; The school is asking families to come look through the lost and found before Friday, when everything left will go to donation. Worth a stop if a jacket or water bottle has gone missing this fall.</li>
+  </ul>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#127780; Weather &mdash; La Mesa</div>
-      <dl class="data-block">
-        <div class="data-row"><dt>Today</dt><dd>68&deg; / 57&deg; &middot; Partly sunny, a chance of showers &middot; 50% rain</dd></div>
-        <div class="data-row"><dt>Wind</dt><dd>Southwest 5&ndash;10 mph</dd></div>
-        <div class="data-row"><dt>Note</dt><dd>The tail of post-tropical Rachel. New rainfall under a tenth of an inch expected, and 20 degrees cooler than Friday&rsquo;s 88&deg;</dd></div>
-        <div class="data-row"><dt>Tomorrow</dt><dd>71&deg; &middot; Sunny, north wind</dd></div>
-      </dl>
-      <p class="data-note">NWS SGX point forecast for La Mesa 91942, issued 12:44 AM PT, fetched 5:36 AM PT.</p>
-    </section>
-  <hr class="rule">
+<section>
+  <p class="section-label">&#127780; Weather</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Today</span>80&deg; / 62&deg; &middot; Sunny &middot; 0% rain</div>
+    <div class="data-row"><span class="data-label">Wind</span>NW 0&ndash;10 mph</div>
+    <div class="data-row"><span class="data-label">Note</span>Sharp warm-up Thursday &mdash; about 10&deg; above today</div>
+    <div class="data-row"><span class="data-label">Tomorrow</span>90&deg; &middot; Sunny</div>
+  </div>
+  <p class="source-note">Live NWS point forecast for La Mesa / 91942, issued 1:33 AM PT today.</p>
+</section>
 
-  <section class="section">
-      <div class="section-header">&#127754; Surf &mdash; Mission Beach / Pacific Beach</div>
-      <dl class="data-block">
-        <div class="data-row"><dt>Swell</dt><dd>5.6 ft @ 15s from the south (191&deg;)</dd></div>
-        <div class="data-row"><dt>Read</dt><dd>Chest- to head-high at MB/PB beach breaks, bigger on sets and on the south-facing banks. Rachel&rsquo;s long-period leftovers &mdash; 15 seconds means it breaks well outside, and the 8-second average period says there is short-range wind chop mixed in on top of it</dd></div>
-        <div class="data-row"><dt>Wind</dt><dd>Southwest 5&ndash;10 mph &mdash; onshore, so textured rather than clean, with no offshore window in today&rsquo;s forecast</dd></div>
-        <div class="data-row"><dt>Tide</dt><dd>Low 3:57 AM (1.7 ft) &middot; High 10:12 AM (6.4 ft) &middot; Low 5:07 PM (0.1 ft) &middot; High 11:17 PM (4.3 ft)</dd></div>
-        <div class="data-row"><dt>Water</dt><dd>74&deg;F</dd></div>
-        <div class="data-row"><dt>Outlook</dt><dd>No forecast model in the feed &mdash; buoy readings are live only. What is known: the NWS coastal flood advisory from the weekend runs into Tuesday, and that 6.4 ft high tide mid-morning is the one to watch at the beach</dd></div>
-      </dl>
-      <p class="data-note">Buoy 46258 (Mission Bay West) at 4:56 AM PT: 5.6 ft, 15s dominant, 191&deg;, 73.6&deg;F. Buoy 46225 (Torrey Pines) at 4:56 AM PT: 5.2 ft, 15s, 211&deg;, 72.9&deg;F &mdash; the two agree closely today, which they did not on Friday. Tides: NOAA station 9410170, San Diego. Wind from the NWS forecast &mdash; the Scripps waverider buoys do not report it.</p>
-    </section>
+<section>
+  <p class="section-label">&#127754; Surf</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Swell</span>4.9 ft @ 17s from 197&deg; (S/SSW) &mdash; average period 9.3s</div>
+    <div class="data-row"><span class="data-label">Read</span>Mixed sea: a long-period south swell under shorter-period windswell. Roughly waist- to chest-high at MB/PB beach breaks, with bigger, more spread-out sets on the better sandbars</div>
+    <div class="data-row"><span class="data-label">Wind</span>Near calm NE overnight; NW 0&ndash;10 mph building through the day, so light onshore texture by afternoon</div>
+    <div class="data-row"><span class="data-label">Tide</span>High 11:01 AM (5.8 ft) &middot; Low 6:35 PM (0.6 ft)</div>
+    <div class="data-row"><span class="data-label">Water</span>72&deg;F</div>
+    <div class="data-row"><span class="data-label">Outlook</span>The 17-second dominant period means this south swell is still filling in; stormsurf forecast unavailable this run, so buoy trend only</div>
+  </div>
+  <p class="source-note">NDBC buoy 46258 (Mission Bay West) observed 4:56 AM PT: 4.9 ft, 17s dominant / 9.3s average, 197&deg;, 72.3&deg;F. Buoy 46225 (Torrey Pines) same hour: 4.6 ft, 15s, 216&deg;, 72.9&deg;F. Tides from NOAA station 9410170. Scripps Waverider buoys report waves and water temperature only &mdash; wind is from the NWS forecast.</p>
+</section>
 
-  <section class="closing-quote">
-    <hr class="rule" style="margin-bottom:2.5rem">
-    <blockquote>I believe that unarmed truth and unconditional love will have the final word in reality. This is why right, temporarily defeated, is stronger than evil triumphant.</blockquote>
-    <cite>&mdash; Martin Luther King Jr., <em>Nobel Peace Prize acceptance address, Oslo, 1964</em></cite>
-  </section>
-</main>
+<div class="quote">
+  Time is a gift, not a possession.
+  <span class="attrib">&mdash; John Swinton, <em>Becoming Friends of Time</em></span>
+</div>
 
 <footer>
-  Morning Brief &middot; Monday, October 12, 2026 &middot; Sources are primary news outlets
+  Morning Brief &middot; Wednesday, October 14, 2026 &middot; Sources are primary news outlets
 </footer>
 
-
+</div>
 <script>
 (function(){
   var btn = document.getElementById('theme-toggle');
-  function apply(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    btn.textContent = theme === 'dark' ? '☀' : '☾';
-  }
-  var current = document.documentElement.getAttribute('data-theme') || 'dark';
-  apply(current);
+  if (!btn) return;
+  function icon(theme){ return theme === 'dark' ? '☀' : '☾'; }
+  function current(){ return document.documentElement.getAttribute('data-theme') || 'dark'; }
+  btn.textContent = icon(current());
   btn.addEventListener('click', function(){
-    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    apply(next);
+    var next = current() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    btn.textContent = icon(next);
     try { localStorage.setItem('brief-theme', next); } catch (e) {}
   });
 })();
 </script>
-
-<script>
-/* Per-story feedback → pre-filled GitHub issues (label: brief-feedback).
-   Lets the reader flag a story so the next brief can learn from it. */
-(function(){
-  var REPO = 'tyfrey-droid/morning-brief-routine';
-  var ISSUE = 'https://github.com/' + REPO + '/issues/new';
-  var OPTIONS = [
-    { key: 'already-read',  label: 'I already read this' },
-    { key: 'redundant',     label: 'Redundant — covered in a prior brief' },
-    { key: 'not-relevant',  label: 'Not relevant to me' },
-    { key: 'more-like-this',label: 'More stories like this' }
-  ];
-
-  var dateEl = document.querySelector('.masthead-left .date');
-  var briefDate = dateEl ? dateEl.textContent.trim() : '';
-  var openMenu = null;
-
-  function closeOpen(){
-    if (openMenu) {
-      openMenu.menu.classList.remove('open');
-      openMenu.btn.setAttribute('aria-expanded', 'false');
-      openMenu = null;
-    }
-  }
-
-  function issueUrl(opt, headline){
-    var title = '[brief-feedback] ' + opt.key + ': ' + headline;
-    var body =
-      'Story: ' + headline + '\n' +
-      'Brief: ' + briefDate + '\n' +
-      'Feedback: ' + opt.label + '\n\n' +
-      '_Optional notes:_\n';
-    return ISSUE + '?labels=' + encodeURIComponent('brief-feedback') +
-      '&title=' + encodeURIComponent(title) +
-      '&body=' + encodeURIComponent(body);
-  }
-
-  var bullets = document.querySelectorAll('main .section ul li');
-  bullets.forEach(function(li){
-    var strong = li.querySelector('strong');
-    if (!strong) return;
-    var headline = strong.textContent.trim();
-
-    var wrap = document.createElement('span');
-    wrap.className = 'fb-wrap';
-
-    var b = document.createElement('button');
-    b.className = 'fb-btn';
-    b.type = 'button';
-    b.textContent = '⚐';
-    b.setAttribute('aria-haspopup', 'true');
-    b.setAttribute('aria-expanded', 'false');
-    b.setAttribute('aria-label', 'Give feedback on: ' + headline);
-    b.title = 'Feedback on this story';
-
-    var menu = document.createElement('span');
-    menu.className = 'fb-menu';
-    menu.setAttribute('role', 'menu');
-
-    var lbl = document.createElement('span');
-    lbl.className = 'fb-label';
-    lbl.textContent = 'Feedback';
-    menu.appendChild(lbl);
-
-    OPTIONS.forEach(function(opt){
-      var a = document.createElement('a');
-      a.href = issueUrl(opt, headline);
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.setAttribute('role', 'menuitem');
-      a.textContent = opt.label;
-      a.addEventListener('click', function(){ closeOpen(); });
-      menu.appendChild(a);
-    });
-
-    b.addEventListener('click', function(e){
-      e.stopPropagation();
-      var isOpen = menu.classList.contains('open');
-      closeOpen();
-      if (!isOpen) {
-        menu.classList.add('open');
-        b.setAttribute('aria-expanded', 'true');
-        openMenu = { menu: menu, btn: b };
-      }
-    });
-
-    wrap.appendChild(b);
-    wrap.appendChild(menu);
-    li.appendChild(document.createTextNode(' '));
-    li.appendChild(wrap);
-  });
-
-  document.addEventListener('click', closeOpen);
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeOpen(); });
-})();
-</script>
-
 </body>
 </html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Wednesday, October 14, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Wednesday, October 14, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 5:48 AM PT</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>Pope Leo has lung cancer</strong> &mdash; Surgeons at Rome's Gemelli Hospital removed the lower lobe of the pope's right lung on Tuesday using a video-assisted technique, and an examination of the tissue during the operation confirmed lung adenocarcinoma &mdash; the diagnosis his pre-operative tests had suspected. The Vatican said the roughly 90-minute procedure went without complications and that the American pope, who had no previously known health problems and is an active tennis player and swimmer, passed a calm first night; he is expected to stay about a week for further tests on the removed tissue. His audiences are cancelled until October 20, and a Latin America tour is on the calendar for November 6&ndash;17. (<a href="https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-surgery-gemelli-hospital-successful.html">Vatican News</a>, <a href="https://www.pbs.org/newshour/health/pope-leo-undergoes-surgery-to-remove-lung-nodule-at-romes-gemelli-hospital">PBS NewsHour</a>)</li>
+    <li><strong>Kyiv loses power under a ballistic barrage</strong> &mdash; Russia fired 39 ballistic missiles and more than 120 drones at Ukraine overnight Monday into Tuesday, hitting Kyiv's CHP-4 power plant and a nine-story apartment building and leaving roughly 600,000 people without electricity. At least three people were killed and more than 20 injured, with counts still being revised. Volodymyr Zelensky said the ballistic launches came with no advance warning from Ukraine's Western partners, and Ukrainian officials said intelligence-sharing had been interrupted. (<a href="https://www.rferl.org/a/russia-ballistic-missile-attack-ukraine/33876280.html">RFE/RL</a>, <a href="https://kyivindependent.com/kyiv-residential-building-struck-by-russia-as-ukraine-says-intelligence-sharing-from-partners-interrupted/">Kyiv Independent</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>The ambassador to Greece is out</strong> &mdash; The White House asked Kimberly Guilfoyle to resign on Tuesday, and she confirmed she is leaving. New press secretary Katie Zacharia broke the news in her first briefing &mdash; "She has been a wonderful asset to the team, and we wish her well" &mdash; and the president said only that "she was doing a good job, but we didn't like what we were reading." The reporting that preceded it included text messages indicating she asked an associate for $100,000 toward an American Express bill before her Senate confirmation, and she had been under review by the State Department's inspector general. Guilfoyle calls the allegations false and says she will defend her reputation; none has been adjudicated. (<a href="https://www.npr.org/2026/10/14/nx-s1-6000592/u-s-ambassador-to-greece-kimberly-guilfoyle-resigns-following-misconduct-allegations">NPR</a>, <a href="https://www.nbcnews.com/politics/trump-administration/trump-kimberly-guilfoyle-resign-ambassador-greece-rcna603034">NBC News</a>, <a href="https://www.cbsnews.com/news/kimberly-guilfoyle-resign-ambassador-greece/">CBS News</a>)</li>
+    <li><strong>Agents search Ilhan Omar's home</strong> &mdash; Homeland Security Investigations executed what the Justice Department called a judicially authorized search warrant at the Minnesota congresswoman's Washington-area home on Monday, part of what NBC describes as a yearslong inquiry run with the U.S. attorney in Minneapolis. The New York Times reported the warrant listed potential immigration-related offenses including false statements and fraudulent paperwork; investigators have also subpoenaed relatives. Omar has not been charged and calls the search an attempt to "weaponize federal law enforcement." She is on the ballot in three weeks, which is why Democratic leaders have pointed to the department's longstanding practice of avoiding overt steps against candidates close to an election. (<a href="https://www.pbs.org/newshour/politics/ap-report-federal-agents-search-rep-ilhan-omars-home-as-part-of-a-criminal-investigation">PBS NewsHour</a>, <a href="https://www.nbcnews.com/politics/trump-administration/rep-ilhan-omar-home-searched-federal-agents-criminal-probe-dhs-rcna602950">NBC News</a>, <a href="https://www.axios.com/2026/10/12/ilhan-omar-search">Axios</a>)</li>
+    <li><strong>Twelve senators move against the diesel deal</strong> &mdash; Monday's brief carried the Putin diesel arrangement as an announcement; it now has a bipartisan revolt attached. Six Democrats and six Republicans &mdash; Blumenthal, Coons, Durbin, Reed, Shaheen and Whitehouse alongside Armstrong, Collins, Cornyn, McConnell, Murkowski and Tillis &mdash; signed a letter urging the president to rescind it and instead use the Russia sanctions Congress authorized last month. They argue letting Russian-origin diesel into global markets offers Americans "limited to no relief" while funding the war, and that the administration skipped a statutory consultation with Congress. Tillis went further on Sunday, saying there is "a legitimate case" that the deal is illegal. (<a href="https://www.npr.org/2026/10/13/g-s1-147871/trump-russia-diesel-deal-congressional-response">NPR</a>, <a href="https://www.axios.com/2026/10/13/trump-russian-diesel-deal-betrayal-bipartisan-letter">Axios</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong>Apple's home push finally has prices</strong> &mdash; The "Welcome home" event in Tribeca on Tuesday turned two weeks of Gurman reporting into a shipping lineup. HomeView, Apple's first smart display, is $299 with a 7-inch Liquid Retina screen on a speaker base or a wall mount; it uses Apple Intelligence to recognise up to six household members and ships November 13, with pre-orders open now and no EU launch yet while Apple works through regulators. The new Apple TV 4K is also $299 &mdash; a steep move from the $129 the last model launched at in 2022 &mdash; and arrives November 13. The HomePod mini 2 is $149, up $50 from the original, and reaches stores October 30, though its Siri features come later in a software update. (<a href="https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html">CNBC</a>, <a href="https://www.tomsguide.com/news/live/apple-homeview-event-october-13-live-updates">Tom's Guide</a>)</li>
+    <li><strong>Gemini 4 Argon opens to everyone</strong> &mdash; When Google unveiled Argon on September 30 the catch was access: it went only to a small set of cyber defenders, which is where our October 2 brief left it. As of Tuesday it is global &mdash; in the API through AI Studio, on Google Cloud, and in the Gemini app and AI Mode in Search for Pro and Ultra subscribers. Introductory pricing is $2 per million input tokens and $10 per million output, with cached input discounted 95%; both rates double after November 30. It supports a one-million-token unified context window, so a single response can run to a million tokens. (<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">Google</a>, <a href="https://www.digitaltrends.com/computing/gemini-4-argon-is-finally-available-for-developers-businesses-and-paid-users/">Digital Trends</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Portland buries Sacramento by 23</strong> &mdash; The Blazers won 100&ndash;77 at Golden 1 Center on Tuesday, and the quarter line tells the story: Portland put up 33 and 33 in the first half, led by as much as it needed through a 27-point third, then scored 7 in the fourth with the game long decided. It was the back half of a home-road turnaround after Monday's London Lions exhibition. (<a href="https://www.espn.com/nba/boxscore/_/gameId/401901826">ESPN</a>)</li>
+    <li><strong>Golden State steals one in Las Vegas</strong> &mdash; The Warriors trailed the Lakers by 13 at halftime at T-Mobile Arena on Tuesday and came back to win 101&ndash;89, with Draymond Green and Al Horford both resting. The shooting was ugly &mdash; 9 of 34 from three &mdash; and the margin came mostly from Los Angeles committing 29 turnovers; the Chronicle also flagged how little resistance Austin Reaves met in the first half. Golden State is 3&ndash;2 in the preseason with one tune-up left. (<a href="https://www.sfchronicle.com/sports/warriors/article/golden-state-warriors-win-preseason-game-show-22476067.php">San Francisco Chronicle</a>, <a href="https://sports.yahoo.com/articles/learned-warriors-storm-back-steal-215004471.html">Yahoo Sports</a>)</li>
+    <li><strong>Boston extends Payton Pritchard</strong> &mdash; The Celtics guard agreed to a two-year extension worth about $44.2 million, with a mutual option in 2029&ndash;30. It is a notable number for a reserve and lands eight days before opening night, with the Lakers among the teams still working to cut to 15 players. (<a href="https://espn.com/nba/story/_/id/50028196/2026-27-nba-buzz-latest-live-updates-news-intel-trades-deals">ESPN</a>, <a href="https://www.spotrac.com/nba/transactions">Spotrac</a>)</li>
+    <li><strong>The Brewers go up 2&ndash;0 on the Dodgers</strong> &mdash; Milwaukee won Game 2 of the NLCS 7&ndash;4 at American Family Field on Monday, with William Contreras tying it on a fifth-inning home run and singling home the go-ahead run an inning later. Rookie starter Logan Henderson was pulled early in the fifth, and four relievers then retired the last 15 Los Angeles hitters in order. The series moves to Los Angeles for Game 3 tonight. (<a href="https://www.espn.com/mlb/recap/_/gameId/401908031">ESPN</a>, <a href="https://www.nbcnews.com/sports/mlb/milwaukee-brewers-los-angeles-dodgers-nlcs-game-2-mlb-results-rcna603113">NBC News</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>Flu is early, and worse than usual</strong> &mdash; County surveillance has recorded eight influenza deaths already, four times the count at this point in each of the last three years, alongside 58 hospitalizations and 8% test positivity &mdash; and San Diego's season normally does not pick up until early November. All eight who died were over 50 and six were unvaccinated. H1N1 is the dominant strain and is covered by this year's vaccine. A new forecasting tool built with UC San Diego's Resilient Shield program projects hospitalizations climbing over the next fortnight; the county's public health officer put it plainly: it will get worse before it gets better. (<a href="https://www.kpbs.org/news/health/2026/10/12/san-diego-county-sees-early-rise-in-flu-hospitalizations-and-deaths">KPBS</a>)</li>
+    <li><strong>The city can now sue over stolen wages</strong> &mdash; The City Council voted unanimously Tuesday to amend the municipal code so San Diego can bring civil actions to recover unpaid wages and overtime, authority the previous language did not grant. Councilmembers Marni von Wilpert and Sean Elo-Rivera brought the changes forward. (<a href="https://www.kpbs.org/news/politics/2026/10/13/san-diego-city-council-to-consider-code-amendments-to-prosecute-wage-theft">KPBS</a>)</li>
+    <li><strong>An immigration surge starts here</strong> &mdash; Reporting on a federal enforcement push described as Operation Safe California has it beginning in San Diego, and local advocacy groups spent Monday organising responses and know-your-rights outreach. One man was apparently detained in Mira Mesa on Monday morning on his way to work. (<a href="https://www.kpbs.org/news/border-immigration/2026/10/12/ice-launching-operation-safe-california-crackdown-starting-in-san-diego">KPBS</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127803; Kaua&#699;i</p>
+  <ul>
+    <li><em>Nothing significant since Monday &mdash; the county's Hurricane Lowell updates this week restate services already covered.</em></li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>A $99 autofocus pancake for E-mount</strong> &mdash; TTArtisan announced the AF 24mm f/3.8 Mini on Tuesday, a full-frame Sony E lens that weighs 57 grams and costs $99, with a launch promotion running to October 30. It uses a VCM focus motor, six elements in six groups including two ED and two aspherical, and focuses to 30cm. The compromises are real and worth knowing up front: no weather sealing, no filter thread, and no manual focus ring at all. (<a href="https://www.newsshooter.com/2026/10/13/ttartisan-af-24mm-f3-8-a-full-frame-sony-e-mount-af-lens-for-less-than-100-usd/">Newsshooter</a>, <a href="https://photorumors.com/2026/10/13/ttartisan-af-24mm-f-3-8-mini-full-frame-pancake-lens-officially-announced-99/">Photo Rumors</a>)</li>
+    <li><strong>Tilta's FX5 viewfinder arm opens for pre-order</strong> &mdash; The EVF Extension Kit teased at IBC is now orderable, with 10% off until October 23. It moves Sony's DVF-EL1 viewfinder off the body for handheld, shoulder and tripod work using a multi-axis bracket on a NATO clamp &mdash; roughly 10.5cm of horizontal and 12.3cm of vertical travel &mdash; plus a 30cm cable. Tilta still has not said whether the XLR handle can run at the same time, which is the question if you work with on-board audio. Reported pricing has been inconsistent across Tilta's own listings, so check before ordering. (<a href="https://www.newsshooter.com/2026/10/12/tiltas-new-evf-extension-kit-for-sony-fx5/">Newsshooter</a>, <a href="https://www.cined.com/tilta-evf-extension-kit-for-sony-fx5-detailed-cage-base-plate-nucleus-autofocus-integration-xlr-adapter-in-development/">CineD</a>)</li>
+    <li><strong>The FX5 tops Amazon without existing</strong> &mdash; Last week's brief had the FX5 slipping to mid-November. The odd coda: it has climbed to number one on Amazon's new-release list for professional video cameras while being impossible to buy, and Sony's own window has drifted from an August target to late October "or later." Reports of problems with the rear LCD have surfaced alongside the delays, though Sony has not connected the two. (<a href="https://ymcinema.com/2026/10/13/sony-fx5-number-one-amazon-unavailable/">Y.M.Cinema</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#128267; Electric Vehicles</p>
+  <ul>
+    <li><strong>A cheaper ID. Buzz is coming</strong> &mdash; Volkswagen CEO Thomas Schäfer confirmed at the Paris Motor Show that a second-generation ID. Buzz is in development, and said the explicit goal is fixing the price &mdash; the thing that has kept the van a niche purchase rather than a family default. The current model gets one more in-generation update first; the replacement moves to VW's new SSP architecture. (<a href="https://motor1.com/news/811704/next-gen-vw-id-buzz-confirmed">Motor1</a>, <a href="https://ecomento.de/2026/10/13/vw-plant-zweite-generation-des-id-buzz">ecomento.de</a>)</li>
+    <li><strong>A modular camper on the e-Transit</strong> &mdash; Wavecamper showed a conversion of Ford's all-electric Transit Custom at the Caravan Salon, built around swappable modules so the same van can be a camper one weekend and empty cargo space the next &mdash; the practical argument for an electric van that has to do more than one job. (<a href="https://newatlas.com/campervans/wavecamper-modular-ford-electric-camper-van/">New Atlas</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong>Lost and found clears out Friday</strong> &mdash; The school is asking families to come look through the lost and found before Friday, when everything left will go to donation. Worth a stop if a jacket or water bottle has gone missing this fall.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127780; Weather</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Today</span>80&deg; / 62&deg; &middot; Sunny &middot; 0% rain</div>
+    <div class="data-row"><span class="data-label">Wind</span>NW 0&ndash;10 mph</div>
+    <div class="data-row"><span class="data-label">Note</span>Sharp warm-up Thursday &mdash; about 10&deg; above today</div>
+    <div class="data-row"><span class="data-label">Tomorrow</span>90&deg; &middot; Sunny</div>
+  </div>
+  <p class="source-note">Live NWS point forecast for La Mesa / 91942, issued 1:33 AM PT today.</p>
+</section>
+
+<section>
+  <p class="section-label">&#127754; Surf</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Swell</span>4.9 ft @ 17s from 197&deg; (S/SSW) &mdash; average period 9.3s</div>
+    <div class="data-row"><span class="data-label">Read</span>Mixed sea: a long-period south swell under shorter-period windswell. Roughly waist- to chest-high at MB/PB beach breaks, with bigger, more spread-out sets on the better sandbars</div>
+    <div class="data-row"><span class="data-label">Wind</span>Near calm NE overnight; NW 0&ndash;10 mph building through the day, so light onshore texture by afternoon</div>
+    <div class="data-row"><span class="data-label">Tide</span>High 11:01 AM (5.8 ft) &middot; Low 6:35 PM (0.6 ft)</div>
+    <div class="data-row"><span class="data-label">Water</span>72&deg;F</div>
+    <div class="data-row"><span class="data-label">Outlook</span>The 17-second dominant period means this south swell is still filling in; stormsurf forecast unavailable this run, so buoy trend only</div>
+  </div>
+  <p class="source-note">NDBC buoy 46258 (Mission Bay West) observed 4:56 AM PT: 4.9 ft, 17s dominant / 9.3s average, 197&deg;, 72.3&deg;F. Buoy 46225 (Torrey Pines) same hour: 4.6 ft, 15s, 216&deg;, 72.9&deg;F. Tides from NOAA station 9410170. Scripps Waverider buoys report waves and water temperature only &mdash; wind is from the NWS forecast.</p>
+</section>
+
+<div class="quote">
+  Time is a gift, not a possession.
+  <span class="attrib">&mdash; John Swinton, <em>Becoming Friends of Time</em></span>
+</div>
+
+<footer>
+  Morning Brief &middot; Wednesday, October 14, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  function icon(theme){ return theme === 'dark' ? '☀' : '☾'; }
+  function current(){ return document.documentElement.getAttribute('data-theme') || 'dark'; }
+  btn.textContent = icon(current());
+  btn.addEventListener('click', function(){
+    var next = current() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    btn.textContent = icon(next);
+    try { localStorage.setItem('brief-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
