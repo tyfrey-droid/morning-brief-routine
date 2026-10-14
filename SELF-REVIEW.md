@@ -908,3 +908,33 @@ Tweak to try next run: the link/domain audit again paid for itself (45 links, 40
   and now runs in one pass; keep it. Next time, check buoy dominant-vs-average period before writing the
   surf READ row — today's 15s dominant against an 8s average was the whole story (long-period south swell
   with windchop on top) and I nearly wrote it as a clean 15-second swell.
+
+## 2026-10-14 (Wed)
+Thin/empty: Mito OMITTED (correct) — PubMed's only 2026 MELAS hits were an Aug 31 review (44 days old)
+  and an April consensus statement, which fails the date rule AND is on the explicit exclude list. Kauaʻi
+  ran the "nothing significant" line: the only Oct 13 items were a routine Hurricane Lowell services
+  restatement and ballot packets mailed, and I could not pin a stable URL for either, so I did not cite
+  one. Tech ran 2 bullets, not padded. School ran 1 — the single school email since Monday was a lost-and-
+  found donation notice, which does carry a Friday deadline, so it qualified thinly rather than not at all.
+Unsure it cleared the bar: the Wavecamper e-Transit camper (EV #2). It is in-window, van-format and real
+  reporting, but it is a coachbuilder's show conversion, not a vehicle the reader could buy. If he says
+  that is filler, drop coachbuilt/show-floor conversions from EV and run a 1-bullet section instead.
+Consensus rule cost me a story, correctly: Reuters had an exclusive Oct 13 on Iran shifting its shipping-
+  attack tactics ahead of the midterms (two senior Iranian officials, plus a US military official
+  confirming a tactical change after strikes degraded Iranian radar). Single-outlet → does not qualify
+  for World. Honoured the rule and excluded it. Also no GW bullet: zero CVN-73 reporting after August
+  surfaced in any search, and the USNI fleet tracker is not indexed past July. Silence was correct.
+Took last run's advice and it worked: skipped every "<wire> top stories today" query entirely. The single
+  most productive query was "Reuters world news October 13 2026 major developments" — it returned a
+  headline LIST that seeded six of the day's candidates (Pope, Kyiv, Nord Stream, Cornell, Senate letter,
+  Iran shipping), each then verified story-by-story. Keep that pattern: one wire-headline-list query to
+  generate candidates, then story-level verification. WebFetch is DNS-blocked (ENOTFOUND, not 403) for
+  cined.com and electrek.co, so section front pages are unreachable — search is the only path, confirmed.
+Caught two near-misses worth keeping as habits. (1) Per last run's note I checked dominant vs average
+  period BEFORE writing the surf READ row: 17s dominant against a 9.3s average is a long-period south
+  under windswell, not a clean 17-second swell, and the row says so. (2) I nearly wrote "the 70-year-old
+  American pope" from inference; no source stated an age, so I cut it. Keep refusing to infer ages.
+Tweak to try next run: the Senate-letter item was nearly dropped because the first two searches returned
+  only ~10 identical TNND syndications and no original. Searching the PRIMARY actor instead
+  ("Shaheen ... Reuters AP") surfaced foreign.senate.gov plus NPR and Axios in one pass. When a story
+  shows up only as local-station syndication, search the named official or committee, not the outlet.
