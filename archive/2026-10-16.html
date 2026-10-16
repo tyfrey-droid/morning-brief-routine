@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Friday, October 16, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Friday, October 16, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 5:45 AM PT</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>A container ship sinks in the Strait of Hormuz</strong> &mdash; The Singapore-flagged <em>GFS Pride</em>, carrying more than 2,500 containers, was struck by a projectile on Tuesday, caught fire and sank; all 21 crew were evacuated without injury, and a sister ship, the <em>GFS Giselle</em>, was damaged in the same wave of attacks but reached anchorage. Iran's Revolutionary Guard said the vessel hit a naval mine while on an unauthorised route; a US official said Iran attacked it, probably with a missile, and the maritime security firm MARISKS said there is no independent evidence for the mine claim. The UK Maritime Trade Operations agency logged the incident as an unidentified projectile strike and has now recorded more than 20 vessels attacked in and around the strait this month. (<a href="https://www.thenationalnews.com/news/gulf/2026/10/15/fire-sinking-and-reported-scramble-for-cargo-what-we-know-about-ship-lost-in-strait-of-hormuz/">The National</a>, <a href="https://gcaptain.com/containership-sinks-as-hormuz-attacks-spiral-out-of-control/">gCaptain</a>)</li>
+    <li><strong>George Washington is no longer alone off Iran</strong> &mdash; USNI News's October 13 fleet tracker places the carrier USS George Washington in the Arabian Sea with Carrier Air Wing 5 and the destroyer USS Shoup, supporting US operations against Iran. The George H.W. Bush strike group has rejoined her there after a port call in Phuket, Thailand &mdash; restoring a two-carrier presence in the Arabian Sea that had lapsed a week earlier, when the Bush's departure left the George Washington as the only carrier strike group in the region. No strikes involving either ship have been reported this week. (<a href="https://news.usni.org/2026/10/13/usni-news-fleet-and-marine-tracker-oct-13-2026">USNI News</a>, <a href="https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026">The War Zone</a>)</li>
+    <li><strong>Pope Leo is recovering after lung surgery</strong> &mdash; Wednesday's brief carried the diagnosis; the surgery is now behind him. Surgeons removed the lower lobe of the pope's right lung on Tuesday in a minimally invasive, camera-guided procedure, and tissue examination confirmed lung adenocarcinoma. The Vatican said Thursday's routine checks came back normal and a chest X-ray showed good recovery of the operated lung; he has begun respiratory therapy, is walking and eating, and has resumed some work. Audiences stay cancelled through October 20, and the Vatican says his South America trip is still the plan. (<a href="https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-s-postoperative-recovery-progressing-normally.html">Vatican News</a>, <a href="https://www.cnn.com/2026/10/13/europe/pope-hospital-lung-surgery-intl">CNN</a>)</li>
+    <li><strong>EU leaders back Zelenskyy as Trump objects</strong> &mdash; Zelenskyy went to Brussels on Thursday seeking a "winter package" of energy, air defence and funding, and most EU leaders lined up behind him. Trump, in a Newsmax interview, called Ukraine's strikes on Russian oil refineries "a disgrace" and tied them to higher oil prices &mdash; Kyiv had abandoned the energy-facility truce he announced, then hit a refinery southeast of Moscow. Putin said the refinery strikes had caused "nothing particularly significant." The European bloc is not unanimous: Austria's chancellor urged caution on far-reaching new financial commitments, while the Dutch leader said of Trump's language, "This is not the right language." (<a href="https://www.theglobeandmail.com/world/article-ukraine-zelensky-at-eu-summit/">The Globe and Mail</a>, <a href="https://www.usnews.com/news/world/articles/2026-10-16/eu-leaders-rally-around-zelenskiy-as-trump-calls-ukrainian-strikes-on-russia-a-disgrace">U.S. News</a>)</li>
+    <li><strong>Hurricane Trudy reaches Category 3</strong> &mdash; Trudy strengthened to a major hurricane off Mexico's Pacific coast early Friday, with 120 mph sustained winds, about 250 miles southwest of Acapulco and moving northwest at 6 mph. A hurricane warning covers the coast from Cabo Corrientes north to Punta San Telmo, with 4 to 8 inches of rain forecast across Colima and Jalisco through the weekend and warnings of life-threatening flooding and landslides in a region already hit by earlier storms. The eastern Pacific has now set a record for its busiest season by accumulated cyclone energy. (<a href="https://www.cnbc.com/2026/10/16/hurricane-trudy-mexicos-pacific-coast.html">CNBC</a>, <a href="https://yaleclimateconnections.org/2026/10/hurricane-trudy-drenching-mexico-guam-braces-for-another-typhoon/">Yale Climate Connections</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>Trump calls off the execution livestream</strong> &mdash; Last Friday's brief carried the Pentagon's plan to broadcast the firing-squad execution of Nidal Hasan, the former Army major convicted of the 2009 Fort Hood shooting. Trump reversed it Thursday, posting that Hasan "will die, as scheduled, by firing squad, but this event will not be streamed," with victims' immediate families able to attend in person. The execution remains set for December 3. The plan drew objections from Republicans and Democrats in Congress, clergy and survivors, and an ABC News/Washington Post/Ipsos poll found most Americans opposed to livestreaming even while supporting the execution. A White House official said Trump had not known about Defense Secretary Pete Hegseth's plan; the Pentagon says Hegseth supports the decision. (<a href="https://www.nbcnews.com/politics/donald-trump/trump-no-livestream-execution-nidal-hasan-rcna603697">NBC News</a>, <a href="https://www.axios.com/2026/10/15/trump-hegseth-fort-hood-execution-livestream">Axios</a>, <a href="https://www.npr.org/2026/10/15/nx-s1-6001794/fort-hood-execution-hegseth-christian-nationalist">NPR</a>)</li>
+    <li><strong>Inflation accelerates to 3.7%</strong> &mdash; The September consumer price index, released Wednesday, put annual inflation at 3.7%, up from 3.4% in August and hotter than the 3.6% forecasters expected. Prices rose 0.6% on the month, and gasoline &mdash; up 9.1% in September &mdash; accounted for more than half of that increase, which CNBC links to the US&ndash;Iran conflict. Core inflation, excluding food and energy, was 2.6%. Airline fares are up 22% over the year; grocery prices fell 0.1% on the month. (<a href="https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html">CNBC</a>, <a href="https://www.cbsnews.com/news/september-cpi-report-inflation-energy-costs/">CBS News</a>, <a href="https://www.bls.gov/news.release/cpi.nr0.htm">Bureau of Labor Statistics</a>)</li>
+    <li><strong>Suspicious letters reach senators and election offices</strong> &mdash; Federal law enforcement told lawmakers Thursday that mail containing suspicious substances had been sent to Capitol Hill offices, including those of Senate Minority Leader Chuck Schumer and Senators Chris Murphy and Alex Padilla. Two law enforcement sources told NBC News that dozens of letters were involved, and election offices in at least 15 states reported receiving suspicious packages the same week. Preliminary tests found the material non-hazardous, with confirmatory testing under way; Murphy's office said the senator and staff were not in immediate danger. The FBI, Postal Inspection Service and Capitol Police are investigating. (<a href="https://www.nbcnews.com/politics/2026-election/authorities-investigate-suspicious-mailings-congressional-offices-rcna603712">NBC News</a>, <a href="https://www.washingtonpost.com/politics/2026/10/15/suspicious-materials-sent-members-congress-police-say/">The Washington Post</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong>iPhone Duo pre-orders open this morning</strong> &mdash; Apple's first foldable went up for pre-order at 5 a.m. PT today, with availability beginning Friday, October 23. US pricing starts at $1,999 for 256GB. It pairs a 5.4-inch outer display with a 7.6-inch foldable inner screen that Apple says is 50% larger than the iPhone 18 Pro Max display, and Apple calls the opened phone the thinnest iPhone it has made. Macworld, tracking the pre-order window, reported quoted ship dates sliding well past launch day within the first half hour. (<a href="https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/">Apple</a>, <a href="https://www.macworld.com/article/3262078/iphone-duo-pre-order-live-blog.html">Macworld</a>)</li>
+    <li><strong>An OpenAI engineer is charged with bugging a conference room</strong> &mdash; Federal prosecutors announced Tuesday that Abdulrahman Alfozan, 35, a Saudi national and OpenAI engineer, was arrested October 9 and charged with one count under the federal Wiretap Act, which carries up to five years. OpenAI's security team found the device during a sweep: wrapped in toilet paper and plugged into a USB port behind a television in an executive conference room, installed around September 28 according to the complaint. Prosecutors say he used his wife's ChatGPT account to research building it. OpenAI terminated him, referred the matter to the FBI, and said it has no indication he accessed or exfiltrated model weights, source code or customer data. (<a href="https://www.sfchronicle.com/bayarea/article/openai-engineer-arrested-hidden-recording-device-22475740.php">San Francisco Chronicle</a>, <a href="https://www.cbsnews.com/news/openai-employee-arrest-recording-device/">CBS News</a>, <a href="https://fortune.com/2026/10/14/openai-arrest-engineer-alfozan-fbi-recording-device-ai-chatbot/">Fortune</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Portland closes preseason, opens Wednesday</strong> &mdash; The Blazers finish the preseason tonight at Golden State and open the regular season at Moda Center against Phoenix on October 21. Damian Lillard returns from the torn Achilles that cost him all of last season &mdash; by the opener he will have gone 542 days between games &mdash; alongside Ja Morant, acquired from Memphis in June, and first-year head coach Micah Nori. Shaedon Sharpe tore a meniscus in an August workout and may miss most or all of the season. (<a href="https://portlandtribune.com/2026/10/15/evanson-says-the-trail-blazers-season-begins-oct-21-are-you-excited-you-should-be">Portland Tribune</a>, <a href="https://www.nba.com/news/2026-27-season-preview-por">NBA.com</a>)</li>
+    <li><strong>Porzingis stays out indefinitely</strong> &mdash; Golden State said Wednesday that Kristaps Porzingis remains out for the unspecified "health-related matter" that has kept him from training camp and all five preseason games, with no timeline given. He returned to the practice facility Tuesday to meet general manager Mike Dunleavy and the team's VP of player health, and posted afterward that it has "definitely been frustrating dealing with some health stuff that you can't exactly pinpoint." The team has not said whether the issue is an injury or an illness. (<a href="https://www.cbssports.com/nba/news/warriors-kristaps-porzingis-mysterious-health-issues-timeline/">CBS Sports</a>, <a href="https://www.sfchronicle.com/sports/warriors/article/kristaps-porzingis-breaks-silence-warriors-22477452.php">San Francisco Chronicle</a>)</li>
+    <li><strong>Two rosters thin out before opening night</strong> &mdash; Oklahoma City rookie guard Otega Oweh was ruled out for the season after a non-contact Achilles injury in overtime of the Thunder's preseason win over Atlanta. The Knicks waived centers Drew Eubanks &mdash; who has a torn pectoral muscle &mdash; and Tony Bradley along with wing Ochai Agbaji on Thursday, and Charlotte is waiving Rob Dillingham days after acquiring him from Chicago. (<a href="https://www.espn.com/nba/story/_/id/50028196/2026-27-nba-buzz-latest-live-updates-news-intel-trades-deals">ESPN</a>)</li>
+    <li><strong>Milwaukee sweeps to its first World Series since 1982</strong> &mdash; The Brewers finished off a 4&ndash;0 NLCS with a 6&ndash;4 win at Dodger Stadium on Thursday, Garrett Mitchell's sixth-inning home run off reliever Tanner Scott providing the go-ahead run before the bullpen closed it out. It ends the Dodgers' title defence and sends Milwaukee to the World Series for the first time in 44 years. Their opponent is still undecided: Cleveland leads Tampa Bay 2&ndash;1 in the ALCS after a 3&ndash;2 Game 3. (<a href="https://www.espn.com/mlb/game/_/gameId/401908033/brewers-dodgers">ESPN</a>, <a href="https://www.cbssports.com/mlb/news/2026-mlb-playoff-bracket-schedule-scores-results-how-to-watch/">CBS Sports</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>A fast fire on Camp Pendleton closes I-5</strong> &mdash; The Henderson Fire started around 2:30 p.m. Thursday near Basilone and Las Pulgas roads and ran to roughly 1,100&ndash;1,200 acres, pushed by dry Santa Ana winds. The CHP closed all lanes of I-5 in both directions from Basilone Road to Harbor Drive in Oceanside at about 5 p.m. and reopened them around 6 p.m. An evacuation order for the base's Las Flores area was lifted about 7:15 p.m. Three air tankers and base ground crews worked the fire; the cause is under investigation. (<a href="https://timesofsandiego.com/crime/2026/10/15/brush-fire-camp-pendleton-interstate-5/">Times of San Diego</a>, <a href="https://www.nbcsandiego.com/news/local/watch-live-brush-fire-on-camp-pendleton-quickly-grows-to-100-acres/4087761/">NBC San Diego</a>)</li>
+    <li><strong>The city gets its chief operating officer back</strong> &mdash; Mayor Todd Gloria named Bethany Bezak as COO on Thursday, reversing his own 2025 decision to absorb the job himself when he cut 31 positions from city government. Bezak has been chief performance and logistics officer since December 2025, overseeing transportation, purchasing and contracting, and general services. The appointment needs council approval, with a vote set for Monday; Council President Joe LaCava and councilmembers Stephen Whitburn and Vivian Moreno have signalled support. It follows by three weeks the episode in which thousands of residents were incorrectly billed for waste services, after which councilmembers pressed for a COO &mdash; a connection Gloria rejects. (<a href="https://www.kpbs.org/news/politics/2026/10/15/todd-gloria-steps-back-from-chief-operating-officer-role-appoints-bethany-bezak">KPBS</a>, <a href="https://voiceofsandiego.org/2026/10/15/mayor-todd-gloria-picks-new-coo/">Voice of San Diego</a>, <a href="https://timesofsandiego.com/politics/2026/10/15/mayor-new-coo-operating-officer-billing-debacle/">Times of San Diego</a>)</li>
+    <li><strong>A 400-megawatt data centre is floated for the NAVWAR site</strong> &mdash; Manchester Financial's president and CEO, Ted Eldredge, asked what it would cost to power a 400-megawatt data centre on the 70-acre Naval Information Warfare Systems Command site near Old Town &mdash; which would make it possibly the largest in California. The company is negotiating with the Navy to build a new command headquarters in exchange for developing the rest of the land under a 99-year lease, with housing, hotels and retail also in the mix. Eldredge said the data centre is one of several proposals and may never be built, and a company representative stressed that no final project has been approved. Councilmember Sean Elo-Rivera said that if ratepayers would absorb the power cost, it is "incredibly alarming" and SDG&amp;E owes the public an answer. (<a href="https://voiceofsandiego.org/2026/10/15/manchester-group-pitches-massive-data-center-at-the-navwar-site/">Voice of San Diego</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127803; Kaua&#699;i</p>
+  <ul>
+    <li><strong>The wildfire-hardening bill stalls over cost estimates</strong> &mdash; A county council committee deferred Bill 2998 again on Wednesday, the latest delay for an ordinance that would require noncombustible materials where exterior walls meet the ground, decking and roof on new homes &mdash; measures drawn from the 2023 Lahaina fire and a July 2024 West Side fire. The hold-up is a gap in the numbers: local builders told the Planning Department the bill would add about $6,750 to a 1,000-square-foot home, while an estimate from the Contractors Association of Kaua&#699;i, requested by Council Chair Mel Rapozo, put the added cost as high as $106,850 &mdash; four times the builders' figure on a key component. The association has not said where its numbers came from. Some members also raised the effect on the county's financially strained water department. (<a href="https://www.civilbeat.org/2026/10/kauai-punts-on-rules-to-make-homes-safer-from-fires-again">Honolulu Civil Beat</a>, <a href="https://www.civilbeat.org/2026/10/kauai-wildfire-resilience-bill-has-turned-into-a-fight-over-numbers/">Honolulu Civil Beat</a>)</li>
+    <li><strong>Fourteen candidates, four open council seats</strong> &mdash; At least four of the seven county council seats are open in the November 3 general election, with 14 candidates running for a body that sets policy, property tax rates and a county budget of nearly $500 million. Most of the field wants the county to keep buying land and building perpetually affordable homes. (<a href="https://www.civilbeat.org/2026/10/kauai-needs-more-affordable-housing-council-candidates-have-ideas/">Honolulu Civil Beat</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>Wooden Camera redesigns its FX6 accessory system</strong> &mdash; The company released a reworked accessory lineup for the Sony FX6 on Wednesday, built around a redesigned top plate with a new attachment style, including a battery slide bracket. Worth a look if you are rebuilding an FX6 rig rather than adding one piece to an existing cage. (<a href="https://www.tvtechnology.com/production/live-production/wooden-camera-releases-redesigned-sony-fx6-accessory-system">TV Technology</a>)</li>
+    <li><strong>A voice-command rig for the FX3 and FX6</strong> &mdash; Newsshooter covered a DIY voice-control system built on a Raspberry Pi Zero with open-source speech recognition, handling commands such as starting and stopping recording and changing ND filters. It is still in development with testing ongoing, so this is a proof of concept rather than something to buy &mdash; but a genuinely interesting one for solo operators working behind the camera. (<a href="https://www.newsshooter.com/2026/10/14/voice-control-system-for-the-sony-fx3-fx6/">Newsshooter</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#128267; Electric Vehicles</p>
+  <ul>
+    <li><strong>Europe sets an EV record while North America drops 44%</strong> <em>(general EV news)</em> &mdash; Global plug-in sales through September reached 15.5 million, up 3% year over year, but the regional split is stark: Europe set a sales record while North American volumes fell 44% in September, the first full month after the US federal purchase credit lapsed. The gap is worth watching if you are shopping in the US &mdash; weaker domestic demand tends to show up as discounting and lease deals rather than new model launches. (<a href="https://electrek.co/2026/10/15/europes-ev-sales-soar-as-north-america-drops-44-heres-the-catch/">Electrek</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#129516; Mito Research</p>
+  <ul>
+    <li><strong>Ketogenic therapy looks genotype-dependent in mitochondrial disease</strong> &mdash; A review in <em>Nutrients</em> from two pediatric neurologists at Yonsei University College of Medicine pulls together the evidence on ketogenic dietary therapies and &beta;-hydroxybutyrate in mitochondrial function, and the clinically useful part is the split it draws: benefit in primary mitochondrial disease appears genotype-dependent, with potential benefit for mtDNA point-variant carriers but possible harm in POLG-related disease and mtDNA deletion myopathy. The authors are candid about the limits &mdash; most clinical studies never measured mitochondrial outcomes directly, ketogenic feeding suppresses mitochondrial one-carbon metabolism, and some signalling effects only appear at ketone levels above what diet alone achieves &mdash; and call for genotype-stratified trials. This is a synthesis of existing data, not new trial results, but for an mtDNA point mutation with drug-resistant seizures it is the distinction that matters when ketogenic therapy comes up. Via PubMed. (<a href="https://pubmed.ncbi.nlm.nih.gov/42884707/">PubMed</a>, <a href="https://doi.org/10.3390/nu18193256">doi.org</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong>Fall Festival is October 24 and needs volunteers</strong> &mdash; The festival is next Saturday and the organisers put out a call this morning for parent volunteers to staff it. If you can take a slot, now is the time to claim one.</li>
+    <li><strong>The field-trip form is live, due October 30</strong> &mdash; The fall field-trip permission form has been sent out for signature and is due by 11:59 p.m. on October 30. Earlier briefs flagged that deadline; the form itself is now sitting unsigned in the parent portal.</li>
+    <li><strong>Safety Committee meets November 5</strong> &mdash; The school's safety committee meets Thursday, November 5 at 4:00 p.m. and is looking for parent representatives from each grade level.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127780; Weather</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Today</span>92&deg; / 71&deg; &middot; Sunny &middot; 2% rain</div>
+    <div class="data-row"><span class="data-label">Wind</span>NE 5&ndash;25 mph, gusts to 35</div>
+    <div class="data-row"><span class="data-label">Note</span>Santa Ana offshore flow with a heat advisory through Saturday &mdash; 12&deg; above Wednesday, and the fire weather that drove yesterday's Camp Pendleton burn</div>
+    <div class="data-row"><span class="data-label">Tomorrow</span>89&deg; &middot; Mostly sunny, east wind easing</div>
+  </div>
+  <p class="source-note">Live NWS point forecast for La Mesa / 91942, issued 12:46 AM PT today.</p>
+</section>
+
+<section>
+  <p class="section-label">&#127754; Surf</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Swell</span>3.0 ft @ 14s from 199&deg; (SSW) &mdash; average period 8.9s</div>
+    <div class="data-row"><span class="data-label">Read</span>Down from midweek. Roughly knee- to waist-high at MB/PB beach breaks, with the occasional chest-high set on the better sandbars</div>
+    <div class="data-row"><span class="data-label">Wind</span>Strong offshore &mdash; NE 5&ndash;25 mph gusting to 35. Clean, groomed faces early; once it peaks that much offshore holds waves up and makes them hard to get into</div>
+    <div class="data-row"><span class="data-label">Tide</span>High 12:03 PM (5.0 ft) &middot; Low 8:53 PM (1.2 ft)</div>
+    <div class="data-row"><span class="data-label">Water</span>72&deg;F</div>
+    <div class="data-row"><span class="data-label">Outlook</span>South swell fading &mdash; 4.9 ft at 17s Wednesday morning to 3.0 ft at 14s now. Stormsurf forecast unavailable this run, so buoy trend only</div>
+  </div>
+  <p class="source-note">NDBC buoy 46258 (Mission Bay West) observed 4:56 AM PT: 3.0 ft, 14s dominant / 8.9s average, 199&deg;, 72.5&deg;F. Buoy 46225 (Torrey Pines) same hour: 3.0 ft, 15s, 206&deg;, 73.2&deg;F. Tides from NOAA station 9410170. Scripps Waverider buoys report waves and water temperature only &mdash; wind is from the NWS forecast.</p>
+</section>
+
+<div class="quote">
+  There we shall rest and see; we shall see and love; we shall love and praise. Behold what shall be in the end, and shall not end.
+  <span class="attrib">&mdash; Augustine, <em>The City of God</em>, Book XXII, Chapter 30</span>
+</div>
+
+<footer>
+  Morning Brief &middot; Friday, October 16, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  function icon(theme){ return theme === 'dark' ? '☀' : '☾'; }
+  function current(){ return document.documentElement.getAttribute('data-theme') || 'dark'; }
+  btn.textContent = icon(current());
+  btn.addEventListener('click', function(){
+    var next = current() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    btn.textContent = icon(next);
+    try { localStorage.setItem('brief-theme', next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
