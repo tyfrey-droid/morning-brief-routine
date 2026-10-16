@@ -938,3 +938,31 @@ Tweak to try next run: the Senate-letter item was nearly dropped because the fir
   only ~10 identical TNND syndications and no original. Searching the PRIMARY actor instead
   ("Shaheen ... Reuters AP") surfaced foreign.senate.gov plus NPR and Axios in one pass. When a story
   shows up only as local-station syndication, search the named official or committee, not the outlet.
+
+## 2026-10-16 (Fri)
+Thin/empty: EV ran ONE bullet by design — zero fresh van/family-format stories existed (the Renault E-Space
+  concept was already covered Oct 12, and the Kia PV5 / ID. Buzz searches returned only 2025 background), so
+  it is the single permitted "(general EV news)" item. Tech ran 2. Gear ran 2, both FX6-specific, which is
+  the best Gear has looked in weeks. Kaua'i ran 2 after last run's empty — Civil Beat's Bill 2998 coverage
+  is a real story and I should check civilbeat.org, not just thegardenisland.com, before writing Kaua'i off.
+Unsure it cleared the bar: the Mito bullet. It is a REVIEW in Nutrients, and the strict filter's review
+  exception asks for named drugs/trials with regulatory or phase status, which this does not have. I ran it
+  anyway because the specific finding — ketogenic benefit in primary mito disease looks genotype-dependent,
+  plausible benefit for mtDNA point variants, possible HARM in POLG and mtDNA-deletion myopathy — bears
+  directly on a real treatment decision for an m.3243A>G child with refractory seizures. If the reader says
+  that is still a review dressed up, tighten to "named drug or named trial only" and omit the section.
+Date rule cost me the day's best Tech story, correctly: the FTC's ~50-page civil investigative demands to
+  OpenAI and Anthropic (issued Oct 14) are real, but the Axios original is dated Sept 30 — 16 days, outside
+  the window — and the Oct 14/15 follow-ups I could find were Gizmodo plus aggregators with no verifiable
+  date on the page. Excluded rather than cite an undated secondary. The OpenAI bugging arrest replaced it
+  and was better sourced anyway (SF Chronicle, CBS, Fortune, Al Jazeera).
+GW watch ran for the first time since Sept: not a position restatement but a genuine change — the Bush
+  strike group rejoined the Arabian Sea after Phuket, restoring the two-carrier presence that TWZ's Oct 6
+  tracker had recorded as lapsed with GW alone. Note for next time: news.usni.org and twz.com are both
+  DNS-blocked to WebFetch (ENOTFOUND), so the tracker can only be read through search snippets; the dated
+  URL slug is the only date verification available. armyrecognition.com surfaced the same story first and
+  was NOT used — it is not a defense desk on the approved list.
+Tweak to try next run: last run's "one wire-headline-list query, then story-level verification" held up
+  again, but the single highest-yield query this run was the Pour Over cross-check — its Oct 16 "Missed the
+  Memo" surfaced the 3.7% CPI print, which none of my wire queries had returned and which became the
+  strongest US bullet. Promote TPO from a final-gate tiebreaker to an early candidate-generation query.

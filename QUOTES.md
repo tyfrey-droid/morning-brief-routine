@@ -89,6 +89,7 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 
 | Date | Author | Source |
 |------|--------|--------|
+| 2026-10-16 | Augustine | The City of God, Book XXII, Ch. 30 |
 | 2026-10-12 | MLK | Nobel Peace Prize acceptance address, Oslo, 1964 |
 | 2026-10-09 | Chambers | My Utmost for His Highest |
 | 2026-10-07 | Keller | Walking with God through Pain and Suffering |
