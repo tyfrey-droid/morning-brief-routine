@@ -966,3 +966,36 @@ Tweak to try next run: last run's "one wire-headline-list query, then story-leve
   again, but the single highest-yield query this run was the Pour Over cross-check — its Oct 16 "Missed the
   Memo" surfaced the 3.7% CPI print, which none of my wire queries had returned and which became the
   strongest US bullet. Promote TPO from a final-gate tiebreaker to an early candidate-generation query.
+
+## 2026-10-19 (Mon)
+Thin/empty: San Diego ran 2 (the Casseus ICE release and the DOJ ticket-broker suit were the only two
+  I could verify with dated URLs; the Times of San Diego Coast Guard items — La Jolla kayaker, Ensenada
+  boat sinking — appeared only as an undated homepage snippet and I would not cite them). Tech ran 2,
+  Gear 2, EV 2, Kaua'i 2, Mito 1. No GW bullet: searched twice and found zero CVN-73 reporting dated
+  after the Oct 13 USNI tracker that Friday's brief already used, so silence was correct, not a miss.
+Unsure it cleared the bar: the SmallRig shoulder rig. It is a REVIEW of a product that has been on
+  shelves ~2 years (B&H lists it discontinued; a 753-day-old Roberts listing shows $335), not a launch.
+  I ran it because a $420 VCT-14 baseplate is directly useful for FX6 rigging and I labelled it as a
+  review rather than news. If the reader says reviews of old kit are filler, cut to 1 Gear bullet.
+Date rule cost me two stories, both correctly. (1) Task & Purpose's "US forces hit three Iranian tankers
+  after carrier attacked" surfaced high in a GW search and reads fresh — it is dated Sept 5, 41 days out.
+  (2) The White House AI accord (OpenAI/Anthropic/Nvidia CEOs) was signed Sept 29/30, outside the window,
+  despite aggregators recirculating it as Oct 17 news. Both looked like the day's best story in their
+  section. Habit worth keeping: when an undated aggregator makes something feel current, find the
+  primary event date before writing a word of it.
+Mito required a judgement call on date verification and I want to flag how I resolved it. The zagociguat
+  discontinuation is the most consequential MELAS news in months, but tisentotx.com and clinicaltrials.gov
+  are both DNS-blocked to WebFetch, so I could not read the letter's date off the page. Two independent
+  signals agreed — the URL slug (update-october-0726) and the search index's "about 11 days old" — putting
+  it at Oct 7/8, inside the window either way. I ran it on that basis and labelled it an industry
+  statement with no peer-reviewed data. Also checked archives: last zagociguat mention was Aug 27, so no
+  redundancy. Rejected the m.3243A>G tacrolimus case report (Transplant Proc, Oct 14) — same variant as
+  the reader's daughter, but a 64-year-old transplant recipient and a drug not in her care, so it fails
+  "case reports adding no new mechanism or treatment." Also rejected Mighty's elamipretide POLG item: a
+  request for an FDA meeting is not yet a trial status change, and it is POLG, not MELAS.
+Tweak to try next run: promoting The Pour Over to early candidate generation (last run's advice) did NOT
+  pay off this time — its latest issue was Oct 17 and covered the OpenAI recording device and the inflation
+  print, both of which Friday's brief already ran, so it was pure confirmation of stale ground. Keep it as
+  a cross-check, but on a Monday run after a Friday brief, expect TPO to be behind us; the productive
+  queries were the two wire-headline-list ones ("Reuters world news October 18", "AP top stories weekend
+  October 17 18"), which between them seeded nine of today's eleven news candidates.

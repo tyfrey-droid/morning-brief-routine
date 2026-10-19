@@ -24,7 +24,8 @@ line you have actually verified.
   it, but on the contrary, keeps it empty and so helps us to keep alive our former communion with
   each other, even at the cost of pain."
   — *Letters and Papers from Prison*, letter to Renate and Eberhard Bethge, Christmas Eve 1943.
-  Used 2026-09-09.
+  Used 2026-09-09; reused 2026-10-19 (shortened to the first two sentences; 40 days clears the 30-day rule,
+  but Bonhoeffer's bank is thin — add a verified fourth line before his next turn).
 - "We must learn to regard people less in the light of what they do or omit to do, and more in the
   light of what they suffer." — *Letters and Papers from Prison*. Used 2026-08-13.
 - On being interrupted by "people with claims and petitions," and passing them by "preoccupied with
@@ -89,6 +90,7 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 
 | Date | Author | Source |
 |------|--------|--------|
+| 2026-10-19 | Bonhoeffer | Letters and Papers from Prison (Christmas Eve 1943) |
 | 2026-10-16 | Augustine | The City of God, Book XXII, Ch. 30 |
 | 2026-10-14 | Swinton | Becoming Friends of Time |
 | 2026-10-12 | MLK | Nobel Peace Prize acceptance address, Oslo, 1964 |
