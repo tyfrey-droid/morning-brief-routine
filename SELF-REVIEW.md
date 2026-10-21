@@ -999,3 +999,28 @@ Tweak to try next run: promoting The Pour Over to early candidate generation (la
   a cross-check, but on a Monday run after a Friday brief, expect TPO to be behind us; the productive
   queries were the two wire-headline-list ones ("Reuters world news October 18", "AP top stories weekend
   October 17 18"), which between them seeded nine of today's eleven news candidates.
+
+## 2026-10-21 (Wednesday)
+
+Thin/empty sections: Kaua'i ran one bullet (hurricane-recovery relief total, with the recycling-bin move
+  folded in rather than padded to two). Gear ran two, and one of them is from Oct 16 rather than since
+  Monday's brief: newsshooter.com and cined.com are both DNS-blocked to WebFetch now, so I could not read
+  either front page and had to reconstruct the week from search. School ran one bullet, which is normal for
+  a Wednesday — one school email since Monday, the Fall LCAP meeting. The GW watch produced nothing: the
+  Oct 19 USNI tracker has her in the Arabian Sea with CVW-5 and USS Shoup, which is where Oct 16's brief
+  already put her, and a restatement of position is explicitly not a trigger. Silence was the right output.
+Unsure it cleared the bar: the Mito item. The only in-window candidate was the Mitochondrion purine/IMP
+  paper (Oct 8) — fibroblasts, Complex I deficiency, not m.3243A>G, and Khondrion-affiliated. I ran it on
+  the strength of the negative result (NR/NMN/nicotinamide/trigonelline all failed) because NAD+ boosters
+  are heavily marketed to this exact family, and a negative is cheaper to act on than a positive. The item
+  I actually wanted was the three-centre hyperinflammation series (Mol Genet Metab) — a MELAS m.3243A>G
+  patient with IFN-driven inflammation during a stroke-like episode who responded to anakinra and is alive
+  at 15. Published Sept 26, so 25 days out and date-excluded. Worth watching for follow-up results.
+Also date-excluded: Renault Trafic E-Tech winning International Van of the Year 2027, which search surfaced
+  as current EV news but was announced at IAA Hanover on Sept 14. That left EV with no genuine van story,
+  so it ran ID. Cross plus one flagged general item.
+Tweak to try next run: two of today's would-be bullets (Renault IVOTY, the Y.M.Cinema items) came back from
+  search with no date attached and had to be dated separately before use, and one of them died. When a
+  search result has no visible date, resolve the date BEFORE writing the bullet, not after — I drafted the
+  Renault line and then threw it away. Also: Newsshooter and CineD are now search-only, so budget an extra
+  targeted query per gear item rather than expecting one front-page fetch to seed the section.
