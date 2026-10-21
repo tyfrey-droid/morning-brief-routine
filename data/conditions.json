@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-10-21T12:45:22Z",
+  "fetched_at_utc": "2026-10-21T15:59:18Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -8,17 +8,7 @@
     "updated": "2026-10-21T09:51:30+00:00",
     "periods": [
       {
-        "name": "Overnight",
-        "temperature": 63,
-        "temperatureUnit": "F",
-        "windSpeed": "0 mph",
-        "windDirection": "",
-        "shortForecast": "Partly Cloudy",
-        "detailedForecast": "Partly cloudy, with a low around 63. East wind around 0 mph.",
-        "precipChancePct": 1
-      },
-      {
-        "name": "Wednesday",
+        "name": "Today",
         "temperature": 77,
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
@@ -28,7 +18,7 @@
         "precipChancePct": 49
       },
       {
-        "name": "Wednesday Night",
+        "name": "Tonight",
         "temperature": 62,
         "temperatureUnit": "F",
         "windSpeed": "5 to 10 mph",
@@ -46,24 +36,34 @@
         "shortForecast": "Rain Showers",
         "detailedForecast": "Rain showers. Mostly cloudy, with a high near 69. Southwest wind 5 to 10 mph. Chance of precipitation is 90%. New rainfall amounts between a tenth and quarter of an inch possible.",
         "precipChancePct": 85
+      },
+      {
+        "name": "Thursday Night",
+        "temperature": 59,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "N",
+        "shortForecast": "Chance Rain Showers",
+        "detailedForecast": "A chance of rain showers before 5am. Mostly cloudy, with a low around 59. North wind 0 to 5 mph. Chance of precipitation is 40%. New rainfall amounts less than a tenth of an inch possible.",
+        "precipChancePct": 35
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-10-21T11:56Z",
-    "waveHeightFt": 3.9,
-    "dominantPeriodS": 15,
-    "avgPeriodS": 9.7,
-    "meanWaveDirDeg": 201,
-    "waterTempF": 74.8
+    "observed_utc": "2026-10-21T15:26Z",
+    "waveHeightFt": 4.3,
+    "dominantPeriodS": 14,
+    "avgPeriodS": 11.3,
+    "meanWaveDirDeg": 208,
+    "waterTempF": 74.1
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-10-21T11:56Z",
-    "waveHeightFt": 3.6,
+    "observed_utc": "2026-10-21T15:26Z",
+    "waveHeightFt": 3.3,
     "dominantPeriodS": 14,
-    "avgPeriodS": 9.8,
-    "meanWaveDirDeg": 208,
-    "waterTempF": 73.0
+    "avgPeriodS": 11.0,
+    "meanWaveDirDeg": 212,
+    "waterTempF": 73.6
   },
   "tides_san_diego_9410170": [
     {
