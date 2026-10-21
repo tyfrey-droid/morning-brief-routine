@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-10-21T15:59:18Z",
+  "fetched_at_utc": "2026-10-21T16:07:29Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -11,10 +11,10 @@
         "name": "Today",
         "temperature": 77,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 10 mph",
-        "windDirection": "S",
+        "windSpeed": "5 to 10 mph",
+        "windDirection": "SW",
         "shortForecast": "Mostly Sunny then Chance Showers And Thunderstorms",
-        "detailedForecast": "A chance of showers and thunderstorms after 5pm. Mostly sunny, with a high near 77. South wind 0 to 10 mph, with gusts as high as 20 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
+        "detailedForecast": "A chance of showers and thunderstorms after 5pm. Mostly sunny, with a high near 77. Southwest wind 5 to 10 mph, with gusts as high as 20 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
         "precipChancePct": 49
       },
       {
