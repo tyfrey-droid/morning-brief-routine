@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Wednesday, October 21, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body><div class="wrap">
+
+
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Wednesday, October 21, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 5:55 AM PT &middot; conditions updated 5:45 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>Alberta votes to stay in Canada</strong> &mdash; Monday's brief had the polls open; the answer was decisive. With roughly 1.8 million ballots counted, about 75 to 76 per cent voted to remain in Canada against 24 to 25 per cent for beginning a legal process toward a future binding separation vote. Prime Minister Mark Carney called it a "clear choice" for unity. Premier Danielle Smith, who called the referendum to settle the question, said she voted to stay. Separatist organiser Jeffrey Rath said the independence push continues regardless. (<a href="https://www.aljazeera.com/news/2026/10/20/alberta-voters-reject-separation-from-canada-early-results-show">Al Jazeera</a>, <a href="https://www.pbs.org/newshour/world/alberta-voters-reject-independence-from-canada-in-victory-for-carney">PBS NewsHour</a>, <a href="https://globalnews.ca/news/12108827/alberta-referendum-result/">Global News</a>)</li>
+    <li><strong>France answers the riots with curfews</strong> &mdash; Monday's brief counted 2,400 arrests and noted Macron had stopped short of curfews. They are now in force. Paris police imposed nightly curfews in two zones &mdash; around Place de la R&eacute;publique and Les Halles &mdash; and said they would hold "for as long as necessary" after restoring overnight calm. Lyon followed, and Marseille, Lille and Nice imposed curfews covering unaccompanied minors. Prime Minister S&eacute;bastien Lecornu credited the measures with quieting the streets and promised a "massive" police presence for Saturday's planned protests; the interior minister said Sentinelle troops will be deployed. Macron has drawn criticism for touring the Gulf during the unrest. (<a href="https://www.npr.org/2026/10/21/nx-s1-6010344/france-nightly-curfews">NPR</a>, <a href="https://www.cnbc.com/2026/10/20/france-protests-curfews-macron-gulf-trip.html">CNBC</a>, <a href="https://www.cnn.com/2026/10/19/europe/france-protests-violence-wwk-intl-hnk">CNN</a>)</li>
+    <li><strong>Kyiv's grid is hit again, and the allies argue about warnings</strong> &mdash; Russia struck Ukrainian energy infrastructure with ballistic missiles and drones, damaging 28 substations and other facilities and cutting electricity, heat and water to more than half a million people. Volodymyr Zelenskyy said Ukraine again received no early warning from partners, then said on Monday that intelligence sharing had been "deblocked" and warnings were flowing again. Secretary of State Marco Rubio, travelling in Asia, said there had been "no pause" at any point and that the US had not changed how it treats Ukraine, adding that Zelenskyy should focus on ending the war. The accounts remain irreconcilable; Kyiv also says it is short of Patriot interceptors. (<a href="https://www.cbc.ca/news/world/russian-missiles-drones-kyiv-overnight-9.7386357">CBC</a>, <a href="https://www.aljazeera.com/news/2026/10/19/rubio-says-there-was-no-us-pause-in-intelligence-sharing-with">Al Jazeera</a>, <a href="https://abc.net.au/news/2026-10-21/ukraine-interceptor-missiles-zelenskyy-us-trump-tensions/107290418">ABC News Australia</a>)</li>
+    <li><strong>Hegseth turns up unannounced in Israel</strong> &mdash; Defence Secretary Pete Hegseth met Prime Minister Benjamin Netanyahu at Ovda Air Base in southern Israel on Monday in an unannounced visit, and also met Defence Minister Israel Katz. Axios reported it first and a US military official confirmed it; Israeli officials told Reuters that Iran was discussed, along with the fighting between Saudi Arabia and the Houthis. The Pentagon has not commented publicly and Hegseth's own post referred only to visiting troops in the region. Both leaders have set their own limits in public: Trump has said he will not order new strikes on Iran before the November midterms, and Netanyahu told Israeli media he is not seeking to attack Iran before Israel's October 27 election. (<a href="https://www.cbsnews.com/news/hegseth-visits-israel-elections-iran-war-netanyahu/">CBS News</a>, <a href="https://www.haaretz.com/israel-news/elections/2026-10-20/ty-article/u-s-defense-secretary-hegseth-meets-netanyahu-katz-in-unannounced-israel-visit/000001a1-57e3-df3c-adbf-d7f363890000">Haaretz</a>, <a href="https://www.inquirer.com/news/nation-world/hegseth-netanyahu-meet-telaviv-unannounced-trump-election-iran-war-20261020.html">The Philadelphia Inquirer</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>Approval hits a record low two weeks out</strong> &mdash; A Reuters/Ipsos poll put Trump's job approval at 31 per cent, the lowest of his political career, with Democrats leading the midterm generic ballot 47 to 35. An NBC News Decision Desk survey of 19,135 adults found 71 per cent say the country is on the wrong track &mdash; the highest reading of his second term &mdash; with approval at 34 per cent. A Washington Post&ndash;ABC&ndash;Ipsos poll conducted October 9 to 13 had 33 per cent approving and 66 per cent disapproving. The measures differ in method and in the size of the Democratic lead, which runs from roughly seven to twelve points, but they move in the same direction. (<a href="https://www.aljazeera.com/news/2026/10/19/trump-approval-hits-record-low-31-percent-polls-show-republican-struggles">Al Jazeera</a>, <a href="https://www.nbcnews.com/politics/2026-election/decision-desk-poll-says-trump-ahead-midterms-rcna604417">NBC News</a>, <a href="https://thehill.com/homenews/administration/6157459-us-voters-wrong-track-trump-administration-survey/">The Hill</a>)</li>
+    <li><strong>A judge finds bad faith over 400 felled trees</strong> &mdash; US District Judge Ana Reyes, who on October 13 temporarily barred the National Park Service from cutting more trees at Washington's East Potomac Golf Links, said after a seven-hour hearing on Monday that she will likely extend the injunction because the government acted in "bad faith" when it took down more than 400 trees over the Columbus Day weekend. She ordered two senior Interior Department officials to testify. The administration has moved to disqualify her from the case, alleging a pattern of animus, and Trump called her a "crazed lunatic" on Truth Social. He wants the municipal course rebuilt as a championship layout; the plaintiffs are a preservation group and two District residents. (<a href="https://www.nbcnews.com/politics/trump-administration/judge-tree-clearing-dc-golf-course-trump-renovation-east-potomac-park-rcna604351">NBC News</a>, <a href="https://thehill.com/regulation/court-battles/6158276-judge-questions-trump-east-potomac-park/">The Hill</a>, <a href="https://www.npr.org/2026/10/13/nx-s1-6000055/east-potomac-golf-course-tree-clearing-judge">NPR</a>)</li>
+    <li><strong>Both Wisconsin senators get the suspicious mail</strong> &mdash; The mailings our October 16 brief flagged have now reached both of a single state's senators. Ron Johnson and Tammy Baldwin each confirmed their offices received suspicious packages, and Johnson said the return address matched letters sent elsewhere in the country. No one was hurt and both offices resumed normal operations. The Wisconsin Elections Commission received a piece containing an unidentified powder that it later deemed not dangerous, and Representatives Gwen Moore and Mark Pocan reported similar mail. Election offices in at least 15 states have been targeted. The FBI and Postal Inspection Service are investigating; early testing of some letters found the contents not hazardous, and no sender has been identified. (<a href="https://www.wpr.org/news/more-wisconsin-lawmakers-receive-suspicious-substances-by-mail">Wisconsin Public Radio</a>, <a href="https://www.nbcnews.com/politics/2026-election/authorities-investigate-suspicious-mailings-congressional-offices-rcna603712">NBC News</a>, <a href="https://edition.cnn.com/2026/10/14/politics/suspicious-letters-white-powder-election-officials">CNN</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong>Musk puts a SpaceX&ndash;Tesla merger on the table</strong> &mdash; On SpaceX's earnings call, Elon Musk said both companies have formed special committees of independent directors to examine combining, and that he is staying out of those discussions as a conflicted party. No terms have been agreed. A merger would need a 50 per cent vote of Tesla shareholders, which Musk himself called a high hurdle, and he cautioned that some people overstate the odds. Reports put the combined value near $3.5 trillion; SpaceX shares rose sharply in premarket trading. Earlier reporting this year had treated a SpaceX&ndash;xAI tie-up as the likelier route. (<a href="https://www.nbcnews.com/business/business-news/elon-musk-spacex-tesla-merger-rcna604685">NBC News</a>, <a href="https://news.bloomberglaw.com/ip-law/musk-says-spacex-tesla-have-formed-committees-to-explore-merger">Bloomberg Law</a>, <a href="https://www.aljazeera.com/economy/2026/10/21/elon-musk-says-spacex-and-tesla-exploring-largest-merger-in">Al Jazeera</a>)</li>
+    <li><strong>Anthropic's draft IPO filing shows the shape of the AI trade</strong> &mdash; The Wall Street Journal, which reviewed a confidential draft prospectus, reports Anthropic booked $16.3 billion of revenue in the first half of 2026, up from about $1.1 billion a year earlier, against a net loss of $80.7 billion. Roughly $72 billion of that loss is non-cash accounting charges tied to revaluing convertible notes and similar instruments rather than money spent; actual compute and infrastructure spending was close to $9 billion for the half. The filing is a draft submitted confidentially to the SEC and is not public on EDGAR; Anthropic declined to comment. Reports put a listing as early as November. (<a href="https://www.aljazeera.com/news/2026/10/21/anthropic-posts-80bn-loss-in-first-half-of-2026-wsj">Al Jazeera</a>)</li>
+    <li><strong>Apple sets October 28 and calls it "Pro and tell"</strong> &mdash; Monday's brief carried Gurman's report of a launch "on or about" October 27; Apple made it official the same day. The event is October 28 at 10 a.m. Pacific in Los Angeles, and it is a press and creator hands-on rather than a streamed keynote. The invitation names no product, chip or price. Expected, on Bloomberg's reporting: the first touchscreen MacBook Pro in 14- and 16-inch OLED versions, an OLED iPad mini, and refreshed iMac and entry-level 14-inch MacBook Pro models. Gurman has suggested the touchscreen MacBook Pro could reach sale on November 6. (<a href="https://9to5mac.com/2026/10/19/apple-announces-special-event-for-october-28/">9to5Mac</a>, <a href="https://www.macworld.com/article/3264015/apple-teases-pro-and-tell-event-on-october-28.html">Macworld</a>, <a href="https://www.engadget.com/2292117/apple-pro-and-tell-event-october-28-what-to-expect/">Engadget</a>)</li>
+    <li><strong>A twelve-hour cache for always-on agents</strong> &mdash; OpenAI added an optional 12-hour prompt cache to its API, alongside the existing 30-minute default, aimed at agents that reuse the same instructions and tools across a whole working day. Writing to the longer cache costs 2.5 times the uncached input rate against 1.25 for the short one, while cached reads cost the same either way &mdash; so it pays only when the same context is genuinely reused many times. Developers set it per request and can mix the two, keeping shared instructions for twelve hours and recent conversation at thirty minutes. It applies to GPT-5.6 and later in the Responses API. (<a href="https://developers.openai.com/api/docs/changelog">OpenAI</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Portland opens tonight with Lillard and Morant</strong> &mdash; The Trail Blazers start the regular season at home against the Phoenix Suns at 7 p.m. Pacific, the first real game of a remade roster: Damian Lillard is through his Achilles recovery, Ja Morant arrives by trade, and Micah Nori takes over as head coach, with Jrue Holiday and Scoot Henderson off the bench. Portland is favoured by 3.5. The two teams finished within three games of each other last season, Portland 42&ndash;40 and Phoenix 45&ndash;37. (<a href="https://sports.yahoo.com/articles/trail-blazers-open-season-home-060349178.html">Yahoo Sports</a>, <a href="https://www.nba.com/news/2026-27-season-preview-por">NBA.com</a>)</li>
+    <li><strong>Golden State opens at the Lakers</strong> &mdash; The Warriors begin the season on the road at Los Angeles tonight, their first game since LeBron James left the Lakers for Philadelphia. They closed the preseason by beating Portland 128&ndash;118 at Chase Center. (<a href="https://www.nba.com/gamenotes/warriors.pdf">NBA.com</a>)</li>
+    <li><strong>Detroit erases 22 points on opening night</strong> &mdash; The Pistons trailed Boston by 22 in the third quarter at Little Caesars Arena, then ran off 23 straight in the fourth to win the NBA's season opener 121&ndash;113. Cade Cunningham had 22 points and eight assists, Jalen Duren 22, and Duncan Robinson and Javonte Green combined for 40 points and ten three-pointers. Paul George scored 38 in his Celtics debut, the most by any player in a first game for Boston; Jayson Tatum went 6-for-23 for 13 points. (<a href="https://www.nbcsports.com/nba/news/pistons-erase-22-point-deficit-stun-celtics-with-23-0-fourth-quarter-run-in-season-opening-win">NBC Sports</a>, <a href="https://www.nbcsportsboston.com/nba/boston-celtics/live-updates-celtics-pistons-highlights-video-jayson-tatum/808480/">NBC Sports Boston</a>)</li>
+    <li><strong>LeBron's 24th season starts with a win at the Garden</strong> &mdash; Philadelphia beat the defending champion Knicks 106&ndash;100 on New York's ring night. Tyrese Maxey led with 28 points; Jaylen Brown, acquired from Boston, had 19 points, eight rebounds and six assists in his first game for the 76ers; LeBron James, who signed after leaving the Lakers, opened his record 24th NBA season with 14 points, nine rebounds and six assists. Jalen Brunson scored 21 on 6-of-19 shooting. (<a href="https://www.usnews.com/news/sports/articles/2026-10-20/76ers-win-opening-game-with-lebron-james-and-jaylen-brown-beating-nba-champion-knicks-106-100">U.S. News</a>, <a href="https://www.skysports.com/nba/news/13601764/lebron-james-philadelphia-76ers-knock-off-champion-new-york-knicks-in-sensational-road-victory-to-open-nba-season">Sky Sports</a>)</li>
+    <li><strong>The World Series is Rays&ndash;Brewers</strong> &mdash; Tampa Bay beat Cleveland 7&ndash;3 in Game 6 on Monday to take the American League pennant four games to two. Junior Caminero's two-run homer off the left-field foul pole in the seventh broke it open, Yandy D&iacute;az added one in the eighth, and Freddy Peralta went 5⅓ innings. The Rays meet Milwaukee, which swept the Dodgers in the National League Championship Series &mdash; both franchises are chasing a first title, and neither has won one since 1980. Game 1 is Friday night in Milwaukee. Cleveland's championship drought reaches 78 years. (<a href="https://www.mlb.com/news/rays-win-alcs-2026">MLB.com</a>, <a href="https://www.bostonglobe.com/2026/10/19/sports/rays-guardians-alcs-game-6-score/">The Boston Globe</a>, <a href="https://www.cnn.com/2026/10/19/sport/tampa-bay-rays-alcs">CNN</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>The county hires a sewage crisis chief</strong> &mdash; San Diego County introduced Bridget Premont on Monday as its first Pollution Crisis Chief, a new post in the County Counsel's Office created to run the response to Tijuana River sewage. She started last week and will lead a multi-agency team drawing on Public Health, Public Works, Environmental Health &amp; Quality, Emergency Services and County Communications, and coordinate with state, federal and Mexican officials. An early priority is Clean and Capture, the plan for a treatment system on the US side of the border. Premont is a former foreign service officer who was political and economic chief, then acting consul general, at the US Consulate in Tijuana from 2017 to 2021. Officials put the crisis's cost to the regional economy at roughly $500 million a year, concentrated in the South Bay and Imperial Beach. (<a href="https://www.kpbs.org/news/public-safety/2026/10/20/county-appoints-pollution-crisis-chief-to-tackle-tijuana-river-issues">KPBS</a>, <a href="https://www.nbcsandiego.com/news/local/san-diego-county-names-new-pollution-crisis-chief/4089183/">NBC 7 San Diego</a>, <a href="https://www.cbs8.com/video/news/local/cross-border-contamination/san-diego-county-appoints-first-pollution-crisis-chief-to-tackle-tijuana-river-sewage-crisis/509-8fd09d70-aa7b-4557-b1a4-ba4462cffb14">CBS 8</a>)</li>
+    <li><strong>SDG&amp;E is sued over the Norte Fire</strong> &mdash; Monday's brief covered the fire that forced 16,000 evacuations in San Juan Capistrano. A law firm filed a complaint on Monday for an evacuated resident alleging the utility's equipment started it, pointing to an outage on SDG&amp;E's Circuit 197 at 11:31 a.m. and equipment sited 100 to 200 feet from the approximate ignition point; one attorney said the filing was partly intended to force preservation of evidence. SDG&amp;E confirmed the outage but said there is currently no basis to connect its facilities to the ignition, and the official cause remains under investigation. The fire burned about 570 acres and was 90 per cent contained as of Tuesday; accounts of homes lost range from six damaged or destroyed to seven destroyed. (<a href="https://timesofsandiego.com/business/2026/10/20/lawsuit-san-diego-gas-electric-equipment-orange-county-fire/">Times of San Diego</a>, <a href="https://www.cbsnews.com/losangeles/news/san-diego-gas-and-electric-sdge-norte-fire/">CBS News Los Angeles</a>, <a href="https://abc7.com/story/complaint-alleges-destructive-norte-fire-burned-homes-san-clemente-was-caused-diego-gas-electric-equipment-failure/19956822/">ABC 7</a>)</li>
+    <li><strong>The Lincoln leaves North Island for Bremerton</strong> &mdash; The Navy announced Monday that the carrier USS Abraham Lincoln will shift its homeport from Naval Air Station North Island to Naval Base Kitsap in Bremerton, Washington, before the end of the year, for a long-planned maintenance period at Puget Sound Naval Shipyard. It is a permanent change of station for roughly 5,000 crew and their families. The move was scheduled well before the ship deployed in November 2025, and is not a response to that deployment; the Lincoln returned to San Diego on October 8 after about ten months away. (<a href="https://www.kpbs.org/news/military/2026/10/20/fleet-announces-uss-lincoln-leaving-san-diego-for-maintenance">KPBS</a>, <a href="https://www.navy.mil/Press-Office/News-Stories/display-news/Article/4628279/uss-abraham-lincoln-to-shift-home-port-to-bremerton/">U.S. Navy</a>, <a href="https://www.stripes.com/branches/navy/2026-10-19/uss-abraham-lincoln-homeport-kitsap-23199798.html">Stars and Stripes</a>)</li>
+    <li><strong>A soccer stadium is pitched at the Del Mar Fairgrounds</strong> &mdash; San Diego Wave owners Lauren Leichtman and Zachary Leichtman-Levine, with a Beverly Hills development partner, presented a plan called "Del Mar Dreams" to the 22nd District Agricultural Association board: a 12,000- to 16,000-seat stadium on the south-eastern part of the 324-acre fairgrounds, plus a 300-room hotel, convention space, retail and parking for 1,300 cars, targeting a 2031 opening when the club's Snapdragon Stadium lease ends. They are asking for a two-year exclusive negotiating window to study feasibility, expected on the board's November agenda. No total cost has been disclosed, and one board member noted the district never solicited competing proposals. The club says its current stadium arrangement is unaffected. (<a href="https://timesofsandiego.com/business/2026/10/20/san-diego-wave-owners-developers-stadium-del-mar-fairgrounds/">Times of San Diego</a>, <a href="https://www.nbcsandiego.com/news/local/san-diego-wave-fc-owners-propose-new-soccer-stadium-del-mar-heres-why/4087802/">NBC 7 San Diego</a>, <a href="https://thecoastnews.com/wave-owners-pitch-soccer-stadium-at-del-mar-fairgrounds/">The Coast News</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127802; Kaua&#699;i</p>
+  <ul>
+    <li><strong>$364,000 out the door, and a turn to the long haul</strong> &mdash; Six weeks after Hurricane Lowell, Kaua&#699;i community organisations have distributed more than $364,000 in direct relief to affected residents and are shifting the effort toward long-term recovery rather than immediate need. Smaller signs of the same turn: the county's North Shore recycling drop-off bins have moved from Hanalei to Kilauea, now open Monday through Saturday, 8 a.m. to 5 p.m. year-round, and the storm-wrecked Harvest Festival is giving away its surviving pumpkins free from Wednesday at The Shops at Kukui&#699;ula. (<a href="https://www.thegardenisland.com/2026/10/21/hawaii-news/kauai-community-distributes-over-364k-in-hurricane-relief-shifts-focus-to-long-term-recovery/">The Garden Island</a>, <a href="https://www.thegardenisland.com/2026/10/21/hawaii-news/north-shore-kauai-recycles-drop-off-bins-relocated-to-kilauea/">The Garden Island</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>SWIT puts 210Wh in a pocket-sized Gold Mount</strong> &mdash; SWIT announced the MINO-A series on October 19: the MINO-A210 at 210Wh with more than 200W continuous output, and the MINO-A140 at 140Wh with more than 150W. The A210 is roughly 105 &times; 80 &times; 82 mm and 1,056 g, which is small for that capacity, and both carry USB-C PD 65W out and 48W in, a 120W D-tap that also charges, and USB-A. They start down to &minus;20&deg;C and are rated for 1.2 m drops; USB-C charging the A210 takes about five hours. Both are available now at &euro;249 and &euro;299 excluding VAT, with no US pricing announced. For an FX6 built out with a monitor and wireless video, the appeal is running the rig off one brick rather than two. (<a href="https://www.newsshooter.com/2026/10/19/swit-mino-a-series-pocket-gold-mount-batteries/">Newsshooter</a>, <a href="https://www.provideocoalition.com/swit-introduces-the-mino-a-series-of-compact-gold-mount-batteries/">ProVideo Coalition</a>, <a href="https://lensvid.com/gear/swit-mino-a210-and-mino-a140-compact-gold-mount-batteries-with-210wh-and-140wh-100w-charging/">LensVid</a>)</li>
+    <li><strong>Z CAM adds internal ProRes RAW at 6K60</strong> &mdash; Firmware 0.9.10 for the E2-F6 Pro enables Apple ProRes RAW recording in-camera at up to 6K 60fps, adding ProRes RAW SQ and HQ to the existing ProRes 422 options. The update is a free download and Z CAM has not attached a separate licence fee, which is the notable part: internal RAW is usually something you pay extra for or route to an external recorder. Z CAM says the feature is exclusive to the E2-F6 Pro and does not extend to the E2-M4. Reports conflict on whether RAW over HDMI to an external recorder is supported, so check the official release notes before planning a workflow around it. (<a href="https://www.newsshooter.com/2026/10/16/z-cam-e2-f6-pro-firmware-update-adds-prores-raw-internally-at-up-to-6k-60fps/">Newsshooter</a>, <a href="https://www.cined.com/z-cam-e2-f6-pro-firmware-0-9-10-released-internal-prores-raw-6k-up-to-60fps/">CineD</a>, <a href="https://ymcinema.com/2026/10/16/z-cam-e2-f6-pro-internal-prores-raw-6k-60fps/">Y.M.Cinema</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#128267; Electric Vehicles</p>
+  <ul>
+    <li><strong>VW opens orders on its cheapest electric SUV</strong> &mdash; Volkswagen began German pre-orders on October 19 for the entry-level ID. Cross Trend, a 37kWh version at &euro;27,995 including VAT &mdash; roughly $31,000 &mdash; with an 85kW motor and up to 201 miles of WLTP range. It slots between the petrol T-Cross and the Tiguan on price, and undercuts the 52kWh ID. Cross that opened for orders in July at &euro;36,525. Pre-sales are Germany-only for now and Volkswagen has announced no plans to sell it outside Europe, which is the catch for a US family shopping small electric crossovers. VW says its Electric Urban Car Family had logged almost 150,000 orders as of October 12. (<a href="https://electrek.co/2026/10/19/vw-opens-orders-lower-priced-id-cross-starting-31000/">Electrek</a>, <a href="https://theevreport.com/volkswagen-id-cross-37-kwh-battery-price">The EV Report</a>)</li>
+    <li><strong>Used EVs take a record share of the used market</strong> &mdash; <em>(general EV news)</em> Used electric vehicles reached 3.3 per cent of US used-vehicle sales in September, a record, up from 2.9 per cent in August, on Cox Automotive's numbers. That is an estimated 47,862 cars, up 12.3 per cent on the month and 21.2 per cent on the year. The average used EV listing fell to $36,767 and the premium over a comparable petrol car narrowed to $2,137 from $2,692. Supply is tightening, at 35 days against 46 for internal-combustion stock. New EV sales are moving the other way &mdash; about 86,632 in September, down 40.7 per cent year over year &mdash; so for a family shopping on price, the used lot is where the market has actually loosened. (<a href="https://insideevs.com/news/812497/record-used-ev-sales-september-2026/">InsideEVs</a>, <a href="https://www.coxautoinc.com/insights/ev-market-monitor-september-2026/">Cox Automotive</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#129516; Mito Research</p>
+  <ul>
+    <li><strong>NAD&#8314; boosters fail a cell test that purines pass</strong> &mdash; A study in <em>Mitochondrion</em> (October 8) took skin fibroblasts from patients with Complex I deficiency and forced them onto oxidative phosphorylation by swapping glucose for galactose, a standard way to make a mitochondrial defect bite. Supplementing with the NAD&#8314; precursors most sold to mitochondrial-disease families &mdash; nicotinamide riboside, nicotinamide mononucleotide, nicotinamide and trigonelline &mdash; produced no improvement in cell survival; niacin helped partially. What did work was adenosine monophosphate, and then adenosine and guanosine, and the metabolic profiling explains why: the OXPHOS-reliant condition was starving the cells of inosine monophosphate, a purine building block, and the nucleosides restored it. The authors propose purine metabolism as a target that has not been on the list. Caveats that matter here: this is cells in a dish, not a patient; it is Complex I deficiency rather than m.3243A&gt;G; and the lead authors are at Khondrion, a mitochondrial drug developer, so read it as ⚠️ industry-affiliated. The useful takeaway for a family is the negative result, which is cheaper to act on than the positive one. (<em>Mitochondrion</em>, via <a href="https://pubmed.ncbi.nlm.nih.gov/42849556/">PubMed</a> &middot; <a href="https://doi.org/10.1016/j.mito.2026.102223">doi.org/10.1016/j.mito.2026.102223</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong>The Fall LCAP meeting is Thursday at 4 p.m.</strong> &mdash; The village schools sent out an invitation on Tuesday to their annual Fall LCAP meeting this Thursday at 4:00 p.m. &mdash; the session where families are asked to weigh in on spending and improvement priorities for the year. All students and families are welcome and refreshments will be provided. It is the only item that came in since Monday's brief; the fieldwork paperwork due October 30 still stands. (School email, October 20)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127780; Weather</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Today</span>77&deg; / 62&deg; &middot; Mostly sunny, then showers and thunderstorms after 5pm &middot; 50% rain</p>
+    <p class="data-row"><span class="data-label">Note</span>Tonight's storms could produce heavy rain &mdash; a half to three quarters of an inch, 90% chance. South wind 0&ndash;10 mph gusting to 20</p>
+    <p class="data-row"><span class="data-label">Tomorrow</span>69&deg; &middot; Rain showers, 90% &mdash; the wettest day of the week</p>
+  </div>
+  <p class="source-note">NWS San Diego point forecast for La Mesa 91942, issued 2:51 AM PT today.</p>
+</section>
+
+<section>
+  <p class="section-label">&#127754; Surf</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Swell</span>3.9 ft @ 15s from 201&deg; (SSW)</p>
+    <p class="data-row"><span class="data-label">Read</span>Waist- to chest-high at MB/PB beach breaks, occasionally shoulder-high on the better sets &mdash; 15 seconds is a long-period south swell with real push behind it</p>
+    <p class="data-row"><span class="data-label">Wind</span>Light and variable early, then south 0&ndash;10 mph gusting to 20 ahead of this evening's storms &mdash; onshore, so expect it to go choppy through the day</p>
+    <p class="data-row"><span class="data-label">Tide</span>High 7:16 AM (4.9 ft) &middot; Low 1:00 PM (2.1 ft) &middot; High 6:46 PM (5.0 ft)</p>
+    <p class="data-row"><span class="data-label">Water</span>75&deg;F</p>
+    <p class="data-row"><span class="data-label">Outlook</span>Unavailable &mdash; no forecast model in the feed this run, so buoy readings only. Both buoys hold 14&ndash;15s, so the south swell is still organised; the rain and south wind arriving tonight will be the bigger factor</p>
+  </div>
+  <p class="source-note">NDBC buoy 46258 (Mission Bay West) observed 4:56 AM PT: 3.9 ft, 15s dominant / 9.7s average, 201&deg;, 74.8&deg;F. Buoy 46225 (Torrey Pines) same hour: 3.6 ft, 14s, 208&deg;, 73.0&deg;F. Tides from NOAA station 9410170 (San Diego), Pacific time. Wind from the NWS forecast, not the buoys &mdash; both are Scripps Waveriders and report no wind.</p>
+</section>
+
+<div class="quote">
+  To be loved but not known is comforting but superficial. To be known and not loved is our greatest fear. But to be fully known and truly loved is, well, a lot like being loved by God.
+  <span class="attrib">&mdash; Timothy Keller, <em>The Meaning of Marriage</em></span>
+</div>
+
+<footer>
+  Morning Brief &middot; Wednesday, October 21, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  function icon(t){ return t === 'dark' ? '☀' : '☾'; }
+  btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+  btn.addEventListener('click', function(){
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('brief-theme', next); } catch (e) {}
+    btn.textContent = icon(next);
+  });
+})();
+</script>
+</body></html>
