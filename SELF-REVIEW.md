@@ -1024,3 +1024,37 @@ Tweak to try next run: two of today's would-be bullets (Renault IVOTY, the Y.M.C
   search result has no visible date, resolve the date BEFORE writing the bullet, not after — I drafted the
   Renault line and then threw it away. Also: Newsshooter and CineD are now search-only, so budget an extra
   targeted query per gear item rather than expecting one front-page fetch to seed the section.
+
+## 2026-10-23 (Friday)
+
+Thin/empty sections: Kaua'i ran one bullet (the grant-in-aid recipients, with no award amounts published);
+  the only other candidate was the hurricane resource centres' final week, which Monday's brief already
+  carried. San Diego ran two: I had a third, the crypto-ATM warning ordinance passed October 20, but the
+  only coverage of the actual vote was a radio page, Yahoo and Hoodline, and sources disagreed on whether
+  it was a first reading or final adoption — not worth publishing on that footing, so I cut it rather than
+  guess at the procedural status. School ran one bullet, Gear two, EV two. The GW watch produced nothing
+  again: the October 22 naval update still has her in the Arabian Sea, same as October 19 and 21. The one
+  genuinely new force-posture fact — NPR's report of a third carrier heading to the region — went into the
+  World bullet on US Gulf posture without naming CVN-73, since nothing ship-specific happened and a
+  third carrier arriving is reinforcement, not the relief-by-another-strike-group trigger.
+Unsure it cleared the bar: nothing this run, which is unusual. The Mito item (PNAS, October 9, Mootha lab)
+  is the strongest in weeks — a named two-drug combination, dosed after advanced disease onset, median
+  survival 62 → 158 days. It is mice and nuclear-gene complex I rather than m.3243A>G, which I said plainly,
+  but "works when started late" is the part that matters for an established patient. Two other in-window
+  PubMed hits were excluded: a riboflavin/complex I systematic review (publication date July 13, so
+  date-excluded) and a tacrolimus-neurotoxicity case report in an m.3243A>G kidney transplant recipient —
+  right variant, but a case report with no new mechanism, and a 64-year-old transplant context. Worth
+  remembering as a drug-safety data point if the reader ever asks about calcineurin inhibitors.
+Carried over and worked: last run's note to resolve dates before drafting. Did that, and it killed two
+  would-be Gear bullets early (Tamron 16-50mm, October 16 and APS-C anyway) instead of after writing them.
+Infrastructure: ALL direct fetch was blocked this run — the egress proxy refused every news domain
+  (connect_rejected), so WebFetch returned DNS failures and curl returned 403 CONNECT. Search was the only
+  content path for every section. Budget accordingly: it took roughly two extra queries per section to
+  pin exact URLs and dates that one front-page fetch would have given. Also worth flagging to the reader:
+  CLAUDE.md describes a per-story feedback flag button in index.html, and there isn't one in the page —
+  has not been for at least the last several issues. The brief-feedback issue queue was empty again.
+Tweak to try next run: stormsurf.com is blocked along with everything else, so the Surf OUTLOOK row has now
+  been "unavailable" two issues running. Either derive a defensible outlook from the two buoys' period and
+  direction trend between consecutive conditions.json fetches, or propose adding a swell-forecast field to
+  fetch-conditions.yml, which runs on GitHub's runners and has real internet access. The second is the
+  right fix.
