@@ -1,110 +1,110 @@
 {
-  "fetched_at_utc": "2026-10-21T17:40:35Z",
+  "fetched_at_utc": "2026-10-23T12:45:06Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-10-21T09:51:30+00:00",
+    "updated": "2026-10-23T04:09:35+00:00",
     "periods": [
       {
-        "name": "Today",
-        "temperature": 77,
+        "name": "Overnight",
+        "temperature": 57,
         "temperatureUnit": "F",
-        "windSpeed": "5 to 10 mph",
+        "windSpeed": "5 mph",
+        "windDirection": "E",
+        "shortForecast": "Chance Rain Showers",
+        "detailedForecast": "A chance of rain showers. Mostly cloudy, with a low around 57. East wind around 5 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
+        "precipChancePct": 28
+      },
+      {
+        "name": "Friday",
+        "temperature": 70,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
         "windDirection": "SW",
-        "shortForecast": "Mostly Sunny then Chance Showers And Thunderstorms",
-        "detailedForecast": "A chance of showers and thunderstorms after 5pm. Mostly sunny, with a high near 77. Southwest wind 5 to 10 mph, with gusts as high as 20 mph. Chance of precipitation is 50%. New rainfall amounts less than a tenth of an inch possible.",
-        "precipChancePct": 49
+        "shortForecast": "Chance Rain Showers",
+        "detailedForecast": "A chance of rain showers. Mostly sunny, with a high near 70. Southwest wind 0 to 10 mph. Chance of precipitation is 30%. New rainfall amounts less than a tenth of an inch possible.",
+        "precipChancePct": 28
       },
       {
-        "name": "Tonight",
-        "temperature": 62,
-        "temperatureUnit": "F",
-        "windSpeed": "5 to 10 mph",
-        "windDirection": "SE",
-        "shortForecast": "Showers And Thunderstorms",
-        "detailedForecast": "Showers and thunderstorms. Some of the storms could produce heavy rain. Mostly cloudy, with a low around 62. Southeast wind 5 to 10 mph. Chance of precipitation is 90%. New rainfall amounts between a half and three quarters of an inch possible.",
-        "precipChancePct": 85
-      },
-      {
-        "name": "Thursday",
-        "temperature": 69,
-        "temperatureUnit": "F",
-        "windSpeed": "5 to 10 mph",
-        "windDirection": "SW",
-        "shortForecast": "Rain Showers",
-        "detailedForecast": "Rain showers. Mostly cloudy, with a high near 69. Southwest wind 5 to 10 mph. Chance of precipitation is 90%. New rainfall amounts between a tenth and quarter of an inch possible.",
-        "precipChancePct": 85
-      },
-      {
-        "name": "Thursday Night",
-        "temperature": 59,
+        "name": "Friday Night",
+        "temperature": 56,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
         "windDirection": "N",
-        "shortForecast": "Chance Rain Showers",
-        "detailedForecast": "A chance of rain showers before 5am. Mostly cloudy, with a low around 59. North wind 0 to 5 mph. Chance of precipitation is 40%. New rainfall amounts less than a tenth of an inch possible.",
-        "precipChancePct": 35
+        "shortForecast": "Slight Chance Rain Showers then Mostly Clear",
+        "detailedForecast": "A slight chance of rain showers before 11pm. Mostly clear, with a low around 56. North wind 0 to 5 mph. Chance of precipitation is 20%.",
+        "precipChancePct": 22
+      },
+      {
+        "name": "Saturday",
+        "temperature": 75,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "N",
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 75. North wind 0 to 10 mph.",
+        "precipChancePct": 0
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-10-21T16:56Z",
-    "waveHeightFt": 4.6,
-    "dominantPeriodS": 14,
-    "avgPeriodS": 11.7,
-    "meanWaveDirDeg": 198,
-    "waterTempF": 73.6
+    "observed_utc": "2026-10-23T11:56Z",
+    "waveHeightFt": 4.3,
+    "dominantPeriodS": 13,
+    "avgPeriodS": 6.8,
+    "meanWaveDirDeg": 199,
+    "waterTempF": 74.7
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-10-21T16:56Z",
-    "waveHeightFt": 3.0,
-    "dominantPeriodS": 14,
-    "avgPeriodS": 10.3,
+    "observed_utc": "2026-10-23T11:56Z",
+    "waveHeightFt": 3.9,
+    "dominantPeriodS": 13,
+    "avgPeriodS": 6.0,
     "meanWaveDirDeg": 206,
-    "waterTempF": 73.8
+    "waterTempF": 74.3
   },
   "tides_san_diego_9410170": [
     {
-      "time_pt": "2026-10-21 00:43",
+      "time_pt": "2026-10-23 01:39",
       "type": "Low",
-      "heightFt": 0.707
+      "heightFt": 0.724
     },
     {
-      "time_pt": "2026-10-21 07:16",
+      "time_pt": "2026-10-23 07:56",
       "type": "High",
-      "heightFt": 4.878
+      "heightFt": 5.806
     },
     {
-      "time_pt": "2026-10-21 13:00",
+      "time_pt": "2026-10-23 14:13",
       "type": "Low",
-      "heightFt": 2.126
+      "heightFt": 0.775
     },
     {
-      "time_pt": "2026-10-21 18:46",
+      "time_pt": "2026-10-23 20:11",
       "type": "High",
-      "heightFt": 4.978
+      "heightFt": 5.151
     },
     {
-      "time_pt": "2026-10-22 01:11",
+      "time_pt": "2026-10-24 02:06",
       "type": "Low",
-      "heightFt": 0.668
+      "heightFt": 0.877
     },
     {
-      "time_pt": "2026-10-22 07:34",
+      "time_pt": "2026-10-24 08:20",
       "type": "High",
-      "heightFt": 5.328
+      "heightFt": 6.273
     },
     {
-      "time_pt": "2026-10-22 13:36",
+      "time_pt": "2026-10-24 14:51",
       "type": "Low",
-      "heightFt": 1.449
+      "heightFt": 0.154
     },
     {
-      "time_pt": "2026-10-22 19:29",
+      "time_pt": "2026-10-24 20:54",
       "type": "High",
-      "heightFt": 5.112
+      "heightFt": 5.079
     }
   ]
 }
