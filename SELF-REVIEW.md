@@ -1058,3 +1058,34 @@ Tweak to try next run: stormsurf.com is blocked along with everything else, so t
   direction trend between consecutive conditions.json fetches, or propose adding a swell-forecast field to
   fetch-conditions.yml, which runs on GitHub's runners and has real internet access. The second is the
   right fix.
+
+## 2026-10-26 (Monday)
+Thin/empty: Mito omitted entirely — three in-window PubMed hits, all excluded (an ACCORD-trial
+  heteroplasmy/cognition association study with no treatment angle, a nimodipine TBI cGAS-STING
+  paper, and a COX2-PGE-PKA/STING immunology paper). The only real MELAS news this month is still
+  the zagociguat discontinuation, carried October 19. EV ran two bullets rather than three: no van
+  or family-van story existed this week, so padding would have meant a second general item. US ran
+  three, but two of them are election-mechanics litigation; that is what the week actually produced.
+Unsure it cleared the bar: the Apple bullet. The October 28 event was already in Wednesday's brief,
+  and the genuinely new fact is only the launch format (press release plus hands-on, no keynote).
+  Kept it because Apple is a priority section and the format change is a real editorial signal, but
+  it is the weakest item in the issue. Also cut an unverified "no team has come back from 0-2 since
+  2017" clause from the World Series bullet after drafting — good catch, but it should not have been
+  written in the first place.
+Date-excluded: Amazon ending data-centre NDAs with local governments (October 2-3, outside 14 days)
+  and the Renault E-Space concept (October 12 and already past). Measles was dropped for a different
+  reason: 4,588 US cases is real and never covered here, but nothing moved since the October 23 CDC
+  update, so there was no development to lead with.
+Carried over and worked: last run's tweak on the Surf OUTLOOK row. Derived it from the buoy trend
+  between consecutive conditions.json commits instead (4.3 ft @ 17s Friday -> 3.0 ft @ 14s today),
+  which is a defensible fading call without stormsurf.com. That is now the standing method; the
+  better fix is still adding a swell-forecast field to fetch-conditions.yml.
+Also fixed: the per-story feedback flag button CLAUDE.md describes was genuinely missing from the
+  page. Added it as a small appended link per bullet that opens a pre-filled brief-feedback issue.
+Infrastructure: direct fetch still blocked (WebFetch returns DNS failure on every news domain), so
+  search was the only content path again. The scheduled 11:20/11:45 UTC conditions fetch did not
+  land fresh data — conditions.json was three days stale on arrival — so it was triggered on demand
+  and returned in under a minute. Worth watching whether the Monday cron is actually firing.
+Tweak to try next run: World/US took the most queries by far because generic "top stories today"
+  searches return nothing usable. Go straight to named expected events instead (scheduled elections,
+  court deadlines, summits) and only then sweep for what was missed.
