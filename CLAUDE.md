@@ -181,9 +181,25 @@ her specifically rather than the campus:
 When in doubt about an Emi item, leave it out. A missed spirit-day reminder
 costs nothing; publishing care or IEP detail costs a lot.
 
-The principal's broadcasts often say "see the Smore or Dojo" for details.
-Those live outside email; do not try to fetch them. Report what the email
-itself says.
+**The weekly Smore is the main Foster newsletter — READ IT.** The
+principal's Friday broadcast says "please see the weekly SMORE attached" and
+carries a link, `https://app.smore.com/n/3c6ar9`. It is not an attachment: it
+is the same URL every week, edited in place, so it always shows the current
+issue. Fetch it with WebFetch and pull dates, events, spirit days, minimum
+days and parent action items from it, filtered by the same rules as the
+email (campus news only, nothing about Emi's care or the IEP). Treat it as
+the richest Foster source; the email broadcasts are mostly short reminders.
+
+- If the fetch fails (this sandbox's egress policy refused smore.com as of
+  2026-10-26 — the reader is adding it to the environment's allowlist), use
+  the broadcast emails alone and say so in the final report: "Foster Smore
+  unreachable — section built from email only." One line; do not retry in
+  a loop.
+- Dojo: the principal also points to ClassDojo. As of 2026-10-26 no Dojo
+  mail reaches this inbox, so there is nothing to read. If Dojo emails
+  start arriving (from `classdojo.com`), read them under the same filter.
+- HTEM: the 4th-grade classroom newsletter's content is in the email body
+  itself; read that. Its Google Doc link duplicates it and is not needed.
 
 ### What qualifies
 
@@ -218,13 +234,16 @@ anyone. So the published section is written DE-IDENTIFIED by default:
 
 - Never a child's name and never a room number. Label which school an item
   belongs to with a short mono tag at the start of the headline:
-  **`4TH GRADE`** for Micah's items and **`ELEMENTARY`** for Emi's. Never
-  her grade, class type, or anything implying special education.
+  **`HTEM`** for Micah's items and **`FOSTER`** for Emi's (reader's choice,
+  2026-10-26 — the short school names, used only as tags). Never Emi's
+  grade, class type, or anything implying special education.
 - Refer to "the classroom teachers," "the performing-arts teacher," "the
   principal," "the school director" — no staff names, no staff email
   addresses.
-- Do NOT name either school or the district in the published HTML.
-- No links into Google Docs/Photos/wishlists/Smore/Dojo from school mail —
+- Beyond the HTEM / FOSTER tags, do not name the schools, their full
+  names, or the district anywhere in the published HTML.
+- No links into Google Docs/Photos/wishlists/Smore/Dojo from school mail
+  (read the Smore, but never publish its URL) —
   those URLs are effectively unlisted credentials for a private community.
 - No drop-off/pick-up procedures, room assignments, exact dismissal times,
   or anything describing where a specific child physically is at a specific
@@ -238,14 +257,17 @@ right fix first is making the site private, not quietly loosening this rule.
 
 ### Format — SHORT. The reader skims this section.
 
-Requested 2026-10-26: this is a reminders list, not a digest. Each bullet is
-the bolded headline (with the school tag) plus ONE sentence, two at most.
+Requested 2026-10-26: this is a reminders list, not a digest, for BOTH
+schools equally — the HTEM classroom newsletter gets the same trim as
+Foster (its "this week in class" becomes one short bullet, not a
+paragraph). Each bullet is the bolded headline (with the school tag) plus
+ONE sentence, two at most.
 Only go longer when the item genuinely needs it to be actionable (e.g. a
 multi-step form), and even then keep it to the steps.
 
-    <li><strong><span class="tag">4TH GRADE</span> Permission slip due Friday</strong>
+    <li><strong><span class="tag">HTEM</span> Permission slip due Friday</strong>
     — Sign the fieldwork slip on PowerSchool by Oct 30 or the trip is cancelled.</li>
-    <li><strong><span class="tag">ELEMENTARY</span> Red Ribbon Week, minimum day Friday</strong>
+    <li><strong><span class="tag">FOSTER</span> Red Ribbon Week, minimum day Friday</strong>
     — Daily dress-up themes all week; Friday is the Halloween parade and an early dismissal.</li>
 
 Style the tag so it reads as a label, not part of the headline:
