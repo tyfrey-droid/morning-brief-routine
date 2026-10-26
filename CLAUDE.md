@@ -118,11 +118,11 @@ which applies here for the same reasons, with an added force-protection edge).
 - The reader can of course ask for more detail in-session; answer freely in the
   chat reply. The restriction is on what gets committed and published.
 
-## 🎒 School — added 2026-09-05 by reader request
+## 🎒 School — added 2026-09-05, two schools since 2026-10-26 (reader request)
 
-A short section pulled from the school's email, so the week's classroom
-topics, dates and parent action items land in one place instead of across a
-dozen newsletters.
+A short, skimmable section pulled from school email, so the week's dates,
+reminders and parent action items land in one place. It now covers BOTH
+children's schools (Emi's added 2026-10-26).
 
 ### Gmail is now READ-ONLY allowed, for this section only
 
@@ -130,43 +130,76 @@ This supersedes the "never touch Gmail" / "Gmail is never used" lines in the
 stored routine prompt, changed 2026-09-05 by explicit reader request. The
 carve-out is narrow and absolute at its edges:
 
-- ALLOWED: `search_threads` and `get_thread` against school senders, to build
-  this section.
+- ALLOWED: `search_threads` and `get_thread` against the school senders
+  below, to build this section.
 - NEVER: send, reply, forward, draft, label, archive, trash, or mark spam.
   Never read mail outside the school scope below. Never quote a private
-  one-to-one message from a teacher — this section is for mail sent to all
-  families, not correspondence about a specific child.
+  one-to-one message from a teacher or administrator — this section is for
+  mail sent to all families, not correspondence about a specific child.
 - If a Gmail call fails or the connector is unavailable, log it and omit the
   section. Never guess at school content from memory.
 
 ### Scope: whose mail, and how far back
 
-Micah (4th grade) at High Tech Elementary Mesa. Search since the previous
-brief's date — the same lookback every other section uses:
+Lookback for both: since the previous brief's date (`after:YYYY/MM/DD`), the
+same lookback every other section uses.
+
+**Micah (4th grade), High Tech Elementary Mesa:**
 
     from:hightechhigh.org OR from:schoolsoft.com OR from:schoolmintemails.com
-    after:YYYY/MM/DD
 
-Recurring senders worth knowing: the 4th-grade classroom newsletter, the
-performing-arts teacher, the school director, and the School Family
-Association (SFA) blasts. `noreply@` addresses carry the school-wide
-announcements; the classroom newsletter carries the actual curriculum.
+Recurring senders: the 4th-grade classroom newsletter (carries the actual
+curriculum), the performing-arts teacher, the school director, and the
+School Family Association (SFA) blasts. `noreply@` addresses carry the
+school-wide announcements.
+
+**Emi, Foster Elementary.** The principal (Gina) sends the school-wide
+announcements, and they arrive through PowerSchool's messaging relay, NOT
+from her own address. This is an ALLOWLIST: the only Foster mail this
+section reads is
+
+    subject:"Emi's administrator" after:YYYY/MM/DD
+
+(subject "Message from Gina Camacho (Emi's administrator)", relayed from a
+`…@mail1.attendance.powerschool.com` address). Match the subject, not the
+sender — the relay's numeric prefix differs per staff member.
+
+Everything else from Emi's school stays out, unread, because it is about
+her specifically rather than the campus:
+
+- The principal's own district email address — almost entirely IEP,
+  placement and dispute correspondence.
+- "Message from … (Emi's teacher)" relay messages and the teacher's own
+  address — day-to-day notes about her care.
+- Therapists and specialists (OT, PT, SLP, adapted PE, AAC, eye gaze,
+  nursing), district special-programs mail, and the family's advocate.
+- Even inside a principal broadcast: anything about Emi specifically, her
+  health, feeding, medical care, equipment, therapies, attendance, or
+  anything mentioning IEP, assessment, placement or complaint. A real
+  broadcast opens to "families" and is about the campus.
+
+When in doubt about an Emi item, leave it out. A missed spirit-day reminder
+costs nothing; publishing care or IEP detail costs a lot.
+
+The principal's broadcasts often say "see the Smore or Dojo" for details.
+Those live outside email; do not try to fetch them. Report what the email
+itself says.
 
 ### What qualifies
 
-INCLUDE: what the class is actually studying this week; dates and deadlines;
-anything needing a parent to DO something (forms, signatures, volunteer
-slots, supplies, permission slips); school-wide policy that changes something
-(meal programs, drop-off rules, calendar changes).
+INCLUDE: dates and deadlines; anything needing a parent to DO something
+(forms, signatures, volunteer slots, supplies, permission slips); schedule
+changes such as minimum days, no-school days and spirit/dress-up weeks;
+school-wide policy that changes something (meal programs, calendar changes);
+and for 4th grade, what the class is actually studying this week (one line).
 
 EXCLUDE: fundraising and donation appeals with no action attached; spirit-wear
 marketing; menu emails unless the policy changed; the third restatement of an
 event already covered; anything already carried in a prior brief unless the
-details moved. Standard anti-redundancy applies — a date announced three
-briefs ago is not news again until it is imminent or changed.
+details moved or it is now imminent (this week or due before the next brief).
 
-Surface genuinely time-sensitive items FIRST — a form due before the next
-brief, a volunteer day this weekend, a mandatory performance.
+Surface time-sensitive items FIRST — a form due before the next brief, an
+early dismissal this week, a mandatory performance.
 
 ### Emi's IEP / SDUSD advocacy thread — EXCLUDED by default
 
@@ -174,7 +207,8 @@ Do NOT put the special-education dispute, IEP correspondence, CDE complaint,
 attorney or advocate mail into this section or any other. It is sensitive,
 it is legally live, the reader is already a participant, and (see below) this
 brief is public. Only include it if the reader asks in-session, and even then
-only in the chat reply, never in the published HTML.
+only in the chat reply, never in the published HTML. The same goes for Emi's
+health and care correspondence with school staff.
 
 ### PRIVACY — this repo and its Pages site are PUBLIC
 
@@ -182,29 +216,46 @@ Verified 2026-09-05: `tyfrey-droid/morning-brief-routine` is a public repo
 with public GitHub Pages, and every archive/ issue is permanently readable by
 anyone. So the published section is written DE-IDENTIFIED by default:
 
-- Say "4th grade," never the child's name, and never a room number.
+- Never a child's name and never a room number. Label which school an item
+  belongs to with a short mono tag at the start of the headline:
+  **`4TH GRADE`** for Micah's items and **`ELEMENTARY`** for Emi's. Never
+  her grade, class type, or anything implying special education.
 - Refer to "the classroom teachers," "the performing-arts teacher," "the
-  school director" — no staff names, no staff email addresses.
-- Do NOT name the school or district in the published HTML.
-- No links into Google Docs/Photos/wishlists from the school mail — those
-  URLs are effectively unlisted credentials for a private community.
-- No drop-off/pick-up procedures, room assignments, or anything describing
-  where a specific child physically is at a specific time.
+  principal," "the school director" — no staff names, no staff email
+  addresses.
+- Do NOT name either school or the district in the published HTML.
+- No links into Google Docs/Photos/wishlists/Smore/Dojo from school mail —
+  those URLs are effectively unlisted credentials for a private community.
+- No drop-off/pick-up procedures, room assignments, exact dismissal times,
+  or anything describing where a specific child physically is at a specific
+  time. "Friday is a minimum day (early dismissal)" is fine; "dismissal at
+  12:05" is not. The reader can get the exact time in chat.
 
-Curriculum topics, dates, and "a form is due Tuesday" all survive this
-intact, which is the actual value. The reader knows who his kid's teacher is.
-If he ever asks for full detail with names, that is his call to make — but it
-should be a deliberate choice, and the right fix first is making the site
-private, not quietly loosening this rule.
+Dates, reminders and "a form is due Tuesday" all survive this intact, which
+is the actual value. If the reader ever asks for full detail with names,
+that is his call to make — but it should be a deliberate choice, and the
+right fix first is making the site private, not quietly loosening this rule.
 
-### Length
+### Format — SHORT. The reader skims this section.
 
-Same discipline as everywhere else: a handful of bullets, ~4 max. Group into
-"this week in class," "coming up," and "needs you" only if there is enough to
-warrant it — otherwise a flat list. **Omit the section entirely, header and
-all, when nothing qualifies** (the 🧬 Mito rule). An empty week is normal:
-holidays, breaks, and Wednesday issues will often have nothing new since
-Monday. Never pad it to justify its existence.
+Requested 2026-10-26: this is a reminders list, not a digest. Each bullet is
+the bolded headline (with the school tag) plus ONE sentence, two at most.
+Only go longer when the item genuinely needs it to be actionable (e.g. a
+multi-step form), and even then keep it to the steps.
+
+    <li><strong><span class="tag">4TH GRADE</span> Permission slip due Friday</strong>
+    — Sign the fieldwork slip on PowerSchool by Oct 30 or the trip is cancelled.</li>
+    <li><strong><span class="tag">ELEMENTARY</span> Red Ribbon Week, minimum day Friday</strong>
+    — Daily dress-up themes all week; Friday is the Halloween parade and an early dismissal.</li>
+
+Style the tag so it reads as a label, not part of the headline:
+`.tag{font-family:'IBM Plex Mono',monospace; font-size:.62rem; font-weight:500;
+letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}`
+
+No source links (it is the reader's own mail) and no closing attribution
+line. Order by urgency, not by school. Up to ~6 bullets across both schools;
+a flat list, no sub-headers. **Omit the section entirely, header and all,
+when nothing qualifies at either school** (the 🧬 Mito rule). Never pad it.
 
 ## Release cadence: Monday / Wednesday / Friday only
 
@@ -298,7 +349,7 @@ gate must never cause a silent total outage again:
 - But the longer cadence means real news accumulates. When genuinely
   qualifying stories exist, allow headroom: World / US up to 5 (was 4),
   Tech, Sports, San Diego, Gear up to ~8 each, EV up to 3, Kauai up to 2,
-  School up to 4. These are ceilings for busy stretches, not targets. Quality
+  School up to ~6 across both schools. These are ceilings for busy stretches, not targets. Quality
   bar is unchanged — every added item must independently clear it.
 
 ## Reader feedback loop (self-improvement)
