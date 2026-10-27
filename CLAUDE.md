@@ -59,7 +59,7 @@ buoy-to-buoy trend between consecutive conditions.json commits.
 - Section order: World · US & Politics · Tech & AI · 🏀 Sports (NBA: Blazers
   first, Warriors second, league-wide; max 1–2 big non-NBA items) ·
   San Diego · 🌺 Kauai (max 2) · Filmmaking Gear · 🔋 F-150 Lightning & EVs
-  (max 3 — see the ⚡ section below) ·
+  (max 3, +1 gadget pick — see the 🔋 section below) ·
   🧬 Mito Research (omit entirely — no header — when nothing meets the strict
   bar) · 🎒 School (same omit-entirely rule) · Weather · Surf · closing quote.
 - REMOVED sections — do NOT include (dropped 2026-08-06 by reader request):
@@ -92,6 +92,22 @@ Section label: `🔋 F-150 Lightning & EVs`. Max 3 bullets. Priority order:
    - **accessories and mods**: new bed, frunk, tonneau, rack, lighting,
      charging and power accessories made for the Lightning; popular owner
      mods and fixes. Practical, specific, with price when known.
+   - **Fun gadgets and accessories** (reader request, 2026-10-27): the
+     enjoyable side of owning the truck, not just fixes. Things that use
+     what the Lightning is good at: Pro Power Onboard and the frunk (camp
+     cooking, coffee makers, induction cooktops, portable fridges, lighting,
+     projectors, power tools), tailgate and bed gear, camping and overland
+     kit, clever organisers, cabin tech, kid- and dog-friendly add-ons.
+     Aim to include ONE such pick in most issues when a genuinely good one
+     surfaces: something newly launched, newly reviewed, or getting real
+     owner buzz in the window. One or two sentences on what it is, why it
+     suits the Lightning, and the price. It may run as a 4th bullet on top
+     of the 3-bullet cap. Never repeat a gadget carried in the last 30 days.
+     Sources: maker announcements, bylined reviews (The Drive, Car and
+     Driver, MotorTrend, Electrek, Gear Patrol, Wirecutter), and owner
+     threads on the forums below ("what did you add to your Lightning").
+     Not affiliate listicles ("15 best F-150 accessories") — find the
+     product there if you like, but cite the maker or a real review.
 2. **At most ONE EV van item**, and only if it is a real development
    (a launch, US pricing, a confirmed US arrival). Vans are now secondary.
 3. **General EV news only when it is big** — federal policy or tax credits,
