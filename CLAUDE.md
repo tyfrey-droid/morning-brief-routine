@@ -56,7 +56,8 @@ buoy-to-buoy trend between consecutive conditions.json commits.
   drafted against a stale clone and had to redo several sections).
 - Every bullet: bolded 3–8 word headline (`<strong>`) then 1–3 sentence
   summary, links whose display name matches the linked domain.
-- Section order: World · US & Politics · Tech & AI · 🏀 Sports (NBA: Blazers
+- Section order: World · US & Politics · Tech & AI (practical AI leads —
+  see the ⚡ section below) · 🏀 Sports (NBA: Blazers
   first, Warriors second, league-wide; max 1–2 big non-NBA items) ·
   San Diego · 🌺 Kauai (max 2) · Filmmaking Gear · 🔋 F-150 Lightning & EVs
   (max 3, +1 gadget pick — see the 🔋 section below) ·
@@ -68,6 +69,74 @@ buoy-to-buoy trend between consecutive conditions.json commits.
   Flag any news involving that ship inside World or US & Politics. Exempt from
   the consensus rule and from the section bullet cap; strict sourcing and a
   privacy rule apply.
+
+## ⚡ Tech & AI — practical AI added 2026-10-27 by reader request
+
+The section had drifted toward AI-industry business news (funding rounds,
+valuations, earnings). The reader wants AI he can USE: practical knowledge
+for his work as a filmmaker/editor and as a sole-proprietor small business.
+This supplements the stored routine prompt's Tech & AI rules; Apple stays
+a priority.
+
+### The mix
+
+- **Practical items lead the section, ideally 2–3 per issue** when good
+  ones exist. Tag each with a mono label at the start of the headline:
+  `<span class="tag">WORKFLOW</span>` (same `.tag` style as School).
+- **Industry/business news drops to 1–2 bullets**, and only stories big
+  enough that ordinary people will hear about them. A funding round or a
+  valuation is not news unless it changes something for users.
+- Apple news stays, framed around what changes for a Mac/iPhone user.
+- Do not pad: if nothing practical surfaced, run the section without it.
+
+### What counts as practical
+
+Something new (launched, updated or written up within 14 days) that the
+reader could try this week, with enough specifics to act on it:
+
+- **Editing and post:** AI features in Premiere Pro and DaVinci Resolve
+  (text-based editing, transcription and captions, Generative Extend,
+  Magic Mask, IntelliScript, speech enhancement, auto-reframe, scene
+  detection), Frame.io review tools, audio cleanup (Adobe Enhance Speech,
+  iZotope RX), upscaling and denoise (Topaz), search across footage
+  libraries, and generative video (Runway, Veo, Sora, Kling) where it is
+  genuinely useful for b-roll, cleanup, previs or pitches rather than demo
+  reels.
+- **Pre-production and client work:** treatments, scripts, shot lists,
+  call sheets, storyboards, mood boards, location research, client
+  proposals and revisions with Claude, ChatGPT, Gemini and similar tools —
+  especially new features (projects, agents, file handling, connectors)
+  and concrete techniques for using them.
+- **Running a one-person business:** quoting and invoicing, bookkeeping
+  and receipts, contracts, client email, scheduling, marketing and social
+  clips, SEO and websites, taxes — AI features in the tools a sole
+  proprietor actually uses, and workflows that save real hours.
+- **Pricing and terms that matter:** a useful tool going free or paid, a
+  plan change, usage limits, and rights/licensing questions around
+  generated footage, music or voice in client work.
+
+Each practical bullet: what it is, what it does for an editor or a solo
+business owner, how to try it and what it costs — 2–3 sentences. Add one
+plain caveat when it is real (beta quality, cloud upload of client footage,
+licensing ambiguity). No hype words.
+
+### Sources
+
+- Makers' own release notes and blogs: Adobe (Premiere, Frame.io),
+  Blackmagic Design (Resolve), Apple, Anthropic, OpenAI, Google, Runway,
+  Topaz, Descript, QuickBooks/Intuit.
+- Post-production trades: ProVideo Coalition, No Film School, CineD,
+  Newsshooter, Frame.io Insider, PremiumBeat, Larry Jordan.
+- Practical-AI writers with real bylines: Ethan Mollick (One Useful
+  Thing), Simon Willison, The Verge and Wired how-tos, Ars Technica.
+- Not: "50 AI tools you need" listicles, affiliate roundups, prompt-pack
+  sellers, AI influencer threads.
+
+### Overlap with 🎥 Filmmaking Gear
+
+Software and AI workflow items go here; cameras, lenses, monitors, audio
+hardware and rigging stay in Gear. A camera firmware update stays in Gear
+even if it mentions AI autofocus.
 
 ## 🔋 F-150 Lightning & EVs — refocused 2026-10-27 by reader request
 
