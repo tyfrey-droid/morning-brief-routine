@@ -69,17 +69,27 @@ jobs:
             TIDES=$(jq '[.predictions[] | {time_pt: .t, type: (if .type=="H" then "High" else "Low" end), heightFt: (.v|tonumber)}]' tmp/tides.json)
           fi
 
+          # --- Swell forecast (Open-Meteo marine model), just off Mission Beach ---
+          # Daily maxima for 4 days, feet. Feeds the Surf OUTLOOK row; stormsurf.com
+          # is not reachable from the brief's sandbox.
+          SWELL=null
+          if curl -fsS -A "$UA" -m 30 "https://marine-api.open-meteo.com/v1/marine?latitude=32.77&longitude=-117.27&daily=wave_height_max,swell_wave_height_max,swell_wave_period_max,swell_wave_direction_dominant&timezone=America%2FLos_Angeles&length_unit=imperial&forecast_days=4" -o tmp/swell.json; then
+            SWELL=$(jq '[range(0; .daily.time|length) as $i | {date: .daily.time[$i], waveHeightMaxFt: .daily.wave_height_max[$i], swellHeightMaxFt: .daily.swell_wave_height_max[$i], swellPeriodMaxS: .daily.swell_wave_period_max[$i], swellDirDeg: .daily.swell_wave_direction_dominant[$i]}]' tmp/swell.json) || SWELL=null
+          fi
+
           jq -n \
             --argjson weather "${WEATHER:-null}" \
             --argjson buoy46258 "${BUOY_46258:-null}" \
             --argjson buoy46225 "${BUOY_46225:-null}" \
             --argjson tides "${TIDES:-null}" \
+            --argjson swell "${SWELL:-null}" \
             '{fetched_at_utc: (now | todate),
               location: {weather: "La Mesa, CA 91942 (NWS SGX point forecast)", surf: "Mission Beach / Pacific Beach, San Diego"},
               weather: $weather,
               buoy_46258_mission_bay: $buoy46258,
               buoy_46225_torrey_pines: $buoy46225,
-              tides_san_diego_9410170: $tides}' > data/conditions.json
+              tides_san_diego_9410170: $tides,
+              swell_forecast_open_meteo: $swell}' > data/conditions.json
 
           cat data/conditions.json
 

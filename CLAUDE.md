@@ -15,6 +15,9 @@ live data to `data/conditions.json`:
   dominant period (s), mean direction (deg), water temp (°F)
 - NOAA tide predictions for San Diego station 9410170 (today + tomorrow,
   Pacific time, hi/lo)
+- Swell forecast (`swell_forecast_open_meteo`, added 2026-10-27): Open-Meteo's
+  marine model just off Mission Beach, 4 days of daily max wave height,
+  swell height (ft), swell period (s) and dominant swell direction (deg)
 
 It runs at 11:20, 11:45, 12:20 & 12:45 UTC on the brief's publish days
 (Mon/Wed/Fri). Two of those four land at 4:20 & 4:45 AM PT — just before the
@@ -34,6 +37,16 @@ trigger a fresh fetch on demand (step 2 below). Each run:
 Buoy notes: 46258/46225 are Scripps Waverider buoys — wave + water temp only,
 no wind. For wind, use the NWS forecast periods' windSpeed/windDirection.
 
+Surf OUTLOOK row: build it from `swell_forecast_open_meteo` — compare today
+against the next 2–3 days ("SSW swell holding ~3 ft at 13s through Wednesday,
+dropping to 2 ft Thursday") and cite it as the Open-Meteo marine model in the
+source note. It is a model forecast; the buoys stay the source for current
+readings. stormsurf.com is blocked from this sandbox (connect_rejected by the
+egress policy, confirmed 2026-10-27); if the reader allowlists it and a fetch
+succeeds, prefer stormsurf's QuikCAST wording for the outlook and use the
+model as the cross-check. If the forecast field is null, fall back to the
+buoy-to-buoy trend between consecutive conditions.json commits.
+
 ## Other standing notes
 
 - GitHub Pages deploys from `main`. Always commit index.html +
@@ -45,7 +58,8 @@ no wind. For wind, use the NWS forecast periods' windSpeed/windDirection.
   summary, links whose display name matches the linked domain.
 - Section order: World · US & Politics · Tech & AI · 🏀 Sports (NBA: Blazers
   first, Warriors second, league-wide; max 1–2 big non-NBA items) ·
-  San Diego · 🌺 Kauai (max 2) · Filmmaking Gear · Electric Vehicles (max 3) ·
+  San Diego · 🌺 Kauai (max 2) · Filmmaking Gear · 🔋 F-150 Lightning & EVs
+  (max 3 — see the ⚡ section below) ·
   🧬 Mito Research (omit entirely — no header — when nothing meets the strict
   bar) · 🎒 School (same omit-entirely rule) · Weather · Surf · closing quote.
 - REMOVED sections — do NOT include (dropped 2026-08-06 by reader request):
@@ -54,6 +68,70 @@ no wind. For wind, use the NWS forecast periods' windSpeed/windDirection.
   Flag any news involving that ship inside World or US & Politics. Exempt from
   the consensus rule and from the section bullet cap; strict sourcing and a
   privacy rule apply.
+
+## 🔋 F-150 Lightning & EVs — refocused 2026-10-27 by reader request
+
+The reader bought a **2023 Ford F-150 Lightning** and the EV section now
+centres on that truck. This SUPERSEDES the stored routine prompt's
+"Electric Vehicles" rules (van/family-EV priority, "(general EV news)"
+filler marker) and the old "CHANGE 3" EV cap language.
+
+Section label: `🔋 F-150 Lightning & EVs`. Max 3 bullets. Priority order:
+
+1. **F-150 Lightning items first** — anything that matters to an owner of a
+   first-generation (2022–2024 model year) Lightning:
+   - recalls, service campaigns and TSBs (check NHTSA's recall database and
+     Ford's own notices for the 2023 Lightning by name);
+   - Ford Power-Up over-the-air software releases and what they change;
+   - charging: Tesla Supercharger / NACS adapter access and pricing, Ford
+     charging network changes, home charging and Intelligent Backup Power /
+     Ford Charge Station Pro updates, BlueCruise subscription changes;
+   - battery, warranty, range or towing findings with real data;
+   - the Lightning program itself (production status, successor, parts and
+     service support for a discontinued model), and used-market value;
+   - **accessories and mods**: new bed, frunk, tonneau, rack, lighting,
+     charging and power accessories made for the Lightning; popular owner
+     mods and fixes. Practical, specific, with price when known.
+2. **At most ONE EV van item**, and only if it is a real development
+   (a launch, US pricing, a confirmed US arrival). Vans are now secondary.
+3. **General EV news only when it is big** — federal policy or tax credits,
+   a charging-network shake-up, a major automaker strategy change, a
+   landmark launch. When the week's biggest EV story is general, it may
+   take the whole section; do not pad with minor general items.
+
+Lightning news is sparse (older, discontinued model). An empty or 1-bullet
+section is fine; omit the section entirely, header and all, when nothing
+qualifies. Lightning items may run up to the 14-day date limit even when
+older than the previous brief, as long as they were not already carried.
+
+### Sources
+
+- Primary: Ford (media.ford.com, ford.com owner/support pages), NHTSA
+  (nhtsa.gov recalls), Ford Pro.
+- News: Electrek, InsideEVs, Ford Authority (fordauthority.com), The Drive,
+  Car and Driver, MotorTrend, Green Car Reports, CleanTechnica.
+- **Owner communities — reader-approved carve-out from the reputability
+  bar:** F150LightningForum.com, the Lightning boards on F150gen14.com, and
+  Reddit's r/F150Lightning. Comb them for mods, accessories, software
+  release notes and issues many owners are reporting. Rules:
+  - Prefer them as a discovery signal: when a forum thread points to a
+    Ford notice, NHTSA filing or news article, cite that instead.
+  - Cite the forum directly only when the item IS community knowledge (a
+    popular mod, a widely reported quirk, an owner-measured result). Label
+    it in the text as owner reports, never as fact ("Owners on the
+    Lightning forum report…"), and require several independent owners or
+    an active thread, not one post.
+  - Display names must match the domain: "F150 Lightning Forum" →
+    f150lightningforum.com, "F150gen14" → f150gen14.com, "r/F150Lightning"
+    → reddit.com.
+  - No affiliate-link product roundups, no dealer marketing, no YouTube
+    hype channels as sources.
+
+### Privacy
+
+Same public-repo rule as everywhere else: write it as ordinary EV coverage.
+Do not say "your truck" or "our truck", or otherwise publish that the reader
+owns one; no VIN, dealer, purchase or location details.
 
 ## ⚓ USS George Washington watch — added 2026-09-13 by reader request
 
@@ -370,7 +448,7 @@ gate must never cause a silent total outage again:
   firehose. Do not pad to fill space; an empty or 1-item section is fine.
 - But the longer cadence means real news accumulates. When genuinely
   qualifying stories exist, allow headroom: World / US up to 5 (was 4),
-  Tech, Sports, San Diego, Gear up to ~8 each, EV up to 3, Kauai up to 2,
+  Tech, Sports, San Diego, Gear up to ~8 each, Lightning & EVs up to 3, Kauai up to 2,
   School up to ~6 across both schools. These are ceilings for busy stretches, not targets. Quality
   bar is unchanged — every added item must independently clear it.
 
