@@ -1089,3 +1089,38 @@ Infrastructure: direct fetch still blocked (WebFetch returns DNS failure on ever
 Tweak to try next run: World/US took the most queries by far because generic "top stories today"
   searches return nothing usable. Go straight to named expected events instead (scheduled elections,
   court deadlines, summits) and only then sweep for what was missed.
+
+## 2026-10-28 (Wednesday)
+Thin/empty: Mito omitted — a PubMed sweep (Oct 14–28, 186 hits, top 25 inspected) returned nothing on
+  MELAS or mitochondrial disease therapeutics; every near-miss was mitochondria-as-mechanism in cancer,
+  NAFLD, PCOS or Parkinson's. Correct omission, not a gap. Lightning & EVs ran ONE bullet: there was no
+  October Lightning recall, TSB or Power-Up news at all, and the forum sweep for a gadget pick turned up
+  only undated frunk-fridge and camp-kitchen threads — no newly launched or newly reviewed item, so the
+  4th gadget bullet was skipped rather than padded with an old thread. Tech practical AI got only ONE
+  WORKFLOW item against the 2–3 target; Premiere 26.5 and the Resolve MCP server are both September,
+  AutoCut is April, and Mollick's agent-mode guide is July 27 — all outside 14 days.
+Unsure it cleared the bar: the Fed bullet. The decision had not happened at publish time (11 a.m. PT
+  vs. a 6 a.m. brief) and I could verify only one reputable outlet for the preview, so it runs on a
+  single CNBC link against the World/US two-outlet rule. Kept it because a rate decision on election
+  week is unambiguously the day's dominant US economic story, but a pre-event bullet is a weak form.
+  Also dropped Apple entirely despite being a priority section: the Oct 28 "Pro and tell" launch was
+  already carried twice (Oct 21 date, Oct 26 no-keynote format) and the event itself is after publish,
+  so a third scheduling bullet would have been exactly what anti-redundancy forbids.
+Date-excluded: the San Diego tropical storm watch (a Times of San Diego piece surfaced as current but
+  is dated Oct 9 — Tropical Storm Rachel, two weeks gone); Kauai Department of Water rate increase
+  "effective Nov 1" (could not confirm adoption or the effective date from any 2026 source, so it was
+  cut rather than guessed); Otay Mesa detention death (surfaced in a headline list, no reporting found
+  to confirm it — excluded); SIRUI VP-1 was borderline at Oct 25 and kept as in-window.
+GW watch: no bullet. USNI's Oct 26 tracker has CVN-73 on routine 5th Fleet operations with no position
+  change, incident or claim — the correct output is silence, per the standing rule.
+Carried over and worked: last run's tweak (go to named expected events first) was the right call —
+  the Israel election, the Fed meeting and Cyclone Arnab's landfall were all on the calendar, and
+  "top stories today" searches were again useless. Keep doing that.
+Infrastructure: conditions.json arrived 34 hours stale again (fetched 2026-10-27T03:07Z), so the
+  scheduled 11:20/11:45 UTC Mon/Wed/Fri cron is NOT reliably committing — second consecutive run that
+  needed an on-demand actions_run_trigger. It returned fresh data in under 90 s. This is now a pattern
+  worth fixing in the workflow rather than working around each run. WebFetch still fails DNS on every
+  outside host (runway.com confirmed), so search remains the only content path.
+Tweak to try next run: for the practical-AI slot, query makers' changelogs and release-note pages by
+  name and version ("Resolve 21.1.2 release notes", "Premiere 26.6") instead of topic phrases —
+  topic searches kept returning comparison blogs and listicles that fail the source bar.
