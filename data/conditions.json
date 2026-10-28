@@ -1,41 +1,21 @@
 {
-  "fetched_at_utc": "2026-10-27T03:07:54Z",
+  "fetched_at_utc": "2026-10-28T12:53:15Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
   },
   "weather": {
-    "updated": "2026-10-26T19:18:43+00:00",
+    "updated": "2026-10-28T07:03:05+00:00",
     "periods": [
       {
-        "name": "Tonight",
-        "temperature": 57,
+        "name": "Overnight",
+        "temperature": 56,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
+        "windSpeed": "5 mph",
         "windDirection": "NE",
-        "shortForecast": "Mostly Clear",
-        "detailedForecast": "Mostly clear, with a low around 57. Northeast wind 0 to 5 mph.",
-        "precipChancePct": 1
-      },
-      {
-        "name": "Tuesday",
-        "temperature": 77,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 10 mph",
-        "windDirection": "W",
-        "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 77. West wind 0 to 10 mph.",
-        "precipChancePct": 1
-      },
-      {
-        "name": "Tuesday Night",
-        "temperature": 57,
-        "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "SE",
-        "shortForecast": "Mostly Cloudy then Patchy Fog",
-        "detailedForecast": "Patchy fog after 5am. Mostly cloudy, with a low around 57. Southeast wind 0 to 5 mph.",
-        "precipChancePct": 1
+        "shortForecast": "Mostly Cloudy",
+        "detailedForecast": "Mostly cloudy, with a low around 56. Northeast wind around 5 mph.",
+        "precipChancePct": 0
       },
       {
         "name": "Wednesday",
@@ -43,98 +23,113 @@
         "temperatureUnit": "F",
         "windSpeed": "0 to 10 mph",
         "windDirection": "S",
-        "shortForecast": "Patchy Fog then Mostly Sunny",
-        "detailedForecast": "Patchy fog before 11am. Mostly sunny, with a high near 74. South wind 0 to 10 mph.",
+        "shortForecast": "Mostly Sunny",
+        "detailedForecast": "Mostly sunny, with a high near 74. South wind 0 to 10 mph.",
         "precipChancePct": 0
+      },
+      {
+        "name": "Wednesday Night",
+        "temperature": 59,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "NW",
+        "shortForecast": "Mostly Cloudy",
+        "detailedForecast": "Mostly cloudy, with a low around 59. Northwest wind 0 to 5 mph.",
+        "precipChancePct": 1
+      },
+      {
+        "name": "Thursday",
+        "temperature": 73,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 10 mph",
+        "windDirection": "SW",
+        "shortForecast": "Mostly Sunny",
+        "detailedForecast": "Mostly sunny, with a high near 73. Southwest wind 0 to 10 mph.",
+        "precipChancePct": 6
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-10-27T02:26Z",
-    "waveHeightFt": 3.6,
-    "dominantPeriodS": 5,
-    "avgPeriodS": 5.0,
-    "meanWaveDirDeg": 292,
-    "waterTempF": 76.1
-  },
-  "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-10-27T02:26Z",
+    "observed_utc": "2026-10-28T11:56Z",
     "waveHeightFt": 3.3,
     "dominantPeriodS": 14,
-    "avgPeriodS": 4.7,
-    "meanWaveDirDeg": 235,
-    "waterTempF": 73.8
+    "avgPeriodS": 7.3,
+    "meanWaveDirDeg": 206,
+    "waterTempF": 76.5
+  },
+  "buoy_46225_torrey_pines": {
+    "observed_utc": "2026-10-28T12:26Z",
+    "waveHeightFt": 3.0,
+    "dominantPeriodS": 15,
+    "avgPeriodS": 6.1,
+    "meanWaveDirDeg": 216,
+    "waterTempF": 73.6
   },
   "tides_san_diego_9410170": [
     {
-      "time_pt": "2026-10-26 03:03",
+      "time_pt": "2026-10-28 04:05",
       "type": "Low",
-      "heightFt": 1.423
+      "heightFt": 2.156
     },
     {
-      "time_pt": "2026-10-26 09:18",
+      "time_pt": "2026-10-28 10:29",
       "type": "High",
-      "heightFt": 6.972
+      "heightFt": 7.017
     },
     {
-      "time_pt": "2026-10-26 16:13",
+      "time_pt": "2026-10-28 17:53",
       "type": "Low",
-      "heightFt": -0.673
+      "heightFt": -0.67
     },
     {
-      "time_pt": "2026-10-26 22:25",
+      "time_pt": "2026-10-29 00:22",
       "type": "High",
-      "heightFt": 4.594
+      "heightFt": 3.857
     },
     {
-      "time_pt": "2026-10-27 03:33",
+      "time_pt": "2026-10-29 04:41",
       "type": "Low",
-      "heightFt": 1.776
+      "heightFt": 2.552
     },
     {
-      "time_pt": "2026-10-27 09:51",
+      "time_pt": "2026-10-29 11:13",
       "type": "High",
-      "heightFt": 7.096
+      "heightFt": 6.725
     },
     {
-      "time_pt": "2026-10-27 17:00",
+      "time_pt": "2026-10-29 18:55",
       "type": "Low",
-      "heightFt": -0.777
-    },
-    {
-      "time_pt": "2026-10-27 23:19",
-      "type": "High",
-      "heightFt": 4.223
+      "heightFt": -0.415
     }
   ],
   "swell_forecast_open_meteo": [
     {
-      "date": "2026-10-26",
-      "waveHeightMaxFt": 3.412,
-      "swellHeightMaxFt": 2.165,
-      "swellPeriodMaxS": 12.25,
-      "swellDirDeg": 210
-    },
-    {
-      "date": "2026-10-27",
-      "waveHeightMaxFt": 3.412,
-      "swellHeightMaxFt": 2.559,
-      "swellPeriodMaxS": 10.45,
-      "swellDirDeg": 273
-    },
-    {
       "date": "2026-10-28",
-      "waveHeightMaxFt": 3.478,
-      "swellHeightMaxFt": 2.362,
-      "swellPeriodMaxS": 13.35,
+      "waveHeightMaxFt": 3.346,
+      "swellHeightMaxFt": 2.493,
+      "swellPeriodMaxS": 13.30,
       "swellDirDeg": 233
     },
     {
       "date": "2026-10-29",
-      "waveHeightMaxFt": 3.215,
-      "swellHeightMaxFt": 2.756,
-      "swellPeriodMaxS": 13.15,
+      "waveHeightMaxFt": 3.281,
+      "swellHeightMaxFt": 2.822,
+      "swellPeriodMaxS": 12.95,
+      "swellDirDeg": 212
+    },
+    {
+      "date": "2026-10-30",
+      "waveHeightMaxFt": 3.412,
+      "swellHeightMaxFt": 3.215,
+      "swellPeriodMaxS": 12.90,
       "swellDirDeg": 210
+    },
+    {
+      "date": "2026-10-31",
+      "waveHeightMaxFt": 3.675,
+      "swellHeightMaxFt": 3.478,
+      "swellPeriodMaxS": 12.75,
+      "swellDirDeg": 207
     }
   ]
 }
