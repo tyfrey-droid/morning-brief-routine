@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Friday, October 30, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.flag{
+  display:inline-block; margin-left:.35rem; padding:.1rem .3rem;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.8rem;
+  color:var(--muted); text-decoration:none; opacity:.55; line-height:1;
+}
+.flag:hover,.flag:focus-visible{opacity:1; color:var(--link-hover); text-decoration:none}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.62rem; font-weight:500;
+  letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body><div class="wrap">
+
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Friday, October 30, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 6:00 AM PT &middot; conditions updated 5:45 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>A control-room decision caused Spain's rail disaster</strong> &mdash; A Renfe AVE travelling the Madrid&ndash;Seville line struck a stopped Iryo train near Toledo on Wednesday morning, killing at least 68 people and sending about 58 more to hospital. Transport minister &Oacute;scar Puente has attributed the crash to what he called an &ldquo;inexplicable&rdquo; decision by the central rail control centre to let a train resume moving after a safety system malfunctioned, and said the drivers bear no responsibility. It is Spain's second fatal high-speed crash this year, after a January collision near Adamuz killed 46. (<a href="https://www.cnbc.com/2026/10/28/spain-high-speed-train-crash.html">CNBC</a>, <a href="https://www.nbcnews.com/world/spain/spain-train-crash-high-speed-collision-toledo-rcna606070">NBC News</a>)</li>
+    <li><strong>Qatar carries a draft deal into Tehran</strong> &mdash; Qatari mediators returned to Iran on Friday with the latest edits to a proposal to end the war, the second trip in a week; a source briefed on the diplomacy told CBS News there were indications of progress. Iran's foreign minister says Tehran &ldquo;continues to give diplomacy a chance,&rdquo; while a senior Iranian official has separately denied receiving any new proposal and called Qatar's ideas unacceptable. The timetable is the pressure: Axios reports mediators are telling Iran that accepting terms may be the only way to avoid a major US&ndash;Israeli strike package drawn up for after Tuesday's midterms. Separately, the IRGC said four tankers struck mines in the Strait of Hormuz on Friday; Washington has not confirmed that account, and President Trump has accused Iran of inventing ship attacks to lift oil prices. (<a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-diplomacy-threat-resume-attacks/">CBS News</a>, <a href="https://www.axios.com/2026/10/28/iran-war-arab-mediators-war-post-midterms">Axios</a>, <a href="https://www.aljazeera.com/news/2026/10/30/qatari-officials-in-iran-in-bid-to-revive-ceasefire-deal-with-us">Al Jazeera</a>)</li>
+    <li><strong>Le Pen opens her third run at the Ély&eacute;e</strong> &mdash; Marine Le Pen launched her 2027 presidential campaign at a rally in Orl&eacute;ans on October 25, promising capped household energy bills, tax cuts, a smaller French contribution to the EU, restored border controls and automatic expulsion of foreign criminals. She enters as the clear front-runner &mdash; an Ipsos survey put her at 32 to 34 per cent in a first round &mdash; but does so under an embezzlement conviction upheld on appeal, which could see her campaign wearing an ankle tag. She has handed the party group in the National Assembly to others to concentrate on the race; voting begins in April. (<a href="https://www.euronews.com/2026/10/25/marine-le-pen-launches-presidential-campaign-with-vow-to-restore-rule-of-law">Euronews</a>, <a href="https://www.aljazeera.com/news/2026/10/25/marine-le-pen-vows-a-french-renaissance-as-far-right-eyes-seat-of-power">Al Jazeera</a>, <a href="https://www.irishtimes.com/world/europe/2026/10/25/marine-le-pen-begins-great-battle-for-france-with-presidential-campaign-launch/">The Irish Times</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>Two Fed officials voted to raise rates</strong> &mdash; Wednesday's brief flagged the decision as pending; it came in as a hold at 3.75 to 4.00 per cent, but the dissents are the news. Cleveland Fed president Beth Hammack and governor Lisa Cook both voted for a quarter-point increase, making it 10&ndash;2 in favour of standing still. That is an unusual direction for a dissent and follows September's hike, the first increase since 2023. Chair Kevin Warsh's committee is now widely expected to tighten again in December with inflation still stubborn. (<a href="https://www.npr.org/2026/10/28/nx-s1-6020425/federal-reserve-interest-rates-inflation">NPR</a>, <a href="https://www.cnn.com/2026/10/28/business/live-news/federal-reserve-interest-rate-october">CNN</a>, <a href="https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf">Federal Reserve</a>)</li>
+    <li><strong>Trump trades closing rallies for the phone</strong> &mdash; With four days to the midterms, the president cancelled Saturday's rally in Salina, Kansas and Sunday's in Dubuque, Iowa, both in states his party expected to hold comfortably, and will reach voters by tele-rally instead; the Republican National Committee describes a 72-hour sprint across at least 19 states. Vice-President Vance also dropped a Minnesota appearance. A Daytona Beach event is still on for Friday, and nothing has been announced for Monday. The backdrop is an approval rating near 32 per cent in Reuters/Ipsos polling and a generic-ballot deficit of roughly eight points. (<a href="https://www.cnbc.com/2026/10/30/trump-vance-rally-midterm-elections-.html">CNBC</a>, <a href="https://thehill.com/homenews/campaign/6181843-donald-trump-kansas-senate-race-rally-canceled/">The Hill</a>, <a href="https://www.aljazeera.com/news/2026/10/30/us-midterms-4-days-to-go-what-the-polls-say-as-trump-cancels-two-rallies">Al Jazeera</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong><span class="tag">WORKFLOW</span> MotionVFX comes built into Final Cut Pro</strong> &mdash; Apple's Creator Studio update, announced Monday and shipping as a free App Store update in November, folds MotionVFX effects, titles and templates directly into Final Cut Pro for Creator Studio subscribers &mdash; a library most editors have been paying MotionVFX separately for. It also opens the Content Hub's video assets inside Final Cut, adds Pixelmator Pro round-tripping so a still on the timeline can be opened, edited and saved straight back, and adds keyframe easing. The catch for anyone who bought Final Cut outright: the perpetual licence stays available at $300, but the bundled MotionVFX content follows the subscription, so a one-time buyer still needs their own MotionVFX plan. Requires macOS 26.6 or later. (<a href="https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/">Apple</a>, <a href="https://petapixel.com/2026/10/27/apple-creator-studio-update-brings-massive-final-cut-pro-improvements/">PetaPixel</a>, <a href="https://www.dpreview.com/news/apple-finally-gives-users-a-reason-to-subscribe-to-final-cut-pro-instead-of-buying-it/">DPReview</a>)</li>
+    <li><strong>The Mac gets a touchscreen, at a price</strong> &mdash; Wednesday's event produced two separate MacBook Pro lines. The headline machine is the first touchscreen Mac: 14- and 16-inch models with a tandem-OLED &ldquo;PROLED XDR&rdquo; display rated to 2,000 nits peak and 1,000 sustained, a 10&ndash;120Hz refresh range, thinner bodies and a Dynamic Island in place of the notch. It runs M5 Pro or M5 Max &mdash; not the newer chip &mdash; and starts at $2,899 for the 14-inch and $3,399 for the 16-inch, rising to $4,499 and $4,799 with M5 Max. Quietly alongside it, the ordinary 14-inch MacBook Pro moved to M6 at $1,999, with a 12-core CPU and 12-core GPU, Wi-Fi 7, and Apple's claims of 30 per cent faster graphics and 25 per cent faster AI work than M5. Both ship November 6. (<a href="https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/">Apple</a>, <a href="https://www.techrepublic.com/article/news-apple-touchscreen-oled-macbook-pro/">TechRepublic</a>, <a href="https://www.macrumors.com/2026/10/27/14-inch-macbook-pro-with-m6-chip/">MacRumors</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Memphis ends Portland's perfect start</strong> &mdash; The Grizzlies beat the Trail Blazers 124&ndash;103 in Portland on Thursday, the first loss after a 3&ndash;0 opening that included the win in Los Angeles carried in Wednesday's brief. Memphis moved to 5&ndash;0 but may have paid for it: Ja Morant left in the fourth quarter with a hamstring injury and did not return. (<a href="https://www.espn.com/nba/recap?gameId=401909895">ESPN</a>, <a href="https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261029_MEM@POR/">CBS Sports</a>)</li>
+    <li><strong>Curry's 44 makes it two straight</strong> &mdash; Stephen Curry scored a season-high 44 on 11-of-27 shooting with six threes and a perfect 16-for-16 from the line as the Warriors won 119&ndash;114 at Minnesota on Wednesday, their second win in a row after the 0&ndash;3 start. Rookie Yaxel Lendeborg added 26. Golden State led by 24 in the third and had to survive a late push, with a De'Anthony Melton block closing it out. They are 2&ndash;3 and host the Lakers tonight. (<a href="https://www.nba.com/warriors/news/gameday-recap-20261028">NBA.com</a>, <a href="https://www.espn.com/nba/story/_/id/50315043/stephen-curry-torches-wolves-44-warriors-win-2nd-straight">ESPN</a>)</li>
+    <li><strong>Milwaukee wins its first World Series</strong> &mdash; The Brewers beat the Rays 4&ndash;1 in Game 5 at Tropicana Field on Wednesday to take the series four games to one and the franchise's first title in 57 seasons. Catcher William Contreras was named Series MVP, and Jackson Chourio set a record for a five-game World Series with 11 hits. Tampa Bay's twelfth-inning win in Game 4, carried in Wednesday's brief, was the only game it took. (<a href="https://www.npr.org/2026/10/29/nx-s1-6021953/brewers-win-first-world-series-title">NPR</a>, <a href="https://www.cbssports.com/mlb/news/2026-mlb-playoff-bracket-schedule-scores-results-how-to-watch/">CBS Sports</a>, <a href="https://www.baseball-reference.com/postseason/2026_WS.shtml">Baseball Reference</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>Outside money floods the local ballot</strong> &mdash; Millions have gone into San Diego campaigns in the closing stretch, with the California Democratic Party and the campaign for Measure B, the countywide sales-tax increase, among the biggest spenders. It is the clearest signal yet of which of Tuesday's local contests are considered genuinely in play. (<a href="https://www.kpbs.org/podcasts/san-diego-news-now/whos-been-spending-big-money-on-midterm-races">KPBS</a>, <a href="https://voiceofsandiego.org/2026/10/30/san-diegos-top-political-power-players/">Voice of San Diego</a>)</li>
+    <li><strong>A councilmember presses police on ICE call-outs</strong> &mdash; Councilmember Sean Elo-Rivera said on Thursday that he is not being told when San Diego officers respond to federal immigration operations. The department says it does notify every councilmember and the mayor's office when that happens. The dispute runs alongside his separate fight with Chief Scott Wahl over the city's Flock licence-plate cameras, which a council committee voted this month to switch off. (<a href="https://www.nbcsandiego.com/news/local/san-diego-city-councilmember-raises-questions-about-police-transparency-on-ice/4094305/">NBC 7 San Diego</a>)</li>
+    <li><strong>The county moves to legalise farm camping</strong> &mdash; Supervisors directed staff to draft an ordinance letting visitors camp on private farms, ranches and vineyards, building on a new state law that lets some landowners take in campers for extra income. More than 100 county landowners have already expressed interest or are taking bookings through platforms like Hipcamp, which the county describes as a legal grey area today. Staff will work through fire-safety rules and permit fees and report back within six months. (<a href="https://www.kpbs.org/podcasts/san-diego-news-now/whos-been-spending-big-money-on-midterm-races">KPBS</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127802; Kaua&#699;i</p>
+  <ul>
+    <li><strong>Fourteen candidates, seven council seats</strong> &mdash; Kaua&#699;i votes Tuesday on its entire seven-member County Council, with 14 candidates on the ballot. Voting is by mail, with ballots sent out around October 16 and in-person early voting open since October 20. (<a href="https://www.thegardenisland.com/2026/10/21/hawaii-news/hooser-electing-a-county-council-that-leads/">The Garden Island</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>SmallHD's Focus 504 targets gimbal rigs</strong> &mdash; SmallHD announced the Focus 504, a 5-inch on-camera monitor pitched at handheld and gimbal work where the bigger Ultra and Cine panels are too much weight. The notable caveat is that its wireless camera control is not there yet &mdash; SmallHD lists it as coming via future firmware, with the control licences sold separately, so the feature it is partly marketed on is a promise at launch rather than a function you can use on delivery. (<a href="https://newsshooter.com/2026/10/28/smallhd-focus-504">Newsshooter</a>)</li>
+    <li><strong>TRIBE7 builds a set for the RIALTO 65</strong> &mdash; TRIBE7 and IB/E Optics released the K70, a six-lens large-format prime set running 23.7mm to 107mm, all at T1.7, designed to cover Sony's RIALTO 65 sensor. It first appeared as a prototype in September 2025. This is rental-house glass for large-format shoots, not an owner-operator buy. (<a href="https://newsshooter.com/2026/10/29/tribe7-k70-prime-lenses-by-ib-e-optics">Newsshooter</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong><span class="tag">HTEM</span> Costumes today, parade after attendance</strong> &mdash; Children may wear a Halloween costume or fall colours today, with a school-wide parade once teachers have taken attendance; send normal clothes underneath and label the costume, since they may be asked to change afterwards. Guidelines: no full masks or face coverings, no weapons or violent props, no blood or gore.</li>
+    <li><strong><span class="tag">HTEM</span> Pre-order by Nov 3, and no school Nov 11</strong> &mdash; The parent association's spirit night is Tuesday, November 10 from 4 to 7 p.m. at the Mission Valley Dave &amp; Buster's, with 20 per cent of food and non-alcoholic drink sales going back to the school. Discounted game cards have to be pre-ordered by November 3 &mdash; $20 for $11, $10 for $6 &mdash; and are collected at the event. The email also confirms there is no school the next day, Wednesday, November 11.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127780; Weather</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Today</span>70&deg; / 60&deg; &middot; Mostly cloudy &middot; 40% rain</p>
+    <p class="data-row"><span class="data-label">Note</span>A chance of light rain on and off, a tenth to a quarter of an inch possible; southwest wind 0&ndash;5 mph</p>
+    <p class="data-row"><span class="data-label">Tomorrow</span>73&deg; &middot; Cloudy, showers likely after 5 p.m.</p>
+  </div>
+  <p class="source-note">Live NWS point forecast for La Mesa 91942, issued 12:08 a.m. PT, retrieved 5:45 a.m.</p>
+</section>
+
+<section>
+  <p class="section-label">&#127754; Surf</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Swell</span>3.6 ft @ 15s from the SW (219&deg;)</p>
+    <p class="data-row"><span class="data-label">Read</span>Waist- to chest-high at MB/PB beach breaks, with bigger sets on the long-period lines</p>
+    <p class="data-row"><span class="data-label">Wind</span>Light and variable early (clean), southwest 0&ndash;5 mph later &mdash; onshore, but too light to do much</p>
+    <p class="data-row"><span class="data-label">Tide</span>Low 5:26 a.m. (3.0 ft) &middot; High 12:09 p.m. (6.3 ft) &middot; Low 8:05 p.m. (&minus;0.1 ft)</p>
+    <p class="data-row"><span class="data-label">Water</span>77&deg;F</p>
+    <p class="data-row"><span class="data-label">Outlook</span>SSW swell holding and edging up toward 4 ft through Monday as the period eases from 14s to about 12s</p>
+  </div>
+  <p class="source-note">Live NOAA data retrieved 5:45 a.m. PT: buoy 46258 Mission Bay West (3.6 ft @ 15s, 219&deg;, 77.0&deg;F, observed 5:26 a.m.) and 46225 Torrey Pines (3.6 ft @ 15s, 214&deg;, 74.3&deg;F, observed 4:56 a.m.); tide predictions for San Diego station 9410170; wind from the NWS forecast. Outlook from the Open-Meteo marine model off Mission Beach &mdash; stormsurf.com is unreachable from this environment.</p>
+</section>
+
+<div class="quote">
+  We must learn to regard people less in the light of what they do or omit to do, and more in the light of what they suffer.
+  <span class="attrib">&mdash; Dietrich Bonhoeffer, Letters and Papers from Prison</span>
+</div>
+
+<footer>
+  Morning Brief &middot; Friday, October 30, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icon = function(t){ return t === 'dark' ? '☀' : '☾'; };
+    btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+    btn.addEventListener('click', function(){
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('brief-theme', next); } catch (e) {}
+      btn.textContent = icon(next);
+    });
+  }
+
+  // Per-story feedback control: opens a pre-filled brief-feedback issue.
+  var REPO = 'https://github.com/tyfrey-droid/morning-brief-routine/issues/new';
+  var date = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : '';
+  var sections = document.querySelectorAll('section');
+  for (var s = 0; s < sections.length; s++) {
+    var label = sections[s].querySelector('.section-label');
+    var items = sections[s].querySelectorAll('li');
+    if (!label || !items.length) continue;
+    var section = label.textContent.trim();
+    for (var i = 0; i < items.length; i++) {
+      var lead = items[i].querySelector('strong');
+      if (!lead) continue;
+      var story = lead.textContent.trim();
+      var body = 'Section: ' + section + '\nStory: ' + story + '\nIssue of: ' + date +
+        '\n\nFeedback (keep one, or write your own):\n' +
+        '- already read / redundant\n- not relevant\n- more like this\n';
+      var a = document.createElement('a');
+      a.className = 'flag';
+      a.href = REPO + '?labels=brief-feedback' +
+        '&title=' + encodeURIComponent('Feedback: ' + story) +
+        '&body=' + encodeURIComponent(body);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.title = 'Send feedback on this story';
+      a.setAttribute('aria-label', 'Send feedback on: ' + story);
+      a.textContent = '⚑';
+      items[i].appendChild(a);
+    }
+  }
+})();
+</script>
+</body></html>
