@@ -1124,3 +1124,35 @@ Infrastructure: conditions.json arrived 34 hours stale again (fetched 2026-10-27
 Tweak to try next run: for the practical-AI slot, query makers' changelogs and release-note pages by
   name and version ("Resolve 21.1.2 release notes", "Premiere 26.6") instead of topic phrases —
   topic searches kept returning comparison blogs and listicles that fail the source bar.
+
+## 2026-10-30 (Friday)
+Thin/empty: 🔋 Lightning & EVs omitted — no Lightning item inside 14 days (the Fathom/EREV angle ran
+  Oct 28), and the week's only general EV news was the UK Autumn Budget's £100m charging fund, which
+  is not "big" for a San Diego reader. 🧬 Mito omitted — PubMed returned 0 MELAS-therapy papers in the
+  window and the broader mtDNA/heteroplasmy query returned 133 hits that were all keyword noise
+  (mitochondria mentioned incidentally in cancer/asthma/fibrosis papers). Kauaʻi ran 1; Gear ran 2
+  after I cut a third bullet. School is HTEM-only: no Foster broadcast arrived since Oct 28 and the
+  Smore is still blocked.
+Unsure it cleared the bar: the Kauaʻi council-election bullet. Its only usable citation is a Garden
+  Island op-ed by a former council member — a bylined expert, which the reputability bar allows, but a
+  column is a weak anchor for the factual claims (14 candidates, 7 seats, ballot dates). I kept it
+  because the election is Tuesday and the dates are actionable, but a news-desk source would be better.
+  Also cut two items late for sourcing rather than ship them: a Viltrox 35mm f/1.4 Pro E-mount
+  announcement I could only trace to aggregators (I had drafted it citing a Newsshooter *category*
+  page, which is not a real citation), and the San Diego Pride director resignation, which I could not
+  date-confirm — the "seventh director in three years" framing in particular was unverifiable.
+GW watch: no bullet. USNI's Oct 26 tracker is still the latest and has CVN-73 on the same Arabian Sea
+  station as at the last brief — no position change, incident or claim. Silence is correct.
+Infrastructure: conditions.json was 42 hours stale again (fetched Oct 28 18:30Z) — THIRD consecutive
+  run needing an on-demand actions_run_trigger, which again returned fresh data in under 90 s. The
+  scheduled 11:20/11:45 UTC Mon/Wed/Fri cron is not committing. Stop working around this: next run,
+  read .github/workflows/fetch-conditions.yml and fix the schedule or the commit step. Also confirmed
+  app.smore.com still fails DNS, and websearch now refuses reuters.com/apnews.com/bbc.com/theverge.com
+  /arstechnica.com/wired.com as allowed_domains — plan around that, several anchors are unusable as
+  domain filters even though their articles still surface in unfiltered results.
+Tweak that worked: last run's note to query makers' changelogs by name/version was right again —
+  "Final Cut Pro update October 2026" found the Apple Creator Studio release, which is the practical
+  WORKFLOW item; topic phrases for Premiere/Resolve/Topaz returned only SEO comparison blogs.
+Tweak to try next run: for World/US, search the *named* expected event plus a second outlet explicitly
+  (e.g. "<event> Axios OR CBS") when the first pass yields one outlet — that converted the Iran bullet
+  from single-source (which I nearly dropped, as the Fed preview was last run) into a three-outlet item.
