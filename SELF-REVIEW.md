@@ -1156,3 +1156,42 @@ Tweak that worked: last run's note to query makers' changelogs by name/version w
 Tweak to try next run: for World/US, search the *named* expected event plus a second outlet explicitly
   (e.g. "<event> Axios OR CBS") when the first pass yields one outlet — that converted the Iran bullet
   from single-source (which I nearly dropped, as the Fed preview was last run) into a three-outlet item.
+
+## 2026-11-02 (Monday)
+
+Thin/empty sections: Gear ran 1 bullet (Sigma FP2 ship date + price — the only
+  in-window item; Newsshooter/CineD are DNS-blocked here so I could only reach them
+  through search, and searches surfaced nothing else new). Lightning & EVs ran 1,
+  and it was the general-EV item: no Lightning-specific news cleared 14 days. The
+  26B07 adaptive-cruise CSP looked promising but traces to a September dealer
+  bulletin — outside the window — so I dropped it rather than date-fudge it. No
+  gadget pick: every "best Lightning accessory" result was a dealer blog or
+  affiliate listicle, which the sourcing rules exclude. Foster had no School bullet
+  (the only broadcast was a Halloween/DST note, both now past) and app.smore.com
+  still fails DNS, so Foster was email-only and produced nothing — section ran HTEM-only.
+Unsure it cleared the bar: the Mito item. It is a genuine mechanistic finding in
+  Cell Reports (Oct 29, UCL-led) about the Hsp60-high fibre state that permits clonal
+  expansion of mutant mtDNA — but it is deletions in a mouse depletion model, not
+  m.3243A>G. I ran it because clonal expansion IS the mechanism that drives MELAS
+  tissue burden, and wrote the caveat into the bullet rather than leaving it implied.
+  A reasonable reviewer could have cut it. Also cut late: a San Diego rainy-Halloween
+  item whose only citation would have been nbcsandiego.com's section page — exactly
+  the "category page is not a citation" mistake flagged in the Oct 30 review.
+GW watch: no bullet. Searched; nothing since the Oct 26 USNI tracker — no position
+  change, incident or claim. Silence is correct, third issue running.
+Infrastructure: RESOLVED the recurring conditions-staleness mystery and wrote it into
+  CLAUDE.md so it stops costing a run. The cron is not broken and neither is the commit
+  step — GitHub queues these scheduled runs 5–6 hours late (Oct 30 crons set for
+  11:20/11:45/12:20/12:45 UTC actually ran 17:03/17:14/18:00/18:14; Oct 28 identical).
+  They land ~9–10 AM PT, after the brief. No cron time can fix an unbounded delay, so
+  the on-demand trigger is now documented as the primary path. It took 13 s today.
+Tweak that worked: the Oct 30 note to pair a named event with a second outlet
+  ("<event> Axios OR CBS") converted the DOJ/election-workers item from one outlet
+  into a four-outlet bullet (Axios, The Hill, WaPo, Fox) and confirmed Judge Thompson
+  by name. Keep doing this.
+Tweak to try next run: websearch refuses reuters.com/apnews.com/bbc.com as
+  allowed_domains AND WebFetch now fails DNS on every news host (espn.com,
+  newsshooter.com, cined.com, smore.com all ENOTFOUND). So for Gear especially,
+  stop trying to browse the trades and instead query the PRODUCT space directly by
+  maker and model-year ("Sigma FP2 price release date", "SmallHD announced") — that
+  is what surfaced every gear item that worked in the last three issues.

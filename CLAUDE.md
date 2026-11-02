@@ -25,6 +25,20 @@ brief's 4–6 AM PT slot — in whichever DST regime is current; the other pair
 fires harmlessly and just refreshes. On any run day, if the data is stale,
 trigger a fresh fetch on demand (step 2 below). Each run:
 
+**KNOWN ISSUE — the cron is effectively useless; do not keep re-diagnosing it.**
+Measured 2026-11-02 from the Actions run history: the scheduled runs DO fire and
+DO succeed, but GitHub queues them roughly 5–6 hours late. On 2026-10-30 the
+11:20/11:45/12:20/12:45 UTC crons actually ran at 17:03/17:14/18:00/18:14 UTC;
+Oct 28 was the same (17:12/17:25/18:20/18:30). They therefore land at ~9–10 AM PT,
+hours AFTER the brief publishes, so `conditions.json` is always the previous
+issue's data at brief time. This is GitHub's shared-scheduler delay, not a bug in
+the workflow file or the commit step — both are correct and the commits land fine.
+The reliable path is the on-demand `actions_run_trigger` in step 2, which has
+completed in 13–20 seconds on every run that used it. So: EXPECT stale data,
+trigger the fetch at the start of every run, and do not spend time investigating
+the cron or reporting it as broken. Changing the cron times cannot fix this —
+the delay is variable and unbounded.
+
 1. `git pull origin main`, read `data/conditions.json`, check `fetched_at_utc`.
 2. If it is older than ~2 hours, trigger a fresh run via the GitHub MCP tool
    `actions_run_trigger` (workflow file: `fetch-conditions.yml`, ref `main`),
