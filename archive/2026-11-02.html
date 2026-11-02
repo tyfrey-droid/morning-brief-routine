@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Monday, November 2, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.flag{
+  display:inline-block; margin-left:.35rem; padding:.1rem .3rem;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.8rem;
+  color:var(--muted); text-decoration:none; opacity:.55; line-height:1;
+}
+.flag:hover,.flag:focus-visible{opacity:1; color:var(--link-hover); text-decoration:none}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.62rem; font-weight:500;
+  letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body><div class="wrap">
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Monday, November 2, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 5:35 AM PT &middot; conditions updated 4:48 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>Lagarde leaves the ECB early</strong> &mdash; Christine Lagarde told the Governing Council and European Council president Ant&oacute;nio Costa on October 29 that she will step down as president of the European Central Bank on February 7, roughly nine months before her term expires. She said she wanted the freedom to speak on matters beyond monetary policy; the early exit also lets EU leaders settle the succession before France's 2027 presidential election. Former Dutch central bank head Klaas Knot and Spain's Pablo Hern&aacute;ndez de Cos are the names most often mentioned, and the search starts immediately. (<a href="https://abcnews.com/Business/wireStory/european-central-bank-president-christine-lagarde-resign-feb-137667889">ABC News</a>, <a href="https://www.scmp.com/news/world/europe/article/3372617/ecb-head-lagarde-resigns-amid-mounting-economic-political-challenges-europe">SCMP</a>)</li>
+    <li><strong>A draft deal circulates after Doha</strong> &mdash; Friday's brief had Qatari mediators carrying edits into Tehran. The Iranian delegation has now left Doha and a draft proposal to end the war is being passed between the two sides, with a follow-up meeting possible; an official briefed on the talks said the departure was not a breakdown. Foreign minister Abbas Araghchi floated a compressed &ldquo;two-day plan&rdquo; &mdash; Washington acts on day one, Iran reopens the Strait of Hormuz on day two &mdash; while Tehran maintains that nothing is final until the US naval blockade ends. The two sides have still not agreed to talk directly. (<a href="https://www.aljazeera.com/news/liveblog/2026/11/1/iran-war-live-araghchi-says-talks-under-way-on-2-day-plan-to-reopen-hormuz">Al Jazeera</a>, <a href="https://www.theglobeandmail.com/world/article-us-iran-doha-talks-strait-of-hormuz/">The Globe and Mail</a>)</li>
+    <li><strong>Brazil's runner-up leaves the country</strong> &mdash; A week after losing the runoff to Lula by 51.8 to 48.2 per cent, Fl&aacute;vio Bolsonaro has left Brazil rather than comply with a Supreme Court order to surrender his passports, and the State Department is reported to be issuing visas to him and his family. He has still not conceded and says he will seek to annul the result over a two-hour extension of voting; his own Liberal Party acknowledged Lula's win on October 26. (<a href="https://www.nbcnews.com/world/brazil/flavio-bolsonaro-flees-us-losing-brazil-election-sources-say-rcna605992">NBC News</a>, <a href="https://www.pbs.org/newshour/world/incumbent-lula-is-declared-winner-of-brazils-election-as-bolsonaro-rejects-results">PBS NewsHour</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>The midterms are tomorrow</strong> &mdash; Voters decide the House and Senate on November 3. Forecasters broadly favour Democrats to take the House, where Republicans hold a slim majority; the Senate is the closer call, with Republicans defending a 53&ndash;47 edge and needing 50 seats to keep control because Vice President JD Vance breaks ties. A New York Times/Siena series has Democrats ahead in five of the seven Senate races it polled, and Fox News's final rankings moved Ohio to lean Democratic and Kansas to toss-up while shifting Nebraska toward Republicans. (<a href="https://www.cnn.com/2026/11/02/politics/live-news/midterm-election-congress">CNN</a>, <a href="https://www.foxnews.com/politics/fox-news-power-rankings-kansas-moves-toss-up-nebraska-moves-lean-r">Fox News</a>, <a href="https://www.forbes.com/sites/saradorn/2026/11/01/latest-polls-in-2026-midterms-democrats-lead-nearly-all-key-senate-races/">Forbes</a>)</li>
+    <li><strong>A judge bars threats to election workers</strong> &mdash; District Judge Trina Thompson issued a temporary restraining order on October 30 forbidding the Justice Department and Homeland Security from threatening election officials with prosecution over noncitizen-voting claims, finding they had likely violated the Voting Rights Act's bar on voter intimidation. The DOJ had written to election officials in all 50 states warning of possible prosecution over record preservation; the department says its actions enforce federal law. Earlier in the week a different California judge threw out the administration's suit seeking to set aside about 20,000 ballots. (<a href="https://www.axios.com/2026/10/31/doj-threats-election-workers-midterms">Axios</a>, <a href="https://thehill.com/regulation/court-battles/6185891-judge-stops-trump-election-threats/">The Hill</a>, <a href="https://www.washingtonpost.com/politics/2026/10/31/judge-orders-trump-officials-not-threaten-or-intimidate-election-workers/">The Washington Post</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong><span class="tag">WORKFLOW</span>Runway now runs inside Premiere</strong> &mdash; Runway shipped a panel that works directly in Adobe Premiere Pro and After Effects, so you can generate images and video and restyle clips already on the timeline with its Aleph 2 model without round-tripping to a browser. A companion update put its Mirelo SFX 2.0 sound-effects model into Runway's MCP server, which generates separate audio stems. Worth an hour if you do b-roll patches or previs; the caveat is the usual one for generative tools &mdash; the work is processed in Runway's cloud, so check your client agreements before uploading their footage. (<a href="https://runway.com/changelog">Runway</a>)</li>
+    <li><strong>Five Apple products land Friday</strong> &mdash; Last week's &ldquo;Pro and tell&rdquo; announcements get their release date: the OLED iPad mini, M6 iMac, 14-inch M6 MacBook Pro and the 14- and 16-inch OLED touchscreen MacBook Pros all go on sale November 6, after pre-orders opened last week. Pricing runs from $699 for the iPad mini and $1,499 for the iMac to $1,999 for the M6 MacBook Pro, with the touchscreen models at $2,899 and $3,399. Apple reports quarterly results after the close today. (<a href="https://www.macrumors.com/2026/11/02/apple-launching-five-new-products-this-friday/">MacRumors</a>, <a href="https://www.engadget.com/2298220/everything-apple-announced-ipad-macbook-pro-and-tell-event/">Engadget</a>)</li>
+    <li><strong>Binance loses $6.3 billion to hackers</strong> &mdash; An intrusion on October 29 that Binance traced to a compromised laptop let an attacker reach a service container and submit unauthorised withdrawals, taking about $6.3 billion in digital assets &mdash; the largest crypto theft on record, well past the $1.5 billion Bybit hack of February 2025. Investigators have linked it to the North Korea-associated group TraderTraitor. Roughly $3 billion moving through the attackers' wallets has been identified and frozen, and Binance says it has replaced about 95 per cent of the loss from its own funds and reopened withdrawals. (<a href="https://www.washingtonpost.com/technology/2026/10/29/suspected-binance-hack-sets-off-scramble-lock-down-billions-crypto/">The Washington Post</a>, <a href="https://www.nbcnews.com/business/markets/binance-hack-tether-circle-stablecoins-rcna606445">NBC News</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Portland buries Utah from the opening tip</strong> &mdash; The Trail Blazers beat Utah 112&ndash;90 on Saturday to go 4&ndash;1, bouncing back from the Memphis loss carried in Friday's brief. Portland opened on a 17&ndash;0 run and led 59&ndash;42 at the half; Deni Avdija scored 24, nineteen of them before the break and 10-of-11 from the line, and Damian Lillard added 22 points with five rebounds and four assists. Ja Morant and Shaedon Sharpe both sat out. Utah fell to 1&ndash;5. The Blazers are at Denver tonight. (<a href="https://www.espn.com/nba/recap/_/gameId/401909896">ESPN</a>, <a href="https://www.nba.com/game/por-vs-uta-0022600147">NBA.com</a>)</li>
+    <li><strong>A rookie carries Golden State</strong> &mdash; The Warriors beat the Clippers 124&ndash;112 at home on Sunday for a fourth straight win, having started the season 0&ndash;3. Stephen Curry and Draymond Green both rested on the front half of a back-to-back, and Yaxel Lendeborg went for a career-high 37 points on 13-of-19 shooting with six threes and six assists. Rui Hachimura led Los Angeles with 24 as the Clippers lost a fifth in a row. (<a href="https://www.espn.com/nba/game/_/gameId/401909905/clippers-warriors">ESPN</a>, <a href="https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261101_LAC@GS/">CBS Sports</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>Forty charged in a Poway gang case</strong> &mdash; Federal prosecutors have charged more than 40 alleged gang members and associates following a two-year investigation centred on a criminal organisation based in Poway. The case was reported Sunday. (<a href="https://timesofsandiego.com/crime/2026/11/01/acusan-a-mas-de-40-presuntos-pandilleros-tras-una-investigacion-de-dos-anos-en-poway/">Times of San Diego</a>)</li>
+    <li><strong>All 221 vote centres are open</strong> &mdash; The county Registrar of Voters brought its remaining 180 vote centres online on Saturday, so all 221 are now operating ahead of Tuesday's election. Four city council seats are on the ballot, along with the countywide sales-tax measure. (<a href="https://nbcsandiego.com/video/videos/san-diego-county-opens-all-221-vote-centers-this-weekend-ahead-of-election-day/4094920">NBC San Diego</a>, <a href="https://www.kpbs.org/news/politics/2026/10/27/sd-city-council-could-look-much-different-with-four-seats-on-ballot">KPBS</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127802; Kaua&#699;i</p>
+  <ul>
+    <li><strong>Flooding closes the road at Hanalei</strong> &mdash; Heavy rain on Saturday put Kaua&#699;i under a flash flood warning that forecasters extended repeatedly into the evening, with rain falling at one to two inches an hour and the Hanalei and Wailua rivers rising fast. K&#363;hi&#333; Highway was closed at the Hanalei Bridge and a community refuge opened at Hale Halawai in Hanalei. Warnings ran on and off through the weekend; forecasters expect a drier, breezier week, but check the road before driving the north shore. (<a href="https://www.thegardenisland.com/2026/10/31/hawaii-news/kuhio-highway-near-the-hanalei-bridge-closed-flash-flood-warning-issued-for-kauai/">The Garden Island</a>, <a href="https://www.staradvertiser.com/2026/10/31/breaking-news/flash-flood-warning-issued-for-kauai-as-heavy-showers-soak-island/">Star-Advertiser</a>)</li>
+    <li><strong>The island shuts down to vote</strong> &mdash; Friday's brief had the council race itself; the logistics are now set. County offices, all neighbourhood centres, the refuse transfer stations, the Kekaha Landfill and the Kapa&#699;a pool are closed Tuesday for the general election, in which Kaua&#699;i also picks a new mayor. The Kaua&#699;i Bus runs its normal schedule with fares waived, and regular hours resume November 4. (<a href="https://kauainownews.com/2026/10/29/county-announces-closures-for-2026-general-election-day/">Kauai Now</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>The Sigma FP2 gets a date and a price</strong> &mdash; Last Monday's brief had the announcement; the shipping details have now landed. The 24.5-megapixel partially stacked full-frame body goes on sale November 11 at $2,199 for the body alone, or $2,749 bundled with either the 50mm F2 DG Contemporary or the EVF-21 viewfinder. A top-plate switch flips it between Still and Cine modes, each with its own interface; in Cine mode it records 6K open gate up to 60fps, ProRes RAW to 6K/30p, and Sigma claims 14.1 stops in L-Log. L-mount means an adapter for E-mount glass, but as a tiny B-camera that records the same codecs as the big bodies, the price is the interesting part. (<a href="https://www.videomaker.com/news/tiny-sigma-fp2-shoots-6k-open-gate-for-2199/">Videomaker</a>, <a href="https://www.redsharknews.com/sigma-fp2-camera-price-specs-release">RedShark News</a>, <a href="https://www.provideocoalition.com/sigma-announces-fp2-a-compact-full-fledged-cinema-camera/">ProVideo Coalition</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#128267; F-150 Lightning &amp; EVs</p>
+  <ul>
+    <li><strong>A $15,000 EV credit bill, and the arithmetic against it</strong> &mdash; More than 160 House Democrats have backed a bill from Representative Greg Landsman that would restore the federal EV tax credit and roughly double it, to $15,000 for a new vehicle and up to $8,000 used, while raising the home-charger credit from 30 to 50 per cent of eligible costs and making all of it permanent. The federal new and used credits ended for vehicles acquired after September 30, 2025 and the charger credit expired for equipment placed in service after June 30 this year. Electrek's own assessment is that the bill has no path: even a Democratic sweep tomorrow would leave a presidential veto in the way. (<a href="https://electrek.co/2026/10/28/15000-ev-tax-credit-bill-landsman-no-chance/">Electrek</a>, <a href="https://insideevs.com/news/813308/ev-tax-credit-could-return-but-hurdles-remain/">InsideEVs</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#129516; Mito Research</p>
+  <ul>
+    <li><strong>Why mutant mtDNA takes over a muscle fibre</strong> &mdash; A team led from UCL's Queen Square Institute of Neurology, publishing in Cell Reports on October 29 with collaborators at Newcastle, Stockholm and Oxford, followed mouse muscle over time and found that depleted mitochondrial DNA first compensates by making more transcripts per genome, which preserves the respiratory chain &mdash; and then, months later, transcripts fall away, deletions appear, and respiratory-deficient fibres emerge. The counterintuitive part is that the fibres carrying deletions end up with far more mtDNA than normal, and every one of them shows raised Hsp60, a pattern the group also saw in human mitochondrial myopathy. They argue that depletion inadvertently creates an Hsp60-high cellular state that lets a mutant genome expand clonally. What matters for a MELAS family is the mechanism rather than the model: clonal expansion is how a mutant load becomes high enough in a tissue to cause symptoms, so a molecular state that permits it is a candidate thing to interfere with. The caveat is real &mdash; this is deletion mutations in a mouse depletion model, not the m.3243A&gt;G point mutation, and nothing here is a treatment. (Cell Reports &mdash; <a href="https://doi.org/10.1016/j.celrep.2026.117995">DOI</a>, indexed on <a href="https://pubmed.ncbi.nlm.nih.gov/42955951/">PubMed</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong><span class="tag">HTEM</span>Fieldwork paperwork is due Wednesday</strong> &mdash; The PowerSchool permission slip for the November 18 Tecolote trip must be signed by November 4 or the trip is cancelled; anyone hoping to drive also needs the volunteer form with licence and registration uploaded plus the mandated-reporter training certificate, with no exceptions even for driving your own child.</li>
+    <li><strong><span class="tag">HTEM</span>Puppet show Friday, lines to practise</strong> &mdash; The performing-arts puppet show is Friday, November 6 and student attendance is mandatory; the teacher has asked families to have students rehearse their lines at home this week.</li>
+    <li><strong><span class="tag">HTEM</span>Fractions check-in today</strong> &mdash; The class sits its first Unit 3 sub-unit assessment today, on adding and subtracting fractions and mixed numbers; reading is the project novel <em>Paradise on Fire</em>.</li>
+    <li><strong><span class="tag">HTEM</span>Color Run registration is open</strong> &mdash; The school's main fundraiser opened Sunday and runs to the event itself on Friday, November 20; registering now gets a shirt and an open-gym pass.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127780; Weather &mdash; La Mesa</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Today</span>73&deg; / 57&deg; &middot; Sunny &middot; 0% rain</p>
+    <p class="data-row"><span class="data-label">Tomorrow</span>74&deg; &middot; Sunny</p>
+  </div>
+  <p class="source-note">NWS point forecast for La Mesa 91942, issued 12:48 a.m. PT and retrieved 4:48 a.m. PT.</p>
+</section>
+
+<section>
+  <p class="section-label">&#127754; Surf &mdash; Mission Beach / Pacific Beach</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Swell</span>5.9 ft @ 15s from the SSW (211&deg;)</p>
+    <p class="data-row"><span class="data-label">Read</span>Chest- to head-high at MB/PB beach breaks, with bigger sets on the long-period lines &mdash; a clear step up from Friday's 3.6 ft</p>
+    <p class="data-row"><span class="data-label">Wind</span>Light north 0&ndash;5 mph early (clean), staying light through the day</p>
+    <p class="data-row"><span class="data-label">Tide</span>High 4:44 a.m. (4.5 ft) &middot; Low 9:55 a.m. (2.9 ft) &middot; High 3:30 p.m. (5.1 ft) &middot; Low 10:36 p.m. (0.2 ft)</p>
+    <p class="data-row"><span class="data-label">Water</span>76&deg;F</p>
+    <p class="data-row"><span class="data-label">Outlook</span>Easing through midweek as the period drops from about 13s to 11s and the swell swings from SSW toward W</p>
+  </div>
+  <p class="source-note">Live NOAA data retrieved 4:48 a.m. PT: buoy 46258 Mission Bay West (5.9 ft @ 15s, 211&deg;, 76.5&deg;F) and 46225 Torrey Pines (5.6 ft @ 15s, 204&deg;, 76.3&deg;F), both observed 3:56 a.m.; tide predictions for San Diego station 9410170; wind from the NWS forecast. Outlook from the Open-Meteo marine model off Mission Beach &mdash; stormsurf.com is unreachable from this environment.</p>
+</section>
+
+<div class="quote">
+  The remarkable thing about fearing God is that when you fear God you fear nothing else, whereas if you do not fear God you fear everything else.
+  <span class="attrib">&mdash; Oswald Chambers, My Utmost for His Highest</span>
+</div>
+
+<footer>
+  Morning Brief &middot; Monday, November 2, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icon = function(t){ return t === 'dark' ? '☀' : '☾'; };
+    btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+    btn.addEventListener('click', function(){
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('brief-theme', next); } catch (e) {}
+      btn.textContent = icon(next);
+    });
+  }
+
+  // Per-story feedback control: opens a pre-filled brief-feedback issue.
+  var REPO = 'https://github.com/tyfrey-droid/morning-brief-routine/issues/new';
+  var date = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : '';
+  var sections = document.querySelectorAll('section');
+  for (var s = 0; s < sections.length; s++) {
+    var label = sections[s].querySelector('.section-label');
+    var items = sections[s].querySelectorAll('li');
+    if (!label || !items.length) continue;
+    var section = label.textContent.trim();
+    for (var i = 0; i < items.length; i++) {
+      var lead = items[i].querySelector('strong');
+      if (!lead) continue;
+      var story = lead.textContent.trim();
+      var body = 'Section: ' + section + '\nStory: ' + story + '\nIssue of: ' + date +
+        '\n\nFeedback (keep one, or write your own):\n' +
+        '- already read / redundant\n- not relevant\n- more like this\n';
+      var a = document.createElement('a');
+      a.className = 'flag';
+      a.href = REPO + '?labels=brief-feedback' +
+        '&title=' + encodeURIComponent('Feedback: ' + story) +
+        '&body=' + encodeURIComponent(body);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.title = 'Send feedback on this story';
+      a.setAttribute('aria-label', 'Send feedback on: ' + story);
+      a.textContent = '⚑';
+      items[i].appendChild(a);
+    }
+  }
+})();
+</script>
+</body></html>
