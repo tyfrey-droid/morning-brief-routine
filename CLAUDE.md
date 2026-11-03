@@ -488,18 +488,38 @@ Publish on an off-day — running the full normal pipeline — in either case:
   ("run it now", "publish today"). Always honor this; do not ask twice.
 - **"Run now" from the routines pane.** This arrives as the stored prompt and
   can look identical to an automated firing, so use the clock to tell them
-  apart. As of 2026-09-01 the trigger fires at **5:30 AM PT on weekdays**
-  (Mon–Fri), so the scheduler's Tue/Thu arrivals are tightly clustered around
-  5:30. An off-day firing INSIDE roughly **5:15–5:50 AM PT** is that scheduler
-  → apply the gate and stop. An off-day firing at any other hour is a human
-  pressing the button → publish.
-  Keep this window tight. It used to be 3:30–7:00 AM, which was safe when
+  apart — **in UTC, never in Pacific time.**
+
+  **Why UTC (fixed 2026-11-03 after a DST miss):** the trigger is pinned to a
+  fixed UTC time (~12:30 UTC, weekdays Mon–Fri), not to a Pacific hour. It
+  therefore lands at 5:30 AM PDT in summer but 4:30 AM PST in winter. The old
+  rule ("5:15–5:50 AM PT") was written in summer and broke when DST ended on
+  2026-11-01: the Tue Nov 3 scheduler firing arrived at 4:44 AM PST, outside
+  the window, and nearly published an unwanted issue — while a genuine 5:30 AM
+  "Run now" would have been gated. Pacific-time windows drift twice a year;
+  UTC windows do not. Do NOT convert this window to PT.
+
+  How to decide (one cheap `git log`, no searches, no connectors):
+  1. Get the current UTC time: `date -u +%H:%M`.
+  2. Calibrate from history: the scheduler's own publish-day runs show its
+     real firing time. Run
+     `TZ=UTC git log origin/main --grep='^Brief for' --format='%ad' --date=format-local:'%a %H:%M' -6`
+     (the `TZ=UTC` prefix is required). The trigger fires ~10–30 min before each "Brief for"
+     commit, so those runs cluster around the scheduler's UTC slot (as of
+     2026-11-03: commits at 12:55–13:01 UTC → trigger ~12:30–12:45 UTC).
+  3. An off-day firing within roughly **−45 / +20 min of that calibrated
+     slot** is the scheduler → apply the gate and stop. Default if history is
+     unclear: **12:10–13:05 UTC**. Any other time is a human pressing the
+     button → publish.
+  Calibrating from the git log means this also self-corrects if the reader
+  ever moves the trigger time — no CLAUDE.md edit needed. If the calibrated
+  slot and the default disagree, trust the git log and mention it in the
+  report.
+
+  Keep the window tight. It used to be 3:30–7:00 AM PT, which was safe when
   off-day firings were rare, but Tue/Thu firings are now routine and a wide
-  window would swallow a genuine 6 AM "Run now" on one of those days —
+  window would swallow a genuine early "Run now" on one of those days —
   refusing the reader, which the gate must never do.
-  (The external trigger is itself set to Mon/Wed/Fri, so off-day firings should
-  be rare and are almost always manual; the window check is only
-  defense-in-depth in case a daily schedule ever returns.)
 
 When publishing off-cadence: note it in the final report, use the normal
 "since the previous brief" lookback, and write index.html + the dated archive
@@ -523,12 +543,13 @@ gate must never cause a silent total outage again:
 2. Dedupe guard: if the newest archive/ file is from today or a brief was
    published within ~12 hours, log "issue already published — skipping
    duplicate firing" and stop.
-3. **RESOLVED 2026-09-01.** The reader reset the trigger to **5:30 AM PT,
-   weekdays (Mon–Fri)** — inside the 4–6 AM PT window they asked for. Firings
+3. **RESOLVED 2026-09-01.** The reader reset the trigger to **~12:30 UTC,
+   weekdays (Mon–Fri)** — 5:30 AM PDT / 4:30 AM PST, inside the 4–6 AM PT
+   window they asked for in both DST regimes. Firings
    now land on the correct Pacific day, so **stop flagging the schedule as
    misconfigured in the final report.** Nothing further is owed on this.
-4. The UTC-skew path in 1. should no longer trigger: a 5:30 AM PT firing has
-   the same UTC calendar day (12:30 UTC in PDT, 13:30 in PST), so the
+4. The UTC-skew path in 1. should no longer trigger: a ~12:30 UTC firing is
+   on the same calendar day in UTC and Pacific (5:30 AM PDT / 4:30 AM PST), so the
    "evening before" condition cannot match. Do NOT delete it — it is the
    outage backstop if the schedule is ever reset to UTC weekdays — but if a
    run ever publishes via 1. again, that means the trigger reverted, and the
@@ -536,6 +557,8 @@ gate must never cause a silent total outage again:
 5. The trigger fires **five** days a week against a **three**-day cadence.
    That is expected and correct, not a bug: Tue/Thu firings hit the gate in
    "Release cadence" step 1 and stop cheaply without searches or connectors.
+   A firing that moves by an hour in Pacific time around a DST change is
+   also expected (the trigger is UTC-pinned) and is not a schedule problem.
    Do not report a gated Tue/Thu firing as an error or a schedule problem —
    log the one-line off-cadence message and stop. `fetch-conditions.yml`
    stays on Mon/Wed/Fri only; there is no reason to fetch conditions for a
