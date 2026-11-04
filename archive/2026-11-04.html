@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Wednesday, November 4, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.flag{
+  display:inline-block; margin-left:.35rem; padding:.1rem .3rem;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.8rem;
+  color:var(--muted); text-decoration:none; opacity:.55; line-height:1;
+}
+.flag:hover,.flag:focus-visible{opacity:1; color:var(--link-hover); text-decoration:none}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.62rem; font-weight:500;
+  letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body><div class="wrap">
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Wednesday, November 4, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 5:05 AM PT &middot; conditions updated 4:44 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>A guided-bomb strike hits a Ukrainian aid centre</strong> &mdash; At least 31 people were killed at Komyshuvakha in Zaporizhzhia region after Russian guided bombs struck a school building being used to distribute humanitarian aid and then a nearby shelter; some of the munitions carried close to 1.5 tons of explosives. Dozens remain unaccounted for, and the dead include four police officers and two rescue workers. Zaporizhzhia declared three days of mourning, and the strike came during a wider overnight barrage on energy infrastructure. (<a href="https://www.npr.org/2026/11/03/g-s1-151439/russia-ukraine-war">NPR</a>, <a href="https://www.nbcnews.com/world/ukraine/-russian-strike-ukrainian-aid-site-komyushuvakha-rcna607191">NBC News</a>, <a href="https://abcnews.com/International/wireStory/death-toll-hits-29-after-russian-strike-ukrainian-137799736">ABC News</a>)</li>
+    <li><strong>Iran talks stall as US strikes Qeshm</strong> &mdash; Monday's brief had a draft proposal moving between the two sides; it has not closed. A senior Iranian official told Reuters the two countries remain far apart, and Tehran publicly played down the chance of a deal after limited US strikes on Qeshm island on the eve of the midterms. Qatari mediators are still reviewing both sides' papers. Trump has declined to rule out resuming full combat operations now that the election has passed, and Vance said no deadlines have been set; Iran's military says it is updating target lists. (<a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-negotiations-midterms/">CBS News</a>, <a href="https://www.aljazeera.com/news/2026/11/2/iran-pushing-accelerated-plan-for-ceasefire-talks-with-us">Al Jazeera</a>, <a href="https://www.dailymaverick.co.za/article/2026-11-03-iran-us-deal-still-out-of-reach-despite-heightened-diplomatic-efforts/">Daily Maverick</a>)</li>
+    <li><strong>Bomb hoaxes ground flights across Europe</strong> &mdash; At least seven passenger flights and an Israel-bound cruise ship received bomb threats on Tuesday, all of which proved false and none of which produced a device. Warsaw's airport briefly closed and a LOT flight from Heathrow diverted to Modlin; the Italian Air Force scrambled Eurofighters to escort a Rome-bound aircraft, and two planes landing in Sofia were targeted. London's Metropolitan Police said four aircraft at Heathrow were named. No group has claimed responsibility, and analysts told Reuters the scattered targeting suggests general disruption rather than a specific aim. (<a href="https://www.pbs.org/newshour/world/flights-across-europe-face-disruption-after-false-bomb-threats">PBS NewsHour</a>, <a href="https://edition.cnn.com/2026/11/03/europe/bomb-threat-airport-warsaw-intl">CNN</a>, <a href="https://www.aljazeera.com/news/2026/11/4/bomb-threats-disrupt-flights-across-europe-no-explosive-devices-found">Al Jazeera</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>Democrats take both chambers</strong> &mdash; Monday's brief had the Senate as the closer call; it was not close. The Associated Press called the House for Democrats early Wednesday, completing a sweep of Congress, and Senate counts stood at roughly 54 Democratic seats to 44 Republican with Alaska and Mississippi uncalled. Republicans went in holding a 219&ndash;214 House edge and a 53&ndash;47 Senate majority, and lost Senate seats in Ohio, Iowa, Maine, North Carolina, Kansas, South Carolina and Texas. Trump told the New York Times he is &ldquo;absolutely willing to accept those results&rdquo; and said on Fox News the losses were not a hit on him. (<a href="https://www.cbsnews.com/live-updates/election-day-2026-midterms/">CBS News</a>, <a href="https://www.cnn.com/2026/11/04/politics/live-news/midterm-election-congress">CNN</a>, <a href="https://www.axios.com/2026/11/03/election-day-midterm-trump-democrats-republicans">Axios</a>)</li>
+    <li><strong>Five governorships change hands</strong> &mdash; Democrats flipped the governor's offices in Texas, Georgia, Nevada, Ohio and Iowa, with Gina Hinojosa winning Texas and Aaron Ford taking Nevada. Incumbents mostly held: Katie Hobbs in Arizona, Josh Green in Hawai&#699;i, Kelly Ayotte in New Hampshire. Republicans took Florida, where Byron Donalds beat David Jolly, and held Tennessee and Alabama with Marsha Blackburn and Tommy Tuberville. Amy Klobuchar won Minnesota and Jocelyn Benson won Michigan. Several counts are still partial and unofficial. (<a href="https://www.nbcnews.com/politics/2026-elections/governor-results">NBC News</a>, <a href="https://www.washingtonpost.com/elections/results/2026/11/03/florida-governor-donalds-jolly-live-updates/">The Washington Post</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong><span class="tag">WORKFLOW</span>Keynote, Pages and Numbers get an assistant &mdash; and an agent door</strong> &mdash; Apple is adding AI assistants to Logic Pro, Keynote, Pages and Numbers, announced October 27 and due on the App Store this month as part of Creator Studio. Each assistant reads the open document: Pages drafts and restructures text, Numbers builds calculations and suggests chart types, Keynote handles slide design. The more useful part for a one-person shop is that the three iWork apps now support MCP, so an outside agent can read and edit a proposal or a budget directly. Caveats are real &mdash; beta, US English only, macOS 27 or later on an Apple Intelligence-capable machine, and the AI features sit behind the Creator Studio subscription even though the apps stay free. (<a href="https://www.thurrott.com/a-i/343266/apple-creator-studio-adds-new-ai-features-for-final-cut-pro-logic-pro-and-the-iwork-suite">Thurrott</a>, <a href="https://www.heise.de/en/news/Apple-adds-AI-helpers-to-creative-subscription-English-only-for-now-11502386.html">heise online</a>)</li>
+    <li><strong>Apple Intelligence reaches China on Alibaba's model</strong> &mdash; Apple and Alibaba confirmed on October 31 that Qwen will power Apple Intelligence in mainland China, and the features went into the developer beta for testing today ahead of a broader December release with iOS 27.3. Qwen handles requests inside Siri, Writing Tools and Visual Intelligence; the rebuilt Siri shown at WWDC is not part of the China launch. Users are prompted for permission before a question, document or image is sent to Qwen, and Alibaba says those requests will not be used to train its models. (<a href="https://www.computerworld.com/article/4243306/apple-intelligence-with-alibaba-comes-to-china-in-december.html">Computerworld</a>, <a href="https://asianews.network/alibabas-qwen-powered-apple-ai-to-launch-in-china-in-december/">Asia News Network</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Portland wins again in Denver</strong> &mdash; The Trail Blazers beat the Nuggets 118&ndash;110 on Monday to go 5&ndash;1, keeping an unbeaten road record. Deni Avdija led Portland with 28 points, nine of them in the fourth quarter, and Damian Lillard added 20; Donovan Clingan pulled down 18 rebounds. Portland shot 15-of-41 from three and out-rebounded Denver 53&ndash;37. Jamal Murray scored 35 for the Nuggets, who fell to 3&ndash;3. (<a href="https://www.espn.com/nba/game/_/gameId/401909918/trail-blazers-nuggets">ESPN</a>, <a href="https://www.blazersedge.com/gameday-coverage/117864/portland-trail-blazers-denver-nuggets-final-score-boxscore-deni-avdija">Blazer's Edge</a>)</li>
+    <li><strong>Golden State makes it five straight</strong> &mdash; The Warriors beat Phoenix 116&ndash;113 at Chase Center on Monday for a fifth consecutive win after opening 0&ndash;3. Stephen Curry had 34 points, seven assists and six rebounds, including 18 in a third quarter he played barely eight minutes of. The game produced three technicals and an ejection for Draymond Green on consecutive technicals in one play. Yaxel Lendeborg, who scored a career-high 37 two nights earlier, added 16 points, five rebounds and five assists; Curry credited the rookie for the turnaround. (<a href="https://www.espn.com/nba/game/_/gameId/401909919/suns-warriors">ESPN</a>, <a href="https://sports.yahoo.com/nba/phoenix-suns-golden-state-warriors-2026110209/">Yahoo Sports</a>)</li>
+    <li><strong>The NBA left Election Day blank</strong> &mdash; There were no games anywhere in the league on Tuesday, a scheduling decision the NBA has made deliberately so that players, staff and fans could vote without a game in the way. The league used the day to push voter participation. Fourteen games are back on the board tonight. (<a href="https://sports.yahoo.com/articles/why-no-nba-games-november-141431397.html">Yahoo Sports</a>, <a href="https://heavy.com/sports/nba/games-today-election-day-november-3/">Heavy</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>Measure B is too close to call</strong> &mdash; The countywide half-cent sales-tax increase was sitting on a knife edge in the first returns, with Yes at about 50.3 per cent to No at 49.7 &mdash; a margin of a few thousand votes out of more than 650,000 counted. Backers estimate it would raise roughly $400 million a year; it would take the rate in the City of San Diego from 7.75 to 8.25 per cent. Results stay unofficial until the canvass finishes, which the Registrar has until December 3 to complete, so this one will not be settled for a while. (<a href="https://www.kpbs.org/news/politics/2026/11/03/live-election-results-san-diego-county-sales-tax-measure-b">KPBS</a>, <a href="https://www.cbs8.com/article/news/politics/elections/san-diego-county-city-measures-live-election-results/509-a84dd703-0148-4d2c-bab9-f3d14fb5238a">CBS 8</a>)</li>
+    <li><strong>The council turns over in two districts</strong> &mdash; Early counts have challengers leading in the two open-seat races and an incumbent trailing: Nicole Crosby ahead of former Coronado mayor Richard Bailey in District 2, Martha Abraham leading incumbent Henry Foster III in District 4, and Antonio Martinez ahead in District 8. Kent Lee was comfortably ahead in District 6 at about 60 per cent. Monday's brief flagged that four seats could reshape the body that sets housing, water rates and the trash fee; on these numbers it will. (<a href="https://www.nbcsandiego.com/elections/san-diego-election-results-2026-midterm-elections/4095405/">NBC San Diego</a>, <a href="https://timesofsandiego.com/community/2026/11/03/election-results-nov-3-2026-general-election/">Times of San Diego</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127802; Kaua&#699;i</p>
+  <ul>
+    <li><strong>Rapozo wins the mayor's race</strong> &mdash; County Council chair Mel Rapozo was projected the winner Tuesday night, taking about 56 per cent to former mayor Bernard Carvalho's 38 in the second printout. He succeeds Derek Kawakami, who ran for lieutenant governor, and takes office December 1. Voters also approved a charter amendment on planning commission appeals. Four of the seven at-large council seats were open after three members ran for mayor and the vice chair termed out, so the council's make-up shifts too; final council placings were still being counted. (<a href="https://www.hawaiinewsnow.com/2026/11/04/mel-rapozo-wins-kauai-mayoral-race-defeating-former-mayor-bernard-carvalho/">Hawaii News Now</a>, <a href="https://www.civilbeat.org/2026/11/kauai-election-results-rapozo-tops-carvalho-for-mayor">Honolulu Civil Beat</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>An e-paper slate for the camera department</strong> &mdash; OFFBIT announced the M1, a 3.1-inch e-paper display that holds lens charts, crew lists and notes and runs about three weeks per charge. Content is pushed from a free iOS app over Bluetooth, with Android in development; the unit is 85 &times; 60 &times; 10 mm and 71 g, with an optional backplate for mounting. It is &euro;199 including VAT plus &euro;35 for the backplate, and pre-orders open November 11 &mdash; but the first batch is 100 units, limit three per person, and US availability is not planned until spring 2027. (<a href="https://www.cined.com/offbit-m1-announced-e-paper-display-for-lens-charts-crew-lists-and-notes-three-week-battery/">CineD</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#128267; F-150 Lightning &amp; EVs</p>
+  <ul>
+    <li><strong>The EV credit bill's arithmetic just changed</strong> &mdash; Monday's brief carried Rep. Greg Landsman's bill to restore the federal EV tax credit at $15,000 new and $8,000 used, and raise the home-charger credit from 30 to 50 per cent, alongside the point that its 160-plus backers were all House Democrats in the minority. After Tuesday those backers are in the majority in both chambers. That is a real change in the odds rather than a passage: the new Congress is not sworn in until January, the bill would still need a presidential signature, and nothing has been rescheduled. For now the purchase credits remain gone for vehicles acquired after September 30, 2025, and the 30C home-charger credit ended June 30, 2026. (<a href="https://electrek.co/2026/10/28/15000-ev-tax-credit-bill-landsman-no-chance/">Electrek</a>, <a href="https://www.kiplinger.com/taxes/605201/federal-tax-credit-for-electric-vehicle-chargers">Kiplinger</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong><span class="tag">HTEM</span>Puppet show is Friday, and attendance is mandatory</strong> &mdash; The performing-arts puppet show is Friday, November 6; students are expected to be there, and the teacher asked families to rehearse lines at home this week.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127780; Weather &mdash; La Mesa</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Today</span>73&deg; / 56&deg; &middot; Mostly sunny &middot; 6% rain</p>
+    <p class="data-row"><span class="data-label">Note</span>Patchy drizzle before 10 a.m., then clearing; wind light out of the northwest</p>
+    <p class="data-row"><span class="data-label">Tomorrow</span>78&deg; &middot; Mostly sunny</p>
+  </div>
+  <p class="source-note">NWS point forecast for La Mesa 91942, issued 1:19 a.m. PT and retrieved 4:44 a.m. PT.</p>
+</section>
+
+<section>
+  <p class="section-label">&#127754; Surf &mdash; Mission Beach / Pacific Beach</p>
+  <div class="data-block">
+    <p class="data-row"><span class="data-label">Swell</span>5.2 ft @ 15s from the W (274&deg;)</p>
+    <p class="data-row"><span class="data-label">Read</span>Chest- to head-high at MB/PB beach breaks, with the long-period sets running bigger &mdash; a west swell pointing straight in</p>
+    <p class="data-row"><span class="data-label">Wind</span>Light northeast around 5 mph before dawn (offshore, clean), going light northwest 0&ndash;5 mph through the day</p>
+    <p class="data-row"><span class="data-label">Tide</span>High 5:53 a.m. (5.5 ft) &middot; Low 12:03 p.m. (1.4 ft) &middot; High 5:47 p.m. (5.0 ft) &middot; Low 11:59 p.m. (0.6 ft)</p>
+    <p class="data-row"><span class="data-label">Water</span>75&deg;F</p>
+    <p class="data-row"><span class="data-label">Outlook</span>Easing: the model drops the swell period from about 12s today to 10s Thursday and 9s Friday, with wave heights sliding from 4.6 ft to about 3.6 ft by Saturday</p>
+  </div>
+  <p class="source-note">Live NOAA data retrieved 4:44 a.m. PT: buoy 46258 Mission Bay West (5.2 ft @ 15s, 274&deg;, 74.8&deg;F) observed 3:56 a.m. and 46225 Torrey Pines (3.9 ft @ 17s, 259&deg;, 76.8&deg;F) observed 4:26 a.m.; tide predictions for San Diego station 9410170; wind from the NWS forecast. Outlook from the Open-Meteo marine model off Mission Beach &mdash; stormsurf.com is unreachable from this environment.</p>
+</section>
+
+<div class="quote">
+  We are because God sustains us in God's memory.
+  <span class="attrib">&mdash; John Swinton, Dementia: Living in the Memories of God</span>
+</div>
+
+<footer>
+  Morning Brief &middot; Wednesday, November 4, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icon = function(t){ return t === 'dark' ? '☀' : '☾'; };
+    btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+    btn.addEventListener('click', function(){
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('brief-theme', next); } catch (e) {}
+      btn.textContent = icon(next);
+    });
+  }
+
+  // Per-story feedback control: opens a pre-filled brief-feedback issue.
+  var REPO = 'https://github.com/tyfrey-droid/morning-brief-routine/issues/new';
+  var date = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : '';
+  var sections = document.querySelectorAll('section');
+  for (var s = 0; s < sections.length; s++) {
+    var label = sections[s].querySelector('.section-label');
+    var items = sections[s].querySelectorAll('li');
+    if (!label || !items.length) continue;
+    var section = label.textContent.trim();
+    for (var i = 0; i < items.length; i++) {
+      var lead = items[i].querySelector('strong');
+      if (!lead) continue;
+      var story = lead.textContent.trim();
+      var body = 'Section: ' + section + '\nStory: ' + story + '\nIssue of: ' + date +
+        '\n\nFeedback (keep one, or write your own):\n' +
+        '- already read / redundant\n- not relevant\n- more like this\n';
+      var a = document.createElement('a');
+      a.className = 'flag';
+      a.href = REPO + '?labels=brief-feedback' +
+        '&title=' + encodeURIComponent('Feedback: ' + story) +
+        '&body=' + encodeURIComponent(body);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.title = 'Send feedback on this story';
+      a.setAttribute('aria-label', 'Send feedback on: ' + story);
+      a.textContent = '⚑';
+      items[i].appendChild(a);
+    }
+  }
+})();
+</script>
+</body></html>
