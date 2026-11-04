@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-11-04T12:44:39Z",
+  "fetched_at_utc": "2026-11-04T18:42:54Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -8,27 +8,17 @@
     "updated": "2026-11-04T09:19:46+00:00",
     "periods": [
       {
-        "name": "Overnight",
-        "temperature": 59,
-        "temperatureUnit": "F",
-        "windSpeed": "5 mph",
-        "windDirection": "NE",
-        "shortForecast": "Patchy Drizzle",
-        "detailedForecast": "Patchy drizzle. Partly cloudy, with a low around 59. Northeast wind around 5 mph.",
-        "precipChancePct": 6
-      },
-      {
-        "name": "Wednesday",
+        "name": "Today",
         "temperature": 73,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 5 mph",
-        "windDirection": "NW",
-        "shortForecast": "Patchy Drizzle then Mostly Sunny",
-        "detailedForecast": "Patchy drizzle before 10am. Mostly sunny, with a high near 73. Northwest wind 0 to 5 mph.",
-        "precipChancePct": 6
+        "windSpeed": "5 mph",
+        "windDirection": "W",
+        "shortForecast": "Sunny",
+        "detailedForecast": "Sunny, with a high near 73. West wind around 5 mph.",
+        "precipChancePct": 0
       },
       {
-        "name": "Wednesday Night",
+        "name": "Tonight",
         "temperature": 56,
         "temperatureUnit": "F",
         "windSpeed": "0 to 5 mph",
@@ -46,23 +36,33 @@
         "shortForecast": "Mostly Sunny",
         "detailedForecast": "Mostly sunny, with a high near 78. West wind 0 to 5 mph.",
         "precipChancePct": 0
+      },
+      {
+        "name": "Thursday Night",
+        "temperature": 56,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "NE",
+        "shortForecast": "Partly Cloudy",
+        "detailedForecast": "Partly cloudy, with a low around 56. Northeast wind 0 to 5 mph.",
+        "precipChancePct": 0
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-11-04T11:56Z",
-    "waveHeightFt": 5.2,
-    "dominantPeriodS": 15,
-    "avgPeriodS": 8.8,
-    "meanWaveDirDeg": 274,
+    "observed_utc": "2026-11-04T18:26Z",
+    "waveHeightFt": 5.6,
+    "dominantPeriodS": 17,
+    "avgPeriodS": 6.8,
+    "meanWaveDirDeg": 277,
     "waterTempF": 74.8
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-11-04T12:26Z",
-    "waveHeightFt": 3.9,
+    "observed_utc": "2026-11-04T17:56Z",
+    "waveHeightFt": 4.6,
     "dominantPeriodS": 17,
-    "avgPeriodS": 7.5,
-    "meanWaveDirDeg": 259,
+    "avgPeriodS": 7.7,
+    "meanWaveDirDeg": 270,
     "waterTempF": 76.8
   },
   "tides_san_diego_9410170": [
