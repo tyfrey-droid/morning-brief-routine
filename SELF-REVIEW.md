@@ -1195,3 +1195,35 @@ Tweak to try next run: websearch refuses reuters.com/apnews.com/bbc.com as
   stop trying to browse the trades and instead query the PRODUCT space directly by
   maker and model-year ("Sigma FP2 price release date", "SmallHD announced") — that
   is what surfaced every gear item that worked in the last three issues.
+
+## 2026-11-04 (Wednesday)
+Thin/empty: Mito OMITTED, and this one stings — the real MELAS news of the year is that
+  Tisento's Phase 2b PRIZM missed every endpoint and the company has discontinued
+  zagociguat for MELAS and all primary mito disease. I could NOT confirm the community
+  letter's date; the only verifiable date is the ClinicalTrials.gov OLE termination,
+  5 Oct, which is 30 days out. Both date rules (use the older date; exclude if
+  unconfirmable) say exclude, so I did, and reported it to the reader in the chat
+  instead. If it is still uncited by Friday, consider whether a confirmed-date
+  secondary pickup appears; do not quietly let it age out unmentioned.
+  Gear ran 1 bullet (DP7/DP5 was a September announcement — date-excluded; FX5 and
+  Focus 504 already carried). EV ran 1. School ran 1: only new mail since Monday was a
+  pre-order deadline that had already expired.
+Unsure: the EV bullet is an inference — the credit bill's backers are now a majority.
+  I kept it because the facts are all sourced and I stated plainly that nothing has
+  passed or been rescheduled. A reviewer could call it speculative framing.
+  Also the School bullet is a second mention of Monday's puppet show, justified only
+  by the "now imminent" clause. Borderline; would have cut it if anything else qualified.
+Practical AI: no WORKFLOW item surfaced from the editing trades inside 14 days (Resolve
+  21.1/Runway-in-Premiere/Imagen all already carried or out of window), so the Apple
+  Creator Studio iWork assistants + MCP carried the WORKFLOW slot. Honest fit — MCP on
+  Pages/Numbers is genuinely actionable for a sole proprietor — but it is an Apple item
+  doing double duty. Two Tech bullets rather than padding to three.
+GW watch: no bullet, fourth issue running. USNI's Nov 2 tracker still has CVN-73 in the
+  Arabian Sea with CVW-5 and USS Shoup — unchanged from Oct 26. Correctly silent.
+Tweak that worked: searching the PRODUCT space by maker+model (last run's note) is what
+  found the OFFBIT M1 — the trades' own index pages were useless and WebFetch is still
+  dead on every news host (nofilmschool, tisentotx, smore all ENOTFOUND).
+Tweak to try next run: when a trial/drug item hinges on a date I cannot confirm, run the
+  registry angle FIRST ("<drug> clinicaltrials.gov terminated/completed") rather than
+  the press-release angle — the registry gave a hard date in one search where three
+  searches of company/news pages gave none. Would have saved two searches today.
