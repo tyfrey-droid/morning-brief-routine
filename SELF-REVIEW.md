@@ -1227,3 +1227,24 @@ Tweak to try next run: when a trial/drug item hinges on a date I cannot confirm,
   registry angle FIRST ("<drug> clinicaltrials.gov terminated/completed") rather than
   the press-release angle — the registry gave a hard date in one search where three
   searches of company/news pages gave none. Would have saved two searches today.
+
+## 2026-11-06 (Friday)
+Thin/empty: Mito omitted — the 14-day PubMed window held only two MELAS case reports, a
+  fungal-heteroplasmy paper and a twin-research essay; none clear the bar. EV ran 1 bullet
+  (no Lightning item in window at all; the $15k credit bill was already carried twice).
+  Tech ran 2, Sports 2, School 1 (only qualifying mail since Wednesday was a same-day
+  kitchen volunteer call). Last run's tweak — hit the registry/primary source first —
+  paid off on the Mito pass: two PubMed title-scoped searches settled it with no web
+  searches burned on press releases.
+Unsure: the Iran bullet. The "mediators handed over written proposals" development is
+  carried mainly by Israeli outlets (JPost, The Media Line) rather than a wire, which is
+  thinner sourcing than the consensus rule really wants. Kept it because the underlying
+  story is dominant and the bullet states the gaps plainly, but a wire pickup would have
+  been better. Also the EVgo bullet is a press release doing duty as a news item.
+GW watch: no bullet, fifth issue running. USNI's Nov 2 tracker and the Nov 5 naval update
+  map both still place CVN-73 in the Arabian Sea with CVW-5 — unchanged since Oct 26.
+  Correctly silent.
+Tweak to try next run: when a World candidate's only coverage is regional/partisan-adjacent
+  outlets, run one explicit wire-scoped search ("Reuters OR AP <story>") before committing
+  the bullet — either it upgrades the citation or it tells me to drop the item, and it is
+  one search either way.
