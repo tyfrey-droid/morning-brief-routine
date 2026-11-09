@@ -44,7 +44,7 @@ line you have actually verified.
 
 ### Martin Luther King Jr.
 - "I have lived these last few years with the conviction that unearned suffering is redemptive."
-  — "Suffering and Faith," *The Christian Century*, 1960. Used 2026-09-07.
+  — "Suffering and Faith," *The Christian Century*, 1960. Used 2026-09-07, 2026-11-09.
 - Progress "comes through the tireless efforts of men willing to be co-workers with God, and
   without this hard work, time itself becomes an ally of the forces of social stagnation."
   — *Letter from Birmingham Jail*, 1963. Used 2026-08-23.
@@ -77,6 +77,12 @@ sources. Stop re-searching these; they are not confirmable without a physical co
 - "The church is an embodied theodicy of practice…" (*Raging with Compassion*) — appears in
   quotation marks in reviews, but could not be confirmed as Swinton's wording rather than a
   reviewer's summary. **Do not use.**
+- "More than ever before I am convinced of the reality of a personal God." (attributed to
+  "Suffering and Faith") — the preceding sentence ("I have also learned that the suffering and
+  agonizing moments through which I have passed over the last few years have also drawn me closer
+  to God") IS confirmed via the Stanford King Institute's personalism essay, but this follow-on
+  sentence could not be confirmed in any source on 2026-11-09, and kinginstitute.stanford.edu is
+  unreachable from this sandbox. **Do not use** until the essay text is checked directly.
 - "Who am I when I've forgotten who I am?" / "What does it mean to love God and be loved by God
   when I have forgotten who God is?" (*Dementia: Living in the Memories of God*) — these are the
   book's two framing questions as rendered in publisher and reviewer copy. Likely close to the
@@ -90,6 +96,7 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 
 | Date | Author | Source |
 |------|--------|--------|
+| 2026-11-09 | MLK | "Suffering and Faith," The Christian Century, 1960 |
 | 2026-10-19 | Bonhoeffer | Letters and Papers from Prison (Christmas Eve 1943) |
 | 2026-10-16 | Augustine | The City of God, Book XXII, Ch. 30 |
 | 2026-10-14 | Swinton | Becoming Friends of Time |

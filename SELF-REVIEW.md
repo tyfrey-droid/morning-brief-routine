@@ -1248,3 +1248,23 @@ Tweak to try next run: when a World candidate's only coverage is regional/partis
   outlets, run one explicit wire-scoped search ("Reuters OR AP <story>") before committing
   the bullet — either it upgrades the citation or it tells me to drop the item, and it is
   one search either way.
+
+## 2026-11-09 (Monday)
+Thin/empty: Sports ran 2 (no league-wide item — didn't spend a search on one once Blazers and
+  Warriors were both covered). Mito ran 1 (Nature Metabolism, Oct 27 — the only one of 29
+  PubMed hits in the window to clear the bar; the rest were case reports, a base-editing
+  technology review with no named drugs or trials, and a natural-history cohort). School is
+  HTEM-only: app.smore.com is still refused by the egress policy, and Friday's Foster broadcast
+  was a one-line "here is your weekly SMORE" with no content of its own, so there was nothing
+  to build a FOSTER bullet from. GW watch silent for a sixth issue — USNI's Nov 2 tracker is
+  still the newest word and news.usni.org is blocked, so this was settled by search alone.
+Unsure: the closing quote. I drafted an MLK line whose first sentence verifies via the Stanford
+  King Institute but whose second sentence does not appear in any source, and nearly shipped it
+  before reading QUOTES.md. Caught it post-push and swapped to a verified bank line; the
+  unverified sentence is now logged in the do-not-ship list. The real error was procedural —
+  I picked the quote from memory and checked the ledger afterwards. Also the Kaua'i homestead
+  item is Nov 2, older than the previous brief, kept because it was never carried and the
+  14-day rule allows it.
+Tweak to try next run: read QUOTES.md during the opening repo pass, alongside the archives and
+  this file, and pick the quote from the bank before drafting — not after the page is written.
+  Same habit the conditions.json step already has: consult the repo's own state first.
