@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Monday, November 9, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.flag{
+  display:inline-block; margin-left:.35rem; padding:.1rem .3rem;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.8rem;
+  color:var(--muted); text-decoration:none; opacity:.55; line-height:1;
+}
+.flag:hover,.flag:focus-visible{opacity:1; color:var(--link-hover); text-decoration:none}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.62rem; font-weight:500;
+  letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body><div class="wrap">
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Monday, November 9, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 5:50 AM PT &middot; conditions updated 5:45 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+  <p class="section-label">&#127757; World</p>
+  <ul>
+    <li><strong>Kraków gunman dies after square attack</strong> &mdash; A man drove into Kraków's Main Market Square on Saturday afternoon and opened fire on people in the square, killing six and wounding about 15 others, including two police officers, before officers shot and wounded him. Police said on Monday that he had died in hospital. Prime Minister Donald Tusk said the bodies of three of the suspect's close relatives were later found at his home in Ostrowiec &#346;wi&#281;tokrzyski, roughly 150km to the north-east. Prosecutors are treating far-right ideology as the likely motive &mdash; the defence minister called it an act of terror &mdash; and the investigation is continuing; the man held a firearms licence issued in March and had not previously come to police attention. Kraków's mayor has declared official mourning until Wednesday. (<a href="https://www.cnn.com/2026/11/09/europe/krakow-shooting-poland-gunman-dead-intl-hnk">CNN</a>, <a href="https://www.pbs.org/newshour/world/gunman-opens-fire-in-polish-city-of-krakow-killing-6-people-and-injuring-15">PBS NewsHour</a>, <a href="https://www.washingtonpost.com/world/2026/11/07/poland-shooting-krakow-market-dead/60c05c24-dabd-11f1-930a-e08f8086f5ac_story.html">The Washington Post</a>)</li>
+    <li><strong>Missiles reach Riyadh's financial district</strong> &mdash; An Aramco administrative building in Riyadh's King Abdullah Financial District was damaged on Sunday in what the Saudi Energy Ministry called an attempted attack, with damage it described as minor and no casualties; Associated Press reporters at the scene described damage across several floors. The Saudi-led coalition said air defences shot down two ballistic and two cruise missiles aimed at Riyadh and other areas, and attributed the launches to the Houthis, who claimed hits on the financial district, King Khalid International Airport and Aramco storage tanks &mdash; claims Saudi authorities have not confirmed. The exchange follows Saudi airstrikes near Sanaa the previous day, and marks the war's spread to the Saudi capital's business core. (<a href="https://abcnews.com/International/wireStory/saudi-arabia-intercepts-missiles-aramco-building-riyadh-damaged-137951443">ABC News</a>, <a href="https://www.cnn.com/2026/11/08/middleeast/saudi-arabia-riyadh-missile-financial-intl">CNN</a>)</li>
+    <li><strong>Qatar's mediator goes to the White House</strong> &mdash; Friday's brief had written proposals being handed to Tehran; the next step is a meeting rather than an answer. Qatari Prime Minister Sheikh Mohammed bin Abdulrahman Al-Thani sees Vice President JD Vance and then Trump at the White House on Monday, in the main channel between Washington and Tehran. Expectations are being managed downward on both sides: senior US and Gulf officials doubt any imminent agreement, and Secretary of State Marco Rubio has called Iran's terms &mdash; an end to the port blockade, some sanctions relief and a halt to bombing in exchange for reopening the Strait of Hormuz &mdash; unacceptable. Trump, who confirmed fresh US strikes on Qeshm island last week, has said further strikes are "highly unlikely" if talks keep moving. (<a href="https://www.axios.com/2026/11/09/trump-qatar-prime-minister-iran-war-mediation">Axios</a>, <a href="https://www.arabnews.com/middle-east/trump-to-meet-iran-war-mediator-qatar-no-imminent-deal-seen-to-end-the-war-3010661">Arab News</a>, <a href="https://aljazeera.com/news/2026/11/7/trump-confirms-new-us-strikes-on-irans-qeshm-island">Al Jazeera</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+  <ul>
+    <li><strong>The House moves to impeach Hegseth</strong> &mdash; Friday's brief had Trump privately canvassing replacements for the defence secretary; the question has now moved to the floor. Representative Thomas Massie, a Kentucky Republican, is forcing a vote on eight articles of impeachment against Pete Hegseth, centred on continuing the war with Iran in defiance of Congress and the War Powers Resolution, plus strikes on suspected drug-trafficking boats. Leadership is braced for enough Republican defections to pass it; Minority Leader Hakeem Jeffries says he is a "hard yes" and nearly all Democrats are expected to follow. Reports put the vote as early as Monday. Two caveats: removal would take a two-thirds Senate vote, which is not close to available, and Massie has said he will drop the articles if Hegseth resigns. Trump has publicly defended him; Hegseth calls the effort a sham. (<a href="https://www.axios.com/2026/11/08/pete-hegseth-impeachment-house-republicans-massie">Axios</a>, <a href="https://www.cnn.com/2026/11/08/politics/live-news/midterm-election-trump-congress">CNN</a>)</li>
+    <li><strong>Trump orders investigations of Democrats</strong> &mdash; Trump directed the Justice Department on Saturday to investigate Democrats over what he described as threats of impeachment and other punishment aimed at administration officials and donors, calling it a criminal act without presenting evidence and naming Michigan Senator Elissa Slotkin. On Sunday, Attorney General Todd Blanche declined to rule out prosecuting Democratic members of Congress, while saying he could not specify when or on what basis, and said the department would provide legal defence to officials facing congressional scrutiny. The backdrop is the oversight Democrats are preparing for January: Representative Robert Garcia, in line to chair House Oversight, has said he is readying investigations of the administration, though some in his party favour guardrails over impeachment. (<a href="https://www.washingtonpost.com/politics/2026/11/07/trump-calls-justice-department-investigate-democrats/">The Washington Post</a>, <a href="https://www.axios.com/2026/11/08/todd-blanche-doj-prosecuting-democrats-oversight">Axios</a>, <a href="https://www.pbs.org/newshour/amp/politics/trump-and-his-justice-department-stand-defiant-as-democrats-ready-an-investigative-blitz">PBS NewsHour</a>)</li>
+    <li><strong>Mississippi's Senate seat is still open</strong> &mdash; The last genuinely undecided Senate race has moved, and it has moved one way. Democrat Scott Colom now leads Republican incumbent Cindy Hyde-Smith by roughly 2,500 votes out of more than 900,000 cast &mdash; about a quarter of a percentage point &mdash; after trailing within double digits on election night; the Associated Press has not called it with about 97 per cent counted. Just over 3,000 mail ballots and an unknown number of affidavit ballots remain, and counties must finish by November 13 for the result to be certified. Mississippi is the only state with neither an automatic nor a requestable recount, so the only route to one is a court order sought by the losing side. (<a href="https://thehill.com/homenews/campaign/6199322-mississippi-senate-race-recount-mail-ballots/">The Hill</a>, <a href="https://www.washingtonpost.com/politics/2026/11/05/mississippi-senate-race-why-theres-no-recount-colom-vs-hyde-smith/">The Washington Post</a>, <a href="https://abcnews.com/Politics/recounts-mississippi-razor-thin-margin-senate-race/story?id=137844445">ABC News</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#9889; Tech &amp; AI</p>
+  <ul>
+    <li><strong><span class="tag">WORKFLOW</span>Pro Tools puts stem separation in the free tier</strong> &mdash; Avid shipped Pro Tools 2026.11 on November 3 with an AI Stem Separator bundled into every tier, including the free Intro version, at no extra charge. It splits a mixed recording into as many as six stems &mdash; vocals, drums, bass, guitar, keys and other &mdash; and runs on your own machine, so nothing is uploaded; you drag audio into the extension, audition the stems and send them back as separate tracks. For an editor that is a practical way to pull a usable dialogue or vocal track out of location audio or an archival mix without buying a separate plug-in or round-tripping to another app. The release also introduces the Extensions plug-in format and MIDI Polyphonic Expression. The catch is that stem separation is a rescue tool, not a mix: expect artefacts on dense material. (<a href="https://www.newsshooter.com/2026/11/05/avid-pro-tools-2026-11/">Newsshooter</a>, <a href="https://www.avid.com/resource-center/whats-new-in-pro-tools-202611">Avid</a>, <a href="https://www.redsharknews.com/pro-tools-2026-11-extensions-stem-separator-mpe">RedShark News</a>)</li>
+    <li><strong><span class="tag">WORKFLOW</span>Claude can now read your accounts</strong> &mdash; Anthropic opened a Personal Finance beta on November 5 that links bank, credit card, loan and investment accounts to Claude, puts balances and spending on one page, and lets you ask questions about your own money in plain language. For a sole proprietor the obvious use is the work ordinarily done by hand at quarter end &mdash; categorising spending, finding the deductible items, sanity-checking cash flow against invoices. It is included on the Pro, Max and Ultra plans at no extra cost and is US-only. Two real caveats: it is a beta, so treat its categorisation as a draft an accountant checks rather than a filing; and it means handing read access to your financial accounts to an AI product, which is a decision worth making deliberately rather than by default. (<a href="https://support.claude.com/en/articles/12138966-release-notes">Claude Release Notes</a>)</li>
+    <li><strong>macOS 27 drops Intel, and Siri opens to apps</strong> &mdash; Apple put the 27.3 betas out on November 3 across iOS, iPadOS, macOS, tvOS, watchOS and visionOS, with a redesigned Health app and wider Siri AI features; MacRumors calls it the largest update since iOS 27 shipped in September, and the public release is expected late November or early December. Two details matter more than the feature list for anyone buying or keeping a Mac: Apple has confirmed macOS 27 will run on Apple silicon only, making macOS 26 the last release to support Intel Macs, and a new Developer Preview in the 27.3 betas lets any developer wire an app into Siri AI &mdash; which is what would make the assistant useful for driving the apps you actually work in. (<a href="https://www.macrumors.com/2026/11/07/top-stories-apple-product-launches/">MacRumors</a>, <a href="https://developer.apple.com/news/">Apple Developer</a>, <a href="https://www.macworld.com/article/3273463/apples-probably-done-announcing-new-hardware-but-november-is-still-pretty-jammed.html">Macworld</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127936; Sports</p>
+  <ul>
+    <li><strong>Portland loses two in a row</strong> &mdash; The Trail Blazers' good start has stalled. Friday in Los Angeles they led into the third quarter before the Lakers ran off 17 straight points, and Luka Don&ccedil;i&#263; &mdash; 53 points, his eleventh career 50-point game &mdash; hit the jumper that settled it with 28 seconds left, 124&ndash;118. Saturday at home was worse: San Antonio led 64&ndash;49 at the break and won 125&ndash;103, Victor Wembanyama scoring 29 on 9-of-13 shooting. Deni Avdija had 22 and then 15, and rookie centre Yang Hansen posted his first career double-double with 12 points and 10 rebounds. Portland is 6&ndash;3; the Spurs are 8&ndash;2. (<a href="https://www.espn.com/nba/recap/_/gameId/401909294">ESPN</a>, <a href="https://www.nba.com/blazers/videos/game-highlights-portland-trail-blazers-118-la-lakers-124-nov-6-2026">NBA.com</a>, <a href="https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261106_POR@LAL/">CBS Sports</a>)</li>
+    <li><strong>Curry's fourth quarter runs the streak to seven</strong> &mdash; Golden State beat Orlando 126&ndash;119 in overtime at Chase Center on Saturday for a seventh consecutive win after opening the season 0&ndash;3 &mdash; only the second team ever to follow an 0&ndash;3 start with a seven-game streak, and the franchise's longest run since March 2025. Stephen Curry finished with 41 points, six rebounds and six assists on 13-of-19 shooting, with 19 of those points in the fourth quarter and overtime; his go-ahead layup with 25.2 seconds left was answered by an Orlando putback that forced the extra period, and he scored again to close it. Yaxel Lendeborg added 23 and Brandin Podziemski 15. The Warriors won despite 19 turnovers. (<a href="https://www.espn.com/nba/recap?gameId=401909942">ESPN</a>, <a href="https://www.sfchronicle.com/sports/warriors/article/warriors-steph-curry-scores-41-points-team-wins-22517447.php">San Francisco Chronicle</a>, <a href="https://www.washingtonpost.com/sports/nba/2026/11/07/magic-warriors-score/8ee48f14-db2e-11f1-930a-e08f8086f5ac_story.html">The Washington Post</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127754; San Diego</p>
+  <ul>
+    <li><strong>The city says the deficit is gone</strong> &mdash; Mayor Todd Gloria, the chief financial officer and the new chief operating officer presented the five-year financial outlook on Friday and said the city will enter the next fiscal year balanced without further cuts or new revenue, with a small surplus projected for fiscal 2028. The turn is credited mainly to roughly $180 million in spending reductions made this cycle, plus a smaller amount of new revenue; a year ago the gap was $258 million and the structural deficit was being called historic. The outlook is a projection rather than a budget, and the officials presenting it were explicit that challenges remain. (<a href="https://www.nbcsandiego.com/news/local/san-diego-mayor-projects-deficit-to-be-eliminated-next-fiscal-year/4098464/">NBC 7 San Diego</a>, <a href="https://www.10news.com/news/local-news/city-of-san-diego-on-track-to-eliminate-historic-general-fund-deficit-according-to-new-report">ABC 10News</a>)</li>
+    <li><strong>Coastal flood advisory through Tuesday</strong> &mdash; The National Weather Service has a coastal flood advisory in effect for the San Diego and Orange county coasts until noon Tuesday, expecting minor to locally moderate flooding around the late-morning high tides, which run to about 7.4&ndash;7.6 feet at the exposed gauges on Monday. Parking lots, parks and low-lying roads are the likely problems, with isolated closures possible. A separate beach hazards statement runs through Tuesday evening for 3-to-7-foot surf and dangerous rip currents on west-facing beaches. (<a href="https://forecast.weather.gov/showsigwx.php?warnzone=CAZ043&amp;warncounty=CAC073&amp;firewxzone=CAZ243&amp;local_place1=Oceanside+CA&amp;product1=Beach+Hazards+Statement&amp;lat=33.2106&amp;lon=-117.329">National Weather Service</a>)</li>
+    <li><strong>Veterans Day closes county offices Wednesday</strong> &mdash; County public offices, family resource centres, libraries, public health centres and animal shelters all close on Wednesday for Veterans Day, as do the city's administrative offices and public library branches, and the Superior Court will not hold courtrooms. The annual Veterans Day parade runs as part of Fleet Week San Diego. Worth planning around if anything needs filing or picking up midweek. (<a href="https://timesofsandiego.com/community/2026/11/08/veterans-day-will-bring-midweek-observances-and-closures-around-san-diego-county/">Times of San Diego</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127802; Kaua&#699;i</p>
+  <ul>
+    <li><strong>Navy and NASA pull their Kaua&#699;i impact statement</strong> &mdash; The state Department of Land and Natural Resources has been notified that the Navy and NASA are withdrawing the final environmental impact statement for their proposed Kaua&#699;i facilities, so the state land board will not take up an acceptability determination on it. Withdrawal resets the review rather than settling it; any revived proposal would have to go back through the environmental process. (<a href="https://www.thegardenisland.com/2026/11/06/hawaii-news/navy-nasa-withdraw-feis-for-kauai-facilities/">The Garden Island</a>)</li>
+    <li><strong>832 homestead leases awarded, most of them in L&#299;hu&#699;e</strong> &mdash; The Department of Hawaiian Home Lands awarded 832 leases at a ceremony on October 31, of which 750 are single-family house lots in L&#299;hu&#699;e &mdash; the largest batch in years for a waiting list that has run decades long. It lands alongside the county housing agency's purchase of 155 acres nearby, which together point at a substantial amount of new L&#299;hu&#699;e housing in the pipeline, though lease award and built house are still a long way apart. (<a href="https://www.thegardenisland.com/2026/11/02/hawaii-news/over-800-hawaiian-homestead-leases-given/">The Garden Island</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127909; Filmmaking Gear</p>
+  <ul>
+    <li><strong>Nikon ZR gets Log3G10 in H.265</strong> &mdash; Nikon has announced firmware 2.00 for the ZR, adding Log3G10 gamma when recording H.265 &mdash; which matters because it brings the camera's cheaper, smaller codec into the same grading pipeline as RED's log curve instead of leaving it to RAW-only workflows &mdash; along with more assignable buttons. It is not out yet; Nikon says before the end of the year. (<a href="https://www.newsshooter.com/2026/11/03/nikon-zr-firmware-version-2-00/">Newsshooter</a>)</li>
+    <li><strong>Deity's $259 recorder ships with the mic</strong> &mdash; Deity has released the PR-2ii pocket recorder at $259 with a lavalier microphone included, putting a second, independent audio capture inside the price of a decent cable. For run-and-gun work it is the cheap insurance play: a backup track that does not depend on the camera's preamps or a wireless link holding up. (<a href="https://www.newsshooter.com/2026/11/02/deity-has-released-the-pr-2ii-pocket-recorder/">Newsshooter</a>)</li>
+    <li><strong>A 96Wh power station that can fly</strong> &mdash; Jackery announced the Explorer 100D, a 96Wh, 850g unit priced at $99 from November 15. The number to notice is 96Wh: it sits under the 100Wh airline limit, so it goes in a carry-on without a battery declaration, which is the whole reason a power station this small exists. Useful for topping up monitors, lights and laptops on location when you cannot count on mains power. (<a href="https://www.newsshooter.com/2026/11/02/jackery-explorer-100d-a-96wh-850-g-portable-power-station/">Newsshooter</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#128267; F-150 Lightning &amp; EVs</p>
+  <ul>
+    <li><strong>Used Lightnings are moving fast and cheap</strong> &mdash; Used F-150 Lightnings are selling in about 20 days, against a 44-day average for used vehicles in the US, and at roughly half their original sticker, according to Electrek's read of the used-market data. That is the discontinued-model paradox working in a buyer's favour and against a seller's: demand for the truck is real once the price drops, but the resale floor for existing owners has fallen hard. (<a href="https://electrek.co/2026/11/05/fords-electric-pickup-selling-like-hotcakes-50-off-used/">Electrek</a>)</li>
+    <li><strong>Ford's Lightning wind-down costs keep accruing</strong> &mdash; Ford's third-quarter results added another $200 million in costs for cancelling the Lightning and the next-generation electric van, taking the year-to-date total to about $800 million, with the EV division citing the Lightning's discontinuation and reduced Mustang Mach-E output among the drivers of its losses. Ford still says the nameplate returns as an extended-range vehicle &mdash; electric drive with a generator and a claimed 700-plus miles of range &mdash; which reporting puts around 2028. For a current owner the useful read is that Ford is treating this as a pause in the nameplate rather than an exit from the segment, which bears on long-term parts and service support. (<a href="https://fordauthority.com/2026/11/ford-f-150-lightning-e-transit-cancellation-costs-carried-over-into-q3-2026/">Ford Authority</a>, <a href="https://fordauthority.com/2026/11/ford-ev-division-continued-to-bleed-billions-through-q3-2026/">Ford Authority</a>)</li>
+    <li><strong>Tesla winds down the Cybertruck</strong> &mdash; Elon Musk said on November 6 that Tesla will end Cybertruck production at its Texas plant by around the middle of 2027, framing it as freeing floor space for the Cybercab robotaxi. He did not say whether the truck continues anywhere else, though its lead engineer's response suggested not. The commercial context is plain: Electrek reckons the truck has been selling at about a tenth of its planned 250,000 units a year, and Tesla raised its price again the day before the announcement. Tesla did the same thing to the Model S and X earlier this year to clear space for Optimus. Musk has since said the existing fleet will be supported for a long time. (<a href="https://www.cnn.com/2026/11/06/business/tesla-winding-down-production-of-cybertruck">CNN</a>, <a href="https://www.washingtonpost.com/business/2026/11/06/musk-says-tesla-will-wind-down-cybertruck-production-texas/">The Washington Post</a>, <a href="https://electrek.co/2026/11/06/tesla-ending-cybertruck-production-sales-10-percent-plan/">Electrek</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#129516; Mito Research</p>
+  <ul>
+    <li><strong>A metabolic weak point above 70 per cent heteroplasmy</strong> &mdash; A study in Nature Metabolism on October 27 looked at what high mutant-mtDNA loads actually do to a cell's metabolism, and found the damage arrives in stages rather than steadily: in cells carrying matched mtDNA deletions, respiration fell in proportion to heteroplasmy, but redox imbalance only appeared above 50 per cent, and above 70 per cent the cells developed integrated stress response&ndash;linked defects in protein synthesis. The finding that matters is what reversed those defects &mdash; either supplying asparagine or raising expression of pyruvate carboxylase, the enzyme whose scarcity left the cells unable to make their own asparagine once respiration was compromised. Patient-derived tumour cells with a high-heteroplasmy complex I mutation showed the same dependency. Two honest limits: this is cell-culture work, not a treatment, and the mutations studied were large mtDNA deletions rather than a point mutation such as m.3243A&gt;G, so whether the same asparagine bottleneck applies there is untested. What makes it worth noting is that it identifies a specific, supplementable metabolic dependency that appears only at the high heteroplasmy levels where disease is severe. (<a href="https://www.nature.com/articles/s42255-026-01651-4">Nature Metabolism</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/42946808/">PubMed</a>)</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127890; School</p>
+  <ul>
+    <li><strong><span class="tag">HTEM</span>No school Wednesday</strong> &mdash; Campus is closed Wednesday, November 11 for Veterans Day.</li>
+    <li><strong><span class="tag">HTEM</span>Spirit night is tomorrow evening</strong> &mdash; Dave &amp; Buster's spirit night runs Tuesday, November 10 from 4 to 7pm, with power cards at $6 for $10 and $11 for $20.</li>
+    <li><strong><span class="tag">HTEM</span>Fieldwork permission slip still outstanding</strong> &mdash; The electronic permission slip for the November 18 trip was due November 4 but has been extended, so sign it on PowerSchool now &mdash; without it a student cannot go. The two-week clearance deadline for driving or chaperoning has already passed, so that window is closed for this trip.</li>
+    <li><strong><span class="tag">HTEM</span>FASS form needed from every family</strong> &mdash; The annual Family and School Support form, which replaced the free-and-reduced-lunch application, is asked of all families regardless of income because it drives state funding; it takes a few minutes and needs no login.</li>
+    <li><strong><span class="tag">HTEM</span>Dates ahead: cereal day, fieldwork, colour run, fall break</strong> &mdash; Family cereal day November 17 at 8:20am, the first fieldwork November 18, the colour run November 20, then no school November 23&ndash;27 for fall break.</li>
+    <li><strong><span class="tag">HTEM</span>Classroom gluesticks and snacks</strong> &mdash; The classroom teachers have asked for gluesticks and snacks, and are also looking for family connections to firefighters, park rangers or Indigenous communities for the current project.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="section-label">&#127780; Weather &mdash; La Mesa</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Today</span>86&deg; / 61&deg; &middot; Sunny &middot; 0% rain</div>
+    <div class="data-row"><span class="data-label">Note</span>Well above normal for early November &mdash; a warm offshore pattern, with northeast wind around 5 mph before dawn going north 0 to 10 mph through the day</div>
+    <div class="data-row"><span class="data-label">Tomorrow</span>86&deg; / 61&deg; &middot; Sunny &middot; the week's first rain chance holds off until the weekend</div>
+  </div>
+  <p class="source-note">NWS point forecast for La Mesa 91942, issued 12:07 a.m. PT and retrieved 5:45 a.m. PT.</p>
+</section>
+
+<section>
+  <p class="section-label">&#127754; Surf &mdash; Mission Beach / Pacific Beach</p>
+  <div class="data-block">
+    <div class="data-row"><span class="data-label">Swell</span>4.6 ft @ 12s from the W (280&deg;), with a longer 15s line from the SSW (211&deg;) reading at Torrey Pines</div>
+    <div class="data-row"><span class="data-label">Read</span>Chest-high on the better sets at MB/PB beach breaks. Two swells in the water from different directions, so sets will arrive at uneven intervals with lulls between</div>
+    <div class="data-row"><span class="data-label">Wind</span>Northeast around 5 mph before dawn (light offshore, clean), north 0&ndash;10 mph through the day</div>
+    <div class="data-row"><span class="data-label">Tide</span>Low 1:55 a.m. (2.0 ft) &middot; High 8:12 a.m. (6.6 ft) &middot; Low 3:18 p.m. (&minus;0.4 ft) &middot; High 9:33 p.m. (4.1 ft)</div>
+    <div class="data-row"><span class="data-label">Water</span>75&deg;F</div>
+    <div class="data-row"><span class="data-label">Advisory</span>Coastal flood advisory until noon Tuesday and a beach hazards statement through Tuesday evening &mdash; dangerous rip currents on west-facing beaches</div>
+    <div class="data-row"><span class="data-label">Outlook</span>Holding then easing: the model keeps about 3.9 ft of swell at 12s today and 3.9 ft at 10.8s Tuesday, then drops to 3.2 ft at 9.6s Wednesday and 2.9 ft Thursday</div>
+  </div>
+  <p class="source-note">Live NOAA data retrieved 5:45 a.m. PT: buoy 46258 Mission Bay West (4.6 ft @ 12s, 280&deg;, 75.4&deg;F) and 46225 Torrey Pines (3.9 ft @ 15s, 211&deg;, 75.2&deg;F), both observed 4:56 a.m.; tide predictions for San Diego station 9410170; wind from the NWS forecast; advisories from NWS San Diego. Outlook from the Open-Meteo marine model off Mission Beach &mdash; stormsurf.com is unreachable from this environment.</p>
+</section>
+
+<div class="quote">
+  I have also learned that the suffering and agonizing moments through which I have passed over the last few years have also drawn me closer to God. More than ever before I am convinced of the reality of a personal God.
+  <span class="attrib">&mdash; Martin Luther King Jr., &ldquo;Suffering and Faith,&rdquo; The Christian Century, 1960</span>
+</div>
+
+<footer>
+  Morning Brief &middot; Monday, November 9, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icon = function(t){ return t === 'dark' ? '☀' : '☾'; };
+    btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+    btn.addEventListener('click', function(){
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('brief-theme', next); } catch (e) {}
+      btn.textContent = icon(next);
+    });
+  }
+
+  // Per-story feedback control: opens a pre-filled brief-feedback issue.
+  var REPO = 'https://github.com/tyfrey-droid/morning-brief-routine/issues/new';
+  var date = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : '';
+  var sections = document.querySelectorAll('section');
+  for (var s = 0; s < sections.length; s++) {
+    var label = sections[s].querySelector('.section-label');
+    var items = sections[s].querySelectorAll('li');
+    if (!label || !items.length) continue;
+    var section = label.textContent.trim();
+    for (var i = 0; i < items.length; i++) {
+      var lead = items[i].querySelector('strong');
+      if (!lead) continue;
+      var story = lead.textContent.trim();
+      var body = 'Section: ' + section + '\nStory: ' + story + '\nIssue of: ' + date +
+        '\n\nFeedback (keep one, or write your own):\n' +
+        '- already read / redundant\n- not relevant\n- more like this\n';
+      var a = document.createElement('a');
+      a.className = 'flag';
+      a.href = REPO + '?labels=brief-feedback' +
+        '&title=' + encodeURIComponent('Feedback: ' + story) +
+        '&body=' + encodeURIComponent(body);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.title = 'Send feedback on this story';
+      a.setAttribute('aria-label', 'Send feedback on: ' + story);
+      a.textContent = '⚑';
+      items[i].appendChild(a);
+    }
+  }
+})();
+</script>
+</body></html>
