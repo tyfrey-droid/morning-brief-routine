@@ -1268,3 +1268,27 @@ Unsure: the closing quote. I drafted an MLK line whose first sentence verifies v
 Tweak to try next run: read QUOTES.md during the opening repo pass, alongside the archives and
   this file, and pick the quote from the bank before drafting — not after the page is written.
   Same habit the conditions.json step already has: consult the repo's own state first.
+
+## 2026-11-11 (Wednesday)
+Thin/empty: Mito omitted — the two in-window PubMed hits were a base-editing *review* (Acta Biochim
+  Biophys Sin, Nov 6) with no named drugs, trials or regulatory status, and a single MELAS case report
+  (Neurologist, Nov 2) whose only contribution is an MLPA diagnostic route for patients who test
+  negative for m.3243A>G — no value for an already-confirmed diagnosis. Correctly silent. EVs ran 1:
+  no Lightning-specific development in the window (the Nov 6 Ford Authority pieces were carried Nov 9;
+  the Charge Station Pro OTA is ~114 days old), so the section is the EVgo/LS Power take-private item
+  alone. No gadget pick — nothing new surfaced. School ran 1 (HTEM lost-and-found, real Nov 20
+  deadline); Foster had no new broadcast since Nov 9 and app.smore.com is still refused by the egress
+  policy. GW watch silent for a seventh issue: USNI's Nov 9 tracker only restates the Arabian Sea
+  position, and the one conflicting claim (gonavy.jp: returned to Norfolk) is contradicted by USNI and
+  navy.mil, so it was not written.
+Unsure: the NAVWAR data-center item is Oct 30 — older than the previous brief, kept because it was
+  never carried and sits inside the 14-day limit, but the bill text still is not public, so the bullet
+  says accounts differ on whether it blocks the project or only requires local consent rather than
+  picking one. Also caught myself about to publish invented specifics for the Logitech MX Master 4
+  (thumb-rest haptics, preloaded Adobe profiles) that no source supported, and the wrong product name
+  ("Creative" for "Creator"); rewrote it to what the one source actually says. Same class of error as
+  last run's quote — detail supplied from memory rather than from the source in hand.
+Tweak to try next run: QUOTES.md-first worked (Chambers picked during the opening repo pass, before
+  drafting). Extend that habit to product items: when a bullet names a product, re-read the search
+  result for it immediately before writing, and if the only detail I have is name/price/date, write
+  only name/price/date.
