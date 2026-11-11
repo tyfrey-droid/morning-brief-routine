@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-11-11T19:36:48Z",
+  "fetched_at_utc": "2026-11-11T19:52:18Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -11,10 +11,10 @@
         "name": "Veterans Day",
         "temperature": 85,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 10 mph",
+        "windSpeed": "5 to 10 mph",
         "windDirection": "W",
         "shortForecast": "Sunny",
-        "detailedForecast": "Sunny, with a high near 85. West wind 0 to 10 mph.",
+        "detailedForecast": "Sunny, with a high near 85. West wind 5 to 10 mph.",
         "precipChancePct": 0
       },
       {
@@ -50,11 +50,11 @@
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-11-11T18:56Z",
-    "waveHeightFt": 4.3,
+    "observed_utc": "2026-11-11T19:26Z",
+    "waveHeightFt": 4.6,
     "dominantPeriodS": 13,
-    "avgPeriodS": 9.5,
-    "meanWaveDirDeg": 287,
+    "avgPeriodS": 10.0,
+    "meanWaveDirDeg": 277,
     "waterTempF": 75.7
   },
   "buoy_46225_torrey_pines": {
