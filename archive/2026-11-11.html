@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Wednesday, November 11, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.flag{
+  display:inline-block; margin-left:.35rem; padding:.1rem .3rem;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.8rem;
+  color:var(--muted); text-decoration:none; opacity:.55; line-height:1;
+}
+.flag:hover,.flag:focus-visible{opacity:1; color:var(--link-hover); text-decoration:none}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.62rem; font-weight:500;
+  letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body><div class="wrap">
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Wednesday, November 11, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 6:05 AM PT &middot; conditions updated 5:45 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+<p class="section-label">&#127757; World</p>
+<ul>
+<li><strong>Abu Dhabi talks end without a deal</strong> &mdash; Monday's brief had Qatar's mediator heading to the White House on Iran; the bigger diplomatic move since has been on Ukraine. US, Russian and Ukrainian delegations met in Abu Dhabi on Tuesday and Wednesday in talks Washington brokered, but the second session broke up in under two hours and Reuters reported it was the last with meetings scheduled. Territory is the obstacle: Russia has not dropped its claim to the Donbas, and Zelensky said territorial questions will have to be settled by leaders rather than negotiators. Lavrov rejected a truce in the meantime, and Russian strikes hit six large electricity substations in central Ukraine overnight. (<a href="https://www.nbcnews.com/world/middle-east/us-russia-ukraine-start-second-day-abu-dhabi-peace-talks-rcna608714">NBC News</a>, <a href="https://www.bloomberg.com/news/articles/2026-11-11/russia-and-ukraine-resume-push-for-peace-deal-in-us-led-talks">Bloomberg</a>, <a href="https://www.kyivpost.com/post/89761">Kyiv Post</a>)</li>
+<li><strong>Trump calls the Iran war &ldquo;effectively over&rdquo;</strong> &mdash; After meeting Qatari Prime Minister Sheikh Mohammed bin Abdulrahman Al-Thani at the White House on Monday, Trump said Iran was &ldquo;militarily, effectively over&rdquo; and that renewed US strikes were &ldquo;quite unlikely,&rdquo; while saying the US remains ready to resume them. Qatar said on Tuesday it saw &ldquo;progress&rdquo; but could not say how close an agreement was, and that nuclear talks would come later. Tehran's public line is the opposite: security official Mohsen Rezaei denied any negotiations are under way and said the Strait of Hormuz stays shut until the US meets all seven of Iran's conditions. No terms have been disclosed by either side. (<a href="https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm">Al Jazeera</a>, <a href="https://www.euronews.com/2026/11/10/qatar-sees-progress-in-us-iran-talks-after-white-house-meeting">Euronews</a>, <a href="https://www.arabnews.com/middle-east/trump-says-iran-war-is-militarily-effectively-over-after-qatar-pm-talks-3010816">Arab News</a>)</li>
+<li><strong>650,000 turn out for Pope Leo in C&oacute;rdoba</strong> &mdash; Pope Leo XIV said Mass before a crowd put at roughly 650,000 at C&oacute;rdoba's military aviation school grounds on Tuesday, on the feast of his namesake Leo the Great. It is the first papal visit to Argentina in nearly 40 years and his first trip to Latin America as pope. He held up Argentine saints &mdash; Cura Brochero and Mama Antula &mdash; as models and told the crowd the Christian calling is missionary by nature; he also met clergy at the cathedral and spoke with people living with addiction and exclusion. Wednesday is his last day in the country, with a prison visit and a Mass at Luj&aacute;n before he flies to Peru. (<a href="https://www.aljazeera.com/gallery/2026/11/10/photos-historic-crowds-greet-pope-leo-xiv-in-argentina-after-40-year-wait">Al Jazeera</a>, <a href="https://www.americamagazine.org/vatican-dispatch/2026/11/10/pope-leo-cordoba-homily-saints-argentina-jesuits/">America Magazine</a>, <a href="https://www.vaticannews.va/en/pope/news/2026-11/pope-leo-highlights-wrap-up-third-day-argentina-cordoba-mass.html">Vatican News</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+<ul>
+<li><strong>The House shelves the Hegseth articles</strong> &mdash; Monday's brief had leadership braced for defections; the vote went the other way. The Republican-led House voted 211&ndash;204 on Tuesday to refer Representative Thomas Massie's eight articles of impeachment against Defense Secretary Pete Hegseth to committee, which effectively kills them for this Congress. Massie was the only Republican to vote against setting the articles aside; seven Republicans and eleven Democrats did not vote at all, more than the margin. Hegseth called the effort &ldquo;a farce.&rdquo; Democrats take the House majority in January and could revive the articles then, with much better odds of passage. (<a href="https://www.npr.org/2026/11/10/nx-s1-6036813/house-votes-to-effectively-end-the-impeachment-effort-against-pete-hegseth">NPR</a>, <a href="https://www.nbcnews.com/politics/congress/republican-led-house-rejects-hegseth-impeachment-effort-rcna608534">NBC News</a>, <a href="https://www.stripes.com/theaters/us/2026-11-10/house-vote-hegseth-impeachment-massie-23427346.html">Stars and Stripes</a>)</li>
+<li><strong>Jim Jordan will lead House Republicans</strong> &mdash; Friday's brief had Mike Johnson stepping aside and both Steve Scalise and Jim Jordan expected to run. House Republicans chose Jordan, the Ohio congressman who chairs the Judiciary Committee, over Majority Leader Scalise by 106&ndash;73 in a secret ballot on Tuesday. He becomes minority leader when the 120th Congress convenes in January, where Democrats currently hold a 254&ndash;166 edge with a handful of races still uncalled. Senate Republicans separately kept John Thune as their leader. (<a href="https://www.pbs.org/newshour/politics/house-republicans-pick-ohio-rep-jim-jordan-to-lead-them-in-the-minority">PBS NewsHour</a>, <a href="https://www.axios.com/2026/11/10/jim-jordan-house-republicans-leadership-elections-scalise">Axios</a>, <a href="https://rollcall.com/2026/11/10/new-minority-leader-for-house-gop-120th/">Roll Call</a>)</li>
+<li><strong>The US is about to lose measles-free status</strong> &mdash; A Pan American Health Organization expert commission met in Washington from Tuesday through Friday to decide whether the United States still qualifies as having eliminated measles, a status it has held since 2000. The test is whether a single chain of transmission has run unbroken for 12 months or more, and reporting suggests the answer is yes. PAHO's director makes the final call, expected to be made public early next week. Losing the designation carries no formal penalty &mdash; it is a measure of how well vaccination coverage and outbreak response are working. Canada lost its status a year ago; Mexico and Bolivia are on PAHO's watch list. (<a href="https://www.cidrap.umn.edu/measles/us-poised-lose-measles-elimination-status-what-does-mean">CIDRAP</a>, <a href="https://www.scientificamerican.com/article/the-u-s-may-be-on-the-cusp-of-losing-its-measles-elimination-status/">Scientific American</a>, <a href="https://www.rte.ie/news/world/2026/1111/1598821-us-measles-status/">RT&Eacute;</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#9889; Tech &amp; AI</p>
+<ul>
+<li><strong><span class="tag">WORKFLOW</span>Premiere 27.0 ships an AI assistant and generative audio</strong> &mdash; Adobe released Premiere 27.0 on Tuesday at MAX, rolling out to Creative Cloud subscribers now. Three pieces matter for an editor: the AI Assistant panel comes out of beta and will read your project and carry out plain-language requests; Generative Media now creates video, music, sound effects and ambience directly in the timeline, with Firefly plus third-party models including Veo, Kling, Runway and Luma; and Color Mode, a full grading workspace beside the timeline, is out of beta too. Generative Remove &mdash; track an unwanted object, let it fill the background &mdash; is in the Beta build, not this release. Two caveats worth planning around: the generative features are metered against Firefly credits rather than included in the subscription, and 27.0 requires Apple silicon, so Intel Macs stop here. (<a href="https://www.cined.com/adobe-premiere-27-0-released-color-mode-ai-assistant-panel-and-generative-audio-tools/">CineD</a>, <a href="https://petapixel.com/2026/11/10/premiere-update-brings-color-mode-out-of-beta-plus-generative-video-ai-audio-tools/">PetaPixel</a>, <a href="https://helpx.adobe.com/premiere/desktop/whats-new/release-notes.html">Adobe</a>)</li>
+<li><strong><span class="tag">WORKFLOW</span>Apple starts charging for AI overage</strong> &mdash; The Creator Studio assistants covered here on November 4 now have a price attached when you use them heavily. Apple began selling one-time $49.99 &ldquo;Intelligence Usage Packs&rdquo; on Monday for subscribers who hit their monthly cap, bought inside the app under Intelligence Features &rarr; Show Usage &rarr; Buy More Usage. Logic Pro is the only app selling them so far, with Final Cut Pro and Pixelmator Pro expected to follow this month. Unused capacity rolls over monthly but expires a year after purchase and cannot be shared through Family Sharing. The honest gap: Apple does not publish how much work a pack actually buys &mdash; it varies by request complexity and server load &mdash; so there is no way to price a job against it in advance. Creator Studio itself remains $12.99 a month. (<a href="https://appleinsider.com/articles/26/11/09/apple-creator-studio-users-can-pay-for-higher-apple-intelligence-usage-limits">AppleInsider</a>, <a href="https://www.notebookcheck.net/Apple-Creator-Studio-Additional-AI-usage-costs-50.1446190.0.html">Notebookcheck</a>)</li>
+<li><strong>Apple is closing its support forums</strong> &mdash; Apple announced Tuesday that the Apple Support Community discussion boards shut permanently on Friday, November 20, ending a two-decade archive of user-written troubleshooting. Worth knowing if you have ever solved a Mac or Final Cut problem by landing on one of those threads from a search: that corpus is going away, and Apple is pointing people to its own support channels instead. Nothing to do about it, but it is a reason to save the page next time a fix you found there actually works. (<a href="https://www.macrumors.com/2026/11/10/apple-support-community-closing-november-20/">MacRumors</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127936; Sports</p>
+<ul>
+<li><strong>Portland dismantles the Thunder</strong> &mdash; The Trail Blazers snapped a two-game slide by beating Oklahoma City 123&ndash;103 at the Moda Center on Tuesday, and did it in the third quarter: tied 59&ndash;59 at the break, Portland won the period 38&ndash;21 and closed it on an 8&ndash;0 run to lead by 17. Damian Lillard scored 25 and Deni Avdija had 24 points, eight assists and six rebounds. Shai Gilgeous-Alexander led the Thunder with 26, though Oklahoma City was missing Jalen Williams and Chet Holmgren. Portland is 7&ndash;3, and the same two teams meet again at the Moda Center tonight. (<a href="https://www.espn.com/nba/recap?gameId=401909965">ESPN</a>, <a href="https://www.blazersedge.com/gameday-coverage/118234/portland-trail-blazers-oklahoma-city-thunder-final-score-boxscore-stats-damian-lilard-shai-gilgeous-alexander">Blazer's Edge</a>, <a href="https://www.si.com/nba/trailblazers/onsi/2-blazers-takeaways-in-huge-win-vs-thunder">Sports Illustrated</a>)</li>
+<li><strong>Eight straight, and a 51-point margin</strong> &mdash; Golden State beat New Orleans 138&ndash;87 at Chase Center on Monday for an eighth consecutive win after the 0&ndash;3 start, finishing a six-game homestand unbeaten and moving to 8&ndash;3. The game was over early &mdash; a 15-point lead after one quarter, 72&ndash;43 at half. Stephen Curry needed only about 20 minutes for 25 points and passed DeMar DeRozan for 16th on the NBA's all-time scoring list; Brandin Podziemski also had 25 and Yaxel Lendeborg 23 with seven rebounds. (<a href="https://www.espn.com/nba/recap?gameId=401909959">ESPN</a>, <a href="https://www.nba.com/warriors/news/gameday-recap-20261109">NBA.com</a>)</li>
+<li><strong>Don&ccedil;i&cacute;'s 40-point run ends at four</strong> &mdash; Luka Don&ccedil;i&cacute; scored 32 with 10 assists as the Lakers beat Atlanta 124&ndash;114 on Tuesday for a sixth straight win, which ended his streak of consecutive 40-point games at four. He and Jalen Brunson were named the league's players of the week. Elsewhere Giannis Antetokounmpo put up 30 on a sprained right wrist in Miami's 115&ndash;109 win over Utah, passing Gary Payton for 39th on the all-time scoring list. (<a href="https://www.nba.com/news/starting-5-november-10-2026">NBA.com</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127754; San Diego</p>
+<ul>
+<li><strong>Midway Rising clears the council unanimously</strong> &mdash; After a meeting that ran more than seven hours, the City Council voted 9&ndash;0 on Monday to approve the real estate agreements, zoning and permitting for Midway Rising, the roughly $4.2 billion redevelopment of the 48.5-acre Sports Arena site. The plan is a new 16,000-seat arena, park space, shops and restaurants and about 4,200 apartments, a large share of them income-restricted; Councilmember Kent Lee added an amendment meant to ensure the affordable units are net new rather than replacements. The council also approved an Enhanced Infrastructure Financing District, which the city must now form with the County over roughly the next year. Opponents are still warning about the terms the city agreed to. (<a href="https://www.nbcsandiego.com/news/local/city-council-to-vote-on-midway-rising-project-monday/4099062/">NBC 7 San Diego</a>, <a href="https://fox5sandiego.com/news/local-news/san-diego/san-diego-midway-rising-approved/">Fox 5 San Diego</a>, <a href="https://www.10news.com/news/local-news/san-diego-news/san-diego-city-council-approved-midway-rising-project">ABC 10News</a>)</li>
+<li><strong>A 400-megawatt data center draws a federal bill</strong> &mdash; San Diego's four Democratic House members say they will introduce legislation to stop a proposed 400-megawatt commercial data center on federal land at the NAVWAR site &mdash; which would be the largest in California &mdash; unless local government consents. The mechanism matters: the city has already passed a 45-day emergency pause on data centers, but it does not reach federal land, which is why the delegation went to Congress. The bill was held until the House returned this month and the text is not public yet, so accounts differ on whether it blocks the project outright or simply requires local sign-off. Manchester Financial Group, which proposed it, says it is one of several options and no agreements are in place; Representative Scott Peters wants the campus used for housing. (<a href="https://timesofsandiego.com/politics/2026/10/30/san-diego-congressional-delegation-navwar-data-center-legislation/">Times of San Diego</a>, <a href="https://voiceofsandiego.org/2026/10/29/congress-could-give-san-diego-more-say-over-navwar-data-center/">Voice of San Diego</a>, <a href="https://www.cbs8.com/article/news/local/proposed-400-megawatt-data-center-at-san-diego-navwar-site-draws-opposition-from-city-leaders/509-f4a225b3-bcc9-486f-8b9e-a6f54ad7e527">CBS 8</a>)</li>
+<li><strong>Gas is the cheapest it has been since September</strong> &mdash; The county average for a gallon of self-serve regular fell to $5.866 on Sunday, down 1.6 cents and the lowest since September 2. A small thing, but it has been drifting down steadily rather than spiking. (<a href="https://timesofsandiego.com/transportation/2026/11/08/gas-prices-around-san-diego-reach-lowest-point-since-sept-2/">Times of San Diego</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127802; Kaua&#699;i</p>
+<ul>
+<li><strong>The new council is settled</strong> &mdash; Last week's brief noted the council's make-up was still being counted after three members ran for mayor and the vice chair termed out. The seven at-large winners are Fern Anuenue Holland, Todd Ozaki, Arryl Kaneshiro, Michelle Correa, Addison Bulosan, Dane Smith and Paul Applegate, elected on a turnout of 49.9 per cent &mdash; 24,635 ballots. Mayor-elect Mel Rapozo, who takes office December 1, has said Hurricane Lowell recovery and the fire at the county's Kapule Building now sit at the top of his list. The council-elect meets November 17. (<a href="https://www.hawaiinewsnow.com/2026/11/05/with-nearly-50-voter-turnout-kauai-selects-next-county-leaders/">Hawaii News Now</a>, <a href="https://www.civilbeat.org/2026/11/kauai-election-results-rapozo-tops-carvalho-for-mayor/">Honolulu Civil Beat</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127909; Filmmaking Gear</p>
+<ul>
+<li><strong>FX6 firmware 6.02 fixes a dual-slot failure</strong> &mdash; Sony has released version 6.02 for the FX6, a small but worthwhile update: it fixes a case where, when recording to both card slots simultaneously, an error in one slot would also stop recording in the other. That is the exact failure dual-slot recording exists to prevent, so it is worth doing before the next paid job rather than after. It follows the larger 6.0 release earlier this year, which added the BIG 6 menu, Blackmagic RAW over HDMI and HLG Mild in custom shooting mode. (<a href="https://www.newsshooter.com/2026/11/05/sony-fx6-firmware-update-ver-6-02/">Newsshooter</a>, <a href="https://nofilmschool.com/sony-fx6-firmware-update-6-02">No Film School</a>)</li>
+<li><strong>An Adobe-themed MX Master 4</strong> &mdash; Logitech put the MX Master 4 Creator Edition on sale Monday at $119.99, an Adobe-branded version of its flagship productivity mouse aimed at Creative Cloud work. The hardware is the same MX Master 4 underneath, so the pitch is the configuration and the branding rather than a new sensor &mdash; of interest mainly if you are already shopping for one and spend the day in Premiere. (<a href="https://newsshooter.com/2026/11/09/logitech-mx-master-4-creator-edition-the-adobe-themed-mx-master-4">Newsshooter</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#128267; F-150 Lightning &amp; EVs</p>
+<ul>
+<li><strong>EVgo may be taken private</strong> &mdash; EVgo reported third-quarter results on Monday with charging revenue up 29 per cent year over year to $72 million and 5,530 stalls in operation, up 20 per cent. The number that matters more is from the week before: on November 2 the company disclosed an unsolicited, non-binding proposal from LS Power, already its largest shareholder, to take it private. Nothing is agreed and such proposals often go nowhere, but EVgo is one of the larger fast-charging networks that still serves both CCS and NACS connectors, which is what keeps it usable for a 2022&ndash;2024 truck charging through an adapter &mdash; so who controls it, and what they do with the buildout rate, is worth following. (<a href="https://www.globenewswire.com/news-release/2026/11/09/3398162/0/en/evgo-inc-reports-third-quarter-2026-results.html">GlobeNewswire</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127890; School</p>
+<ul>
+<li><strong><span class="tag">HTEM</span>Check the lost and found before November 20</strong> &mdash; Everything left in the overflowing lost and found gets donated on Friday, November 20, before fall break; the school is rotating the station between the three pickup gates to make it easier to spot.</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127780; Weather &mdash; La Mesa</p>
+<div class="data-block">
+<div class="data-row"><span class="data-label">Today</span>85&deg; / 59&deg; &middot; Sunny &middot; 0% rain</div>
+<div class="data-row"><span class="data-label">Note</span>Unusually warm for mid-November; light northeast wind overnight, turning onshore out of the west by midday</div>
+<div class="data-row"><span class="data-label">Tomorrow</span>81&deg; &middot; Sunny</div>
+</div>
+<p class="source-note">NWS point forecast for La Mesa 91942, issued 12:13 a.m. PT and retrieved 5:45 a.m. PT.</p>
+</section>
+
+<section>
+<p class="section-label">&#127754; Surf &mdash; Mission Beach / Pacific Beach</p>
+<div class="data-block">
+<div class="data-row"><span class="data-label">Swell</span>4.3 ft @ 13s from the WSW (256&deg;)</div>
+<div class="data-row"><span class="data-label">Read</span>Waist- to chest-high at MB/PB beach breaks, with the occasional bigger set on the 13&ndash;14 second lines</div>
+<div class="data-row"><span class="data-label">Wind</span>Northeast around 5 mph overnight (light offshore, clean early), going west 0&ndash;10 mph through the day (onshore, texture building by midday)</div>
+<div class="data-row"><span class="data-label">Tide</span>Low 2:44 a.m. (2.6 ft) &middot; High 9:05 a.m. (6.2 ft) &middot; Low 4:32 p.m. (&minus;0.1 ft) &middot; High 11:05 p.m. (3.7 ft)</div>
+<div class="data-row"><span class="data-label">Water</span>75&deg;F</div>
+<div class="data-row"><span class="data-label">Outlook</span>Building into the weekend: the model holds about 4 ft today and Thursday with the period stretching from 10s to 11.4s, then lifts to 5.6 ft Friday and 7.7 ft Saturday from the west-northwest</div>
+</div>
+<p class="source-note">Live NOAA data retrieved 5:45 a.m. PT: buoy 46258 Mission Bay West (4.3 ft @ 13s, 256&deg;, 74.8&deg;F) and 46225 Torrey Pines (3.9 ft @ 14s, 254&deg;, 75.2&deg;F), both observed 4:56 a.m.; tide predictions for San Diego station 9410170; wind from the NWS forecast. Outlook from the Open-Meteo marine model off Mission Beach &mdash; stormsurf.com is unreachable from this environment.</p>
+</section>
+
+<div class="quote">
+  We are not built for the mountains and the dawns and the aesthetic affinities; those are for moments of inspiration, that is all. We are built for the valley, for the ordinary stuff we are in, and that is where we have to prove our mettle.
+  <span class="attrib">&mdash; Oswald Chambers, <em>My Utmost for His Highest</em></span>
+</div>
+
+<footer>
+  Morning Brief &middot; Wednesday, November 11, 2026 &middot; Sources are primary news outlets
+</footer>
+
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icon = function(t){ return t === 'dark' ? '☀' : '☾'; };
+    btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+    btn.addEventListener('click', function(){
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('brief-theme', next); } catch (e) {}
+      btn.textContent = icon(next);
+    });
+  }
+
+  // Per-story feedback control: opens a pre-filled brief-feedback issue.
+  var REPO = 'https://github.com/tyfrey-droid/morning-brief-routine/issues/new';
+  var date = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : '';
+  var sections = document.querySelectorAll('section');
+  for (var s = 0; s < sections.length; s++) {
+    var label = sections[s].querySelector('.section-label');
+    var items = sections[s].querySelectorAll('li');
+    if (!label || !items.length) continue;
+    var section = label.textContent.trim();
+    for (var i = 0; i < items.length; i++) {
+      var lead = items[i].querySelector('strong');
+      if (!lead) continue;
+      var story = lead.textContent.trim();
+      var body = 'Section: ' + section + '\nStory: ' + story + '\nIssue of: ' + date +
+        '\n\nFeedback (keep one, or write your own):\n' +
+        '- already read / redundant\n- not relevant\n- more like this\n';
+      var a = document.createElement('a');
+      a.className = 'flag';
+      a.href = REPO + '?labels=brief-feedback' +
+        '&title=' + encodeURIComponent('Feedback: ' + story) +
+        '&body=' + encodeURIComponent(body);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.title = 'Send feedback on this story';
+      a.setAttribute('aria-label', 'Send feedback on: ' + story);
+      a.textContent = '⚑';
+      items[i].appendChild(a);
+    }
+  }
+})();
+</script>
+</body></html>
