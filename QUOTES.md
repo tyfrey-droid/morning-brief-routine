@@ -52,7 +52,8 @@ line you have actually verified.
 ### Oswald Chambers
 - "We are not built for the mountains and the dawns and the aesthetic affinities; those are for
   moments of inspiration, that is all. We are built for the valley, for the ordinary stuff we are
-  in, and that is where we have to prove our mettle." — *My Utmost for His Highest*. Used 2026-09-02.
+  in, and that is where we have to prove our mettle." — *My Utmost for His Highest*. Used 2026-09-02,
+  2026-11-11.
 - On faith that "by its very nature must be tested and tried. And the real trial of faith is not
   that we find it difficult to trust God, but that God's character must be proven as trustworthy in
   our own minds." — *My Utmost for His Highest*. Used 2026-08-18.
@@ -96,6 +97,7 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 
 | Date | Author | Source |
 |------|--------|--------|
+| 2026-11-11 | Chambers | My Utmost for His Highest ("built for the valley") |
 | 2026-11-09 | MLK | "Suffering and Faith," The Christian Century, 1960 |
 | 2026-10-19 | Bonhoeffer | Letters and Papers from Prison (Christmas Eve 1943) |
 | 2026-10-16 | Augustine | The City of God, Book XXII, Ch. 30 |
