@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief — Friday, November 13, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.flag{
+  display:inline-block; margin-left:.35rem; padding:.1rem .3rem;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.8rem;
+  color:var(--muted); text-decoration:none; opacity:.55; line-height:1;
+}
+.flag:hover,.flag:focus-visible{opacity:1; color:var(--link-hover); text-decoration:none}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.62rem; font-weight:500;
+  letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head><body><div class="wrap">
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Friday, November 13, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 6:55 AM PT &middot; conditions updated 6:44 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+<p class="section-label">&#127757; World</p>
+<ul>
+<li><strong>Putin meets Trump's envoys, and a prisoner swap is agreed</strong> &mdash; Wednesday's brief had the Abu Dhabi round breaking up without a deal. Since then Steve Witkoff and Jared Kushner flew to Moscow and met Vladimir Putin on Thursday, and Russia and Ukraine agreed in principle to a prisoner exchange that Kushner called an &ldquo;important humanitarian breakthrough&rdquo; and the largest of the war. Neither side released numbers, and Putin confirmed progress without detail. Kushner pressed for European governments to be brought into the talks, which Moscow has resisted; the envoys then went on to Dublin, where Zelensky said the exchange was agreed and that Europe would be represented in the next round. (<a href="https://www.cnn.com/2026/11/11/politics/trump-envoys-russia-trip-peace-talks-intl">CNN</a>, <a href="https://www.jpost.com/international/internationalrussia-ukraine-war/article-914670">The Jerusalem Post</a>)</li>
+<li><strong>An Israeli strike hits Nasser Hospital in Khan Younis</strong> &mdash; An overnight strike on Wednesday into Thursday hit the surgery department of Nasser Hospital, the main hospital serving southern Gaza, killing six people including a doctor and a child and injuring 27, according to the UN and Gaza's health ministry. The Israeli military said it struck a senior Hamas figure and other militants operating inside the hospital, without providing evidence; hospital staff said they had no warning. NPR described it as the first Israeli air strike on a Gaza hospital since the ceasefire took hold, and the UN's special coordinator said the recent increase in military operations is straining an increasingly fragile truce. (<a href="https://www.npr.org/2026/11/12/nx-s1-6038879/israeli-air-strike-on-gaza-hospital-kills-six-including-surgeon">NPR</a>, <a href="https://news.un.org/en/story/2026/11/1168796">UN News</a>, <a href="https://www.nbcnews.com/world/middle-east/israeli-strike-gaza-nasser-hospital-abu-shaira-doctor-hamas-rcna608932">NBC News</a>)</li>
+<li><strong>The IAEA says it can no longer account for Iran's uranium</strong> &mdash; A confidential IAEA report circulated Friday says the agency cannot verify Iran's stockpile of near-weapons-grade uranium or inspect the facilities struck in June, and that it is &ldquo;increasingly concerned&rdquo; about an underground enrichment site at Isfahan whose status it does not know. Tehran told the agency that talks on resuming inspections cannot proceed while it faces the threat of further strikes. Separately, Iran's Revolutionary Guard reported tankers striking naval mines in the Strait of Hormuz on Thursday and Friday; the strait remains closed by Iran's declaration, and Trump said he would not hesitate to order new strikes if Iran threatens US allies or shipping. (<a href="https://www.ynetnews.com/article/hk4dqsncml">Ynetnews</a>, <a href="https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/">CBS News</a>)</li>
+<li><strong>Pope Leo draws the largest crowds of his papacy in Peru</strong> &mdash; Officials put Wednesday's turnout in Lima at roughly three million, which Reuters reported as the biggest crowds of his 18-month papacy, and throngs filled the streets again on Thursday. Leo, who spent about two decades in Peru as a missionary and bishop and holds Peruvian citizenship, called the country his homeland. The centrepiece of the trip is an outdoor Mass today at Pimentel, near Chiclayo, the diocese he once led; he stays in the area through Sunday. It is the final leg of a 12-day South America tour that also took in Argentina and Uruguay. (<a href="https://www.nbcnews.com/world/pope-leo-xiv/record-crowd-greets-pope-leo-calls-peru-homeland-emotional-visit-rcna608930">NBC News</a>, <a href="https://www.cbsnews.com/news/pope-leo-peru-homeland-south-america-trip/">CBS News</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+<ul>
+<li><strong>Eight die in a Brooklyn building collapse</strong> &mdash; A three-storey building at Flatbush and Bedford avenues in Flatbush collapsed into an adjacent construction excavation on Wednesday, killing eight people &mdash; two of them children, all eight since named by police &mdash; and injuring about 18, four of them critically. Heavy rain and thunderstorms slowed the work; the fire department has since completed search and rescue and says there are no further victims, and the site has been turned over to the Department of Buildings and the NYPD. Mayor Zohran Mamdani said the city would hold whoever is responsible accountable and that the buildings department has begun inspecting roughly 100 construction sites doing similar excavation work. (<a href="https://www.nbcnews.com/news/us-news/2-children-8-dead-new-york-city-building-collapse-officials-say-rcna608974">NBC News</a>, <a href="https://www.cnn.com/2026/11/11/us/live-news/brooklyn-building-collapse-nyc">CNN</a>, <a href="https://abc7ny.com/live-updates/brooklyn-building-collapse-live-updates-1-dead-flatbush/20034152/">ABC7 New York</a>)</li>
+<li><strong>Mississippi's open Senate seat goes to Scott Colom</strong> &mdash; Monday's brief had the seat still uncalled. Democrat Scott Colom, a district attorney, has unseated Republican Senator Cindy Hyde-Smith, making him Mississippi's first Black senator since Reconstruction and &mdash; because Hiram Revels and Blanche Bruce were chosen by the state legislature in the 1870s &mdash; the first elected to the seat by voters. It is the first Democratic win in the seat since 1982, in a state Trump carried by 23 points in 2024. Outlets describe the result as a projection; he has not been sworn in. (<a href="https://rollcall.com/2026/11/11/scott-colom-wins-mississippi-senate-election/">Roll Call</a>, <a href="https://www.cnn.com/2026/11/11/politics/scott-colom-mississippi-campaign-democrats">CNN</a>)</li>
+<li><strong>USDA moves to narrow food-stamp eligibility</strong> &mdash; A proposed rule published Tuesday would limit automatic SNAP eligibility to households receiving direct cash assistance through TANF, ending the broad-based categorical eligibility states have used to extend the programme past its own income and asset limits. USDA's own estimate is that 3.2 million households containing 6.3 million people would no longer qualify once the rule is fully in effect in fiscal 2029, that 1.8 million children would lose automatic eligibility for free school meals, and that federal SNAP spending would fall by about $44.65bn over five years. A second rule issued the same day would tighten work requirements. Comments close December 10, and nothing changes unless and until a final rule is published. (<a href="https://www.federalregister.gov/documents/2026/11/10/2026-22936/supplemental-nutrition-assistance-program-reforming-categorical-eligibility">Federal Register</a>, <a href="https://www.naco.org/news/usda-releases-new-snap-proposed-rules-impacting-eligibility-and-work-requirements">NACo</a>, <a href="https://civileats.com/2026/11/10/new-proposed-snap-change-could-cut-assistance-to-millions-more-people/">Civil Eats</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#9889; Tech &amp; AI</p>
+<ul>
+<li><strong><span class="tag">WORKFLOW</span>Adobe's AI assistant spreads past Premiere</strong> &mdash; Premiere 27.0's assistant panel shipped on Tuesday; Adobe has now put the same Creative Agent assistants into beta in After Effects, Frame.io, Illustrator and InDesign, so the conversational-prompt approach covers the motion-graphics and client-review ends of a job rather than just the edit. Adobe also said MCP support &mdash; which would let an outside tool such as Claude or ChatGPT drive the apps directly &mdash; is planned for 2027, so that is a roadmap item and not something to build a workflow around yet. Everything here is beta, and worth using on a pass you can throw away rather than on a client deadline. (<a href="https://9to5mac.com/2026/11/10/adobe-unveils-new-ai-tools-for-photoshop-premiere-and-more-with-mcp-support-coming-in-2027/">9to5Mac</a>)</li>
+<li><strong><span class="tag">WORKFLOW</span>Apple patches an iMessage group-chat flaw</strong> &mdash; Apple's November 9 security round covers iOS and iPadOS 27.2.1, 26.7.3 and 18.7.12, macOS 27.2.1, 26.7.3 and 15.8.3, plus watchOS and visionOS. Among the fixes is an iMessage bug that could let a remote attacker join a group conversation and read it, along with a set of Bluetooth and AirPlay pairing issues; the Mac builds also add protections for command-line tools against the eMudhra certificate problem. These are point releases with no feature changes, so the only reason to delay is a project mid-render &mdash; worth installing on any device carrying client correspondence. (<a href="https://www.macrumors.com/2026/11/09/ios-27-2-1-security-fixes/">MacRumors</a>, <a href="https://support.apple.com/en-us/100100">Apple Support</a>)</li>
+<li><strong><span class="tag">WORKFLOW</span>Topaz's new image model is heading into Photoshop</strong> &mdash; Topaz released Wonder 4 on November 3, built on a mixture-of-experts design that splits an image into thousands of regions and applies only the enhancement each region actually needs rather than one global pass. Following Adobe's acquisition of Topaz Labs, Adobe says it is adding Wonder 4 and a second model, Image HDR, to Photoshop. The caveat for a video shop: this is an image model, so it is for stills, frame grabs and thumbnails, not footage &mdash; Topaz's video tools are separate and unchanged. (<a href="https://www.topazlabs.com/news">Topaz Labs</a>, <a href="https://9to5mac.com/2026/11/10/adobe-unveils-new-ai-tools-for-photoshop-premiere-and-more-with-mcp-support-coming-in-2027/">9to5Mac</a>)</li>
+<li><strong>Jensen Huang resigns as Nvidia's chief executive</strong> &mdash; Nvidia's board accepted Huang's resignation as president, chief executive and director on Wednesday and announced it Thursday, appointing chief financial officer Colette Kress interim chief executive and naming Harvey Jones the company's first-ever board chair. Nvidia gave no reason. Reporting ties the exit to disclosures about affairs, including one with a Chinese technology executive whom the New York Times reported had been recruited by China's Ministry of State Security; the stock fell more than 4% on Thursday and touched eight-month lows. The board has begun a search for a permanent successor, Huang has been summoned to testify before Congress, and third-quarter results are due November 17. (<a href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">Nvidia</a>, <a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm">SEC</a>, <a href="https://www.washingtonpost.com/technology/2026/11/12/nvidia-board-weighs-jensen-huangs-future-after-affair-with-allege-chinese-spy/">The Washington Post</a>, <a href="https://www.pbs.org/newshour/nation/what-we-know-after-jensen-huangs-resignation-as-nvidias-ceo">PBS NewsHour</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127936; Sports</p>
+<ul>
+<li><strong>Portland completes the sweep of Oklahoma City</strong> &mdash; Wednesday's brief had the first win; the Blazers took the second 118&ndash;108 at Moda Center, sweeping the two-game set against the Thunder. Deni Avdija led with 28 points, six assists, four steals and two blocks, Jrue Holiday added 19 off the bench and Damian Lillard 18, and Donovan Clingan pulled 12 rebounds with three blocks. Portland trailed for most of the first half, went ahead in the second quarter and pulled away in the fourth. They are at Sacramento tonight. (<a href="https://www.espn.com/nba/recap/_/gameId/401909975">ESPN</a>, <a href="https://www.washingtonpost.com/sports/nba/2026/11/12/thunder-trail-blazers-score/b3ed2064-de5d-11f1-912c-4fbb80d73f7f_story.html">The Washington Post</a>)</li>
+<li><strong>Curry tears an oblique and the streak ends at eight</strong> &mdash; Houston beat Golden State 115&ndash;108 at Toyota Center, ending the Warriors' eight-game run. Stephen Curry left in the first quarter with right abdominal soreness and did not return; an MRI confirmed an oblique abdominal tear and the team says he will be re-evaluated in two weeks. Rookie Yaxel Lendeborg carried the offence with 25 points and 10 rebounds and Brandin Podziemski added 22; Kevin Durant led Houston with 20, with Alperen Sengun and Amen Thompson on 19 each. (<a href="https://www.espn.com/nba/recap/_/gameId/401909974">ESPN</a>, <a href="https://www.washingtonpost.com/sports/nba/2026/11/12/rockets-warriors-score/a22c25fa-de58-11f1-912c-4fbb80d73f7f_story.html">The Washington Post</a>)</li>
+<li><strong>Marcus Smart gets three games for a punch</strong> &mdash; The league suspended the Rockets guard three games without pay on Thursday for punching Warriors centre Charles Bassey with 21 seconds left in the third quarter of that same game; Smart was assessed a flagrant 2 and ejected. He said Bassey had bent his already-injured elbow earlier in the game, and Houston coach Ime Udoka pointed to trash talk; Bassey called it &ldquo;fake toughness.&rdquo; Smart starts the suspension tonight against Utah and also misses Washington and Miami. (<a href="https://www.nba.com/news/rockets-guard-marcus-smart-suspended-three-games">NBA</a>, <a href="https://www.cbssports.com/nba/news/rockets-marcus-smart-suspension-punch-warriors-charles-bassey/">CBS Sports</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127754; San Diego</p>
+<ul>
+<li><strong>Police used licence-plate cameras on a domestic violence victim</strong> &mdash; San Diego police used the city's Flock automated licence-plate reader network during an internal affairs investigation of an officer, checking whether the officer's car and the car of a domestic violence victim had been in the same places; the department confirmed this was not an isolated use and says it ran the system in six separate administrative investigations. Councilmember Raul Campillo, who had backed the contract, now wants the programme suspended and audited &mdash; which may supply the sixth council vote opponents need after a committee voted in October to end it. Voice of San Diego also reports a local man was jailed for a month after being wrongly identified through Flock footage. (<a href="https://voiceofsandiego.org/2026/11/12/san-diego-police-used-flock-to-surveil-officers-domestic-violence-victim/">Voice of San Diego</a>, <a href="https://www.kpbs.org/news/public-safety/2026/11/12/san-diego-police-used-flock-to-surveil-officers-domestic-violence-victim">KPBS</a>, <a href="https://www.nbcsandiego.com/news/local/sdpd-allegedly-used-alpr-to-track-officer-domestic-violence-victim/4101248/">NBC 7 San Diego</a>)</li>
+<li><strong>Hundreds rally for an eight-year-old held by ICE</strong> &mdash; Parents, teachers and elected officials gathered outside the Edward J. Schwartz Federal Building downtown on Thursday to call for the release of a Haitian boy taken into federal custody on November 4. Local Democrats say he is still detained, and KPBS reports the agency has not answered repeated questions about where he is being held. (<a href="https://kpbs.org/news/border-immigration/2026/11/12/bring-him-home-san-diego-officials-parents-teachers-rally-for-8-year-old-boy-detained-by-ice">KPBS</a>)</li>
+<li><strong>A committee advances a study of public power</strong> &mdash; A City Council committee voted 2&ndash;1 on Thursday to move forward a resolution from Councilmember Sean Elo-Rivera directing the city to explore a non-profit, publicly owned utility as an alternative to SDG&amp;E. It is a study, not a decision: the full council would have to take it up before anything further happens. (<a href="https://fox5sandiego.com/news/local-news/san-diego/san-diego-utility-resolution-advances-sdge/">Fox 5 San Diego</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127803; Kaua&#699;i</p>
+<ul>
+<li><strong>Temporary green-waste sites close Tuesday</strong> &mdash; The county will shut the temporary green-waste drop-off sites at Kapa&#699;a and Kilauea, opened after Hurricane Lowell, on Tuesday, November 17. Green waste can still be taken to the permanent county transfer stations after that. (<a href="https://www.thegardenisland.com/2026/11/12/hawaii-news/temporary-green-waste-sites-in-kapaa-and-kilauea-to-close/">The Garden Island</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127909; Filmmaking Gear</p>
+<ul>
+<li><strong>Blackmagic's 108-capsule ambisonic microphone</strong> &mdash; Blackmagic announced the Ambisonic Microphone on Thursday: 108 MEMS capsules and an onboard encoder that converts the whole array to 7th-order ambisonics &mdash; 64 channels &mdash; in real time, over a single USB-C cable. Apple licensed the array geometry and the encoding filters, and Blackmagic did the engineering; it is built to pair with the URSA Cine Immersive and writes spatial audio straight into the camera's immersive files in sync with picture. Announced at $1,695 before duties, with Blackmagic's own page listing $1,909 including the mount and a $2,405 kit adding windshield and locking cable. Shipping December. (<a href="https://www.blackmagicdesign.com/products/blackmagicambisonic">Blackmagic Design</a>, <a href="https://www.provideocoalition.com/blackmagic-announces-its-ambisonic-microphone-for-true-spatial-audio/">ProVideo Coalition</a>, <a href="https://ymcinema.com/2026/11/12/blackmagic-apple-108-microphone-spatial-audio/">Y.M.Cinema</a>)</li>
+<li><strong>Laowa's fast tilt-shift comes in E-mount</strong> &mdash; Venus Optics launched the Laowa 24mm f/2 Zero-D Tilt-Shift on November 5, billed as the fastest tilt-shift lens yet made, with 10 degrees of tilt and 12mm of shift either way, a 77mm filter thread and an 860g weight. Sony E is one of six mounts offered, alongside Nikon Z, Canon RF, L, Fujifilm GFX and Hasselblad XCD &mdash; the image circle covers medium format. Priced at $1,249 at most outlets, though Newsshooter lists $1,224. (<a href="https://www.imaging-resource.com/news/laowa-24mm-f2-tilt-shift-brings-an-unusually-fast-aperture-to-architectural-photography/">Imaging Resource</a>, <a href="https://www.newsshooter.com/2026/11/05/laowa-24mm-f-2-zero-d-tilt-shift/">Newsshooter</a>, <a href="https://amateurphotographer.com/latest/photo-news/who-said-tilt-shift-lenses-had-to-be-slow-laowa-debuts-zero-d-24mm-f-2-for-full-frame-and-medium-format-cameras/">Amateur Photographer</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#128267; F-150 Lightning &amp; EVs</p>
+<ul>
+<li><strong>Tesla extends Cybertruck production into 2027</strong> &mdash; Monday's brief had Tesla winding the Cybertruck down. Five days after that announcement the company extended production to late summer 2027 to work through its order backlog, buying the truck roughly two to three more months. Electrek reports the backlog was largely self-created, and that on the same day Tesla raised Cybertruck prices by up to 10% and paused orders for the base Dual Motor configuration. (<a href="https://electrek.co/2026/11/11/tesla-extends-cybertruck-production-summer-2027-fan-backlash">Electrek</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127780; Weather</p>
+<div class="data-block">
+  <div class="data-row"><span class="data-label">Today</span>69&deg; / 58&deg; &middot; Showers and thunderstorms &middot; 80% rain</div>
+  <div class="data-row"><span class="data-label">Note</span>A tenth to a quarter inch expected; rain showers likely again tonight, south wind 5&ndash;10 mph</div>
+  <div class="data-row"><span class="data-label">Tomorrow</span>68&deg; &middot; Chance of showers before 4 p.m., then partly sunny</div>
+</div>
+<p class="source-note">NWS point forecast for La Mesa 91942, issued 1:33 a.m. PT and retrieved 6:44 a.m. PT.</p>
+</section>
+
+<section>
+<p class="section-label">&#127754; Surf</p>
+<div class="data-block">
+  <div class="data-row"><span class="data-label">Swell</span>6.2 ft @ 15s from 268&deg; (W) &mdash; buoy 46258; Torrey Pines reads 5.9 ft @ 15s from 270&deg;</div>
+  <div class="data-row"><span class="data-label">Read</span>Chest- to head-high at MB/PB beach breaks, bigger on the sets; average period is only 7.7s, so there is short-period wind swell mixed in</div>
+  <div class="data-row"><span class="data-label">Wind</span>South 5&ndash;10 mph &mdash; onshore to side-onshore, so textured rather than clean, with thunderstorms in the forecast</div>
+  <div class="data-row"><span class="data-label">Tide</span>High 10:03 a.m. (5.6 ft) &middot; Low 6:05 p.m. (0.5 ft)</div>
+  <div class="data-row"><span class="data-label">Water</span>75&deg;F</div>
+  <div class="data-row"><span class="data-label">Outlook</span>Building slightly and shortening up: the model has max wave height near 7.6 ft Saturday at about 10s and 7.5 ft Sunday, from a similar westerly direction</div>
+</div>
+<p class="source-note">NDBC buoys 46258 (Mission Bay West) and 46225 (Torrey Pines), observed 5:56 a.m. PT. Tides from NOAA station 9410170 (San Diego). Outlook from the Open-Meteo marine model off Mission Beach &mdash; a forecast model, not an observation; stormsurf.com is unreachable from this environment.</p>
+</section>
+
+<div class="quote">
+Suffering can refine us rather than destroy us because God himself walks with us in the fire.
+<span class="attrib">&mdash; Tim Keller, <em>Walking with God through Pain and Suffering</em></span>
+</div>
+
+<footer>
+Morning Brief &middot; Friday, November 13, 2026 &middot; Sources are primary news outlets
+</footer>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icon = function(t){ return t === 'dark' ? '☀' : '☾'; };
+    btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+    btn.addEventListener('click', function(){
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('brief-theme', next); } catch (e) {}
+      btn.textContent = icon(next);
+    });
+  }
+
+  // Per-story feedback control: opens a pre-filled brief-feedback issue.
+  var REPO = 'https://github.com/tyfrey-droid/morning-brief-routine/issues/new';
+  var date = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : '';
+  var sections = document.querySelectorAll('section');
+  for (var s = 0; s < sections.length; s++) {
+    var label = sections[s].querySelector('.section-label');
+    var items = sections[s].querySelectorAll('li');
+    if (!label || !items.length) continue;
+    var section = label.textContent.trim();
+    for (var i = 0; i < items.length; i++) {
+      var lead = items[i].querySelector('strong');
+      if (!lead) continue;
+      var story = lead.textContent.trim();
+      var body = 'Section: ' + section + '\nStory: ' + story + '\nIssue of: ' + date +
+        '\n\nFeedback (keep one, or write your own):\n' +
+        '- already read / redundant\n- not relevant\n- more like this\n';
+      var a = document.createElement('a');
+      a.className = 'flag';
+      a.href = REPO + '?labels=brief-feedback' +
+        '&title=' + encodeURIComponent('Feedback: ' + story) +
+        '&body=' + encodeURIComponent(body);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.title = 'Send feedback on this story';
+      a.setAttribute('aria-label', 'Send feedback on: ' + story);
+      a.textContent = '⚑';
+      items[i].appendChild(a);
+    }
+  }
+})();
+</script>
+</body></html>
