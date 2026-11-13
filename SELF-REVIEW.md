@@ -1292,3 +1292,27 @@ Tweak to try next run: QUOTES.md-first worked (Chambers picked during the openin
   drafting). Extend that habit to product items: when a bullet names a product, re-read the search
   result for it immediately before writing, and if the only detail I have is name/price/date, write
   only name/price/date.
+
+## 2026-11-13 (Friday)
+Thin/empty: School omitted — the Gmail MCP server returned 502 at session start and never connected, so
+  no school mail could be read at either campus; per the standing rule the section is omitted rather than
+  guessed at. Mito omitted — PubMed's connector was also 502, and a web sweep found nothing new in window:
+  the Thiogenesis TTI-0102 MELAS interim data is Nov 2025 / Jan 2026, and the only fresh item was an
+  ~Oct 28 bioRxiv preprint that *introduces* pathogenic ND1/ND5 variants to model Leigh syndrome — a
+  disease-modelling tool, not therapy, and a preprint. Correctly silent. EVs ran 1: no Lightning item
+  existed anywhere in the window (Ford Authority's newest Lightning piece is September), so the section is
+  the Cybertruck production reversal alone — a genuine new development on the wind-down carried Nov 9.
+  No gadget pick; nothing surfaced. Kauai ran 1. GW watch silent for an eighth issue: USNI's Nov 9 tracker
+  restates the Arabian Sea position and the only Nov 13 item is a routine Navy dental-readiness feature,
+  which is not a development; gonavy.jp's service-life-extension claim stays unconfirmed and unwritten.
+Unsure: the Laowa price — most outlets say $1,249 and Newsshooter says $1,224, so the bullet gives both
+  rather than picking one, and the same for the Blackmagic mic ($1,695 announced vs $1,909 on Blackmagic's
+  own page). Also note the buoys have read ~75°F water for four consecutive issues now; that is implausibly
+  warm for mid-November San Diego but it is what both 46258 and 46225 report, consistently, so it ran as
+  given rather than being silently "corrected."
+Tweak to try next run: the product-detail discipline from last run held — every spec in the Gear and Tech
+  bullets traces to a search snippet I had in hand, and where sources disagreed I published the
+  disagreement. Extend it one step: WebFetch failed on every single domain this run (nofilmschool, 9to5mac,
+  macrumors, descript, pubmed, thepourover, apnews, bbc), so search snippets are now the *only* content
+  path. Next run, stop attempting WebFetch on news domains entirely and spend those calls on a second
+  search pass instead — it cost ~8 wasted tool calls today.

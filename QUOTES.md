@@ -129,3 +129,4 @@ when Swinton comes up in the rotation, fall through to the next-oldest author.
 | 2026-08-16 | Keller | The Reason for God |
 | 2026-08-13 | Bonhoeffer | Letters and Papers from Prison |
 | 2026-08-11 | Augustine | Confessions I |
+| 2026-11-13 | Keller | Walking with God through Pain and Suffering (p. 9, "walks with us in the fire") |
