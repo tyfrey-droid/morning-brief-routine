@@ -1316,3 +1316,32 @@ Tweak to try next run: the product-detail discipline from last run held — ever
   macrumors, descript, pubmed, thepourover, apnews, bbc), so search snippets are now the *only* content
   path. Next run, stop attempting WebFetch on news domains entirely and spend those calls on a second
   search pass instead — it cost ~8 wasted tool calls today.
+
+## 2026-11-16 (Monday)
+Thin/empty: Mito omitted. PubMed (connector worked today) returned nothing on target — the 25 newest hits
+  under the MELAS/mito-therapy/mtDNA-gene-therapy query were all off-disease (GERD, gallbladder cancer,
+  diabetic bone defects, Parkinson's nanoparticles, disc degeneration, osteoarthritis) and matched only on
+  the word "mitochondrial." The one genuinely significant item is Tisento DISCONTINUING zagociguat for MELAS
+  after PRIZM missed every primary and secondary endpoint — but the community letter dates to ~Oct 30
+  (URL "update-october-0726", metadata "17 days ago"), outside the 14-day window, so it is date-excluded
+  rather than filtered. FLAG FOR NEXT RUN: if a dated press release or journal publication of the PRIZM
+  result lands, it runs immediately — it is the biggest MELAS drug story in two years and the archives show
+  zagociguat last covered Oct 19, before the failure. EVs ran 1 (the BC outage/bidirectional-power item);
+  no Lightning recall, Power-Up or gadget surfaced, and I dropped a proposed federal $130 EV road fee
+  because the only source was Korea Daily — single weak outlet on a US bill that has not passed. Kauai ran 2.
+  GW watch silent for a ninth issue: USNI's Nov 9 tracker still has her in the Arabian Sea and the only
+  newer item is a CENTCOM flight-deck photo dated Nov 15, which is routine ops, not a development — correct
+  to say nothing even with the Hormuz mining claims running in World.
+Unsure: the Hormuz tanker bullet. Iran's own counts disagree (IRGC says six vessels, IRNA five), no ship is
+  named, and nothing is independently confirmed, so the bullet is built entirely as attributed claim with the
+  absence of confirmation stated twice. Also the Canon Videographer Kit price — $5,999.99 announced vs $5,699
+  at Y.M.Cinema and B&H, so both ran. Water temp read 75°F for a fifth straight issue; this run it finally
+  has corroboration (Times of San Diego, Nov 15: record-breaking ocean heat off San Diego), so the Surf row
+  now points at the San Diego bullet instead of just reporting the anomaly flatly.
+Tweak to try next run: last run's tweak worked — zero WebFetch attempts on news domains, search snippets only,
+  and no calls wasted (the one WebFetch, to smore.com, was the required School attempt and failed as expected).
+  Next: three Tech candidates this run (Imagen Video out of beta, Adobe's MCP, Descript's Nov 6 roundup) died
+  on unresolvable dates or on being the same Adobe MAX announcement already carried Nov 11 and Nov 13. Adobe
+  MAX is now mined out; stop searching Adobe for practical items for ~10 days and spend that query on
+  Blackmagic/Resolve release notes and on the one-person-business tools (QuickBooks/Intuit Assist, Frame.io)
+  where nothing has been carried at all.
