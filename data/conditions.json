@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-11-16T13:45:46Z",
+  "fetched_at_utc": "2026-11-16T21:06:12Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -8,27 +8,17 @@
     "updated": "2026-11-16T09:23:14+00:00",
     "periods": [
       {
-        "name": "Overnight",
-        "temperature": 56,
-        "temperatureUnit": "F",
-        "windSpeed": "5 mph",
-        "windDirection": "E",
-        "shortForecast": "Mostly Cloudy",
-        "detailedForecast": "Mostly cloudy, with a low around 56. East wind around 5 mph.",
-        "precipChancePct": 11
-      },
-      {
-        "name": "Monday",
+        "name": "This Afternoon",
         "temperature": 71,
         "temperatureUnit": "F",
-        "windSpeed": "0 to 10 mph",
-        "windDirection": "S",
+        "windSpeed": "5 to 10 mph",
+        "windDirection": "W",
         "shortForecast": "Showers And Thunderstorms",
-        "detailedForecast": "A chance of rain showers between 10am and 4pm, then showers and thunderstorms. Mostly cloudy, with a high near 71. South wind 0 to 10 mph. Chance of precipitation is 80%. New rainfall amounts between a tenth and quarter of an inch possible.",
+        "detailedForecast": "A chance of rain showers before 4pm, then showers and thunderstorms. Mostly cloudy, with a high near 71. West wind 5 to 10 mph. Chance of precipitation is 80%. New rainfall amounts between a tenth and quarter of an inch possible.",
         "precipChancePct": 78
       },
       {
-        "name": "Monday Night",
+        "name": "Tonight",
         "temperature": 56,
         "temperatureUnit": "F",
         "windSpeed": "5 mph",
@@ -46,23 +36,33 @@
         "shortForecast": "Sunny",
         "detailedForecast": "Sunny, with a high near 66. West wind 0 to 10 mph.",
         "precipChancePct": 12
+      },
+      {
+        "name": "Tuesday Night",
+        "temperature": 50,
+        "temperatureUnit": "F",
+        "windSpeed": "0 to 5 mph",
+        "windDirection": "E",
+        "shortForecast": "Partly Cloudy",
+        "detailedForecast": "Partly cloudy, with a low around 50. East wind 0 to 5 mph.",
+        "precipChancePct": 1
       }
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-11-16T12:56Z",
-    "waveHeightFt": 5.2,
-    "dominantPeriodS": 14,
-    "avgPeriodS": 9.1,
-    "meanWaveDirDeg": 244,
+    "observed_utc": "2026-11-16T20:26Z",
+    "waveHeightFt": 5.9,
+    "dominantPeriodS": 18,
+    "avgPeriodS": 10.8,
+    "meanWaveDirDeg": 282,
     "waterTempF": 75.2
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-11-16T12:56Z",
-    "waveHeightFt": 6.2,
+    "observed_utc": "2026-11-16T20:26Z",
+    "waveHeightFt": 7.9,
     "dominantPeriodS": 15,
-    "avgPeriodS": 10.7,
-    "meanWaveDirDeg": 263,
+    "avgPeriodS": 12.6,
+    "meanWaveDirDeg": 270,
     "waterTempF": 75.0
   },
   "tides_san_diego_9410170": [
