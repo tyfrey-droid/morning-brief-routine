@@ -1345,3 +1345,33 @@ Tweak to try next run: last run's tweak worked — zero WebFetch attempts on new
   MAX is now mined out; stop searching Adobe for practical items for ~10 days and spend that query on
   Blackmagic/Resolve release notes and on the one-person-business tools (QuickBooks/Intuit Assist, Frame.io)
   where nothing has been carried at all.
+
+## 2026-11-18 (Wednesday)
+Thin/empty: Mito omitted for a third straight issue — the PubMed sweep (28,812 hits, 25 newest by pub date,
+  Nov 4 cutoff) was again entirely off-disease (NEIL glycosylases, gastric/liver cancer nanomedicine,
+  colitis alkaloids, bovine endometrium, breast-cancer mitomiRs), matching only on "mitochondrial". Chased
+  the flagged zagociguat/PRIZM item from last run: still no dated press release or journal publication —
+  ClinicalTrials.gov NCT06402123 shows "completed" with a June 29 primary completion and an Oct 20 update,
+  and nothing reputable carries a discontinuation. Keep the flag up; it has not expired, only failed to
+  surface. EVs ran 1 (Cox's October EV market monitor). No Lightning item qualified: the only candidates
+  were the park-module rollaway recall (Ford 25C69 / NHTSA 25V863 — a 2025 campaign, date-excluded under
+  the older-of-two-dates rule even though a Nov 15 Canadian write-up re-reported it), Ford Authority's
+  wind-down costs (already carried Nov 9) and a TorqueNews owner-savings piece (below the bar). No gadget
+  pick — searches returned only 1–3-year-old overlanding/camping reviews. Gear ran 2. US ran 2.
+Unsure: the Blazers score. NBA.com's highlight reel and ESPN's Nov 17 scoreboard both say 106–105 Minnesota,
+  but CBS Sports lists 106–98 on Nov 16 for what looks like the same game; I went with the two agreeing
+  sources and cut a "second straight road defeat" clause I could not support from the archives. Also cut
+  "still without Curry" from the Warriors bullet — plausible from the Nov 13/16 coverage but not verified
+  in the box score I had. The California v. OpenAI bullet states outlet disagreement on the agent count
+  (dozens vs several hundred) rather than picking one. Dropped the QuickBooks November update (AI
+  reconciliation beta, invoicing via Claude/ChatGPT) — the only source carrying it was datastudios.org,
+  and the invoicing GA actually dates to Intuit's July release, outside the window.
+Structural fix: index.html was missing its opening `<div class="wrap">` (and `</head>`/`<body>`), so the
+  `max-width:720px` desktop rule had nothing to apply to and the page ran full-bleed on wide screens; a
+  stray `</div>` before the script was the leftover. Rebuilt the scaffold and verified with Playwright —
+  wrap measures 720px at 1100px viewport, 390px at phone width, no horizontal scroll.
+Tweak to try next run: last run's tweak (skip Adobe, mine Blackmagic/Resolve + solo-business tools)
+  half-worked — Resolve 21.2 was already carried Nov 6 and QuickBooks died on sourcing, leaving one
+  practical Tech item (Final Cut's MotionVFX update shipping). Next: stop re-searching the big AI labs for
+  practical items; they produce industry news. Spend those two queries on Frame.io/Premiere *release notes*
+  and on bylined practical-AI writers (Mollick, Willison) directly, which have never been searched by name.
