@@ -1375,3 +1375,27 @@ Tweak to try next run: last run's tweak (skip Adobe, mine Blackmagic/Resolve + s
   practical Tech item (Final Cut's MotionVFX update shipping). Next: stop re-searching the big AI labs for
   practical items; they produce industry news. Spend those two queries on Frame.io/Premiere *release notes*
   and on bylined practical-AI writers (Mollick, Willison) directly, which have never been searched by name.
+
+## 2026-11-20 (Friday)
+Thin/empty: 🧬 Mito omitted — the only two PubMed hits were a MELAS sleep-apnea prevalence study
+  (Feb 2026) and the ERN EURO-NMD MELAS consensus statement (Apr 2026, Eur J Neurol); both are
+  date-excluded and the consensus paper is doubly excluded by the rule against consensus statements,
+  which it illustrates by concluding arginine/taurine/CoQ efficacy "remains unproven." Lightning ran
+  zero items again — recall 25C69 is still the only live campaign and is date-excluded, and the one
+  November Lightning piece (pickuptrucktalk's "known problems" roundup) is a compilation, not news.
+  EVs ran 1 general item. No gadget pick surfaced. US ran 2. School ran 2 (HTEM only).
+Unsure: the Anthropic IPO valuation — CNN's headline says $2T, its own body says $1.76T at close, and
+  CNBC says $1.8T, so I cited the $97.17 close and CNBC's figure and said published numbers vary with
+  the measurement point rather than picking one. Also: my first search asserted the Blazers' 124–114 /
+  Lillard 33 line from AP phrasing but a follow-up could not find it; I re-verified against the ESPN
+  and NBA.com box scores before publishing rather than trusting the first pass. Cut the Mother Jones
+  claim that Ford plans to relaunch the Lightning as an extended-range model — no primary source, and
+  a dealer listing contradicts it.
+Egress: helpx.adobe.com, descript.canny.io, app.smore.com and espn.com all failed DNS resolution, so
+  Adobe's and Descript's own release notes and the Foster Smore were unreadable; search snippets were
+  the only path. The Smore is still not allowlisted despite the 2026-10-26 note saying it was being added.
+Tweak to try next run: last run's tweak (go to Frame.io/Premiere release notes and bylined practical-AI
+  writers directly) failed on egress, not on sourcing — WebFetch cannot reach maker release-note hosts at
+  all. So stop trying to fetch them. Next: get practical Tech items from the post-production trades that
+  DO resolve in search (Newsshooter, PRONEWS, RedShark, PetaPixel, 4KShooters) by searching the software
+  name plus a version number, which is how Resolve 21.2 and Premiere 27.0 both surfaced cleanly.
