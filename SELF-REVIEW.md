@@ -1399,3 +1399,34 @@ Tweak to try next run: last run's tweak (go to Frame.io/Premiere release notes a
   all. So stop trying to fetch them. Next: get practical Tech items from the post-production trades that
   DO resolve in search (Newsshooter, PRONEWS, RedShark, PetaPixel, 4KShooters) by searching the software
   name plus a version number, which is how Resolve 21.2 and Premiere 27.0 both surfaced cleanly.
+
+## 2026-11-23 (Mon)
+Thin/empty: Mito omitted — PubMed's only on-variant hit was a Finsterer letter claiming GLP-1 agonists
+  benefit m.3243A>G carriers, with no abstract and no PMC full text to check what data it rests on, so
+  it failed the "named drug with evidence" bar; the other two hits were case reports, excluded by rule.
+  Tech ran ZERO practical/WORKFLOW items: Premiere 27.0 and the Creative Agent spread were already
+  carried Nov 11/13, Resolve 21.2 (Nov 4) is date-excluded, and the only "new AI feature" coverage in
+  the Nov 20–22 window was aggregator/substack material that fails reputability. Ran industry+Apple
+  instead rather than pad. EV ran 1 bullet (no Lightning news at all — 25C69 is still the only live
+  campaign and recall 26S78 excludes the Lightning; no gadget pick surfaced). Kauaʻi ran 1. Sports ran
+  2 NBA and no non-NBA item: the 49ers–Vikings Mexico City game was only in an AP bulletin summary with
+  no article URL I could cite, so I dropped it rather than cite a wire I hadn't actually opened.
+Unsure: the George Washington bullet is a thin development — a PACOM write-up of an ambassador visit in
+  the Indian Ocean rather than a position or orders change. Ran it because it is officially published,
+  confirms the transit east, and a reader following the ship will want it; held it to one calm paragraph
+  and published nothing about onward schedule. Also: Dymer's toll moved all weekend (4 → 6 → 10 → 11),
+  so I pinned it to "11 by Monday morning" and kept Zelenskyy's 14-unaccounted figure attributed to him
+  rather than stating a single settled number. Cut the Kaliningrad air-raid item — Newsweek and Telegram
+  claims conflicted with the governor's false-alarm explanation and nothing resolved it. Cut the Laowa
+  24mm tilt-shift (Nov 4/5, 19 days) and SmallHD Focus 504 (Oct 30) on the 14-day rule.
+Egress: timesofsandiego.com and app.smore.com both failed DNS, so the Foster Smore was unreadable for
+  the fourth run running and Times of San Diego was unusable as a local source. KPBS carried San Diego
+  on its own. The Smore allowlisting noted as "being added" on 2026-10-26 still has not happened.
+Tweak to try next run: last run's tweak (search software name + version number on trades that resolve)
+  worked — it is how I confirmed Resolve 21.2 and Premiere 27.0 were both already-carried or stale, which
+  is what made the "run Tech without practical items" call clean rather than lazy. Next: for practical
+  AI, search the trades for a WORKFLOW item by TASK rather than by product ("transcription workflow",
+  "call sheet", "invoicing") — product-name searches in a quiet week only resurface releases already
+  carried, whereas a task search can surface a technique write-up that is new to the brief even when no
+  software shipped. Also: find a second citable Lightning-community source by searching the forum
+  domains directly, since generic "F-150 Lightning news" queries return recall aggregators every time.
