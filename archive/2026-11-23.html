@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Brief &mdash; Monday, November 23, 2026</title>
+<script>
+(function(){
+  try {
+    var t = localStorage.getItem('brief-theme');
+    document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root[data-theme="dark"]{
+  --bg:#14140f; --surface:#1c1c18; --text:#ebe9e2; --body:#d6d3ca; --muted:#9a9890;
+  --rule:#33332c; --link:#8ab4f8; --link-hover:#f0a5b0;
+}
+:root[data-theme="light"]{
+  --bg:#f5f4f0; --surface:#ffffff; --text:#1a1a18; --body:#1a1a18; --muted:#6b6b66;
+  --rule:#d8d7d2; --link:#1a3a8f; --link-hover:#c41230;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background-color:var(--bg); color:var(--body);
+  font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+  font-weight:400; font-size:1.125rem; line-height:1.7;
+  transition:background-color .25s, color .25s;
+}
+.wrap{padding:0 1.25rem 3rem}
+header.masthead{padding:2rem 0 .9rem; border-bottom:2px solid var(--rule); margin-bottom:2rem}
+.kicker{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .5rem;
+}
+h1{
+  margin:0 0 .75rem; font-weight:300; font-size:1.9rem; line-height:1.2;
+  color:var(--text); letter-spacing:-.01em;
+}
+.metarow{display:flex; align-items:center; justify-content:space-between; gap:1rem}
+.generated{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.7rem;
+  letter-spacing:.08em; color:var(--muted); text-transform:uppercase;
+}
+#theme-toggle{
+  flex:0 0 auto; min-width:44px; min-height:44px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:none; border:1px solid var(--rule); border-radius:4px;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:1rem;
+  color:var(--muted); cursor:pointer; padding:0 .5rem;
+  transition:color .25s, border-color .25s;
+}
+#theme-toggle:hover,#theme-toggle:focus-visible{color:var(--text); border-color:var(--muted)}
+section{margin:0 0 2rem}
+section + section{padding-top:2rem; border-top:1px solid var(--rule)}
+.section-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-weight:500; font-size:.7rem;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin:0 0 .75rem;
+}
+ul{list-style:none; margin:0; padding:0}
+li{margin:0 0 1rem}
+li:last-child{margin-bottom:0}
+strong{font-weight:600; color:var(--text)}
+a{color:var(--link); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover,a:active{color:var(--link-hover)}
+em{font-style:italic; color:var(--muted)}
+.flag{
+  display:inline-block; margin-left:.35rem; padding:.1rem .3rem;
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.8rem;
+  color:var(--muted); text-decoration:none; opacity:.55; line-height:1;
+}
+.flag:hover,.flag:focus-visible{opacity:1; color:var(--link-hover); text-decoration:none}
+.data-block{margin:0}
+.data-row{display:block; margin:0 0 .4rem}
+.data-row:last-child{margin-bottom:0}
+.data-label{
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem; font-weight:500;
+  letter-spacing:.15em; text-transform:uppercase; color:var(--muted);
+  display:inline-block; min-width:5.5rem; margin-right:.35rem;
+}
+.tag{font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.62rem; font-weight:500;
+  letter-spacing:.12em; color:var(--muted); margin-right:.45rem; vertical-align:.1em}
+.source-note{font-size:.95rem; color:var(--muted); margin:.9rem 0 0}
+.quote{
+  margin:3rem 0 0; padding:2.5rem 1rem 0; border-top:1px solid var(--rule);
+  text-align:center; font-style:italic; font-weight:300; color:var(--muted); line-height:1.6;
+}
+.quote .attrib{display:block; margin-top:1rem; font-style:normal; font-size:.9rem; letter-spacing:.02em}
+footer{
+  margin-top:3rem; padding-top:1.25rem; border-top:1px solid var(--rule);
+  font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.65rem;
+  letter-spacing:.08em; color:var(--muted); text-align:center; line-height:1.8;
+}
+@media (min-width:700px){
+  .wrap{max-width:720px; margin:0 auto; padding:0 1.25rem 4rem}
+  header.masthead{display:flex; align-items:flex-end; justify-content:space-between; gap:2rem; padding-top:3rem}
+  .masthead-left{flex:1 1 auto}
+  h1{font-size:2.3rem; margin-bottom:0}
+  .metarow{flex:0 0 auto; justify-content:flex-end}
+  section + section{padding-top:1.75rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="masthead">
+  <div class="masthead-left">
+    <p class="kicker">Morning Brief</p>
+    <h1>Monday, November 23, 2026</h1>
+  </div>
+  <div class="metarow">
+    <span class="generated">Generated 5:52 AM PT &middot; conditions updated 5:45 AM</span>
+    <button id="theme-toggle" type="button" aria-label="Switch color theme">&#9728;</button>
+  </div>
+</header>
+
+<section>
+<p class="section-label">&#127757; World</p>
+<ul>
+<li><strong>A drone hits an apartment block near Kyiv</strong> &mdash; A Russian attack drone struck the entrance of a five-storey residential building in Dymer, in the Kyiv region, around midnight Saturday, collapsing sections of the building from the first floor to the fifth. Rescuers worked through Sunday and into Monday morning, by which point the confirmed death toll had reached 11; Zelenskyy had earlier said 14 residents could not be accounted for, and crews pulled a 79-year-old woman out alive. Ukraine's air force said it downed 161 of 186 Shahed-type drones launched overnight, and Zelenskyy used the strike to press Washington and European partners to speed up deliveries of Patriot interceptors already paid for, saying Russia fired roughly 165 missiles and 2,700 drones at 20 regions over the week. (<a href="https://www.pravda.com.ua/eng/news/2026/11/22/8064022/">Ukrainska Pravda</a>, <a href="https://meduza.io/en/news/2026/11/23/11-killed-in-russian-strike-on-ukraine-s-dymer-in-kyiv-region">Meduza</a>)</li>
+<li><strong>Israel's opposition leader calls settler arson terrorism</strong> &mdash; Settlers burned cars and sprayed graffiti in at least four Palestinian towns in the occupied West Bank overnight into Sunday, including Kafr Malik near Ramallah, and Israeli police said they are investigating. Opposition leader Gadi Eisenkot called the attacks &ldquo;Jewish terrorism&rdquo; and blamed Netanyahu's government, which he said had brought the territory to the brink of anarchy; Foreign Minister Gideon Saar condemned the arson as the work of &ldquo;a handful of extremists.&rdquo; The exchange lands in the middle of Eisenkot's effort to assemble a coalition that would remove Netanyahu. (<a href="https://www.washingtonpost.com/world/2026/11/22/arson-attacks-by-israeli-settlers-west-bank-add-tense-political-debate/">Washington Post</a>, <a href="https://www.newarab.com/news/jewish-terrorism-eisenkot-condemns-west-bank-arson-attacks">The New Arab</a>)</li>
+<li><strong>George Washington turns up in the Indian Ocean</strong> &mdash; US Indo-Pacific Command published an account of the US ambassador to India visiting the carrier USS George Washington at sea in the Indian Ocean on November 20, the first official word on where the ship is since Pacific Fleet confirmed it had left US Central Command and crossed into the 7th Fleet area of responsibility. The visit is a routine engagement and the Navy has still not said whether the carrier goes straight home to Yokosuka or makes port calls as it heads east. (<a href="https://www.pacom.mil/Media/News/News-Articles/Article/4657739/us-ambassador-visits-uss-george-washington/">U.S. Indo-Pacific Command</a>, <a href="https://news.usni.org/2026/11/18/carrier-uss-george-washington-leaves-middle-east-after-three-months">USNI News</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127482;&#127480; US &amp; Politics</p>
+<ul>
+<li><strong>Democrats land their biggest House majority since 1992</strong> &mdash; The final uncalled competitive race broke over the weekend when Republican Virginia Foxx conceded a North Carolina seat decided by roughly 330 votes, putting Democrats at 258 seats to Republicans' 173 and confirming the party's largest House majority in 34 years. A handful of races remain uncalled, and analysts expect the final count to land around 260. The practical ceiling is still the Senate and the White House, so the majority buys subpoena power, committee control and the floor agenda rather than a path to enacting legislation. (<a href="https://www.aljazeera.com/news/2026/11/22/democrats-win-largest-house-majority-since-1992-with-north-carolina-seat">Al Jazeera</a>, <a href="https://www.nbcnews.com/politics/2026-elections/house-results">NBC News</a>, <a href="https://thehill.com/homenews/state-watch/6234415-house-recounts-runoffs-democrat-majority/">The Hill</a>)</li>
+<li><strong>An appeals court voids the pregnant workers law</strong> &mdash; The Fifth Circuit ruled 9&ndash;8 on Friday that the Pregnant Workers Fairness Act was not validly enacted, because the House passed it in 2022 with members voting by proxy under pandemic rules rather than being physically present for a quorum. The decision reaches Texas, Louisiana and Mississippi and does not take effect for several weeks, leaving room for an appeal; A Better Balance, which campaigned for the law, says it will go to the Supreme Court. The law requires employers to make reasonable accommodations such as schedule changes or lighter duties for pregnancy and childbirth. (<a href="https://www.wlwt.com/article/appeals-court-strikes-down-pregnant-workers-fairness-act/74501827">WLWT</a>, <a href="https://www.wrtv.com/news/politics/appeals-court-says-federal-law-requiring-accommodations-for-pregnant-workers-is-unconstitutional/">WRTV</a>)</li>
+<li><strong>Thanksgiving travel dips for the first time in four years</strong> &mdash; AAA expects 81.5 million Americans to travel at least 50 miles between Tuesday and the following Monday, down a fraction from last year's 81.6 million and ending a three-year run of records, which AAA attributes to cost rather than appetite. Driving still accounts for 72.9 million of those trips; domestic round-trip airfares are averaging about $800, up 17 per cent on AAA's booking data. Atlanta and Dallas-Fort Worth are the busiest airports, and AAA does not expect this month's FAA router failure to affect the holiday. (<a href="https://newsroom.acg.aaa.com/sc-aaa-815-million-americans-expected-to-travel-for-thanksgiving/">AAA</a>, <a href="https://abcnews.go.com/GMA/Travel/record-number-travelers-expected-fly-trains-thanksgiving/story?id=138006590">ABC News</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#9889; Tech &amp; AI</p>
+<ul>
+<li><strong>The AI trade drags the market into a correction</strong> &mdash; The S&amp;P 500 fell about 3.7 per cent on Friday, its seventh consecutive decline and worst streak since February 2020, pulling both it and the Dow into correction territory while the Nasdaq erased its gains for 2026. Nvidia did most of the damage, dropping roughly 12 to 14 per cent to an 18-month low and leaving it down about 47 per cent from its October 6 peak, as investors picked over the $102 billion in data-centre lease and cloud commitments disclosed in its quarterly report and the fallout from Jensen Huang's departure. Futures bounced on Monday morning, with Nasdaq 100 contracts up around 3 per cent, and Asian regulators announced support measures over the weekend. (<a href="https://www.cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html">CNBC</a>, <a href="https://www.forbes.com/sites/antoniopequenoiv/2026/11/20/sp-500-falls-to-7-month-low-as-tech-and-ai-concerns-fuel-sell-off/">Forbes</a>, <a href="https://www.axios.com/2026/11/20/anthropic-ipo-nvidia-ai-tech-selloff">Axios</a>)</li>
+<li><strong>Siri's AI requests get a daily cap tied to iCloud+</strong> &mdash; The second developer beta of iOS 27.3 introduces daily usage limits on the heavier Siri features, and the size of your allowance scales with your iCloud+ tier. What counts: multi-step requests that use personal context, Image Playground, Clean Up, Extend and Reframe in Photos, and cloud model calls made through Shortcuts or third-party apps using Private Cloud Compute. What does not: timers, alarms, messages and the other on-device basics. Limits are per device and reset at local midnight. Apple has not published the actual numbers and this is still beta behaviour, so treat the tier multipliers circulating in coverage as provisional. (<a href="https://www.macworld.com/article/3287111/heres-how-much-youll-need-to-pay-to-use-siri-ai-after-apples-new-limits-kick-in.html">Macworld</a>, <a href="https://www.macobserver.com/news/ios-27-3-adds-siri-ai-usage-limits-heres-what-counts-toward-your-daily-limit/">The Mac Observer</a>)</li>
+<li><strong>Apple closed its support forums on Friday</strong> &mdash; The Apple Support Community, running in one form or another for roughly 28 years, shut permanently on November 20; the discussions site now redirects to Apple's main support page. Apple told MacRumors it decided to sunset the forums &ldquo;after a careful evaluation of strategy and customer needs,&rdquo; and has not said what becomes of the archive, though MacRumors reports existing posts will eventually be deleted. If you have ever solved a Mac problem by landing on a decade-old thread there, that path is closing; Apple is steering people to direct support instead. (<a href="https://www.macrumors.com/2026/11/10/apple-support-community-closing-november-20/">MacRumors</a>, <a href="https://www.macrumors.com/2026/11/11/november-20-end-of-era-at-apple/">MacRumors</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127936; Sports</p>
+<ul>
+<li><strong>Portland loses on a buzzer-beater in New York</strong> &mdash; Mikal Bridges hit a three at the horn to give the Knicks a 97&ndash;96 win over the Trail Blazers on Saturday, after Portland had erased a 20-point hole with a 19&ndash;4 third-quarter run and tied the game at 94 late. Donovan Clingan posted 22 points and 13 rebounds, Deni Avdija added 20 and 9, and Jrue Holiday finished with 13 points, 9 rebounds and 7 assists; Damian Lillard managed 15 on a cold shooting night for a team that went 11 of 38 from three. Jalen Brunson led all scorers with 30. (<a href="https://www.espn.com/nba/game/_/gameId/401910024/trail-blazers-knicks">ESPN</a>, <a href="https://www.nba.com/blazers/game/0022600275-blazers-vs-knicks-new-york-ny-11-21-2026/event-details">NBA.com</a>)</li>
+<li><strong>Golden State edges Boston to stop the slide</strong> &mdash; The Warriors beat the Celtics 88&ndash;87 at Chase Center on Sunday, ending a five-game losing streak and stretching their home winning streak to seven, in a game that never got above the high 80s. Brandin Podziemski led with 18 points and seven rebounds, and Jayson Tatum&rsquo;s 27 points, 10 rebounds and 6 assists ended with a missed shot to win it. Boston has now lost four straight. (<a href="https://www.espn.com/nba/game?gameId=401910035">ESPN</a>, <a href="https://www.nba.com/warriors/game/0022600286-celtics-vs-warriors-san-francisco-ca-11-22-2026">NBA.com</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127754; San Diego</p>
+<ul>
+<li><strong>King tides run through Thanksgiving</strong> &mdash; The city is bracing for a run of extremely high tides starting today and continuing through Thursday, with the National Weather Service projecting peaks of roughly 7.9 to 8.2 feet from Tuesday to Thanksgiving Day. Crews have been reinforcing sand berms and the city is making sandbags available; low-lying coastal spots and the usual flood-prone streets are the exposure. It compounds a month that has already cost Pacific Beach's pier a closure and dropped a section of the Sunset Cliffs seawall into the ocean. (<a href="https://www.kpbs.org/news/environment/2026/11/20/city-of-san-diego-prepares-for-king-tides-possible-coastal-flooding-next-week">KPBS</a>)</li>
+<li><strong>A bill would give the city a say over a Navy-land data centre</strong> &mdash; San Diego's congressional Democrats plan to introduce legislation requiring local approval before a data centre could be built on federal land downtown, aimed at reports that a company is weighing a 400-megawatt facility on the Navy's NAVWAR site. The city council already passed an emergency ban on new data centres, but it cannot reach federal property, which is the gap the bill is meant to close. (<a href="https://www.kpbs.org/news/military/2026/11/20/congress-could-give-san-diego-more-say-over-proposed-data-center">KPBS</a>)</li>
+<li><strong>Officials keep pressing for local control of robotaxis</strong> &mdash; Council member Sean Elo-Rivera, who chairs the city's Taxi Advisory Committee, is lobbying state lawmakers to hand cities more authority over driverless vehicles, which are currently regulated almost entirely at the state level through the DMV and the Public Utilities Commission. San Diego has no mechanism of its own to set conditions on where or how robotaxis operate. (<a href="https://www.kpbs.org/news/public-safety/2026/11/18/push-for-local-control-of-driverless-vehicles-continues">KPBS</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127802; Kaua&#699;i</p>
+<ul>
+<li><strong>County closures for the holiday</strong> &mdash; County offices, neighborhood centers, refuse transfer stations, the Kekaha Landfill, HI5 redemption centers, the Puhi metals facility and the Kapa&#699;a pool are all closed Thursday, November 26, with offices back to normal hours on the 27th. Residential refuse pickup keeps its usual schedule and the Kaua&#699;i Bus runs its normal daily timetable. (<a href="https://www.thegardenisland.com/2026/11/21/hawaii-news/news-briefs-for-saturday-november-21-2026/">The Garden Island</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127909; Filmmaking Gear</p>
+<ul>
+<li><strong>Libec shows a quick-deploy tripod pair</strong> &mdash; Newsshooter&rsquo;s Inter BEE first look covers Libec&rsquo;s Q30B and Q50B, two-stage tripods built around a single ring on the spreader that opens the legs and locks the spreader in one motion. Both carry a 45kg payload at roughly 2.9&ndash;3.0kg, which is the interesting part &mdash; the Q30B takes a 75mm ball and the Q50B a 100mm, so either one will sit under a built-up FX6 without being the heaviest thing in the bag. Libec says the locks are dust-resistant and the legs were field-tested for over a year; show pricing was around 80,000 yen and 132,000 yen, and US figures were not set. (<a href="https://www.newsshooter.com/2026/11/19/libec-q30b-q50b-lightweight-high-load-capacity-tripods-with-new-quick-deploy-system-first-look-at-inter-bee-2026/">Newsshooter</a>, <a href="https://www.cined.com/libec-q30b-and-q50b-explained-quick-deploy-ring-45kg-payload-dust-proof-spreader-locks/">CineD</a>)</li>
+<li><strong>NANLITE&rsquo;s vela spotlights reach production</strong> &mdash; The prototypes NANLITE showed at IBC turned up at Inter BEE as four shipping fixtures: the bicolour vela 150b and 300b and the full-colour 150c and 300c, all Bowens-mount with the power supply built into the head, so they run off an AC cable with no separate ballast to find a place for. The 150s use a 21&ndash;40&deg; Fresnel and the 300s a 40&deg; reflector, with on-board or NANLINK app control. List prices run $209 / $249 / $299 / $349, discounted for Black Friday; regional availability varies, with some markets not getting the 300s until the new year. (<a href="https://www.newsshooter.com/2026/11/19/nanlite-vela-150b-150c-300b-300c-first-look-at-inter-bee-2026/">Newsshooter</a>, <a href="https://www.redsharknews.com/after-ibc-prototypes-nanlite-s-vela-spotlights-ship-from-209">RedShark News</a>)</li>
+<li><strong>Blackmagic's ambisonic ball goes on sale next month</strong> &mdash; Blackmagic Design announced a 7th-order ambisonic microphone built from 108 MEMS capsules in a sphere, recording spatial audio over a single USB-C cable and shipping in December. It is Apple-licensed and aimed squarely at immersive production for Vision Pro, and it writes about 33GB an hour, so plan storage accordingly. Note the price is unsettled in coverage: Blackmagic's US store lists $1,909, while announcement-day reporting quoted $1,695, with a $2,405 kit adding a windshield and a locking cable. (<a href="https://petapixel.com/2026/11/12/blackmagics-1695-spatial-audio-mic-has-108-mics-and-looks-super-sci-fi/">PetaPixel</a>, <a href="https://www.videomaker.com/news/new-7th-order-ambisonic-mic-joins-blackmagic-design-lineup/">Videomaker</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#128267; F-150 Lightning &amp; EVs</p>
+<ul>
+<li><strong>Ford's first US-made LFP cells head for a $28,350 pickup</strong> &mdash; Ford has started producing lithium-iron-phosphate battery cells in the United States using licensed CATL technology, and the first of them are earmarked for the Fathom, the compact electric pickup Ford has priced from $28,350 and expects to bring to market near the end of 2027. LFP chemistry is cheaper and longer-cycling than the nickel-based packs in the current electric F-150, at the cost of cold-weather performance and energy density. Planned cell capacity has been scaled back from Ford's earlier targets, and Bill Ford says the truck will be exported rather than sold only domestically. (<a href="https://electrek.co/2026/11/18/fords-first-lfp-batteries-en-route-30k-fathom-ev-pickup">Electrek</a>, <a href="https://www.cnbc.com/2026/11/18/ford-us-battery-cells-catl-tech.html">CNBC</a>, <a href="https://fordauthority.com/2026/11/bill-ford-says-fathom-ev-pickup-will-compete-around-the-world/">Ford Authority</a>)</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127890; School</p>
+<ul>
+<li><strong><span class="tag">HTEM</span><span class="tag">FOSTER</span> No school this week</strong> &mdash; Both campuses are closed for fall break November 23&ndash;27, and students return Monday, November 30.</li>
+<li><strong><span class="tag">HTEM</span> Winter celebration December 2 &mdash; volunteers still needed</strong> &mdash; The free evening event runs 5:00&ndash;7:00 p.m. the Wednesday after break, and the organisers are short of people to run tables and help with setup and cleanup; the sign-up also takes donated items.</li>
+<li><strong><span class="tag">HTEM</span> Fourth-grade exhibition December 9</strong> &mdash; Student attendance is mandatory for the 2:00&ndash;3:00 p.m. exhibition of project work, which the teachers have extended beyond the original scope because the class is still deep in it.</li>
+<li><strong><span class="tag">HTEM</span> Two annual forms are still open</strong> &mdash; Any adult who might chaperone this year needs the PowerSchool volunteer application done before they can go &mdash; it takes a licence, registration and insurance upload plus a mandated-reporter training that arrives by email afterwards &mdash; and every family is asked to file the family and school support form, which is quick, needs no login and drives state funding regardless of income.</li>
+</ul>
+</section>
+
+<section>
+<p class="section-label">&#127780; Weather &mdash; La Mesa</p>
+<div class="data-block">
+<div class="data-row"><span class="data-label">Today</span>69&deg; / 50&deg; &middot; Mostly sunny &middot; 9% rain &middot; south wind 0&ndash;5 mph</div>
+<div class="data-row"><span class="data-label">Note</span>The overnight shower chance ended around 4 a.m. &mdash; a tenth of an inch at most. Coastal king tides run through Thanksgiving</div>
+<div class="data-row"><span class="data-label">Tomorrow</span>73&deg; / sunny, light north wind</div>
+</div>
+<p class="source-note">NWS point forecast for La Mesa 91942, issued 12:42 a.m. PT and retrieved 5:45 a.m. PT.</p>
+</section>
+
+<section>
+<p class="section-label">&#127754; Surf &mdash; Mission Beach / Pacific Beach</p>
+<div class="data-block">
+<div class="data-row"><span class="data-label">Swell</span>3.9 ft @ 17s from the SSW (201&deg;) &mdash; buoy 46258; Torrey Pines reads 3.3 ft @ 17s from 212&deg;</div>
+<div class="data-row"><span class="data-label">Read</span>A 17-second interval at that height is long-period groundswell, which focuses well at the MB/PB beach breaks &mdash; chest-high on the better sets, arriving in spaced pulses rather than steadily</div>
+<div class="data-row"><span class="data-label">Wind</span>South 0&ndash;5 mph through the day, northeast around 5 mph tonight &mdash; effectively slack, so clean water most of the morning</div>
+<div class="data-row"><span class="data-label">Tide</span>Low 12:54 a.m. (1.7 ft) &middot; High 7:15 a.m. (7.1 ft) &middot; Low 2:24 p.m. (&minus;1.0 ft) &middot; High 8:40 p.m. (4.3 ft) &mdash; king-tide range, with a 7.4 ft high tomorrow morning</div>
+<div class="data-row"><span class="data-label">Water</span>73.9&deg;F at 46258, 73.2&deg;F at Torrey Pines &mdash; still far above normal for late November</div>
+<div class="data-row"><span class="data-label">Outlook</span>The SSW holds near 2.4 ft at 14s through Tuesday, then a WSW-to-W swell builds hard to roughly 6&ndash;7 ft Wednesday into Thanksgiving</div>
+</div>
+<p class="source-note">Buoy readings from NDBC 46258 (Mission Bay West) and 46225 (Torrey Pines), observed 4:56 a.m. PT. Tides from NOAA station 9410170 (San Diego). Wind from the NWS La Mesa forecast. Outlook from the Open-Meteo marine model off Mission Beach &mdash; a model forecast, not an observation.</p>
+</section>
+
+<div class="quote">
+Only he who gives thanks for little things receives the big things.
+<span class="attrib">&mdash; Dietrich Bonhoeffer, <em>Life Together</em></span>
+</div>
+
+<footer>
+Morning Brief &middot; Monday, November 23, 2026 &middot; Sources are primary news outlets
+</footer>
+</div>
+<script>
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    var icon = function(t){ return t === 'dark' ? '☀' : '☾'; };
+    btn.textContent = icon(document.documentElement.getAttribute('data-theme'));
+    btn.addEventListener('click', function(){
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('brief-theme', next); } catch (e) {}
+      btn.textContent = icon(next);
+    });
+  }
+
+  // Per-story feedback control: opens a pre-filled brief-feedback issue.
+  var REPO = 'https://github.com/tyfrey-droid/morning-brief-routine/issues/new';
+  var date = document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : '';
+  var sections = document.querySelectorAll('section');
+  for (var s = 0; s < sections.length; s++) {
+    var label = sections[s].querySelector('.section-label');
+    var items = sections[s].querySelectorAll('li');
+    if (!label || !items.length) continue;
+    var section = label.textContent.trim();
+    for (var i = 0; i < items.length; i++) {
+      var lead = items[i].querySelector('strong');
+      if (!lead) continue;
+      var story = lead.textContent.trim();
+      var body = 'Section: ' + section + '\nStory: ' + story + '\nIssue of: ' + date +
+        '\n\nFeedback (keep one, or write your own):\n' +
+        '- already read / redundant\n- not relevant\n- more like this\n';
+      var a = document.createElement('a');
+      a.className = 'flag';
+      a.href = REPO + '?labels=brief-feedback' +
+        '&title=' + encodeURIComponent('Feedback: ' + story) +
+        '&body=' + encodeURIComponent(body);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.title = 'Send feedback on this story';
+      a.setAttribute('aria-label', 'Send feedback on: ' + story);
+      a.textContent = '⚑';
+      items[i].appendChild(a);
+    }
+  }
+})();
+</script>
+</body></html>
