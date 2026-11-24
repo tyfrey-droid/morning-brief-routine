@@ -1,5 +1,5 @@
 {
-  "fetched_at_utc": "2026-11-23T23:54:22Z",
+  "fetched_at_utc": "2026-11-24T00:23:25Z",
   "location": {
     "weather": "La Mesa, CA 91942 (NWS SGX point forecast)",
     "surf": "Mission Beach / Pacific Beach, San Diego"
@@ -50,19 +50,19 @@
     ]
   },
   "buoy_46258_mission_bay": {
-    "observed_utc": "2026-11-23T22:56Z",
-    "waveHeightFt": 4.6,
+    "observed_utc": "2026-11-23T23:56Z",
+    "waveHeightFt": 4.9,
     "dominantPeriodS": 17,
-    "avgPeriodS": 9.4,
-    "meanWaveDirDeg": 211,
-    "waterTempF": 74.3
+    "avgPeriodS": 9.5,
+    "meanWaveDirDeg": 198,
+    "waterTempF": 74.1
   },
   "buoy_46225_torrey_pines": {
-    "observed_utc": "2026-11-23T23:26Z",
+    "observed_utc": "2026-11-23T23:56Z",
     "waveHeightFt": 4.3,
-    "dominantPeriodS": 15,
-    "avgPeriodS": 9.0,
-    "meanWaveDirDeg": 209,
+    "dominantPeriodS": 17,
+    "avgPeriodS": 8.5,
+    "meanWaveDirDeg": 198,
     "waterTempF": 73.4
   },
   "tides_san_diego_9410170": [
@@ -110,30 +110,30 @@
   "swell_forecast_open_meteo": [
     {
       "date": "2026-11-23",
-      "waveHeightMaxFt": 3.806,
+      "waveHeightMaxFt": 3.675,
       "swellHeightMaxFt": 2.362,
-      "swellPeriodMaxS": 13.95,
+      "swellPeriodMaxS": 13.70,
       "swellDirDeg": 194
     },
     {
       "date": "2026-11-24",
-      "waveHeightMaxFt": 3.346,
-      "swellHeightMaxFt": 2.362,
-      "swellPeriodMaxS": 13.10,
-      "swellDirDeg": 194
+      "waveHeightMaxFt": 3.412,
+      "swellHeightMaxFt": 2.428,
+      "swellPeriodMaxS": 13.15,
+      "swellDirDeg": 193
     },
     {
       "date": "2026-11-25",
-      "waveHeightMaxFt": 6.890,
-      "swellHeightMaxFt": 5.906,
-      "swellPeriodMaxS": 13.05,
+      "waveHeightMaxFt": 6.693,
+      "swellHeightMaxFt": 5.840,
+      "swellPeriodMaxS": 12.70,
       "swellDirDeg": 246
     },
     {
       "date": "2026-11-26",
-      "waveHeightMaxFt": 7.087,
-      "swellHeightMaxFt": 6.693,
-      "swellPeriodMaxS": 12.80,
+      "waveHeightMaxFt": 6.890,
+      "swellHeightMaxFt": 6.430,
+      "swellPeriodMaxS": 12.05,
       "swellDirDeg": 276
     }
   ]
