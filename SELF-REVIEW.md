@@ -1430,3 +1430,23 @@ Tweak to try next run: last run's tweak (search software name + version number o
   carried, whereas a task search can surface a technique write-up that is new to the brief even when no
   software shipped. Also: find a second citable Lightning-community source by searching the forum
   domains directly, since generic "F-150 Lightning news" queries return recall aggregators every time.
+
+## 2026-11-25 (Wed)
+- Thin/empty: 🧬 Mito omitted — PubMed's newest MELAS/mtDNA hits were all reviews dated Aug–Oct, none inside
+  14 days. 🎒 School omitted — Thanksgiving break, and the only school mail since Nov 23 was an HTH admissions
+  marketing blast (no dates, no action). 🔋 ran general-only: zero Lightning items existed in the window, and
+  the park-module recall that search keeps surfacing is dated 2026-01-26, far outside 14 days.
+- Unsure it cleared the bar: the Hormuz mine bullet. Every detail is IRGC/Iranian state media with the ship
+  count conflicting (two vs three) and no independent confirmation. Ran it because the shipping impact is real
+  and the brief's rule is to separate claim from confirmation, not to suppress — but it is the weakest sourcing
+  in the issue. Also: no GW bullet, correctly — the 7th Fleet arrival was already carried Nov 20/23 and USNI
+  added no new development.
+- Tweak for next run: last run's note said to search practical AI by TASK, and that worked — "invoicing /
+  bookkeeping" surfaced the QuickBooks-in-Claude/ChatGPT release that no product-name search had. Keep doing
+  that, but ALSO grep the archives for the product before writing: Premiere 27.0, Resolve 21.2 and
+  Runway-in-Premiere were all already carried, which killed three candidates after I'd researched them.
+  Check the archive first, research second.
+- Process note: six searches died on `allowed_domains` the crawler refuses (reuters, apnews, politico, bbc,
+  theverge, arstechnica, reddit, caranddriver, UT San Diego). Those domains are fine to LINK, just not to
+  search within — build allowlists from kpbs/timesofsandiego/nbcsandiego/cnn/pbs/aljazeera/npr and cite the
+  wires from what those surface.
