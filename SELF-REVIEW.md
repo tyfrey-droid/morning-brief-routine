@@ -1450,3 +1450,22 @@ Tweak to try next run: last run's tweak (search software name + version number o
   theverge, arstechnica, reddit, caranddriver, UT San Diego). Those domains are fine to LINK, just not to
   search within — build allowlists from kpbs/timesofsandiego/nbcsandiego/cnn/pbs/aljazeera/npr and cite the
   wires from what those surface.
+
+## 2026-11-27 (Fri)
+- Thin/empty: 🧬 Mito omitted (PubMed's only m.3243A>G hit in 14 days was a psychiatric case report, explicitly
+  excluded; zagociguat PRIZM topline still unreported). 🎒 School omitted — zero school mail since Nov 25, still
+  Thanksgiving break. ⚡ Tech ran with no WORKFLOW item: Resolve 21.2 and Premiere 27.0 were already carried, and
+  nothing practical shipped in the window. Gear and EV ran one bullet each — the holiday killed product news.
+- Unsure it cleared the bar: the Apple Black Friday bullet. It is consumer guidance ("gift cards, not discounts")
+  rather than news, and the only reason it ran is that Tech would otherwise have had a single item. If a week this
+  quiet repeats, a one-bullet Tech section is the more honest call. Also caught myself about to write that Ford is
+  an Ionna partner — it is not (BMW/GM/Honda/Hyundai/Kia/Mercedes/Stellantis/Toyota), so the bullet was reframed
+  around NACS+CCS open access. Verify JV membership before implying relevance to the truck.
+- Data gap: buoys 46258/46225 and the NOAA 9410170 tide predictions returned null on BOTH fetches (13:45 and
+  13:51 UTC) while weather and the Open-Meteo swell model came back fine. Surf shipped with model swell plus
+  "unavailable" on tide and water temp. Worth watching — if it is null again Monday the workflow's NDBC/CO-OPS
+  steps are broken, not the upstream APIs.
+- Tweak for next run: the task-based practical-AI search has stopped paying off two runs in a row because
+  everything it surfaces is already carried. Next time, before searching, grep the archives for the last 30 days
+  of WORKFLOW headlines and search explicitly OUTSIDE those products — try the pre-production side (treatments,
+  shot lists, call sheets, client proposals) which has never produced a bullet, rather than editing software.
